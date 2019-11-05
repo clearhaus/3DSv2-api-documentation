@@ -106,6 +106,8 @@ $ curl -H 'APIKey: $APIKEY' -d "{\"acctNumber\": \"$PAN\"}" https://service.stag
 
 ## Explanation
 
+TODO: Section is currently, envisioned is a sort of FAQ.
+
 ## Reference
 
 ### Authentication
