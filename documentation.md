@@ -180,7 +180,7 @@ invoked.
    ```json
    {
      "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
-     "threeDSMethodNotificationURL": "<SOME URL>"
+     "threeDSMethodNotificationURL": "<Requestor callback URL>"
    }
    ```
 1. _(Requirement 261)_
