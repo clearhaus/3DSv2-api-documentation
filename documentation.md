@@ -128,33 +128,63 @@ Invalid API Key
 ```
 
 ### The `/preauth` call
-1. Create a JSON object containing the transaction account number:
-  ```json
-  {
-    "acctNumber": "<13-19 DIGITS>"
-  }
-  ```
 
-  POST the body to `/preauth`.
-  The response will be something like:
-  ```json
-  {
-    "acsStartProtocolVersion": "2.1.0",
-    "acsEndProtocolVersion": "2.2.0",
-    "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"
-  }
-  ```
-2. Create JSON object containing:
-  ```json
-  {
-    "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
-    "threeDSMethodNotificationURL": "<SOME URL>"
-  }
-  ```
-3. _(Requirement 261)_
-  Render a hidden HTML iframe in the Cardholder browser and send a form
-  with a field name `threeDSMethodData` containing the above JSON to the
-  `threeDSMethodURL`.
+Input is a JSON object, with the following parameters:
+
+| Key          | Regexp/Format | Required?  |
+| -----        | --------           | ---------- |
+| `acctNumber` | `^[1-9]\d{12,18}$` | Yes        |
+
+Example input:
+```json
+{
+  "acctNumber": "4111111111111111"
+}
+```
+
+POST the body to `/preauth`.
+
+Response:
+
+| Key                       | Regexp/Format  | Required?  |
+| -----                     | --------       | ---------- |
+| `acsStartProtocolVersion` | messageVersion | Yes        |
+| `acsEndProtocolVersion`   | messageVersion | Yes        |
+| `threeDSServerTransID`    | UUID           | Yes        |
+| `dsStartProtocolVersion`  | messageVersion | No         |
+| `dsEndProtocolVersion`    | messageVersion | No         |
+| `acsInfoInd`              | ACSInfo        | No         |
+| `threeDSMethodURL`        | URL            | No         |
+
+
+Example response:
+```json
+{
+  "acsStartProtocolVersion": "2.1.0",
+  "acsEndProtocolVersion": "2.2.0",
+  "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"
+}
+```
+
+_Note:_ This _must_ be followed up with a [3DS method
+invocation](#3ds-method-invocation) if `threeDSMethodURL` is included.
+
+### 3DS Method Invocation
+
+If the `/preauth` call includes a `threeDSMethodURL`, the 3DS Method _must_ be
+invoked.
+
+1. Create JSON object containing `threeDSServerTransID` from the `/preauth` call:
+   ```json
+   {
+     "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
+     "threeDSMethodNotificationURL": "<SOME URL>"
+   }
+   ```
+1. _(Requirement 261)_
+   Render a hidden HTML iframe in the Cardholder browser and send a form
+   with a field name `threeDSMethodData` containing the above JSON to the
+   `threeDSMethodURL`.
 
 ### The `/auth` call
 1. POST a authentication JSON message (`AReq`) to `/auth` endpoint.
