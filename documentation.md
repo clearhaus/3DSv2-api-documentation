@@ -64,22 +64,22 @@ point of view:
 </div>
 
 An _authentication flow_ is one of the following categories:
-1. _Frictionless flow_
+* _Frictionless flow_
 
    This flow includes messages 1-4, where the `authenticationValue`, `eci` and
    `dsTransID` are returned in 4.
 
-2. _Challenge flow_
+* _Challenge flow_
 
    This includes 1-8, where the `authenticationValue`, `eci` and `dsTransID`
    are returned in 8.
 
-3. _Out-of-band (OOB)_
+* _Out-of-band (OOB)_
 
    This includes 1-8, where the `authenticationValue`, `eci` and `dsTransID`
    are returned in 8.
 
-4. _Decoupled Authentication_
+* _Decoupled Authentication_
 
    This includes 1-4,6-8, where the `authenticationValue`, `eci` and `dsTransID`
    are returned in 8.
