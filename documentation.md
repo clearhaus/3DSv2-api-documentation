@@ -63,6 +63,36 @@ point of view:
   <img src="authentication.svg" alt="Authentication"/>
 </div>
 
+The following describes the individual points in the diagram:
+
+1. A call to the [`/preauth`](#the-preauth-call) endpoint is performed if the
+   request originator is a cardholder using a browser, as opposed to using a
+   SDK or the authentication being Requestor initiated.
+2. The [response](#preauth-response) contains:
+   - Information that might be usable in determining whether to fall back to
+     3-D Secure v1.
+   - An optional `threeDSMethodURL` that is invoked in the user browser.
+3. The cardholder browser invokes the `threeDSMethodURL`, to allow the ACS to
+   fingerprint the browser.
+4. The Requestor uses the [`/auth`](#the-auth-call) to send the information
+   needed for 3dsecure.io to assemble a `AReq` message.
+5. An `ARes` is nominally returned to the Requestor.
+
+   This `ARes` contains either:
+   - The authentication result (Called _frictionless_ flow)
+   - Information about how to proceed with the challenge
+   - Information stating why the challenge cannot continue (Called _challenge_ flow)
+
+6. The cardholder [completes the challenge](#performing-the-challenge) on the
+   cardholders device.
+7. The ACS informs the Requestor about the challenge result through a callback.
+8. The [`/postauth`](#the-postauth-call) is used the fetch the results of the
+   authentication.
+9. Nominally a `RReq` is returned to the Requestor.
+
+<!--- Currently this seems out of place.
+#### Flow types
+
 An _authentication flow_ is one of the following categories:
 * _Frictionless flow_
 
@@ -83,6 +113,7 @@ An _authentication flow_ is one of the following categories:
 
    This includes 1-4,6-8, where the `authenticationValue`, `eci` and `dsTransID`
    are returned in 8.
+-->
 
 ### Performing an authentication flow
 
@@ -110,7 +141,7 @@ TODO: Section is currently, envisioned is a sort of FAQ.
 
 ## Reference
 
-### Authentication
+### 3DSecure.io API Access
 
 Access to the service is granted by an API key. The API key is used on each request using the
 `APIKey` HTTP header as such:
@@ -133,7 +164,7 @@ Invalid API Key
 
 Input is a JSON object, with the following parameters:
 
-| Key          | Regexp/Format | Required?  |
+| Key          | Regexp/Format      | Required?  |
 | -----        | --------           | ---------- |
 | `acctNumber` | `^[1-9]\d{12,18}$` | Yes        |
 
@@ -146,7 +177,7 @@ Example input:
 
 POST the body to `/preauth`.
 
-Response:
+#### `/preauth` response:
 
 | Key                       | Regexp/Format  | Required?  |
 | -----                     | --------       | ---------- |
