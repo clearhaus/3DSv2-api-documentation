@@ -11,8 +11,7 @@ Overview of Authentication Flow
 
 An authentication in 3-D Secure is the process of verifying cardholder
 involvement in e.g. a purchase. An authentication results from and
-_authentication flow_ and proof of authentication is an
-_authentication value_.
+*authentication flow* and proof of authentication is an *authentication value*.
 
 This figure illustrates the simplified authentication flow from a requestor
 point of view:
@@ -42,8 +41,7 @@ The following describes the individual points in the diagram:
    This ``ARes`` contains either:
    - The authentication result (Called *frictionless* flow)
    - Information about how to proceed with the challenge
-   - Information stating why the challenge cannot continue (Called *challenge*
-     flow)
+   - Information stating why the challenge cannot continue (Called *challenge* flow)
 
 6. The cardholder [completes the challenge](#performing-the-challenge) on the
    cardholders device.

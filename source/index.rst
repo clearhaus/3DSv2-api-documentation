@@ -22,7 +22,7 @@ API integration.
 
 
 3-D Secure -- briefly
-==================
+=====================
 
 Briefly, a 3-D Secure Server is used in the financial industry, to:
 

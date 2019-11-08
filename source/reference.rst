@@ -71,7 +71,8 @@ invocation](#3ds-method-invocation) if `threeDSMethodURL` is included.
 If the `/preauth` call includes a `threeDSMethodURL`, the 3DS Method _must_ be
 invoked.
 
-1. Create JSON object containing `threeDSServerTransID` from the `/preauth` call:
+1. Create JSON object containing `threeDSServerTransID` from the `/preauth`
+   call:
 
    .. code-block:: json
 
@@ -88,7 +89,7 @@ invoked.
 .. _auth-endpoint:
 
 ``/auth`` endpoint
-================
+==================
 
 1. POST a authentication JSON message (`AReq`) to `/auth` endpoint.
 2. If `transStatus` is `C`, perform a challenge flow.
