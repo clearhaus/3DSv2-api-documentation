@@ -21,5 +21,8 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+diagrams:
+	plantuml -o ../ -tsvg source/diagrams/authentication.uml
+
 watch:
 	cwatch -m -r '.*.rst' -e 'make html' source
