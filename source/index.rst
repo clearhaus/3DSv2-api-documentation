@@ -1,12 +1,12 @@
-########
+############
 Introduction
-########
+############
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
    :hidden:
-   :numbered:
+   :numbered: 2
 
    self
    getting-started

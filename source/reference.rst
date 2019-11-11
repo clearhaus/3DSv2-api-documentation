@@ -9,61 +9,59 @@ Reference
 ``/preauth`` endpoint
 =====================
 
-Input is a JSON object, with the following parameters:
+Input
+-----
 
-+----------------+----------------------+------------+
-| Key            | Regexp/Format        | Required?  |
-+================+======================+============+
-| ``acctNumber`` | ``^[1-9]\d{12,18}$`` | Yes        |
-+----------------+----------------------+------------+
+.. list-table::
+  :widths: 1 1 1 30
+  :header-rows: 1
 
-Example input:
-
-.. code-block:: json
-    :linenos:
-
-    {
-      "acctNumber": "4111111111111111"
-    }
-
-POST the body to ``/preauth``.
+  * - Key
+    - Format
+    - Required
+    - Comments
+  * - acctNumber
+    - ``^[1-9]\d{12,18}$``
+    - Yes
+    - The cardholders account number or e.g. a tokenized PAN.
 
 .. _preauth-response:
 
-``/preauth`` response:
-----------------------
+Output
+------
 
-+---------------------------+----------------+------------+
-| Key                       | Regexp/Format  | Required?  |
-+===========================+================+============+
-| `acsStartProtocolVersion` | messageVersion | Yes        |
-+---------------------------+----------------+------------+
-| `acsEndProtocolVersion`   | messageVersion | Yes        |
-+---------------------------+----------------+------------+
-| `threeDSServerTransID`    | UUID           | Yes        |
-+---------------------------+----------------+------------+
-| `dsStartProtocolVersion`  | messageVersion | No         |
-+---------------------------+----------------+------------+
-| `dsEndProtocolVersion`    | messageVersion | No         |
-+---------------------------+----------------+------------+
-| `acsInfoInd`              | ACSInfo        | No         |
-+---------------------------+----------------+------------+
-| `threeDSMethodURL`        | URL            | No         |
-+---------------------------+----------------+------------+
+.. list-table::
+  :widths: 1 1 1 30
+  :header-rows: 1
 
-Example response:
-
-.. code-block:: json
-  :linenos:
-
-    {
-      "acsStartProtocolVersion": "2.1.0",
-      "acsEndProtocolVersion": "2.2.0",
-      "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"
-    }
-
-_Note:_ This _must_ be followed up with a [3DS method
-invocation](#3ds-method-invocation) if `threeDSMethodURL` is included.
+  * - Key
+    - Format
+    - Required
+    - Comments
+  * - acsStartProtocolVersion
+    - messageVersion
+    - Yes
+    - 
+  * - acsEndProtocolVersion
+    - messageVersion
+    - Yes
+    - 
+  * - threeDSServerTransID
+    - UUID
+    - Yes
+    - 
+  * - dsStartProtocolVersion
+    - messageVersion
+    - No
+    - 
+  * - acsInfoInd
+    - ACSInfo
+    - No
+    - 
+  * - threeDSMethodURL
+    - URL
+    - No
+    - 
 
 3DS Method Invocation
 =====================
@@ -91,21 +89,437 @@ invoked.
 ``/auth`` endpoint
 ==================
 
-1. POST a authentication JSON message (`AReq`) to `/auth` endpoint.
-2. If `transStatus` is `C`, perform a challenge flow.
+Input
+-----
 
-.. _postauth-endpoint:
+.. list-table::
+  :widths: 1 1 1 30
+  :header-rows: 1
 
-``/postauth`` endpoint
-======================
+  * - Key
+    - Format
+    - Required
+    - Comments
+  * - threeDSCompInd
+    -
+    -
+    -
+  * - threeDSRequestorAuthenticationInfo
+    -
+    -
+    -
+  * - threeDSReqAuthMethodInd
+    -
+    -
+    -
+  * - threeDSRequestorChallengeInd
+    -
+    -
+    -
+  * - threeDSRequestorAuthenticationInd
+    -
+    -
+    -
+  * - threeDSRequestorDecMaxTime
+    -
+    -
+    -
+  * - threeDSRequestorDecReqInd
+    -
+    -
+    -
+  * - threeDSRequestorID
+    -
+    -
+    -
+  * - threeDSRequestorName
+    -
+    -
+    -
+  * - threeDSRequestorPriorAuthenticationInfo
+    -
+    -
+    -
+  * - threeDSRequestorURL
+    -
+    -
+    -
+  * - threeDSServerTransID
+    -
+    -
+    -
+  * - threeRIInd
+    -
+    -
+    -
+  * - acctType
+    -
+    -
+    -
+  * - acctID
+    -
+    -
+    -
+  * - acctInfo
+    -
+    -
+    -
+  * - acctNumber
+    -
+    -
+    -
+  * - acquirerBIN
+    -
+    -
+    -
+  * - acquirerMerchantID
+    -
+    -
+    -
+  * - addrMatch
+    -
+    -
+    -
+  * - billAddrCity
+    -
+    -
+    -
+  * - billAddrCountry
+    -
+    -
+    -
+  * - billAddrLine1
+    -
+    -
+    -
+  * - billAddrLine2
+    -
+    -
+    -
+  * - billAddrLine3
+    -
+    -
+    -
+  * - billAddrPostCode
+    -
+    -
+    -
+  * - billAddrState
+    -
+    -
+    -
+  * - browserAcceptHeader
+    -
+    -
+    -
+  * - browserColorDepth
+    -
+    -
+    -
+  * - browserIP
+    -
+    -
+    -
+  * - browserJavaEnabled
+    -
+    -
+    -
+  * - browserJavascriptEnabled
+    -
+    -
+    -
+  * - browserLanguage
+    -
+    -
+    -
+  * - browserScreenHeight
+    -
+    -
+    -
+  * - browserScreenWidth
+    -
+    -
+    -
+  * - browserTZ
+    -
+    -
+    -
+  * - browserUserAgent
+    -
+    -
+    -
+  * - cardExpiryDate
+    -
+    -
+    -
+  * - cardholderName
+    -
+    -
+    -
+  * - homePhone
+    -
+    -
+    -
+  * - mobilePhone
+    -
+    -
+    -
+  * - workPhone
+    -
+    -
+    -
+  * - email
+    -
+    -
+    -
+  * - shipAddrCity
+    -
+    -
+    -
+  * - shipAddrCountry
+    -
+    -
+    -
+  * - shipAddrLine1
+    -
+    -
+    -
+  * - shipAddrLine2
+    -
+    -
+    -
+  * - shipAddrLine3
+    -
+    -
+    -
+  * - shipAddrPostCode
+    -
+    -
+    -
+  * - shipAddrState
+    -
+    -
+    -
+  * - deviceChannel
+    -
+    -
+    -
+  * - deviceRenderOptions
+    -
+    -
+    -
+  * - purchaseInstalData
+    -
+    -
+    -
+  * - merchantCountryCode
+    -
+    -
+    -
+  * - merchantName
+    -
+    -
+    -
+  * - merchantRiskIndicator
+    -
+    -
+    -
+  * - messageCategory
+    -
+    -
+    -
+  * - messageExtension
+    -
+    -
+    -
+  * - messageType
+    -
+    -
+    -
+  * - messageVersion
+    -
+    -
+    -
+  * - mcc
+    -
+    -
+    -
+  * - notificationURL
+    -
+    -
+    -
+  * - purchaseAmount
+    -
+    -
+    -
+  * - purchaseCurrency
+    -
+    -
+    -
+  * - purchaseExponent
+    -
+    -
+    -
+  * - purchaseDate
+    -
+    -
+    -
+  * - recurringExpiry
+    -
+    -
+    -
+  * - recurringFrequency
+    -
+    -
+    -
+  * - sdkAppID
+    -
+    -
+    -
+  * - sdkEncData
+    -
+    -
+    -
+  * - sdkEphemPubKey
+    -
+    -
+    -
+  * - sdkMaxTimeout
+    -
+    -
+    -
+  * - sdkReferenceNumber
+    -
+    -
+    -
+  * - sdkTransID
+    -
+    -
+    -
+  * - transType
+    -
+    -
+    -
+  * - whiteListStatus
+    -
+    -
+    -
+  * - whiteListStatusSource
+    -
+    -
+    -
+  * - payTokenInd
+    -
+    -
+    -
+  * - payTokenSource
+    -
+    -
+    -
 
-1. Post a JSON object to the `/postauth` endpoint:
+Output
+------
 
-   .. code-block:: json
+.. list-table::
+  :widths: 1 1 1 30
+  :header-rows: 1
 
-      {
-        "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"
-      }
+  * - Key
+    - Format
+    - Required
+    - Comments
+  * - acsChallengeMandated
+    -
+    -
+    -
+  * - acsDecConInd
+    -
+    -
+    -
+  * - acsOperatorID
+    -
+    -
+    -
+  * - acsReferenceNumber
+    -
+    -
+    -
+  * - acsRenderingType
+    -
+    -
+    -
+  * - acsSignedContent
+    -
+    -
+    -
+  * - acsTransID
+    -
+    -
+    -
+  * - acsURL
+    -
+    -
+    -
+  * - authenticationType
+    -
+    -
+    -
+  * - authenticationValue
+    -
+    -
+    -
+  * - cardholderInfo
+    -
+    -
+    -
+  * - dsReferenceNumber
+    -
+    -
+    -
+  * - dsTransID
+    -
+    -
+    -
+  * - eci
+    -
+    -
+    -
+  * - messageExtension
+    -
+    -
+    -
+  * - messageType
+    -
+    -
+    -
+  * - messageVersion
+    -
+    -
+    -
+  * - sdkTransID
+    -
+    -
+    -
+  * - threeDSServerTransID
+    -
+    -
+    -
+  * - transStatus
+    -
+    -
+    -
+  * - transStatusReason
+    -
+    -
+    -
+  * - whiteListStatus
+    -
+    -
+    -
+  * - whiteListStatusSource
+    -
+    -
+    -
 
 .. _challenge-flow:
 
@@ -113,3 +527,106 @@ Challenge Flow
 ==============
 
 TODO: Add information about how requestor should perform the challenge.
+
+.. _postauth-endpoint:
+
+``/postauth`` endpoint
+======================
+
+Input
+-----
+
+.. list-table::
+  :widths: 1 1 1
+  :header-rows: 1
+
+  * - Key
+    - Format
+    - Required
+  * - threeDSServerTransID
+    - UUID
+    - Yes
+
+Output
+------
+
+.. list-table::
+  :widths: 1 1 1 30
+  :header-rows: 1
+
+  * - Key
+    - Format
+    - Required
+    - Comments
+  * - authenticationValue
+    -
+    -
+    -
+  * - threeDSServerTransID
+    -
+    -
+    -
+  * - authenticationType
+    -
+    -
+    -
+  * - acsTransID
+    -
+    -
+    -
+  * - acsRenderingType
+    -
+    -
+    -
+  * - challengeCancel
+    -
+    -
+    -
+  * - dsTransID
+    -
+    -
+    -
+  * - eci
+    -
+    -
+    -
+  * - interactionCounter
+    -
+    -
+    -
+  * - messageExtension
+    -
+    -
+    -
+  * - messageCategory
+    -
+    -
+    -
+  * - messageType
+    -
+    -
+    -
+  * - messageVersion
+    -
+    -
+    -
+  * - sdkTransID
+    -
+    -
+    -
+  * - transStatus
+    -
+    -
+    -
+  * - transStatusReason
+    -
+    -
+    -
+  * - whiteListStatus
+    -
+    -
+    -
+  * - whiteListStatusSource
+    -
+    -
+    -
