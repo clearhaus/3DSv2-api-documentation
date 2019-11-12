@@ -100,322 +100,334 @@ Input
     - Format
     - Required
     - Comments
-  * - threeDSCompInd
-    -
-    -
-    -
-  * - threeDSRequestorAuthenticationInfo
-    -
-    -
-    -
-  * - threeDSReqAuthMethodInd
-    -
-    -
-    -
-  * - threeDSRequestorChallengeInd
-    -
-    -
-    -
-  * - threeDSRequestorAuthenticationInd
-    -
-    -
-    -
-  * - threeDSRequestorDecMaxTime
-    -
-    -
-    -
-  * - threeDSRequestorDecReqInd
-    -
-    -
-    -
-  * - threeDSRequestorID
-    -
-    -
-    -
-  * - threeDSRequestorName
-    -
-    -
-    -
-  * - threeDSRequestorPriorAuthenticationInfo
-    -
-    -
-    -
-  * - threeDSRequestorURL
-    -
-    -
-    -
-  * - threeDSServerTransID
-    -
-    -
-    -
-  * - threeRIInd
-    -
-    -
-    -
-  * - acctType
-    -
-    -
-    -
   * - acctID
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - acctInfo
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - acctNumber
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
+  * - acctType
+    - 
+    - No
+    - 
   * - acquirerBIN
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - acquirerMerchantID
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - addrMatch
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrCity
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrCountry
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrLine1
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrLine2
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrLine3
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrPostCode
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - billAddrState
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - browserAcceptHeader
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
   * - browserColorDepth
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - browserIP
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - browserJavaEnabled
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - browserJavascriptEnabled
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
   * - browserLanguage
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
   * - browserScreenHeight
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - browserScreenWidth
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - browserTZ
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - browserUserAgent
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
   * - cardExpiryDate
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - cardholderName
-    -
-    -
-    -
-  * - homePhone
-    -
-    -
-    -
-  * - mobilePhone
-    -
-    -
-    -
-  * - workPhone
-    -
-    -
-    -
-  * - email
-    -
-    -
-    -
-  * - shipAddrCity
-    -
-    -
-    -
-  * - shipAddrCountry
-    -
-    -
-    -
-  * - shipAddrLine1
-    -
-    -
-    -
-  * - shipAddrLine2
-    -
-    -
-    -
-  * - shipAddrLine3
-    -
-    -
-    -
-  * - shipAddrPostCode
-    -
-    -
-    -
-  * - shipAddrState
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - deviceChannel
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
   * - deviceRenderOptions
-    -
-    -
-    -
-  * - purchaseInstalData
-    -
-    -
-    -
-  * - merchantCountryCode
-    -
-    -
-    -
-  * - merchantName
-    -
-    -
-    -
-  * - merchantRiskIndicator
-    -
-    -
-    -
-  * - messageCategory
-    -
-    -
-    -
-  * - messageExtension
-    -
-    -
-    -
-  * - messageType
-    -
-    -
-    -
-  * - messageVersion
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
+  * - email
+    - 
+    - No
+    - 
+  * - homePhone
+    - 
+    - No
+    - 
   * - mcc
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
+  * - merchantCountryCode
+    - 
+    - Conditional
+    - 
+  * - merchantName
+    - 
+    - Conditional
+    - 
+  * - merchantRiskIndicator
+    - 
+    - No
+    - 
+  * - messageCategory
+    - 
+    - Yes
+    - 
+  * - messageExtension
+    - 
+    - No
+    - 
+  * - messageType
+    - 
+    - Yes
+    - 
+  * - messageVersion
+    - 
+    - Yes
+    - 
+  * - mobilePhone
+    - 
+    - No
+    - 
   * - notificationURL
-    -
-    -
-    -
+    - 
+    - Yes
+    - 
   * - purchaseAmount
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - purchaseCurrency
-    -
-    -
-    -
-  * - purchaseExponent
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
   * - purchaseDate
-    -
-    -
-    -
-  * - recurringExpiry
-    -
-    -
-    -
-  * - recurringFrequency
-    -
-    -
-    -
-  * - sdkAppID
-    -
-    -
-    -
-  * - sdkEncData
-    -
-    -
-    -
-  * - sdkEphemPubKey
-    -
-    -
-    -
-  * - sdkMaxTimeout
-    -
-    -
-    -
-  * - sdkReferenceNumber
-    -
-    -
-    -
-  * - sdkTransID
-    -
-    -
-    -
-  * - transType
-    -
-    -
-    -
-  * - whiteListStatus
-    -
-    -
-    -
-  * - whiteListStatusSource
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
+  * - purchaseExponent
+    - 
+    - Conditional
+    - 
+  * - purchaseInstalData
+    - 
+    - Conditional
+    - 
   * - payTokenInd
-    -
-    -
-    -
+    - 
+    - No
+    - 
   * - payTokenSource
-    -
-    -
-    -
+    - 
+    - Conditional
+    - 
+  * - recurringExpiry
+    - 
+    - Conditional
+    - 
+  * - recurringFrequency
+    - 
+    - Conditional
+    - 
+  * - sdkAppID
+    - 
+    - Yes
+    - 
+  * - sdkEncData
+    - 
+    - Yes
+    - 
+  * - sdkEphemPubKey
+    - 
+    - Yes
+    - 
+  * - sdkMaxTimeout
+    - 
+    - Yes
+    - 
+  * - sdkReferenceNumber
+    - 
+    - Yes
+    - 
+  * - sdkTransID
+    - 
+    - Conditional
+    - 
+  * - shipAddrCity
+    - 
+    - No
+    - 
+  * - shipAddrCountry
+    - 
+    - Conditional
+    - 
+  * - shipAddrLine1
+    - 
+    - No
+    - 
+  * - shipAddrLine2
+    - 
+    - No
+    - 
+  * - shipAddrLine3
+    - 
+    - No
+    - 
+  * - shipAddrPostCode
+    - 
+    - No
+    - 
+  * - shipAddrState
+    - 
+    - No
+    - 
+  * - threeDSCompInd
+    - 
+    - Yes
+    - 
+  * - threeDSReqAuthMethodInd
+    - 
+    - No
+    - 
+  * - threeDSRequestorAuthenticationInd
+    - 
+    - Yes
+    - 
+  * - threeDSRequestorAuthenticationInfo
+    - 
+    - No
+    - 
+  * - threeDSRequestorChallengeInd
+    - 
+    - No
+    - 
+  * - threeDSRequestorDecMaxTime
+    - 
+    - Conditional
+    - 
+  * - threeDSRequestorDecReqInd
+    - 
+    - No
+    - 
+  * - threeDSRequestorID
+    - 
+    - Yes
+    - 
+  * - threeDSRequestorName
+    - 
+    - Yes
+    - 
+  * - threeDSRequestorPriorAuthenticationInfo
+    - 
+    - No
+    - 
+  * - threeDSRequestorURL
+    - 
+    - Yes
+    - 
+  * - threeDSServerOperatorID
+    - 
+    - No
+    - 
+  * - threeDSServerRefNumber
+    - 
+    - No
+    - 
+  * - threeDSServerTransID
+    - 
+    - Yes
+    - 
+  * - threeDSServerURL
+    - 
+    - No
+    - 
+  * - threeRIInd
+    - 
+    - Yes
+    - 
+  * - transType
+    - 
+    - No
+    - 
+  * - whiteListStatus
+    - 
+    - No
+    - 
+  * - whiteListStatusSource
+    - 
+    - Conditional
+    - 
+  * - workPhone
+    - 
+    - No
+    - 
 
 Output
 ------
