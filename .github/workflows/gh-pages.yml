@@ -7,15 +7,15 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       -
         name: Checkout
         uses: actions/checkout@v1
       -
         name: Build
+        env:
+          USER_ID: 0
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
           args: make html
