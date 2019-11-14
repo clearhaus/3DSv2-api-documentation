@@ -15,7 +15,7 @@ jobs:
       -
         name: Build
         env:
-          USER_ID: ${{ github.actor }}
+          USER_ID: 0
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
           args: make html
