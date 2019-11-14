@@ -15,13 +15,13 @@ jobs:
       -
         name: Build
         env:
-          USER_ID: 0
+          USER_ID: ${{ github.actor }}
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
           args: make html
       -
-        name: Allow Access
-        run: chmod 777 -R build/html
+        name: Display ID
+        run: id
       -
         name: Deploy
         if: success()
