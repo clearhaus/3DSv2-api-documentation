@@ -15,7 +15,7 @@ jobs:
       -
         name: Build
         env:
-          USER_ID: 0
+          USER_ID: 1001
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
           args: make html
