@@ -18,7 +18,7 @@ jobs:
         name: Build
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
-          entrypoint: make html
+          args: make html
       -
         name: Deploy
         if: success()
