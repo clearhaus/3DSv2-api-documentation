@@ -52,8 +52,13 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_context = {
-    'css_files': [
-        '_static/overrides.css',  # overrides for wide tables in RTD theme
-        ],
-    }
+# These files are relative to html_static_path.
+html_css_files = [
+    'overrides.css',  # overrides for wide tables in RTD theme
+    'scenario_selector.css', # Scenario selector
+    'doc_table.css', # Overrides for documentation input table
+]
+
+html_js_files = [
+    'scenario_selector.js', # Implement scenario selector.
+]
