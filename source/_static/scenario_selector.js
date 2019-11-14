@@ -56,14 +56,14 @@ class ScenarioSelector {
   }
 
   filterOnScenario(deviceChannel, messageCategory) {
-    $('.argtable tbody tr').show()
+    $('.argtable tbody tr').removeClass('irrelevant');
 
     if (deviceChannel != "") {
-      $('.argtable tbody tr:not([channels*="' + deviceChannel + '"])').hide();
+      $('.argtable tbody tr:not([channels*="' + deviceChannel + '"])').addClass('irrelevant');
     }
 
     if (messageCategory != "") {
-      $('.argtable tbody tr:not([categories*="' + messageCategory + '"])').hide();
+      $('.argtable tbody tr:not([categories*="' + messageCategory + '"])').addClass('irrelevant');
     }
   }
 
