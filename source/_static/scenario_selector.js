@@ -1,3 +1,14 @@
+/*
+ * The point of the Scenario Selector is to make it possible to only view the
+ * input fields that are required for a specific implementation scenario.  E.g.
+ * Browser, Payment.  It should do the following
+ * 1. When query/searchparams are empty, show all fields by default.
+ * 2. When a scenario is selected, only show the relevant variables.
+ * 3. Update the search params, so it is possible to link to the page.
+ * 4. (TODO) Remember what you last viewed in localStorage, so it can be
+ *    recalled if you're browsing around.
+ */
+
 class ScenarioSelector {
   constructor(channelSelector, categorySelector) {
     this.channelSelector = channelSelector[0];
