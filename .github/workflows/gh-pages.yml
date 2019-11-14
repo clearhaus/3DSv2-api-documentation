@@ -20,6 +20,9 @@ jobs:
         with:
           args: make html
       -
+        name: Allow Access
+        run: chmod 777 -R build/html
+      -
         name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v1
