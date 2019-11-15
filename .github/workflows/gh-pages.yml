@@ -10,20 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Checkout
+        name: Checkout Source Code
         uses: actions/checkout@v1
       -
-        name: Build
+        name: Build Documentation
         env:
-          USER_ID: 1001
+          USER_ID: runner
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
           args: make html
       -
-        name: Display ID
-        run: id
+        name: Tell GH Pages not to use Jekyll
+        run: touch build/html/.nojekyll
       -
-        name: Deploy
+        name: Deploy to Github Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v1
         with:
