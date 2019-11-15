@@ -20,9 +20,6 @@ jobs:
         with:
           args: make html
       -
-        name: Tell GH Pages not to use Jekyll
-        run: touch build/html/.nojekyll
-      -
         name: Deploy to Github Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v1
