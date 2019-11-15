@@ -58,8 +58,12 @@ html_css_files = [
     'overrides.css',  # overrides for wide tables in RTD theme
     'scenario_selector.css', # Scenario selector
     'doc_table.css', # Overrides for documentation input table
+    'css/custom.css' #Extra styling for matching documentation with the website
 ]
 
 html_js_files = [
     'scenario_selector.js', # Implement scenario selector.
+    'js/functions.js' #Logo-implementing
 ]
+
+html_logo = 'assets/logo.svg'

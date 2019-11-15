@@ -1,0 +1,81 @@
+/********************** Sidebar ***********************/
+/** Logo **/
+.wy-side-nav-search img {
+    background-color: transparent;
+    width: 230px;
+    height: 58px;
+    border-radius: 0;
+    margin: 0 auto;
+}
+.fa-home:before, .icon-home:before {
+    display: none !important; 
+}
+
+.icon-home {
+    transition: .3s;
+    font-size: 25px;
+}
+
+.icon-home:hover {
+    background-color: transparent;
+    color: rgba(234, 136, 91)
+}
+
+.wy-side-nav-search input[type=text] {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: none;
+    border-radius: 100px;
+    width: 100%;
+    border: none;
+    padding: 1em 2em;
+    color: #eee !important;
+    margin-bottom: 10px;
+}
+
+.wy-side-nav-search input[type=text]::placeholder {
+    color: #ddd !important;
+}
+/** Sidebar -box**/
+.wy-nav-side {
+    background-color: rgba(247, 247, 242) !important;
+}
+
+/** top of sidebar **/
+.wy-side-nav-search {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+
+/** Content in sidebar **/
+.caption-text {
+    color: rgba(234, 136, 91)
+}
+
+.toctree-expand {
+    visibility: hidden;
+}
+.wy-menu-vertical li.toctree-l2 span.toctree-expand {
+    margin-left: 10px;
+}
+
+.current, .internal, .wy-menu-vertical li.current {
+    background-color: transparent !important;
+}
+.current .current a.reference {
+    padding: .4045em 1.618em;
+}
+.internal li .internal {
+    padding: .4045em 1.718em;
+}
+.wy-menu-vertical li.toctree-l1.current>a {
+    border-bottom: none;
+    border-top: none;
+}
+  
+/********************** Global ***********************/
+a {
+    color: #404040; 
+    transition: .3s;
+}
+a:hover {
+    text-decoration: underline;
+}
