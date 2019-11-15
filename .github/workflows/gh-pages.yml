@@ -15,7 +15,7 @@ jobs:
       -
         name: Build Documentation
         env:
-          USER_ID: runner
+          USER_ID: 1001
         uses: docker://ddidier/sphinx-doc:2.2.1-1
         with:
           args: make html
