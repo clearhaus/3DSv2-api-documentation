@@ -20,6 +20,11 @@ This is the documentation for `3dsecure.io`_, a 3-D Secure Server.  The
 implementation is a SAAS implementation, offering a language-agnostic HTTP API
 integration.
 
+A 3-D Secure Server is used for *cardholder authentication*.
+An authentication in 3-D Secure is the process of verifying cardholder
+involvement in e.g. a purchase. An authentication results from and
+*authentication flow* and proof of authentication is an *authentication value*.
+
 This service supports all active versions of 3-D Secure version 2 (``2.1.0``,
 ``2.2.0``) and we have tried to make the documentation work on it's own.
 Nevertheles, you may need to refer to the specifications during the
