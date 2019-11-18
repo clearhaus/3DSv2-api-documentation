@@ -5,7 +5,7 @@ Examples
 ########
 
 /preauth input
---------------
+==============
 
 Example input:
 
@@ -26,9 +26,6 @@ Example output:
       "acsEndProtocolVersion": "2.2.0",
       "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"
     }
-
-_Note:_ This _must_ be followed up with a [3DS method
-invocation](#3ds-method-invocation) if `threeDSMethodURL` is included.
 
 ******************
 Card Verification:

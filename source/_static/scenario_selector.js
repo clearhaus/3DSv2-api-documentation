@@ -97,5 +97,9 @@ $(document).ready(function() {
   var categorySelector = $('select.messageCategory');
   var channelSelector = $('select.deviceChannel');
 
+  if (categorySelector.length == 0 || channelSelector.length == 0) {
+    return;
+  }
+
   var selectObject = new ScenarioSelector(channelSelector, categorySelector);
 });

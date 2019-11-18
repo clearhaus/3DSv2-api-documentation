@@ -16,15 +16,33 @@ Introduction
 
 If this is your first time here, please read this page.
 
-This is the documentation for `3dsecure.io`_, a 3-D Secure Server.
-The implementation is a SAAS implementation, offering a language-agnostic HTTP
-API integration.
+This is the documentation for `3dsecure.io`_, a 3-D Secure Server.  The
+implementation is a SAAS implementation, offering a language-agnostic HTTP API
+integration.
 
+A 3-D Secure Server is used for *cardholder authentication*.
+An authentication in 3-D Secure is the process of verifying cardholder
+involvement in e.g. a purchase. An authentication results from and
+*authentication flow* and proof of authentication is an *authentication value*.
 
-3-D Secure -- briefly
-=====================
+This service supports all active versions of 3-D Secure version 2 (``2.1.0``,
+``2.2.0``) and we have tried to make the documentation work on it's own.
+Nevertheles, you may need to refer to the specifications during the
+implementation.
 
-Briefly, a 3-D Secure Server is used in the financial industry, to:
+Who should integrate with this service:
+=======================================
+
+Candidates for integrating with this service:
+
+- Acquirers
+- Gateways
+- Merchants
+
+A Brief introduction to a 3-D Secure Server
+===========================================
+
+A 3-D Secure Server is used in the financial industry, to:
 
     Facilitate cardholder *authentication* in preparation for e.g. making a
     purchase.
@@ -37,10 +55,6 @@ words <https://www.emvco.com/about/overview/>`_
 
 The specification is public and can be found at `EMVCos document page
 <https://www.emvco.com/emv-technologies/3d-secure/>`_.
-
-This service supports all active versions of 3-D Secure version 2, ``2.1.0``
-and ``2.2.0``. During integration, you will need to refer to the specification
-for *both* versions.
 
 Where to go from here
 =====================
