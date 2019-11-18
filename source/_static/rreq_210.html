@@ -1,0 +1,104 @@
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<thead>
+<tr>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><p>acsRenderingType</p>
+<p>
+&#8230;
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Identifies the ACS UI Template that the ACS will first present to the consumer.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>acsTransID</p>
+<p>
+<code><span class='pre'>uuid</span></code>
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>authenticationType</p>
+<p>
+<code><span class='pre'>^(0[1-3])$</span></code>
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>authenticationValue</p>
+<p>
+&#8230;
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><p>challengeCancel</p>
+<p>
+<code><span class='pre'>^(0[14-8])$</span></code>
+</p>
+<p>Not required</p></td>
+<td class='argdesc'><p>Indicator informing the ACS and the DS that the authentication has been canceled.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>dsTransID</p>
+<p>
+<code><span class='pre'>uuid</span></code>
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Universally unique transaction identifier assigned by the DS to identify a single transaction.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>eci</p>
+<p>
+&#8230;
+</p>
+<p>Not required</p></td>
+<td class='argdesc'><p>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><p>interactionCounter</p>
+<p>
+&#8230;
+</p>
+<p>Required</p></td>
+<td class='argdesc'><p>Indicates the number of authentication cycles attempted by the Cardholder.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageCategory</p>
+<p>
+<code><span class='pre'>01, 02</span></code>
+</p>
+<p>Required</p></td>
+<td class='argdesc'><p>Identifies the category of the message for a specific use case.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>messageExtension</p>
+<p>
+&#8230;
+</p>
+<p>Not required</p></td>
+<td class='argdesc'><p>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageType</p>
+<p>
+<code><span class='pre'>AReq, ARes, CReq, CRes, PReq, PRes, RReq, RRes, Erro</span></code>
+</p>
+<p>Required</p></td>
+<td class='argdesc'><p>Identifies the type of message that is passed.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>messageVersion</p>
+<p>
+<code><span class='pre'>2.1.0</span></code>
+</p>
+<p>Required</p></td>
+<td class='argdesc'><p>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>threeDSServerTransID</p>
+<p>
+<code><span class='pre'>uuid</span></code>
+</p>
+<p>Required</p></td>
+<td class='argdesc'><p>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>transStatus</p>
+<p>
+<code><span class='pre'>Y, N, U, A, C, R, I</span></code>
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</p></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>transStatusReason</p>
+<p>
+&#8230;
+</p>
+<p>Conditionally Required</p></td>
+<td class='argdesc'><p>Provides information on why the Transaction Status field has the specified value.</p></td></tr>
+</tbody>
+</table>

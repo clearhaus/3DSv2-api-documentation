@@ -4,6 +4,15 @@
 Examples
 ########
 
+Performing an authentication
+----------------------------
+
+1. Use the :ref:`preauth-endpoint` call to determine 3-D Secure version.
+2. Perform an authentication using the :ref:`auth-endpoint` call.
+3. If ``transStatus`` is ``C``, perform a :ref:`3ds_challenge_flow` on the cardholder device.
+4. Retrieve values from :ref:`postauth-endpoint` endpoint after
+   challenge flow has completed.
+
 /preauth input
 ==============
 
