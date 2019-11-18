@@ -6,8 +6,8 @@ Getting Started
 
 .. contents::
 
-Service description
-===================
+About this service
+==================
 
 There are two hostnames associated with this service:
 
