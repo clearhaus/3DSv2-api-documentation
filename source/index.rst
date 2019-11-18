@@ -13,6 +13,7 @@ Introduction
    server-information
    examples
    reference
+   guides
 
 If this is your first time here, please read this page.
 

@@ -2,7 +2,6 @@
 Server information
 ##################
 
-
 Connecting to the server
 ========================
 

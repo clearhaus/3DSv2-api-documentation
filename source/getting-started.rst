@@ -4,8 +4,6 @@
 Getting Started
 ###############
 
-.. contents::
-
 About this service
 ==================
 
@@ -23,26 +21,28 @@ implementation so there will be some discrepancies with the production
 endpoint.  The production endpoint is used for production requests.
 
 
-There are 3 API endpoints for this service:
+There are 3 API endpoints for this service, refer to :ref:`reference` for
+parameter definition. Brief descriptions are:
 
 /preauth
-  This is used when performing transactions from a browser, where it will return an optional
-  3-D Secure Method URL, which is used for browser fingerprinting.
-  This can support risk-based analysis and assist in ensuring a flow where the cardholder is
-  not challenged.
+  This is used when performing transactions from a browser [1]_, where it will
+  return an optional 3-D Secure Method URL, which is used for browser
+  fingerprinting.  This can support risk-based analysis and assist in ensuring
+  a flow where the cardholder is not challenged.
 
   While in the transition period between 3-D Secure v1 and v2, this endpoint
-  can help determine if v1 should be used instead.
+  can help determine if v1 should be used instead. This is documented in the
+  :ref:`3ds_versioning` guide.
 
 /auth
-  A single call to receive all the data that is needed for authentication [1]_.
-  Under certain circumstances, the authentication flow will end successfully here,
-  this is called _frictionless_ flow.
+  A single call to receive all the data that is needed for authentication [2]_.
+  Under certain circumstances, the authentication flow will end successfully
+  here, this is called _frictionless_ flow.
 
 /postauth
-  Used when the ``/auth`` did not result in a frictionless flow, this endpoint returns
-  the result of the challenge the cardholder performed.
-  In this case the flow is called a _challenge_ flow.
+  Used when the ``/auth`` did not result in a frictionless flow, this endpoint
+  returns the result of the challenge the cardholder performed.  In this case
+  the flow is called a _challenge_ flow.
 
 Overview of Authentication Flow
 ===============================
@@ -84,16 +84,6 @@ The following describes the individual points in the diagram:
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor.
 
-Where to go next
-================
-
-Performing an authentication
-----------------------------
-
-1. Use the :ref:`preauth-endpoint` call to determine 3-D Secure version.
-2. Perform an authentication using the :ref:`auth-endpoint` call.
-3. If ``transStatus`` is ``C``, perform a :ref:`challenge-flow` on the cardholder device.
-4. Retrieve values from :ref:`postauth-endpoint` endpoint after
-   challenge flow has completed.
-
-.. [1] Except for the 3-D Secure Method URL used for fingerprinting.
+.. [1] as opposed to using an SDK.
+.. [2] except for the 3-D Secure Method URL used for fingerprinting when
+       performing an authentication through a browser.
