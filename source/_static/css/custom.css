@@ -1,4 +1,8 @@
 /********************** Sidebar ***********************/
+/**Mobil nav**/
+.wy-nav-top {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
 /** Logo **/
 .wy-side-nav-search>a img.logo {
     width: 230px;
@@ -83,13 +87,11 @@ a:hover {
 }
 
 /********************** Arg tabel content ***********************/
-.argtable {
-    
-}
-
 .argtable td {
     background-color: #fcfcfc !important;
     border: none !important;
+    max-width: 50%;
+    clear:both;
 }
 
 .argdef {
@@ -102,6 +104,10 @@ a:hover {
     color: rgba(234, 136, 91) !important;
     font-weight: 600 !important;
     margin-bottom: 0px !important;
+}
+
+.argdef p:first-child {
+    color: #444 !important;
 }
 
 .argdef p {
@@ -122,9 +128,22 @@ a:hover {
     border-bottom: solid 1px #bbb !important;
 }
 
-@media only screen and (max-width: 500px) {
-    .argdef {
-        width: 200px !important;
-        padding: 10px !important;
+@media only screen and (max-width: 768px) {
+    .wy-table-responsive {
+        margin-bottom: 24px;
+        max-width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        border: 1px solid #ccc !important;
     }
+    .wy-table-responsive table {
+        width: 100%
+    }
+    .wy-nav-top {
+        position: fixed;
+        width: 100%;
+    }
+    .wy-nav-content-wrap .wy-nav-content {
+        padding-top: 90px;
+    }    
 }
