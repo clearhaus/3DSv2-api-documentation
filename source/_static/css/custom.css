@@ -1,12 +1,10 @@
 /********************** Sidebar ***********************/
 /** Logo **/
-.wy-side-nav-search img {
-    background-color: transparent;
+.wy-side-nav-search>a img.logo {
     width: 230px;
     height: 58px;
-    border-radius: 0;
-    margin: 0 auto;
 }
+
 .fa-home:before, .icon-home:before {
     display: none !important; 
 }
@@ -70,6 +68,10 @@
     border-bottom: none;
     border-top: none;
 }
+
+.wy-menu-vertical a {
+    color: #999;
+}
   
 /********************** Global ***********************/
 a {
@@ -78,4 +80,51 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+/********************** Arg tabel content ***********************/
+.argtable {
+    
+}
+
+.argtable td {
+    background-color: #fcfcfc !important;
+    border: none !important;
+}
+
+.argdef {
+    /*border-right: 1px solid #999;*/
+    max-width: 325px !important;
+    padding: 20px !important;
+}
+
+.argdef p:last-child {
+    color: rgba(234, 136, 91) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0px !important;
+}
+
+.argdef p {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+}
+
+.argdesc {
+    padding: 20px !important;
+}
+
+.argdesc p {
+    color: #777;
+    font-size: 15px;
+}
+
+.argtable tr {
+    border-bottom: solid 1px #bbb !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .argdef {
+        width: 200px !important;
+        padding: 10px !important;
+    }
 }

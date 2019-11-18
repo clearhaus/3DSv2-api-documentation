@@ -63,7 +63,12 @@ html_css_files = [
 
 html_js_files = [
     'scenario_selector.js', # Implement scenario selector.
-    'js/functions.js' #Logo-implementing
 ]
 
-html_logo = 'assets/logo.svg'
+html_logo = '_static/assets/logo.svg'
+
+html_theme_options = {
+    'logo_only': True,
+}
+
+html_favicon = '_static/assets/favicon.png'
