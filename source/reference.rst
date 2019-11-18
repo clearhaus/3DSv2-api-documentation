@@ -97,6 +97,8 @@ Input
 .. raw:: html
   :file: _static/areq_210.html
 
+.. _auth-response:
+
 Output
 ------
 
@@ -226,6 +228,8 @@ Input
   * - threeDSServerTransID
     - UUID
     - Yes
+
+.. _postauth-response:
 
 Output
 ------

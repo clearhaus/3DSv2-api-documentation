@@ -67,22 +67,24 @@ The following describes the individual points in the diagram:
    * An optional `threeDSMethodURL` that is invoked in the user browser.
 
 3. The cardholder browser invokes the `threeDSMethodURL`, to allow the ACS to
-   fingerprint the browser.
+   fingerprint the browser. See the :ref:`3ds_method` guide.
 4. The Requestor uses the :ref:`auth-endpoint` to send the information needed
    for 3dsecure.io to assemble a ``AReq`` message.
-5. An ``ARes`` is nominally returned to the Requestor.
+5. The Auth :ref:`auth-response` is an ``ARes``, as defined by the specification.
 
    This ``ARes`` contains either:
    - The authentication result (Called *frictionless* flow)
    - Information about how to proceed with the challenge
    - Information stating why the challenge cannot continue (Called *challenge* flow)
 
-6. The cardholder [completes the challenge](#performing-the-challenge) on the
-   cardholders device.
+6. The cardholder completes the challenge on the cardholders device.  See the
+   :ref:`3ds_challenge_flow` guide.
 7. The ACS informs the Requestor about the challenge result through a callback.
+   See the :ref:`3ds_callback` guide.
 8. The :ref:`postauth-endpoint` is used the fetch the results of the
    authentication.
-9. Nominally a ``RReq`` is returned to the Requestor.
+9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
+   in the postauth :ref:`postauth-response` section.
 
 .. [1] as opposed to using an SDK.
 .. [2] except for the 3-D Secure Method URL used for fingerprinting when
