@@ -12,32 +12,52 @@
 <tbody>
 <tr categories='' channels='' class='row-even'><td class='argdef'><p>threeDSReqPriorAuthData</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='maxLength'>
 Max length: 2048
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Data that documents and supports a specific authentication process. In the current version of the specification this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. In future versions of the specification, these details are expected to be included.</p></td></tr>
+<td class='argdesc'><p>
+Data that documents and supports a specific authentication process. In the current version of the specification this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. In future versions of the specification, these details are expected to be included.</p></td></tr>
 <tr categories='' channels='' class='row-odd'><td class='argdef'><p>threeDSReqPriorAuthMethod</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='regexp'>
 Regexp:
 <code><span class='pre'>^(0[1-4])|([89][1-10])$</span></code>
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Mechanism used by the Cardholder to previously authenticate to the 3DS Requestor.</p></td></tr>
+<td class='argdesc'><p>
+Mechanism used by the Cardholder to previously authenticate to the 3DS Requestor.</p></td></tr>
 <tr categories='' channels='' class='row-even'><td class='argdef'><p>threeDSReqPriorAuthTimestamp</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='format'>
 Format: yyyymmddhhmm
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Date and time in UTC of the prior cardholder authentication.</p></td></tr>
+<td class='argdesc'><p>
+Date and time in UTC of the prior cardholder authentication.</p></td></tr>
 <tr categories='' channels='' class='row-odd'><td class='argdef'><p>threeDSReqPriorRef</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='maxLength'>
 Max length: 36
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>This data element provides additional information to the ACS to determine the best approach for handing a request.</p></td></tr>
+<td class='argdesc'><p>
+This data element provides additional information to the ACS to determine the best approach for handing a request.</p></td></tr>
 </tbody>
 </table>

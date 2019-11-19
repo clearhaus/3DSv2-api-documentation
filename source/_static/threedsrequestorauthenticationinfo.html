@@ -12,25 +12,40 @@
 <tbody>
 <tr categories='' channels='' class='row-even'><td class='argdef'><p>threeDSReqAuthData</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='maxLength'>
 Max length: 20000
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Data that documents and supports a specific authentication process. In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, if the 3DS Requestor Authentication Method is: 03, then this element can carry information about the provider of the federated ID and related information. 06, then this element can carry the FIDO attestation data (including the signature). 07, then this element can carry FIDO Attestation data with the FIDO assurance data signed. 08, then this element can carry the SRC assurance data.</p></td></tr>
+<td class='argdesc'><p>
+Data that documents and supports a specific authentication process. In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, if the 3DS Requestor Authentication Method is: 03, then this element can carry information about the provider of the federated ID and related information. 06, then this element can carry the FIDO attestation data (including the signature). 07, then this element can carry FIDO Attestation data with the FIDO assurance data signed. 08, then this element can carry the SRC assurance data.</p></td></tr>
 <tr categories='' channels='' class='row-odd'><td class='argdef'><p>threeDSReqAuthMethod</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='regexp'>
 Regexp:
 <code><span class='pre'>^(0[1-8])|([89][0-9])$</span></code>
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</p></td></tr>
+<td class='argdesc'><p>
+Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</p></td></tr>
 <tr categories='' channels='' class='row-even'><td class='argdef'><p>threeDSReqAuthTimestamp</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='format'>
 Format: yyyymmddhhmm
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Date and time in UTC of the cardholder authentication.</p></td></tr>
+<td class='argdesc'><p>
+Date and time in UTC of the cardholder authentication.</p></td></tr>
 </tbody>
 </table>

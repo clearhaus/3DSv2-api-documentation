@@ -12,108 +12,190 @@
 <tbody>
 <tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><p>acsRenderingType</p>
 <p>
-Derived:
+<div class='type'>
 <a href='#acsrenderingtype'>
-AcsRenderingType
+AcsRenderingType object
 </a>
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Identifies the ACS UI Template that the ACS will first present to the consumer.</p></td></tr>
+<td class='argdesc'><p>
+Identifies the ACS UI Template that the ACS will first present to the consumer.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>acsTransID</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='format'>
 Format: uuid
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</p></td></tr>
+<td class='argdesc'><p>
+Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>authenticationType</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='regexp'>
 Regexp:
 <code><span class='pre'>^(0[1-3])$</span></code>
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</p></td></tr>
+<td class='argdesc'><p>
+Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>authenticationValue</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='length'>
+Length: 28
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</p></td></tr>
+<td class='argdesc'><p>
+Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><p>challengeCancel</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='regexp'>
 Regexp:
 <code><span class='pre'>^(0[14-8])$</span></code>
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Indicator informing the ACS and the DS that the authentication has been canceled.</p></td></tr>
+<td class='argdesc'><p>
+Indicator informing the ACS and the DS that the authentication has been canceled.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>dsTransID</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='format'>
 Format: uuid
+</div>
+<div class='maxLength'>
 Max length: 36
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Universally unique transaction identifier assigned by the DS to identify a single transaction.</p></td></tr>
+<td class='argdesc'><p>
+Universally unique transaction identifier assigned by the DS to identify a single transaction.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>eci</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='maxLength'>
 Max length: 2
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</p></td></tr>
+<td class='argdesc'><p>
+Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><p>interactionCounter</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='length'>
+Length: 2
+</div>
+<div class='integerString'>
+Value:
+<code><span class='pre'>
+00</span></code>
+&#8230;
+<code><span class='pre'>
+99</span></code>
+</div>
 </p>
 <p>Required</p></td>
-<td class='argdesc'><p>Indicates the number of authentication cycles attempted by the Cardholder.</p></td></tr>
+<td class='argdesc'><p>
+Indicates the number of authentication cycles attempted by the Cardholder.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageCategory</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='enum'>
 One of:
 <code><span class='pre'>01</span></code>
 <code><span class='pre'>02</span></code>
+</div>
 </p>
 <p>Required</p></td>
-<td class='argdesc'><p>Identifies the category of the message for a specific use case.</p></td></tr>
+<td class='argdesc'><p>
+Identifies the category of the message for a specific use case.<div>
+<div>01</div>
+<div>PA - Payment</div>
+<div>02</div>
+<div>NPA - Non-Payment</div>
+</div>
+</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>messageExtension</p>
 <p>
-Derived:
+<div class='type'>
 <a href='#messageextensionlist'>
-MessageExtensionList
+MessageExtensionList object
 </a>
+</div>
+<div class='maxLength'>
 Max length: 10
+</div>
 </p>
 <p>Not required</p></td>
-<td class='argdesc'><p>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</p></td></tr>
+<td class='argdesc'><p>
+Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageType</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='enum'>
 One of:
 <code><span class='pre'>RReq</span></code>
+</div>
 </p>
 <p>Required</p></td>
-<td class='argdesc'><p>Identifies the type of message that is passed.</p></td></tr>
+<td class='argdesc'><p>
+Identifies the type of message that is passed.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>messageVersion</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='enum'>
 One of:
 <code><span class='pre'>2.1.0</span></code>
+</div>
 </p>
 <p>Required</p></td>
-<td class='argdesc'><p>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</p></td></tr>
+<td class='argdesc'><p>
+Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>threeDSServerTransID</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='format'>
 Format: uuid
+</div>
 </p>
 <p>Required</p></td>
-<td class='argdesc'><p>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</p></td></tr>
+<td class='argdesc'><p>
+Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>transStatus</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='enum'>
 One of:
 <code><span class='pre'>Y</span></code>
 <code><span class='pre'>N</span></code>
@@ -121,15 +203,44 @@ One of:
 <code><span class='pre'>A</span></code>
 <code><span class='pre'>C</span></code>
 <code><span class='pre'>R</span></code>
-<code><span class='pre'>I</span></code>
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</p></td></tr>
+<td class='argdesc'><p>
+Indicates whether a transaction qualifies as an authenticated transaction or account verification.<div>
+<div>Y</div>
+<div>Authentication/ Account Verification Successful</div>
+<div>N</div>
+<div>Not Authenticated /Account Not Verified; Transaction denied</div>
+<div>U</div>
+<div>Authentication/ Account Verification Could Not Be Performed; Technical or other problem, as indicated in ARes or RReq</div>
+<div>A</div>
+<div>Attempts Processing Performed; Not Authenticated/Verified , but a proof of attempted authentication/verificat ion is provided</div>
+<div>C</div>
+<div>Challenge Required; Additional authentication is required using the CReq/CRes</div>
+<div>R</div>
+<div>Authentication/ Account Verification Rejected; Issuer is rejecting authentication/verificat ion and request that authorisation not be attempted.</div>
+</div>
+</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>transStatusReason</p>
 <p>
+<div class='type'>
 Type: string
+</div>
+<div class='length'>
+Length: 2
+</div>
+<div class='integerString'>
+Value:
+<code><span class='pre'>
+01</span></code>
+&#8230;
+<code><span class='pre'>
+21</span></code>
+</div>
 </p>
 <p>Conditionally Required</p></td>
-<td class='argdesc'><p>Provides information on why the Transaction Status field has the specified value.</p></td></tr>
+<td class='argdesc'><p>
+Provides information on why the Transaction Status field has the specified value.</p></td></tr>
 </tbody>
 </table>
