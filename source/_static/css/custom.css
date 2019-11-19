@@ -39,7 +39,7 @@
 }
 /** Sidebar -box**/
 .wy-nav-side {
-    background-color: rgba(247, 247, 242) !important;
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
 }
 
 /** top of sidebar **/
@@ -74,7 +74,10 @@
 }
 
 .wy-menu-vertical a {
-    color: #999;
+    color: #bbb;
+}
+.current .current a {
+    color: #eee !important;
 }
   
 /********************** Global ***********************/
@@ -90,7 +93,6 @@ a:hover {
 .argtable td {
     background-color: #fcfcfc !important;
     border: none !important;
-    max-width: 50%;
     clear:both;
 }
 
@@ -113,6 +115,7 @@ a:hover {
 .argdef p {
     font-size: 13px !important;
     margin-bottom: 10px !important;
+    font-weight: 600;
 }
 
 .argdesc {
@@ -134,7 +137,6 @@ a:hover {
         max-width: 100%;
         overflow-y: hidden;
         overflow-x: scroll;
-        border: 1px solid #ccc !important;
     }
     .wy-table-responsive table {
         width: 100%
@@ -145,5 +147,53 @@ a:hover {
     }
     .wy-nav-content-wrap .wy-nav-content {
         padding-top: 90px;
-    }    
+    } 
+
+    .argdef {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .argdesc {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }   
+
+    .argtable th {
+        display: none;
+    }
+}
+
+/********************** Select ***********************/
+#scenario_selector {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 4px 4px 8px;
+}
+#deviceChannelSelector{
+    margin-top: -5px;
+    margin-left: 10px;
+}
+#messageCategorySelector {
+    margin-top: -5px;
+    margin-right: calc(100% - 540px); 
+    margin-left: 10px;
+}
+@media only screen and (max-width: 768px) {
+    #scenario_selector {
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+        border: none !important;
+    }
+
+    #deviceChannelSelector {
+        margin: 10px 0;
+    }
+
+    #messageCategorySelector {
+        margin: 10px 0;
+    }
 }
