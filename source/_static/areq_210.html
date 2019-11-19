@@ -246,7 +246,7 @@
 <td class='argdesc'><p>Fully qualified URL of the system that receives the CRes message or Error Message. The CRes message is posted by the ACS through the Cardholder browser at the end of the challenge and receipt of the RRes message.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><p>purchaseAmount</p>
 <p>
-<code><span class='pre'>^\d{0,48}</span></code>
+<code><span class='pre'>^\d{0,48}$</span></code>
 </p>
 <p>Conditionally Required</p></td>
 <td class='argdesc'><p>Purchase amount in minor units of currency with all punctuation removed.</p></td></tr>
@@ -264,7 +264,7 @@
 <td class='argdesc'><p>Date and time of the purchase expressed in UTC.</p></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><p>purchaseExponent</p>
 <p>
-<code><span class='pre'>\d</span></code>
+<code><span class='pre'>^\d$</span></code>
 </p>
 <p>Conditionally Required</p></td>
 <td class='argdesc'><p>Minor units of currency as specified in the ISO 4217 currency exponent.</p></td></tr>
