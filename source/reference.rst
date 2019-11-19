@@ -110,3 +110,48 @@ Output
 
 .. raw:: html
   :file: _static/rreq_210.html
+
+Nested objects
+==============
+
+DeviceRenderOptions
+-------------------
+
+.. raw:: html
+  :file: _static/devicerenderoptions.html
+
+AcctInfo
+--------
+
+.. raw:: html
+  :file: _static/acctinfo.html
+
+PhoneNumber
+-----------
+
+MerchantRiskIndicator
+---------------------
+
+.. raw:: html
+  :file: _static/merchantriskindicator.html
+
+MessageExtensionList
+--------------------
+
+ThreeDSRequestorAuthenticationInfo
+----------------------------------
+
+.. raw:: html
+  :file: _static/threedsrequestorauthenticationinfo.html
+
+ThreeDSRequestorPriorAuthenticationInfo
+---------------------------------------
+
+.. raw:: html
+  :file: _static/threedsrequestorpriorauthenticationinfo.html
+
+ACSRenderingType
+----------------
+
+.. raw:: html
+  :file: _static/acsrenderingtype.html

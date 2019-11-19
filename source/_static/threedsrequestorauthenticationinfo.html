@@ -1,0 +1,36 @@
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<thead>
+<tr>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr categories='' channels='' class='row-even'><td class='argdef'><p>threeDSReqAuthData</p>
+<p>
+Type: string
+Max length: 20000
+</p>
+<p>Not required</p></td>
+<td class='argdesc'><p>Data that documents and supports a specific authentication process. In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, if the 3DS Requestor Authentication Method is: 03, then this element can carry information about the provider of the federated ID and related information. 06, then this element can carry the FIDO attestation data (including the signature). 07, then this element can carry FIDO Attestation data with the FIDO assurance data signed. 08, then this element can carry the SRC assurance data.</p></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><p>threeDSReqAuthMethod</p>
+<p>
+Type: string
+Regexp:
+<code><span class='pre'>^(0[1-8])|([89][0-9])$</span></code>
+</p>
+<p>Not required</p></td>
+<td class='argdesc'><p>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</p></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><p>threeDSReqAuthTimestamp</p>
+<p>
+Type: string
+Format: yyyymmddhhmm
+</p>
+<p>Not required</p></td>
+<td class='argdesc'><p>Date and time in UTC of the cardholder authentication.</p></td></tr>
+</tbody>
+</table>
