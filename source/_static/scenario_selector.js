@@ -59,11 +59,25 @@ class ScenarioSelector {
     $('.argtable tbody tr').removeClass('irrelevant');
 
     if (deviceChannel != "") {
-      $('.argtable tbody tr:not([channels*="' + deviceChannel + '"])').addClass('irrelevant');
+      var el = $('.argtable tbody tr:not([channels*="' + deviceChannel + '"])');
+
+      el.each(function(_) {
+        var tr = $(this);
+        if (tr.attr('channels') != "") {
+          tr.addClass('irrelevant');
+        }
+      });
     }
 
     if (messageCategory != "") {
-      $('.argtable tbody tr:not([categories*="' + messageCategory + '"])').addClass('irrelevant');
+      var el = $('.argtable tbody tr:not([categories*="' + messageCategory + '"])');
+
+      el.each(function(_) {
+        var tr = $(this);
+        if (tr.attr('categories') != "") {
+          tr.addClass('irrelevant');
+        }
+      });
     }
   }
 
