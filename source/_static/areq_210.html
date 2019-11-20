@@ -350,13 +350,13 @@ One of:
 </p>
 <p>Required</p></td>
 <td class='argdesc'><p>
-Indicates the type of channel interface being used to initiate the transaction.<div>
-<div>01</div>
-<div>App-based (APP)</div>
-<div>02</div>
-<div>Browser (BRW)</div>
-<div>03</div>
-<div>3DS Requestor Initiated (3RI)</div>
+Indicates the type of channel interface being used to initiate the transaction.<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>App-based (APP)</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Browser (BRW)</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>3DS Requestor Initiated (3RI)</div>
 </div>
 </p></td></tr>
 <tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><p>deviceRenderOptions</p>
@@ -465,11 +465,11 @@ One of:
 </p>
 <p>Required</p></td>
 <td class='argdesc'><p>
-Identifies the category of the message for a specific use case.<div>
-<div>01</div>
-<div>PA - Payment</div>
-<div>02</div>
-<div>NPA - Non-Payment</div>
+Identifies the category of the message for a specific use case.<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>PA - Payment</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>NPA - Non-Payment</div>
 </div>
 </p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageExtension</p>
@@ -844,13 +844,13 @@ One of:
 </p>
 <p>Required</p></td>
 <td class='argdesc'><p>
-Indicates whether the 3DS Method successfully completed.<div>
-<div>Y</div>
-<div>Successfully completed</div>
-<div>N</div>
-<div>Did not successfully complete</div>
-<div>U</div>
-<div>Unavailable— 3DS Method URL was not present in the PRes message data for the card range associated with the Cardholder Account Number.</div>
+Indicates whether the 3DS Method successfully completed.<div class='enumDescription'>
+<div class='enumKey'>Y</div>
+<div class='enumValue'>Successfully completed</div>
+<div class='enumKey'>N</div>
+<div class='enumValue'>Did not successfully complete</div>
+<div class='enumKey'>U</div>
+<div class='enumValue'>Unavailable— 3DS Method URL was not present in the PRes message data for the card range associated with the Cardholder Account Number.</div>
 </div>
 </p></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><p>threeDSRequestorAuthenticationInd</p>
@@ -1014,17 +1014,17 @@ One of:
 </p>
 <p>Not required</p></td>
 <td class='argdesc'><p>
-Identifies the type of transaction being authenticated.<div>
-<div>01</div>
-<div>Goods/ Service Purchase</div>
-<div>03</div>
-<div>Check Acceptance</div>
-<div>10</div>
-<div>Account Funding</div>
-<div>11</div>
-<div>Quasi-Cash Transaction</div>
-<div>28</div>
-<div>Prepaid Activation and Load</div>
+Identifies the type of transaction being authenticated.<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Goods/ Service Purchase</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Check Acceptance</div>
+<div class='enumKey'>10</div>
+<div class='enumValue'>Account Funding</div>
+<div class='enumKey'>11</div>
+<div class='enumValue'>Quasi-Cash Transaction</div>
+<div class='enumKey'>28</div>
+<div class='enumValue'>Prepaid Activation and Load</div>
 </div>
 </p></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>workPhone</p>
