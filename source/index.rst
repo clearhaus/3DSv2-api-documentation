@@ -55,13 +55,11 @@ words <https://www.emvco.com/about/overview/>`_
     secure payment transactions
 
 The specification is public and can be found at `EMVCos document page
-<https://www.emvco.com/emv-technologies/3d-secure/>`_.
+<https://www.emvco.com/emv-technologies/3d-secure/>`_.  The specifications are
+included here for ease of access. This guide intends to be self-contained, such
+that you do not need to refer to the specification.
 
-EMVCo 3-D Secure Specification
-==============================
-
-The specifications are included here for ease of access. This guide intends to
-be self-contained, such that you do not need to refer to the specification.
+Note: The following documents are all produced and copyrighted by EMVCo.
 
 .. list-table::
   :header-rows: 1
@@ -78,7 +76,7 @@ be self-contained, such that you do not need to refer to the specification.
   * - :download:`EMVCo_3DS_SB204v5.pdf <specifications/EMVCo_3DS_SB204v5.pdf>`
     - Specification Bulletin No. 204 v5 (Cumulative updates to 2.1.0)
 
-  * - :download:`EMVCo_3DS_SB207.pdf <specifications/EMVCo_3DS_SB207.pdf>`
+  * - :download:`EMVCo_3DS_SB207v1.pdf <specifications/EMVCo_3DS_SB207v1.pdf>`
     - Update document describing changes between 2.1.0 and 2.2.0.
 
   * - :download:`EMVCo_3DS_Spec_v220.pdf <specifications/EMVCo_3DS_Spec_v220.pdf>`
