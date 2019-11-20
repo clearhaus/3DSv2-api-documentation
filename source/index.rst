@@ -57,6 +57,39 @@ words <https://www.emvco.com/about/overview/>`_
 The specification is public and can be found at `EMVCos document page
 <https://www.emvco.com/emv-technologies/3d-secure/>`_.
 
+EMVCo 3-D Secure Specification
+==============================
+
+The specifications are included here for ease of access. This guide intends to
+be self-contained, such that you do not need to refer to the specification.
+
+.. list-table::
+  :header-rows: 1
+
+  * - File
+    - Description
+
+  * - :download:`EMVCo_3DS_spec_v210.pdf <specifications/EMVCo_3DS_spec_v210.pdf>`
+    - Specification 2.1.0
+
+  * - :download:`EMVCo_3DS_SDKSpec_v210.pdf <specifications/EMVCo_3DS_SDKSpec_v210.pdf>`
+    - SDK Specification 2.1.0
+
+  * - :download:`EMVCo_3DS_SB204v5.pdf <specifications/EMVCo_3DS_SB204v5.pdf>`
+    - Specification Bulletin No. 204 v5 (Cumulative updates to 2.1.0)
+
+  * - :download:`EMVCo_3DS_SB207.pdf <specifications/EMVCo_3DS_SB207.pdf>`
+    - Update document describing changes between 2.1.0 and 2.2.0.
+
+  * - :download:`EMVCo_3DS_Spec_v220.pdf <specifications/EMVCo_3DS_Spec_v220.pdf>`
+    - Specification 2.2.0
+
+  * - :download:`EMVCo_3DS_SDKSpec_v220.pdf <specifications/EMVCo_3DS_SDKSpec_v220.pdf>`
+    - SDK Specification 2.2.0
+
+  * - :download:`EMVCo_3DS_SB214v1.pdf <specifications/EMVCo_3DS_SB214v1.pdf>`
+    - Specification Bulletin No. 214 v1 (Cumulative updates to 2.2.0)
+
 Where to go from here
 =====================
 
