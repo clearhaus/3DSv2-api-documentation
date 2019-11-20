@@ -213,7 +213,7 @@ Fully qualified URL
 country
 -------
 
-3-diti ISO 3166-1 country code string, for Denmark e.g.
+3-digit ISO 3166-1 country code string, for Denmark e.g.
 
 .. code:: json
 
