@@ -10,19 +10,28 @@
 </tr>
 </thead>
 <tbody>
-<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><p>acsRenderingType</p>
-<p>
+<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><div class='attributeName'>acsRenderingType</div>
+<div class='requirements'>
 <div class='type'>
 <a href='#acsrenderingtype'>
 AcsRenderingType object
 </a>
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Identifies the ACS UI Template that the ACS will first present to the consumer.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>acsTransID</p>
-<p>
+</div>
+<div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div></div></td>
+<td class='argdesc'><div class='decscription'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
+<div class='conditions'>
+<div class=''>
+Required if messageType is "RReq"</div>
+<div class='hidden' messageCategory='01'>
+Required if messageType is "RReq"</div>
+<div class='hidden' messageCategory='02'>
+Required if messageType is "RReq"</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acsTransID</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -32,12 +41,21 @@ Format:
 uuid
 </a>
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>authenticationType</p>
-<p>
+</div>
+<div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div></div></td>
+<td class='argdesc'><div class='decscription'>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</div>
+<div class='conditions'>
+<div class=''>
+Required if messageType is one of [ARes, CReq, CRes, RReq, RRes]</div>
+<div class='hidden' messageCategory='01'>
+Required if messageType is one of [ARes, CReq, CRes, RReq, RRes]</div>
+<div class='hidden' messageCategory='02'>
+Required if messageType is one of [ARes, CReq, CRes, RReq, RRes]</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>authenticationType</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -45,24 +63,42 @@ Type: string
 Regexp:
 <code><span class='pre'>^(0[1-3])$</span></code>
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>authenticationValue</p>
-<p>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div></div></td>
+<td class='argdesc'><div class='decscription'>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</div>
+<div class='conditions'>
+<div class=''>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' messageCategory='01'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' messageCategory='02'>
+Required if transStatus is one of [Y, N]</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>authenticationValue</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='length'>
 Length: 28
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><p>challengeCancel</p>
-<p>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Optional</div></div></td>
+<td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
+<div class='conditions'>
+<div class=''>
+Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+<div class='hidden' messageCategory='01'>
+Required if transStatus is one of [Y, A]</div>
+<div class='hidden' messageCategory='02'>
+Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>challengeCancel</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -70,12 +106,13 @@ Type: string
 Regexp:
 <code><span class='pre'>^(0[14-8])$</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Indicator informing the ACS and the DS that the authentication has been canceled.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>dsTransID</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Indicator informing the ACS and the DS that the authentication has been canceled.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>dsTransID</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -88,24 +125,34 @@ uuid
 <div class='maxLength'>
 Max length: 36
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Universally unique transaction identifier assigned by the DS to identify a single transaction.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>eci</p>
-<p>
+</div>
+<div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div></div></td>
+<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
+<div class='conditions'>
+<div class=''>
+Required if messageType is one of [ARes, RReq, RRes, PRes]</div>
+<div class='hidden' messageCategory='01'>
+Required if messageType is one of [ARes, RReq, RRes, PRes]</div>
+<div class='hidden' messageCategory='02'>
+Required if messageType is one of [ARes, RReq, RRes, PRes]</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>eci</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='maxLength'>
 Max length: 2
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><p>interactionCounter</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>interactionCounter</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -120,12 +167,13 @@ Value:
 <code><span class='pre'>
 99</span></code>
 </div>
-</p>
-<p>Required</p></td>
-<td class='argdesc'><p>
-Indicates the number of authentication cycles attempted by the Cardholder.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageCategory</p>
-<p>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Indicates the number of authentication cycles attempted by the Cardholder.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageCategory</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -134,18 +182,19 @@ One of:
 <code><span class='pre'>01</span></code>
 <code><span class='pre'>02</span></code>
 </div>
-</p>
-<p>Required</p></td>
-<td class='argdesc'><p>
-Identifies the category of the message for a specific use case.<div class='enumDescription'>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Identifies the category of the message for a specific use case.</div>
+<div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>PA - Payment</div>
 <div class='enumKey'>02</div>
 <div class='enumValue'>NPA - Non-Payment</div>
 </div>
-</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>messageExtension</p>
-<p>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageExtension</div>
+<div class='requirements'>
 <div class='type'>
 <a href='#messageextensionlist'>
 MessageExtensionList object
@@ -154,25 +203,35 @@ MessageExtensionList object
 <div class='maxLength'>
 Max length: 10
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>messageType</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageType</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='enum'>
 One of:
+<code><span class='pre'>AReq</span></code>
+<code><span class='pre'>ARes</span></code>
+<code><span class='pre'>CReq</span></code>
+<code><span class='pre'>CRes</span></code>
+<code><span class='pre'>PReq</span></code>
+<code><span class='pre'>PRes</span></code>
 <code><span class='pre'>RReq</span></code>
+<code><span class='pre'>RRes</span></code>
+<code><span class='pre'>Erro</span></code>
 </div>
-</p>
-<p>Required</p></td>
-<td class='argdesc'><p>
-Identifies the type of message that is passed.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>messageVersion</p>
-<p>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageVersion</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -180,12 +239,13 @@ Type: string
 One of:
 <code><span class='pre'>2.1.0</span></code>
 </div>
-</p>
-<p>Required</p></td>
-<td class='argdesc'><p>
-Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>threeDSServerTransID</p>
-<p>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSServerTransID</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -195,12 +255,13 @@ Format:
 uuid
 </a>
 </div>
-</p>
-<p>Required</p></td>
-<td class='argdesc'><p>
-Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><p>transStatus</p>
-<p>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>transStatus</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -213,10 +274,12 @@ One of:
 <code><span class='pre'>C</span></code>
 <code><span class='pre'>R</span></code>
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Indicates whether a transaction qualifies as an authenticated transaction or account verification.<div class='enumDescription'>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Optional</div></div></td>
+<td class='argdesc'><div class='decscription'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
+<div class='enumDescription'>
 <div class='enumKey'>Y</div>
 <div class='enumValue'>Authentication/ Account Verification Successful</div>
 <div class='enumKey'>N</div>
@@ -230,9 +293,16 @@ Indicates whether a transaction qualifies as an authenticated transaction or acc
 <div class='enumKey'>R</div>
 <div class='enumValue'>Authentication/ Account Verification Rejected; Issuer is rejecting authentication/verificat ion and request that authorisation not be attempted.</div>
 </div>
-</p></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><p>transStatusReason</p>
-<p>
+<div class='conditions'>
+<div class=''>
+Required if messageCategory is "01"</div>
+<div class='hidden' messageCategory='01'>
+Required if messageCategory is "01"</div>
+<div class='hidden' messageCategory='02'>
+Required if messageCategory is "01"</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>transStatusReason</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -247,9 +317,18 @@ Value:
 <code><span class='pre'>
 21</span></code>
 </div>
-</p>
-<p>Conditionally Required</p></td>
-<td class='argdesc'><p>
-Provides information on why the Transaction Status field has the specified value.</p></td></tr>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div></div></td>
+<td class='argdesc'><div class='decscription'>Provides information on why the Transaction Status field has the specified value.</div>
+<div class='conditions'>
+<div class=''>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' messageCategory='01'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' messageCategory='02'>
+Required if transStatus is one of [N, U, R]</div>
+</div></td></tr>
 </tbody>
 </table>

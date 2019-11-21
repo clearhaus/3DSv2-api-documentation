@@ -59,7 +59,7 @@ The specification is public and can be found at `EMVCos document page
 included here for ease of access. This guide intends to be self-contained, such
 that you do not need to refer to the specification.
 
-Note: The following documents are all produced and copyrighted by EMVCo.
+Note: The following documents are all produced and copyrighted by `EMVCo <https://www.emvco.com/>`_.
 
 .. list-table::
   :header-rows: 1

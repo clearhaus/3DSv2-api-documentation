@@ -12,3 +12,7 @@
 .irrelevant {
   color: #f3f3f3;
 }
+
+.hidden {
+  display: none;
+}

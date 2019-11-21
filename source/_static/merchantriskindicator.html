@@ -10,8 +10,8 @@
 </tr>
 </thead>
 <tbody>
-<tr categories='' channels='' class='row-even'><td class='argdef'><p>deliveryEmailAddress</p>
-<p>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>deliveryEmailAddress</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -24,12 +24,13 @@ email
 <div class='maxLength'>
 Max length: 254
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-For Electronic delivery, the email address to which the merchandise was delivered.</p></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><p>deliveryTimeframe</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>For Electronic delivery, the email address to which the merchandise was delivered.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>deliveryTimeframe</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -40,10 +41,10 @@ One of:
 <code><span class='pre'>03</span></code>
 <code><span class='pre'>04</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Indicates the merchandise delivery timeframe.<div class='enumDescription'>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Indicates the merchandise delivery timeframe.</div>
+<div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Electronic Delivery</div>
 <div class='enumKey'>02</div>
@@ -53,9 +54,10 @@ Indicates the merchandise delivery timeframe.<div class='enumDescription'>
 <div class='enumKey'>04</div>
 <div class='enumValue'>Two-day or more shipping</div>
 </div>
-</p></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><p>giftCardAmount</p>
-<p>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>giftCardAmount</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -63,12 +65,13 @@ Type: string
 Regexp:
 <code><span class='pre'>^\d{0,15}$</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-For prepaid or gift card purchase, the purchase amount total of prepaid or gift card(s) in major units (for example, USD 123.45 is 123).</p></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><p>giftCardCount</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>For prepaid or gift card purchase, the purchase amount total of prepaid or gift card(s) in major units (for example, USD 123.45 is 123).</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>giftCardCount</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -76,12 +79,13 @@ Type: string
 Regexp:
 <code><span class='pre'>^\d{2}$</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-For prepaid or gift card purchase, total count of individual prepaid or gift cards/codes purchased.</p></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><p>giftCardCurr</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>For prepaid or gift card purchase, total count of individual prepaid or gift cards/codes purchased.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>giftCardCurr</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -91,12 +95,13 @@ Format:
 currency
 </a>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-For prepaid or gift card purchase, ISO 4217 three-digit currency code of the gift card, other than those listed in Table A.5.</p></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><p>preOrderDate</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>For prepaid or gift card purchase, ISO 4217 three-digit currency code of the gift card, other than those listed in Table A.5.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>preOrderDate</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -106,12 +111,13 @@ Format:
 yyyymmdd
 </a>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-For a pre-ordered purchase, the expected date that the merchandise will be available.</p></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><p>preOrderPurchaseInd</p>
-<p>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>For a pre-ordered purchase, the expected date that the merchandise will be available.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>preOrderPurchaseInd</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -120,18 +126,19 @@ One of:
 <code><span class='pre'>01</span></code>
 <code><span class='pre'>02</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Indicates whether Cardholder is placing an order for merchandise with a future availability or release date.<div class='enumDescription'>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Indicates whether Cardholder is placing an order for merchandise with a future availability or release date.</div>
+<div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Merchandise available</div>
 <div class='enumKey'>02</div>
 <div class='enumValue'>Future availability</div>
 </div>
-</p></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><p>reorderItemsInd</p>
-<p>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>reorderItemsInd</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -140,18 +147,19 @@ One of:
 <code><span class='pre'>01</span></code>
 <code><span class='pre'>02</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Indicates whether the cardholder is reordering previously purchased merchandise.<div class='enumDescription'>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Indicates whether the cardholder is reordering previously purchased merchandise.</div>
+<div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>First time ordered</div>
 <div class='enumKey'>02</div>
 <div class='enumValue'>Reordered</div>
 </div>
-</p></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><p>shipIndicator</p>
-<p>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>shipIndicator</div>
+<div class='requirements'>
 <div class='type'>
 Type: string
 </div>
@@ -165,10 +173,10 @@ One of:
 <code><span class='pre'>06</span></code>
 <code><span class='pre'>07</span></code>
 </div>
-</p>
-<p>Not required</p></td>
-<td class='argdesc'><p>
-Indicates shipping method chosen for the transaction. Merchants must choose the Shipping Indicator code that most accurately describes the cardholder’s specific transaction, not their general business. If one or more items are included in the sale, use the Shipping Indicator code for the physical goods, or if all digital goods, use the Shipping Indicator code that describes the most expensive item.<div class='enumDescription'>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Indicates shipping method chosen for the transaction. Merchants must choose the Shipping Indicator code that most accurately describes the cardholder’s specific transaction, not their general business. If one or more items are included in the sale, use the Shipping Indicator code for the physical goods, or if all digital goods, use the Shipping Indicator code that describes the most expensive item.</div>
+<div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Ship to cardholder’s billing address</div>
 <div class='enumKey'>02</div>
@@ -184,6 +192,7 @@ Indicates shipping method chosen for the transaction. Merchants must choose the 
 <div class='enumKey'>07</div>
 <div class='enumValue'>Other (for example, Gaming, digital services not shipped, emedia subscriptions, etc.)</div>
 </div>
-</p></td></tr>
+<div class='conditions'>
+</div></td></tr>
 </tbody>
 </table>
