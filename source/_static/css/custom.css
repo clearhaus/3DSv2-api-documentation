@@ -97,10 +97,10 @@ a:hover {
 }
 
 .argdef {
-    /*border-right: 1px solid #999;*/
-    max-width: 325px !important;
     padding: 20px !important;
+    width: 400px;
 }
+
 
 .argdef p:last-child {
     color: rgba(234, 136, 91) !important;
@@ -130,7 +130,26 @@ a:hover {
 .argtable tr {
     border-bottom: solid 1px #bbb !important;
 }
+/**Tags**/
+.type, .maxLength, .format, .length, .minLength, .integerString {
+    float: right;
+    border: 1px solid #ccc;
+    padding: 3px 6px;
+    border-radius: 200px;
+    margin: 0 0 10px 5px;
+    text-align: center;
+}
 
+.enum, .argdef p:last-child, .regexp {
+    margin-top: 10px;
+    clear: both;
+}
+/**Media query**/
+@media only screen and (max-width: 980px) {
+    .argdef {
+        width: 250px;
+    }
+}
 @media only screen and (max-width: 768px) {
     .wy-table-responsive {
         margin-bottom: 24px;
@@ -157,12 +176,17 @@ a:hover {
     
     .argdesc {
         float: left;
-        width: 100%;
+        width: 150px;
         text-align: left;
     }   
 
     .argtable th {
         display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .type, .maxLength, .format, .length, .minLength, .integerString {
+        float: left;
     }
 }
 
@@ -178,7 +202,6 @@ a:hover {
 }
 #messageCategorySelector {
     margin-top: -5px;
-    margin-right: calc(100% - 540px); 
     margin-left: 10px;
 }
 @media only screen and (max-width: 768px) {
