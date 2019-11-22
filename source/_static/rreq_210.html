@@ -19,16 +19,19 @@ AcsRenderingType object
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' deviceChannel='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03'>Required</div>
 <div class='hidden dynamic' messageCategory='01'>Required</div>
-<div class='hidden dynamic' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
 <td class='argdesc'><div class='decscription'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
 <div class='conditions'>
-<div class=''>
-Required if messageType is "RReq"</div>
-<div class='hidden' messageCategory='01'>
-Required if messageType is "RReq"</div>
-<div class='hidden' messageCategory='02'>
-Required if messageType is "RReq"</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acsTransID</div>
 <div class='requirements'>
@@ -43,16 +46,19 @@ uuid
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' deviceChannel='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03'>Required</div>
 <div class='hidden dynamic' messageCategory='01'>Required</div>
-<div class='hidden dynamic' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
 <td class='argdesc'><div class='decscription'>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
-<div class=''>
-Required if messageType is one of [ARes, CReq, CRes, RReq, RRes]</div>
-<div class='hidden' messageCategory='01'>
-Required if messageType is one of [ARes, CReq, CRes, RReq, RRes]</div>
-<div class='hidden' messageCategory='02'>
-Required if messageType is one of [ARes, CReq, CRes, RReq, RRes]</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>authenticationType</div>
 <div class='requirements'>
@@ -65,15 +71,42 @@ Regexp:
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
 <div class='hidden dynamic' messageCategory='01'>Conditional</div>
-<div class='hidden dynamic' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</div>
 <div class='conditions'>
 <div class=''>
 Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='01'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='02'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='03'>
+Required if transStatus is one of [Y, N]</div>
 <div class='hidden' messageCategory='01'>
 Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if transStatus is one of [Y, N]</div>
 <div class='hidden' messageCategory='02'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if transStatus is one of [Y, N]</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if transStatus is one of [Y, N]</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>authenticationValue</div>
@@ -86,16 +119,35 @@ Length: 28
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
 <div class='hidden dynamic' messageCategory='01'>Conditional</div>
-<div class='hidden dynamic' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
 <td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
 <div class='conditions'>
 <div class=''>
 Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+<div class='hidden' deviceChannel='01'>
+Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+<div class='hidden' deviceChannel='02'>
+Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+<div class='hidden' deviceChannel='03'>
+Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
 <div class='hidden' messageCategory='01'>
 Required if transStatus is one of [Y, A]</div>
-<div class='hidden' messageCategory='02'>
-Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if transStatus is one of [Y, A]</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if transStatus is one of [Y, A]</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if transStatus is one of [Y, A]</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>challengeCancel</div>
 <div class='requirements'>
@@ -127,16 +179,19 @@ Max length: 36
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' deviceChannel='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03'>Required</div>
 <div class='hidden dynamic' messageCategory='01'>Required</div>
-<div class='hidden dynamic' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
 <div class='conditions'>
-<div class=''>
-Required if messageType is one of [ARes, RReq, RRes, PRes]</div>
-<div class='hidden' messageCategory='01'>
-Required if messageType is one of [ARes, RReq, RRes, PRes]</div>
-<div class='hidden' messageCategory='02'>
-Required if messageType is one of [ARes, RReq, RRes, PRes]</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>eci</div>
 <div class='requirements'>
@@ -276,8 +331,17 @@ One of:
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
 <div class='hidden dynamic' messageCategory='01'>Required</div>
-<div class='hidden dynamic' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
 <td class='argdesc'><div class='decscription'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
 <div class='enumDescription'>
 <div class='enumKey'>Y</div>
@@ -296,9 +360,11 @@ One of:
 <div class='conditions'>
 <div class=''>
 Required if messageCategory is "01"</div>
-<div class='hidden' messageCategory='01'>
+<div class='hidden' deviceChannel='01'>
 Required if messageCategory is "01"</div>
-<div class='hidden' messageCategory='02'>
+<div class='hidden' deviceChannel='02'>
+Required if messageCategory is "01"</div>
+<div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>transStatusReason</div>
@@ -319,15 +385,42 @@ Value:
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
 <div class='hidden dynamic' messageCategory='01'>Conditional</div>
-<div class='hidden dynamic' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
 <td class='argdesc'><div class='decscription'>Provides information on why the Transaction Status field has the specified value.</div>
 <div class='conditions'>
 <div class=''>
 Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='01'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='02'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='03'>
+Required if transStatus is one of [N, U, R]</div>
 <div class='hidden' messageCategory='01'>
 Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if transStatus is one of [N, U, R]</div>
 <div class='hidden' messageCategory='02'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if transStatus is one of [N, U, R]</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if transStatus is one of [N, U, R]</div>
 </div></td></tr>
 </tbody>

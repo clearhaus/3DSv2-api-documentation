@@ -28,6 +28,30 @@ class ScenarioSelector {
     });
   }
 
+  messageCategoryToValue(input) {
+    switch(input) {
+      case "P":
+        return "01";
+      case "NP":
+        return "02";
+      default:
+        console.log("INVALID MESSAGE CATEGORY");
+    }
+  }
+
+  deviceChannelToValue(input) {
+    switch(input) {
+      case "APP":
+        return "01";
+      case "BRW":
+        return "02";
+      case "3RI":
+        return "03";
+      default:
+        console.log("INVALID DEVICE CHANNEL");
+    }
+  }
+
   setScenarioInURL(deviceChannel, messageCategory) {
     var currentURL = window.location.href;
     var parsedURL = new URL(currentURL);
@@ -79,6 +103,32 @@ class ScenarioSelector {
         }
       });
     }
+
+    // Hide inclusion requirement
+    $('div.inclusion > div.dynamic:not([class*=hidden])').addClass('hidden');
+
+    // Hide conditional descriptions.
+    $('div.conditions > div:not([class*=hidden])').addClass('hidden');
+
+    if (messageCategory == "") {
+      var mcSelector = ":not([messageCategory])";
+    } else {
+      var mcSelector = '[messageCategory="'+ this.messageCategoryToValue(messageCategory) +'"]';
+    }
+
+    if (deviceChannel == "") {
+      var dcSelector = ":not([deviceChannel])";
+    } else {
+      var dcSelector = '[deviceChannel="'+ this.deviceChannelToValue(deviceChannel) +'"]';
+    }
+
+    // Show selected inclusions
+    var inclusionSelector = 'div.inclusion > div.dynamic' + dcSelector + mcSelector;
+    $(inclusionSelector).removeClass('hidden');
+
+    // Show selected conditions
+    var conditonsSelector = 'div.conditions > div' + dcSelector + mcSelector;
+    $(conditonsSelector).removeClass('hidden');
   }
 
   setScenarioFromURL() {
