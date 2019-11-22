@@ -187,6 +187,13 @@ yyyymmdd
 
 4-digit year, 2-digit month and day-of-month.
 
+.. _format-yyyymmddhhmm:
+
+yyyymmddhhmm
+------------
+
+4-digit year, 2-digit month, day-of-month, hour and minute.
+
 .. _format-yyyymmddhhmmss:
 
 yyyymmddhhmmss
