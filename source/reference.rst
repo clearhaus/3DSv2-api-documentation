@@ -135,14 +135,17 @@ MerchantRiskIndicator
 .. raw:: html
   :file: _static/merchantriskindicator.html
 
-MessageExtensionList
---------------------
+MessageExtension
+----------------
+
+.. raw:: html
+  :file: _static/messageextension.html
 
 ThreeDSRequestorAuthenticationInfo
 ----------------------------------
 
 .. raw:: html
-  :file: _static/threedsrequestorauthenticationinfo.html
+  :file: _static/threedsrequestorauthenticationinfo_210.html
 
 ThreeDSRequestorPriorAuthenticationInfo
 ---------------------------------------
