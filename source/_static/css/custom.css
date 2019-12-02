@@ -102,10 +102,23 @@ a:hover {
 }
 
 
-.argdef p:last-child {
+.inclusion {
     color: rgba(234, 136, 91) !important;
     font-weight: 600 !important;
     margin-bottom: 0px !important;
+    clear: both;
+    margin-top: 10px;
+}
+
+.attributeName {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.attributeName:before {
+    content: "Attribute:  ";
+    font-weight: 500;
+    margin-right: 4px;
 }
 
 .argdef p:first-child {
@@ -132,18 +145,18 @@ a:hover {
 }
 
 /**Tags**/
-.type, .maxLength, .format, .length, .minLength, .integerString {
+.type, .maxLength, .format, .length, .minLength {
     float: right;
     border: 1px solid #ccc;
-    padding: 3px 6px;
+    padding: 5px 6px 3px;
     border-radius: 200px;
-    margin: 0 0 10px 5px;
+    margin: 0 0 12px 5px;
     text-align: center;
     align-items: center;
     display: flex;
 }
 
-.enum, .argdef p:last-child, .regexp {
+.enum, .argdef p:last-child, .regexp, .integerString {
     margin-top: 10px;
     clear: both;
 }
