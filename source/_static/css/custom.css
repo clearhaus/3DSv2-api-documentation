@@ -130,6 +130,7 @@ a:hover {
 .argtable tr {
     border-bottom: solid 1px #bbb !important;
 }
+
 /**Tags**/
 .type, .maxLength, .format, .length, .minLength, .integerString {
     float: right;
@@ -138,6 +139,8 @@ a:hover {
     border-radius: 200px;
     margin: 0 0 10px 5px;
     text-align: center;
+    align-items: center;
+    display: flex;
 }
 
 .enum, .argdef p:last-child, .regexp {
