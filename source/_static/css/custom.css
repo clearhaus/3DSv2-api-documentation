@@ -88,6 +88,18 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/** Middel content **/ 
+.wy-nav-content {
+    max-width: initial !important;
+}
+.section {
+    max-width: 60%;
+}
+@media only screen and (max-width: 980px) {
+    .section {
+        max-width: 100%;
+    }
+}
 
 /********************** Arg tabel content ***********************/
 .argtable td {
@@ -160,6 +172,7 @@ a:hover {
     margin-top: 10px;
     clear: both;
 }
+
 /**Media query**/
 @media only screen and (max-width: 980px) {
     .argdef {
