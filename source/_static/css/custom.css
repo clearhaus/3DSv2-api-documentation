@@ -92,14 +92,6 @@ a:hover {
 .wy-nav-content {
     max-width: initial !important;
 }
-.section {
-    max-width: 60%;
-}
-@media only screen and (max-width: 980px) {
-    .section {
-        max-width: 100%;
-    }
-}
 
 /********************** Arg tabel content ***********************/
 .argtable td {
@@ -178,14 +170,14 @@ a:hover {
     .argdef {
         width: 250px;
     }
-}
-@media only screen and (max-width: 768px) {
     .wy-table-responsive {
         margin-bottom: 24px;
         max-width: 100%;
         overflow-y: hidden;
         overflow-x: scroll;
     }
+}
+@media only screen and (max-width: 768px) {
     .wy-table-responsive table {
         width: 100%
     }
