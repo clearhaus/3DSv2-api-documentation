@@ -12,11 +12,43 @@ provided as a service for continuous integration and for live tests.
 This is our own implementation so there will be some discrepancies with the
 production endpoint.
 
-.. warning::
+.. note::
   The sandbox environment is not live yet.
 
 
 The production endpoint is to be used only for production requests.
+
+Authentication scenarios
+========================
+
+Authentications can be split up broadly by two variables included in every
+transaction, ``messageCategory`` and ``deviceChannel``.
+
+The two possible message categories are:
+
+Payment
+  Used for the normal payment authentication flow.
+  The message value is ``01``.
+
+Non-Payment
+  Used for e.g. cardholder account verification.
+  The message value is ``02``.
+
+The three device channels are:
+
+APP
+  Authentications initiated on a mobile device, utilizing a dedicated 3-D
+  Secure SDK for the specific device.
+  The message value is ``01``.
+
+BRW
+  Authentications performed using a browser, similar to 3-D Secure version 1.
+  The message value is ``02``.
+
+3RI
+  Authentications performed wihtout cardholder involvement, used for e.g.
+  getting 3-D Secure values for subsequent recurring transactions.
+  The message value is ``03``.
 
 URL Endpoints
 =============
