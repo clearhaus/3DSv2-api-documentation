@@ -40,6 +40,34 @@ Candidates for integrating with this service:
 - Gateways
 - Merchants
 
+Why should you choose **3dsecure.io**?
+======================================
+
+We naturally believe that 3dsecure.io is a great service. Let us list a few
+reasons why.
+
+Developed to have no downtime
+  Updates and deployments have been engineered as to have no downtime for
+  integrators.
+
+No performance limit
+  The service is highly scalable and has been engineered to be redundant.
+
+Sandbox service
+  *(Not in production yet)* We provide access to a sandbox service that allows
+  for continus testing against a "live" system.
+
+Competitive pricing
+  We offer plans you can grow with!  Our pricing is aimed at both low-end users
+  as well as high-end enterprise users.
+
+Dedicated dashboard
+  *(Not in production yet)* Use our dedicated dashboard to gain insight into
+  your 3-D Secure usage.
+
+Devoted team
+  We take pride in our job and are dedicated to provide a great service.
+
 A Brief introduction to a 3-D Secure Server
 ===========================================
 
