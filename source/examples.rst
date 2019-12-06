@@ -45,4 +45,4 @@ Card Verification:
     APIKEY=********-****-****-****-************
     PAN=****************
     curl -H 'APIKey: $APIKEY' -d "{\"acctNumber\": \"$PAN\"}" \
-         https://service.staging.3dsecure.io/preauth
+         https://service.sandbox.3dsecure.io/preauth
