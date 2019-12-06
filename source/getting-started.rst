@@ -7,19 +7,19 @@ Getting Started
 About this service
 ==================
 
-There are two hostnames associated with this service:
+Included in this service is a sandbox environment to ease integration. It is
+provided as a service for continuous integration and for live tests.
+This is our own implementation so there will be some discrepancies with the
+production endpoint.
 
-+--------------+-------------------------------------+
-| Sandbox      | https://service.sandbox.3dsecure.io |
-+--------------+-------------------------------------+
-| Production   | https://service.3dsecure.io         |
-+--------------+-------------------------------------+
+.. warning::
+  The sandbox environment is not live yet.
 
-The sandbox environment is used for integration and provided for continuous
-integration purposes. This system is suitable for live tests. This is our own
-implementation so there will be some discrepancies with the production
-endpoint.  The production endpoint is used for production requests.
 
+The production endpoint is to be used only for production requests.
+
+URL Endpoints
+=============
 
 There are 3 API endpoints for this service, refer to :ref:`reference` for
 parameter definition. Brief descriptions are:
@@ -37,12 +37,12 @@ parameter definition. Brief descriptions are:
 /auth
   A single call to receive all the data that is needed for authentication [2]_.
   Under certain circumstances, the authentication flow will end successfully
-  here, this is called _frictionless_ flow.
+  here, this is called *frictionless* flow.
 
 /postauth
   Used when the ``/auth`` did not result in a frictionless flow, this endpoint
   returns the result of the challenge the cardholder performed.  In this case
-  the flow is called a _challenge_ flow.
+  the flow is called a *challenge* flow.
 
 Overview of Authentication Flow
 ===============================
