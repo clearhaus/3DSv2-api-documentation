@@ -4,6 +4,16 @@
 Reference
 #########
 
+The *scenario selector* below can be used to narrow down the required fields
+for a selected authentication scenario. Please note these things:
+
+1. When ``All`` is selected in both dropdowns, no type filters are applied.
+   I.e. both ``sdkTransID`` and ``browserUserAgent`` is marked as required,
+   even though they will never appear in the same message.
+2. When a Message Category or a Device Channel is selected, messages will be
+   filtered if they are not relevant for the selection. The inclusion might
+   change from e.g. required to optional
+
 .. include:: _static/scenario_selector.html
 
 .. _preauth-endpoint:
