@@ -8,7 +8,7 @@ a:hover {
 }
 /** Middel content **/ 
 .wy-nav-content {
-    max-width: initial !important;
+    max-width: 1200px !important;
 }
 
 /** DL STYLE **/
@@ -34,6 +34,11 @@ dd {
 
 .admonition-title {
     background: #39757c !important;
+}
+
+/*Background color*/
+.wy-nav-content-wrap {
+    background: linear-gradient(35deg, rgb(57, 117, 124, 0.3) 0%, rgb(57, 117, 124, 0.3) 100%);
 }
 
 /********************** Sidebar ***********************/
@@ -239,6 +244,7 @@ dd {
 .json-example {
     display: none; 
     color: #bbb;
+    line-height: 2;
 }
 .json-example.active {
 display: block !important;
