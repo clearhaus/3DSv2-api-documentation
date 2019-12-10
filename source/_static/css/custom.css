@@ -1,3 +1,41 @@
+/********************** Global ***********************/
+a {
+    color: #404040; 
+    transition: .3s;
+}
+a:hover {
+    text-decoration: underline;
+}
+/** Middel content **/ 
+.wy-nav-content {
+    max-width: initial !important;
+}
+
+/** DL STYLE **/
+dl:not(.docutils) dt {
+    display: table !important;
+    margin: 6px 0 !important;
+    font-size: 0.9em !important;
+    line-height: normal !important;
+    background: transparent !important;
+    color: #333 !important;
+    border-top: none !important;
+    padding: 0 !important;
+    position: relative !important; 
+}
+
+dd {
+    margin-left: 6px !important;
+}
+
+.note {
+    background: #e1eaeb !important;
+}
+
+.admonition-title {
+    background: #39757c !important;
+}
+
 /********************** Sidebar ***********************/
 /**Mobil nav**/
 .wy-nav-top {
@@ -80,19 +118,6 @@
     color: #eee !important;
 }
   
-/********************** Global ***********************/
-a {
-    color: #404040; 
-    transition: .3s;
-}
-a:hover {
-    text-decoration: underline;
-}
-/** Middel content **/ 
-.wy-nav-content {
-    max-width: initial !important;
-}
-
 /********************** Arg tabel content ***********************/
 .argtable td {
     background-color: #fcfcfc !important;
@@ -210,6 +235,23 @@ a:hover {
         float: left;
     }
 }
+/********************** JSON ***********************/
+.json-example {
+    display: none; 
+    color: #bbb;
+}
+.json-example.active {
+display: block !important;
+}
+
+
+.json-example-container {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px -2px #111;
+    margin-bottom: 50px;
+}
 
 /********************** Select ***********************/
 #scenario_selector {
@@ -241,3 +283,4 @@ a:hover {
         margin: 10px 0;
     }
 }
+
