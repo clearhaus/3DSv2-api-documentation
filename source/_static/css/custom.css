@@ -9,6 +9,8 @@ a:hover {
 /** Middel content **/ 
 .wy-nav-content {
     max-width: 1200px !important;
+    margin: 0;
+    background: #fcfcfc;
 }
 
 /** DL STYLE **/
@@ -290,3 +292,30 @@ display: block !important;
     }
 }
 
+
+/********************** argdesc content ***********************/
+.enumDescription {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.enumKey {
+    font-weight: 600;
+    margin: 5px 10px 5px 0;
+    white-space: nowrap;
+    width: fit-content;
+    background: #fff;
+    border: solid 1px #e1e4e5;
+    font-size: 75%;
+    padding: 5px;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+    overflow-x: auto;
+}
+.enumValue {
+    width: calc(100% - 40px);
+}
+
+.conditions {
+    margin: 10px 0;
+    font-weight: 600;
+}
