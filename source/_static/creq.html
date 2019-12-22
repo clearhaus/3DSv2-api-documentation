@@ -1,0 +1,146 @@
+<div class='message-info'>
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<thead>
+<tr>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageType</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='enum'>
+One of:
+<code><span class='pre'>AReq</span></code>
+<code><span class='pre'>ARes</span></code>
+<code><span class='pre'>CReq</span></code>
+<code><span class='pre'>CRes</span></code>
+<code><span class='pre'>PReq</span></code>
+<code><span class='pre'>PRes</span></code>
+<code><span class='pre'>RReq</span></code>
+<code><span class='pre'>RRes</span></code>
+<code><span class='pre'>Erro</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageVersion</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='enum'>
+One of:
+<code><span class='pre'>2.1.0</span></code>
+<code><span class='pre'>2.2.0</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageExtension</div>
+<div class='requirements'>
+<div class='type'>
+Array of
+<a href='#messageextension'>
+MessageExtension object
+</a>
+</div>
+<div class='maxLength'>
+Max length: 10
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acsTransID</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-uuid'>
+uuid
+</a>
+</div>
+</div>
+<div class='inclusion'><div class='dynamic'>Required</div>
+<div class='hidden dynamic' deviceChannel='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03'>Required</div>
+<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
+<div class='hidden dynamic' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<td class='argdesc'><div class='decscription'>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSServerTransID</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-uuid'>
+uuid
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>challengeWindowSize</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='enum'>
+One of:
+<code><span class='pre'>01</span></code>
+<code><span class='pre'>02</span></code>
+<code><span class='pre'>03</span></code>
+<code><span class='pre'>04</span></code>
+<code><span class='pre'>05</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div></td>
+<td class='argdesc'><div class='decscription'>Dimensions of the challenge window that has been displayed to the Cardholder. The ACS shall reply with content that is formatted to appropriately render in this window to provide the best possible user experience. Preconfigured sizes are width x height in pixels of the window displayed in the Cardholder browser window.</div>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>250 x 400</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>390 x 400</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>500 x 600</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>600 x 400</div>
+<div class='enumKey'>05</div>
+<div class='enumValue'>Full screen</div>
+</div>
+<div class='conditions'>
+</div></td></tr>
+</tbody>
+</table>
+<div class='json-example-container'>
+<pre class='json-example active'>{&#x000A;  "messageVersion": "2.1.0",&#x000A;  "dsTransID": "f25084f0-5b16-4c0a-ae5d-b24808a95e4b",&#x000A;  "messageType": "ARes",&#x000A;  "threeDSServerTransID": "8a880dc0-d2d2-4067-bcb1-b08d1690b26e",&#x000A;  "acsTransID": "d7c1ee99-9478-44a6-b1f2-391e29c6b340",&#x000A;  "acsReferenceNumber": "3DS_LOA_ACS_PPFU_020100_00009",&#x000A;  "acsOperatorID": "AcsOpId 4138359541",&#x000A;  "dsReferenceNumber": "DS_LOA_DIS_PPFU_020100_00010",&#x000A;  "transStatus": "C",&#x000A;  "acsChallengeMandated": "Y",&#x000A;  "acsURL": "https://test.com",&#x000A;  "authenticationType": "01"&#x000A;}</pre>
+<pre class='json-example'>{&#x000A;  "threeDSServerTransID": "8a880dc0-d2d2-4067-bcb1-b08d1690b26e",&#x000A;  "acsTransID": "d7c1ee99-9478-44a6-b1f2-391e29c6b340",&#x000A;  "acsRenderingType": {&#x000A;    "acsInterface": "01",&#x000A;    "acsUiTemplate": "01"&#x000A;  },&#x000A;  "authenticationMethod": "02",&#x000A;  "authenticationType": "02",&#x000A;  "authenticationValue": "MTIzNDU2Nzg5MDA5ODc2NTQzMjE=",&#x000A;  "dsTransID": "f25084f0-5b16-4c0a-ae5d-b24808a95e4b",&#x000A;  "eci": "05",&#x000A;  "interactionCounter": "02",&#x000A;  "messageCategory": "01",&#x000A;  "messageType": "RReq",&#x000A;  "messageVersion": "2.1.0",&#x000A;  "transStatus": "Y"&#x000A;}</pre>
+</div>
+</div>

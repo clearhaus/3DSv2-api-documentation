@@ -12,19 +12,19 @@ provided as a service for continuous integration and for live tests.
 This is our own implementation so there will be some discrepancies with the
 production endpoint.
 
-.. note::
-  The sandbox environment is not live yet.
-
+.. warning::
+  Under *no* circumstances may real card numbers or other cardholder
+  information be sent to the sandbox.
 
 The production endpoint is to be used only for production requests.
 
 Authentication scenarios
 ========================
 
-Authentications can be split up broadly by two variables included in every
-transaction, ``messageCategory`` and ``deviceChannel``.
+Authentications can be split up broadly by two variables which are included in
+every transaction, ``messageCategory`` and ``deviceChannel``.
 
-The two possible message categories are:
+The two possible *message categories* are:
 
 Payment
   Used for the normal payment authentication flow.
@@ -34,7 +34,8 @@ Non-Payment
   Used for e.g. cardholder account verification.
   The message value is ``02``.
 
-The three device channels are:
+
+The three *device channels* are:
 
 APP
   Authentications initiated on a mobile device, utilizing a dedicated 3-D

@@ -11,9 +11,14 @@ Introduction
    self
    getting-started
    server-information
-   examples
-   reference
+   usage
    guides
+   reference
+
+.. warning::
+  This documentation is a work in progress. (Updated December 22nd 2019)
+
+  Currently this documentation only contains information about v2.1.0.
 
 If this is your first time here, please read this page.
 
@@ -43,7 +48,7 @@ Candidates for integrating with this service:
 Why should you choose **3dsecure.io**?
 ======================================
 
-We naturally believe that 3dsecure.io is a great service. Let us list a few
+We of course believe that 3dsecure.io is a great service. Let us list a few
 reasons why.
 
 Developed to have no downtime
@@ -54,12 +59,12 @@ No performance limit
   The service is highly scalable and has been engineered to be redundant.
 
 Sandbox service
-  *(Not in production yet)* We provide access to a sandbox service that allows
-  for continus testing against a "live" system.
+  We provide access to a sandbox service that allows for continus testing
+  against a "live" system.
 
 Competitive pricing
-  We offer plans you can grow with!  Our pricing is aimed at both low-end users
-  as well as high-end enterprise users.
+  We offer plans you can grow with. Our pricing is aimed at both low scale
+  users as well as high scale enterprise users.
 
 Dedicated dashboard
   *(Not in production yet)* Use our dedicated dashboard to gain insight into
@@ -123,5 +128,6 @@ Where to go from here
    this documentation.
 2. Read the :ref:`getting-started` guide for getting an
    understanding of the authentication flow.
-3. Look at the :ref:`examples` in this documentation.
-4. Consult the  :ref:`reference` to get details about the individual API endpoints.
+3. Read the :ref:`requests` section to learn the prerequisites for requests.
+4. Look at the :ref:`usage` in this documentation.
+5. Consult the  :ref:`reference` to get details about the individual API endpoints.

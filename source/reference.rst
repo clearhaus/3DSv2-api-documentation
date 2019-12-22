@@ -21,6 +21,8 @@ for a selected authentication scenario. Please note these things:
 ``/preauth`` endpoint
 =====================
 
+.. _preauth-input:
+
 Input
 -----
 
@@ -80,6 +82,8 @@ Output
 ``/auth`` endpoint
 ==================
 
+.. _auth-input:
+
 Input
 -----
 
@@ -93,6 +97,17 @@ Output
 
 .. raw:: html
   :file: _static/ares_210.html
+
+.. _challenge-flow-messages:
+
+Challenge flow
+==============
+
+Challenge request (CReq)
+------------------------
+
+.. raw:: html
+  :file: _static/creq.html
 
 .. _postauth-endpoint:
 
