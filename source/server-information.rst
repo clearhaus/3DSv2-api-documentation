@@ -13,9 +13,6 @@ Connecting to the server
 | Production   | https://service.3dsecure.io         |
 +--------------+-------------------------------------+
 
-.. note::
-  The sandbox environment is not live yet.
-
 Supported card schemes
 ======================
 
