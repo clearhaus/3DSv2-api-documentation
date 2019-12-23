@@ -14,6 +14,7 @@ Introduction
    usage
    guides
    reference
+   sandbox
 
 .. note::
   This documentation is a work in progress. (Updated December 22nd 2019)

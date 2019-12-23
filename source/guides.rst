@@ -11,4 +11,3 @@ Guides
    versioning
    3dsmethod
    challenge_flow
-   callback

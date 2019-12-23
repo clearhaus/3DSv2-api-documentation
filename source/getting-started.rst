@@ -114,7 +114,6 @@ The following describes the individual points in the diagram:
 6. The cardholder completes the challenge on the cardholders device.  See the
    :ref:`3ds_challenge_flow` guide.
 7. The ACS informs the Requestor about the challenge result through a callback.
-   See the :ref:`3ds_callback` guide.
 8. The :ref:`postauth-endpoint` is used the fetch the results of the
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed

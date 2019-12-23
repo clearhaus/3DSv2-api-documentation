@@ -42,3 +42,7 @@ This near-pseudocode describes the flow your code should perform.
    all but the rarest cases.
 
 See :ref:`the reference <postauth-input>` for the values returned.
+
+.. note::
+  The authentication cache expires 300 seconds after 3dsecure.io receives it
+  from the card scheme, it must be fetched before expiry.

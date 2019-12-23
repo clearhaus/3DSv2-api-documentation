@@ -71,6 +71,8 @@ Response Data
 
 Successfull requests will have HTTP response code 200.
 
+.. _preauth-success:
+
 Success
 =======
 
