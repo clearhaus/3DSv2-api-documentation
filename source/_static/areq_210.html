@@ -1290,6 +1290,20 @@ Regexp:
 </div>
 <div class='inclusion'>Required</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of Authentication request. This data element provides additional information to the ACS to determine the best approach for handing an authentication request.</div>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Payment transaction</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Recurring transaction</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Instalment transaction</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Add card</div>
+<div class='enumKey'>05</div>
+<div class='enumValue'>Maintain card</div>
+<div class='enumKey'>06</div>
+<div class='enumValue'>Cardholder verification as part of EMV token ID&V</div>
+</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSRequestorAuthenticationInfo</div>
@@ -1316,6 +1330,16 @@ Regexp:
 </div>
 <div class='inclusion'>Optional</div></td>
 <td class='argdesc'><div class='decscription'>Indicates whether a challenge is requested for this transaction. For example: For 01-PA, a 3DS Requestor may have concerns about the transaction, and request a challenge. For 02-NPA, a challenge may be necessary when adding a new card to a wallet. For local/regional mandates or other variables.</div>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>No preference</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>No challenge requested</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Challenge requested: 3DS Requestor Preference</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Challenge requested: Mandate</div>
+</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSRequestorID</div>
@@ -1433,6 +1457,18 @@ Regexp:
 </div>
 <div class='inclusion'>Required</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of 3RI request. This data element provides additional information to the ACS to determine the best approach for handing a 3RI request.</div>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Recurring transaction</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Instalment transaction</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Add card</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Maintain card information</div>
+<div class='enumKey'>05</div>
+<div class='enumValue'>Account verification</div>
+</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>transType</div>
