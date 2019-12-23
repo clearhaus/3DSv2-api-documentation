@@ -91,6 +91,14 @@ The final CRes looks something like this:
 Here ``transStatus`` will be either ``Y`` or ``N``, if the value is ``Y`` you
 can use the :ref:`postauth-usage` to fetch the results of the challenge.
 
+Handling timeouts
+*****************
+
+1. You have 30 seconds from receiving the :ref:`authentication response <auth-response>` to start
+   the challenge.
+2. Each interaction in the challenge window has a 10 minute timeout. So the cardholder can take
+   at least 10 minutes to complete the challenge.
+
 SDK Challenge
 -------------
 
