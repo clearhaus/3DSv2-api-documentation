@@ -30,7 +30,7 @@ This near-pseudocode describes the flow your code should perform.
        curl -H "APIKey: $APIKEY" \
             -H 'Content-Type: application/json; charset=utf-8' \
             -d @input.json \
-               https://service.sandbox.3dsecure.io/preauth
+               https://service.sandbox.3dsecure.io/auth
 
 3. If the returned JSON has ``"messageType": "Erro"`` or the HTTP response code
    is not ``200``, then the request failed.

@@ -116,6 +116,8 @@ Challenge request (CReq)
 ``/postauth`` endpoint
 ======================
 
+.. _postauth-input:
+
 Input
 -----
 
