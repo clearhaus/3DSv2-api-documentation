@@ -106,6 +106,8 @@ Challenge flow
 Challenge request (CReq)
 ------------------------
 
+.. _creq-format:
+
 .. raw:: html
   :file: _static/creq.html
 

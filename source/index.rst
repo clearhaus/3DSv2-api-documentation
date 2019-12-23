@@ -15,7 +15,7 @@ Introduction
    guides
    reference
 
-.. warning::
+.. note::
   This documentation is a work in progress. (Updated December 22nd 2019)
 
   Currently this documentation only contains information about v2.1.0.

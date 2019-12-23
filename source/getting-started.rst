@@ -106,9 +106,10 @@ The following describes the individual points in the diagram:
 5. The Auth :ref:`auth-response` is an ``ARes``, as defined by the specification.
 
    This ``ARes`` contains either:
+
    - The authentication result (Called *frictionless* flow)
-   - Information about how to proceed with the challenge
-   - Information stating why the challenge cannot continue (Called *challenge* flow)
+   - Information about how to proceed with the challenge (Called *challenge* flow)
+   - Information stating why the challenge cannot continue
 
 6. The cardholder completes the challenge on the cardholders device.  See the
    :ref:`3ds_challenge_flow` guide.
@@ -117,7 +118,7 @@ The following describes the individual points in the diagram:
 8. The :ref:`postauth-endpoint` is used the fetch the results of the
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
-   in the postauth :ref:`postauth-response` section.
+   in the :ref:`postauth response <postauth-response>` section.
 
 .. [1] as opposed to using an SDK.
 .. [2] except for the 3-D Secure Method URL used for fingerprinting when
