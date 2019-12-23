@@ -207,7 +207,7 @@ Expected Outcome
 -----------------
 
 Successfull frictionless
-  A successfull frictionless transaction.
+  A successful frictionless transaction.
 
 Endpoint under test
   - ``https://service.sandbox.3dsecure.io/auth``
@@ -222,7 +222,7 @@ Expected Outcome
 -----------------
 
 Successfull frictionless attempt
-  A successfull frictionless transaction.
+  A successful frictionless transaction.
 
 Endpoint under test
   - ``https://service.sandbox.3dsecure.io/auth``
