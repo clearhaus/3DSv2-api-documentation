@@ -101,7 +101,7 @@ indicate that the 3DS Method was not available.
 
    .. code-block:: json
 
-      {"threeDSMethodData": "d461f105-1792-407f-95ff-9a496fd918a9"}
+      {"threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"}
 
    Continue the authentication with the :ref:`auth-usage`, setting
    ``"threeDSCompInd": "Y"``
