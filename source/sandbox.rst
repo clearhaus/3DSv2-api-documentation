@@ -4,124 +4,90 @@
 Sandbox
 #######
 
-..
-  ===================
-  3DSMethod Testcases
-  ===================
+===================
+3DSMethod Testcases
+===================
 
-  -----------------
+-----------------
 
-  Invalid BIN
-  """""""""""
+Invalid BIN
+"""""""""""
 
-  Test that your system handles account numbers that are not enrolled.
+Test that your system handles account numbers that are not enrolled.
 
-  Endpoint under test
-    ``https://service.sandbox.3dsecure.io/preauth``
+Endpoint under test
+  ``https://service.sandbox.3dsecure.io/preauth``
 
-  Input
-    Normal :ref:`/preauth <preauth-input>`, using an account number between
-    ``9000100149672445`` and ``9000100158669649``.
+Input
+  Normal :ref:`/preauth <preauth-input>`, using an account number between
+  ``9000100149672445`` and ``9000100158669649``.
 
-  Expected Outcome
-    Your system should be able to handle the :ref:`not enrolled <not_enrolled>` response.
+Expected Outcome
+  Your system should be able to handle the :ref:`not enrolled <not_enrolled>` response.
 
-  -----------------
+-----------------
 
-  Valid BIN, no 3DS Method
-    Test that your system handles account numbers that are enrolled, but with no
-    3DS Method URL.
+Successful frictionless auth with 3DS Method timeout
+  Test that your system handles threeDSMethods that time out correctly, by
+  setting ``threeDSCompInd`` to ``N`` in the ``/auth`` call, after a timed out
+  3DSMethod call.
 
-  Endpoint under test
-    ``https://service.sandbox.3dsecure.io/preauth``
+Endpoint under test
+  - ``threeDSMethodURL``
+  - ``https://service.sandbox.3dsecure.io/auth``
 
-  Input
-    Normal :ref:`/preauth <preauth-input>`, using an account number between
-    ``9000100200700419`` and ``9000100201840411``.
+Input
+  Normal :ref:`/preauth <preauth-input>`, using an account number between
+  ``9000100434274192`` and ``9000100458973304``.
 
-  Expected Outcome
-    Your system should be able to handle the :ref:`preauth success
-    <preauth-success>` response, without a included 3DS Method URL.
+  For the ``/auth``, use a nominal ``auth`` input with the same ``acctNumber``
+  as used in the preauth call.
 
-  -----------------
+  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+  superfluous.
 
-  Valid BIN, 3DS Method
-    Test that your system handles account numbers that are enrolled and contains
-    a 3DS Method URL.
+Expected Outcome
+  A valid frictionless flow, resulting in an authentication response with authenticationValue.
 
-  Endpoint under test
-    ``https://service.sandbox.3dsecure.io/preauth``
+-----------------
 
-  Input
-    Normal :ref:`/preauth <preauth-input>`, using an account number between
-    ``9000100338788232`` and ``9000100364594002``.
+Successful frictionless auth with 3DS Method
+  Test a successful frictionless auth with a 3DS Method invocation.
 
-  Expected Outcome
-    Your system should be able to handle the :ref:`preauth success
-    <preauth-success>` response, without a included 3DS Method URL.
+Endpoint under test
+  - ``threeDSMethodURL``
+  - ``https://service.sandbox.3dsecure.io/auth``
 
-  -----------------
+Input
+  Normal :ref:`/preauth <preauth-input>`, using an account number between
+  ``9000100553679418`` and ``9000100595707805``.
 
-  3DSMethod timeout
-    Test that your system handles threeDSMethods that time out correctly, by
-    setting ``threeDSCompInd`` to ``N`` in the ``/auth`` call, after a timed out
-    3DSMethod call.
+  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+  superfluous.
 
-  Endpoint under test
-    - ``threeDSMethodURL``
-    - ``https://service.sandbox.3dsecure.io/auth``
+Expected Outcome
+  A valid frictionless flow, resulting in an authentication response with authenticationValue.
 
-  Input
-    Normal :ref:`/preauth <preauth-input>`, using an account number between
-    ``9000100434274192`` and ``9000100458973304``.
+-----------------
 
-    For the ``/auth``, use a nominal ``auth`` input with the same ``acctNumber``
-    as used in the preauth call.
+Successful frictionless auth without 3DS Method
+  Test a successful frictionless auth without a 3DS Method invocation.  Expects
+  a received ``AReq`` value with ``"threeDSCompInd": "U"``.
 
-    The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-    superfluous.
+Endpoint under test
+  - ``https://service.sandbox.3dsecure.io/auth``
 
-  Expected Outcome
-    Your system correctly sets the ``threeDSCompInd`` in the ``/auth`` call.
+Input
+  Normal :ref:`/preauth <preauth-input>`, using an account number between
+  ``9000100659307466`` and ``9000100695973527``.
 
-  -----------------
+  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+  superfluous.
 
-  Successful frictionless auth with 3DS Method
-    Test a successful frictionless auth with a 3DS Method invocation.
+Expected Outcome
+  A valid frictionless flow, resulting in an authentication response with authenticationValue.
 
-  Endpoint under test
-    - ``threeDSMethodURL``
-    - ``https://service.sandbox.3dsecure.io/auth``
-
-  Input
-    Normal :ref:`/preauth <preauth-input>`, using an account number between
-    ``9000100553679418`` and ``9000100595707805``.
-
-    The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-    superfluous.
-
-  Expected Outcome
-    A received ``AReq`` value with ``"threeDSCompInd": "Y"``.
-
-  -----------------
-
-  Successful frictionless auth without 3DS Method
-    Test a successful frictionless auth without a 3DS Method invocation.
-
-  Endpoint under test
-    - ``https://service.sandbox.3dsecure.io/auth``
-
-  Input
-    Normal :ref:`/preauth <preauth-input>`, using an account number between
-    ``9000100659307466`` and ``9000100695973527``.
-
-    The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-    superfluous.
-
-  Expected Outcome
-    A received ``AReq`` value with ``"threeDSCompInd": "U"``.
-
-  -----------------
+-----------------
 
 ======================
 Frictionless Testcases
