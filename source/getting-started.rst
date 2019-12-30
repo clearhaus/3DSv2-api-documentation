@@ -4,27 +4,26 @@
 Getting Started
 ###############
 
-About this service
-==================
+Sandbox environment
+===================
 
 Included in this service is a sandbox environment to ease integration. It is
 provided as a service for continuous integration and for live tests.
 This is our own implementation so there will be some discrepancies with the
-production endpoint.
+production endpoint. The production endpoint is to be used only for production requests.
 
 .. warning::
   Under *no* circumstances may real card numbers or other cardholder
   information be sent to the sandbox.
 
-The production endpoint is to be used only for production requests.
-
 Authentication scenarios
 ========================
 
-Authentications can be split up broadly by two variables which are included in
-every transaction, ``messageCategory`` and ``deviceChannel``.
+Authentications can be described broadly by the two variables below which are included in
+every transaction.
 
-The two possible *message categories* are:
+Message categories (``messageCategory``)
+----------------------------------------
 
 Payment
   Used for the normal payment authentication flow.
@@ -35,7 +34,8 @@ Non-Payment
   The message value is ``02``.
 
 
-The three *device channels* are:
+Device channels (``deviceChannel``)
+-----------------------------------
 
 APP
   Authentications initiated on a mobile device, utilizing a dedicated 3-D
@@ -58,9 +58,9 @@ There are 3 API endpoints for this service, refer to :ref:`reference` for
 parameter definition. Brief descriptions are:
 
 /preauth
-  This is used when performing transactions from a browser [1]_, where it will
+  This is used when performing transactions from a browser (as opposed to using an SDK), where it will
   return an optional 3-D Secure Method URL, which is used for browser
-  fingerprinting.  This can support risk-based analysis and assist in ensuring
+  fingerprinting. This can support risk-based analysis and assist in ensuring
   a flow where the cardholder is not challenged.
 
   While in the transition period between 3-D Secure v1 and v2, this endpoint
@@ -68,9 +68,13 @@ parameter definition. Brief descriptions are:
   :ref:`3ds_versioning` guide.
 
 /auth
-  A single call to receive all the data that is needed for authentication [2]_.
+  A single call to receive all the data that is needed for authentication, 
+  except for the 3-D Secure Method URL used for fingerprinting when performing 
+  an authentication through a browser.
   Under certain circumstances, the authentication flow will end successfully
   here, this is called *frictionless* flow.
+
+  
 
 /postauth
   Used when the ``/auth`` did not result in a frictionless flow, this endpoint
@@ -118,7 +122,3 @@ The following describes the individual points in the diagram:
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
    in the :ref:`postauth response <postauth-response>` section.
-
-.. [1] as opposed to using an SDK.
-.. [2] except for the 3-D Secure Method URL used for fingerprinting when
-       performing an authentication through a browser.
