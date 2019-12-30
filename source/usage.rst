@@ -7,7 +7,7 @@ API Usage
 
    - Insert link to 3dservice 1.0.2 MPI documentation.
 
-BRW device channel
+Authentication through browser (BRW device channel)
   1. Use the :ref:`/preauth <preauth-usage>` API call to determine 3-D Secure
      version.
 
