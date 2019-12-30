@@ -6,10 +6,8 @@
 
 The ``/preauth`` endpoint is used for two things:
 
-- Determine if card number is enrolled for 3-D Secure v2
-
-  This can be used to decide if you should fall back to using 3-D Secure
-  v1.0.2
+- Determine if card number is enrolled for 3-D Secure v2.
+  This can be used to decide if you should fall back to using 3-D Secure v1.0.2
 - 3DSMethod invocation information
 
 ************
