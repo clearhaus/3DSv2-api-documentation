@@ -4,7 +4,7 @@
 /auth endpoint
 ##############
 
-The ``/auth`` call is used to initiate a 3-D Secure v2 authentication.
+The ``/auth`` endpoint is used to initiate a 3-D Secure v2 authentication.
 
 ************
 Request flow
@@ -85,8 +85,8 @@ Please note that a 3-D Secure Server transaction is considered successful even i
 ``transStatus`` is ``N``. There is a difference between an *authentication
 failure* and a *transaction failure*.
 
-Failure
-=======
+Errors
+======
 
 In all but the rarest cases an ``Erro`` message is returned on an error.
 
