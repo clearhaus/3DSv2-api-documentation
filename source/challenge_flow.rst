@@ -6,7 +6,7 @@ Challenge flow
 Browser Challenge
 -----------------
 
-Create a CReq :ref:`as decribed <creq-format>`, using the transaction ID's
+Create a CReq :ref:`as described <creq-format>`, using the transaction ID's
 received in the :ref:`authentication response <auth-response>`.
 
 Add an iframe to the users browser, either statically or using javascript.

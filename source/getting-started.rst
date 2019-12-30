@@ -47,7 +47,7 @@ BRW
   The message value is ``02``.
 
 3RI
-  Authentications performed wihtout cardholder involvement, used for e.g.
+  Authentications performed without cardholder involvement, used for e.g.
   getting 3-D Secure values for subsequent recurring transactions.
   The message value is ``03``.
 

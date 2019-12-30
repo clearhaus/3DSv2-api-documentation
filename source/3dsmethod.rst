@@ -85,7 +85,7 @@ indicate that the 3DS Method was not available.
 
 3. When the 3D Method call is finished, the browser iframe will be redirected to
    ``threeDSMethodNotificationURL``.
-   If the callback is not recieved in 10 seconds, proceed with step 4.
+   If the callback is not received in 10 seconds, proceed with step 4.
 
    The method will be ``POST`` and will contain a form with the value
    ``threeDSMethodData``, that can be used to identify the request.
