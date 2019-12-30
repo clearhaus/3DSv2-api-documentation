@@ -30,7 +30,7 @@ This near-pseudocode describes the flow your code should perform.
          "acctNumber": "9171598723598723"
        }
 
-2. Send the request to 3dsecure.io. Consult the :ref:`requests guide
+2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
    <requests>` for information about how to make requests.
    A simple request performed using cURL:
 
