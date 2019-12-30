@@ -4,7 +4,7 @@
 /postauth endpoint
 ##################
 
-The ``/postauth`` is used to fetch the results of a challenge flow.
+The ``/postauth`` endpoint is used to fetch the results of a challenge flow.
 
 ************
 Request flow
