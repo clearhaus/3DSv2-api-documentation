@@ -7,7 +7,7 @@ Getting Started
 Sandbox environment
 ===================
 
-Included in this service is a sandbox environment to ease integration. It is
+A sandbox environment is included to ease integration. It is
 provided as a service for continuous integration and for live tests.
 This is our own implementation so there will be some discrepancies with the
 production endpoint. The production endpoint is to be used only for production requests.
@@ -74,17 +74,15 @@ parameter definition. Brief descriptions are:
   Under certain circumstances, the authentication flow will end successfully
   here, this is called *frictionless* flow.
 
-  
-
 /postauth
   Used when the ``/auth`` did not result in a frictionless flow, this endpoint
-  returns the result of the challenge the cardholder performed.  In this case
-  the flow is called a *challenge* flow.
+  returns the result of the challenge performed by the cardholder. In this case
+  the flow is called a *challenge* flow. Read more about this in :ref:`3ds_challenge_flow`.
 
 Overview of Authentication Flow
 ===============================
 
-This figure illustrates the simplified authentication flow from a requestor
+This figure illustrates the authentication flow from a requestor
 point of view:
 
 .. image:: authentication.svg
@@ -94,31 +92,30 @@ point of view:
 The following describes the individual points in the diagram:
 
 1. A call to the :ref:`preauth-endpoint` is performed if the
-   request originator is a cardholder using a browser, as opposed to using a
+   request originator is a cardholder using a browser. This is opposed to using a
    SDK or the authentication being Requestor initiated.
 2. The :ref:`preauth-response` contains:
 
-   * Information that might be usable in determining whether to fall back to
+   - Information that might be usable in determining whether to fall back to
      3-D Secure v1.
+   - An optional `threeDSMethodURL` that is invoked in the user browser.
 
-   * An optional `threeDSMethodURL` that is invoked in the user browser.
-
-3. The cardholder browser invokes the `threeDSMethodURL`, to allow the ACS to
+3. The cardholder browser invokes the received `threeDSMethodURL`, to allow the ACS to
    fingerprint the browser. See the :ref:`3ds_method` guide.
 4. The Requestor uses the :ref:`auth-endpoint` to send the information needed
-   for 3dsecure.io to assemble a ``AReq`` message.
+   for the 3-D Securer Server to assemble a ``AReq`` message.
 5. The Auth :ref:`auth-response` is an ``ARes``, as defined by the specification.
 
    This ``ARes`` contains either:
 
-   - The authentication result (Called *frictionless* flow)
-   - Information about how to proceed with the challenge (Called *challenge* flow)
+   - The authentication result (*frictionless* flow)
+   - Information about how to proceed with the challenge (*challenge* flow)
    - Information stating why the challenge cannot continue
 
-6. The cardholder completes the challenge on the cardholders device.  See the
+6. The cardholder completes the challenge on the their device. See the
    :ref:`3ds_challenge_flow` guide.
 7. The ACS informs the Requestor about the challenge result through a callback.
-8. The :ref:`postauth-endpoint` is used the fetch the results of the
+8. The :ref:`postauth-endpoint` is used to fetch the results of the
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
    in the :ref:`postauth response <postauth-response>` section.
