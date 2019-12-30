@@ -5,7 +5,7 @@ Reference
 #########
 
 The *scenario selector* below can be used to narrow down the required fields
-for a selected authentication scenario. Please note these things:
+for a selected authentication scenario. Please note the following:
 
 1. When ``All`` is selected in both dropdowns, no type filters are applied.
    I.e. both ``sdkTransID`` and ``browserUserAgent`` is marked as required,
