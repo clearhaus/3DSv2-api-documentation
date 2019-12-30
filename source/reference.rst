@@ -103,10 +103,10 @@ Output
 Challenge flow
 ==============
 
+.. _creq-format:
+
 Challenge request (CReq)
 ------------------------
-
-.. _creq-format:
 
 .. raw:: html
   :file: _static/creq.html
