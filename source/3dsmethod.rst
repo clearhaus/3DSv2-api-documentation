@@ -6,10 +6,10 @@
 If the :ref:`preauth-usage` response includes a `threeDSMethodURL`, the 3DS Method *must* be
 invoked.
 
-If not, continue the :ref:`auth-usage` with ``"threeDSCompInd": "U"``, to
+If not, continue with the :ref:`auth-usage` and include ``"threeDSCompInd": "U"``, to
 indicate that the 3DS Method was not available.
 
-1. Create JSON object containing `threeDSServerTransID` from the `/preauth`
+1. Create a JSON object containing `threeDSServerTransID` from the `/preauth`
    call:
 
    .. code-block:: json
@@ -20,7 +20,7 @@ indicate that the 3DS Method was not available.
      }
 
 2. Render a hidden HTML iframe in the Cardholder browser and send a form with a
-   field name `threeDSMethodData` containing the above JSON Base64URL-encoded
+   field named `threeDSMethodData` containing the above JSON as Base64URL-encoded
    to the `threeDSMethodURL`.
 
    Below is a suggestion of what you can do:
@@ -97,7 +97,7 @@ indicate that the 3DS Method was not available.
       threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ==
 
 
-   And the decoded value is like:
+   The decoded value is like:
 
    .. code-block:: json
 
