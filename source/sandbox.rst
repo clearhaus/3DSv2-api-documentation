@@ -89,6 +89,27 @@ Expected Outcome
 
 -----------------
 
+Successful challenge auth with 3DS Method
+  Test a successful frictionless auth without a 3DS Method invocation.  Expects
+  a received ``AReq`` value with ``"threeDSCompInd": "Y"``.
+
+Endpoint under test
+  - ``threeDSMethodURL``
+  - ``https://service.sandbox.3dsecure.io/auth``
+  - ``https://service.sandbox.3dsecure.io/postauth``
+
+Input
+  Normal :ref:`/preauth <preauth-input>`, using an account number between
+  ``9000100820989135`` and ``9000100886343862``.
+
+  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+  superfluous.
+
+Expected Outcome
+  A valid challenge flow with a 3DSMethod.
+
+-----------------
+
 ======================
 Frictionless Testcases
 ======================
