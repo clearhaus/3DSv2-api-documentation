@@ -32,11 +32,11 @@ Versions supported
 
 .. _requests:
 
-Making requests to 3dsecure.io
-==============================
+Making requests to the 3-D Secure Server
+========================================
 
 Request methods
-  All requests to 3dsecure.io are HTTP POST requests.
+  All requests to the 3-D Secure Server are HTTP POST requests.
 
 Request headers
   For all requests, the content type header must be

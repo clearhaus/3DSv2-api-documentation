@@ -4,7 +4,7 @@
 /auth endpoint
 ##############
 
-The ``/auth`` call is used to initiate a 3-D Secure v2 authentication.
+The ``/auth`` endpoint is used to initiate a 3-D Secure v2 authentication.
 
 ************
 Request flow
@@ -18,7 +18,7 @@ This near-pseudocode describes the flow your code should perform.
 
 1. Generate the input as described in :ref:`the reference <auth-input>`.
 
-2. Send the request to 3dsecure.io. Consult the :ref:`requests guide
+2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
    <requests>` for information about how to make requests.
    A simple request performed using cURL:
 
@@ -81,12 +81,12 @@ To check if a transaction was successful:
 1. Parse as JSON
 2. Check that ``messageType`` is ``ARes``
 
-Please note that a 3dsecure.io transaction is considered successful even if
+Please note that a 3-D Secure Server transaction is considered successful even if
 ``transStatus`` is ``N``. There is a difference between an *authentication
 failure* and a *transaction failure*.
 
-Failure
-=======
+Errors
+======
 
 In all but the rarest cases an ``Erro`` message is returned on an error.
 

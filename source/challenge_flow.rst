@@ -6,7 +6,7 @@ Challenge flow
 Browser Challenge
 -----------------
 
-Create a CReq :ref:`as decribed <creq-format>`, using the transaction ID's
+Create a CReq :ref:`as described <creq-format>`, using the transaction ID's
 received in the :ref:`authentication response <auth-response>`.
 
 Add an iframe to the users browser, either statically or using javascript.
@@ -71,9 +71,9 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
 .. TODO: Describe the callback.
 
 After the challenge has finished, the browser will be redirected to the
-``notificationURL``, where it will POST two values, the ``threeDSSessionData``
-that was supplied before, as well as a "final" challenge result ``CRes`` value.
-The final CRes looks something like this:
+``notificationURL``, where it will POST two values, 1) the ``threeDSSessionData``
+that was supplied before, as well as 2) a "final" challenge result ``CRes`` value.
+The final `CRes` looks something like this:
 
 
 .. code-block:: json
@@ -88,7 +88,7 @@ The final CRes looks something like this:
      "transStatus": "Y"
    }
 
-Here ``transStatus`` will be either ``Y`` or ``N``, if the value is ``Y`` you
+Here ``transStatus`` will be either ``Y`` or ``N``. If the value is ``Y`` you
 can use the :ref:`postauth-usage` to fetch the results of the challenge.
 
 Handling timeouts
@@ -103,4 +103,4 @@ SDK Challenge
 -------------
 
 The challenge should be handled by the SDK, please refer to the SDK
-documentation.
+specification for further information.

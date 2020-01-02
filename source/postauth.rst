@@ -4,7 +4,7 @@
 /postauth endpoint
 ##################
 
-The ``/postauth`` is used to fetch the results of a challenge flow.
+The ``/postauth`` endpoint is used to fetch the results of a challenge flow.
 
 ************
 Request flow
@@ -22,7 +22,7 @@ This near-pseudocode describes the flow your code should perform.
       }
 
 
-2. Send the request to 3dsecure.io. Consult the :ref:`requests guide
+2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
    <requests>` for information about how to make requests.
    A simple request performed using cURL:
 
@@ -44,5 +44,5 @@ This near-pseudocode describes the flow your code should perform.
 See :ref:`the reference <postauth-input>` for the values returned.
 
 .. note::
-  The authentication cache expires 300 seconds after 3dsecure.io receives it
+  The authentication cache expires 300 seconds after the 3-D Secure Server receives it
   from the card scheme, it must be fetched before expiry.

@@ -193,7 +193,7 @@ Expected Outcome
 
 -----------------
 
-Successfull frictionless
+Successful frictionless
   A successful frictionless transaction.
 
 Endpoint under test
@@ -208,7 +208,7 @@ Expected Outcome
 
 -----------------
 
-Successfull frictionless attempt
+Successful frictionless attempt
   A successful frictionless transaction.
 
 Endpoint under test
@@ -228,7 +228,7 @@ Expected Outcome
   Challenge Testcases
   ===================
 
-  - Successfull frictionless
+  - Successful frictionless
     - [x] transStatus [Y, A]
       - [ ] AuthenticationType [01, 02, 03]
 
@@ -237,7 +237,7 @@ Expected Outcome
       - [ ] transStatusReason
     - [x] Filled/Empty cardholderInfo
 
-  - Successfull challenge
+  - Successful challenge
     - [ ] transStatus [C]
     - [ ] acsChallengeMandated [Y, N]
 

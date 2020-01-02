@@ -6,10 +6,8 @@
 
 The ``/preauth`` endpoint is used for two things:
 
-- Determine if Card Number is enrolled for 3-D Secure v2
-
-  This can be used to decide if you should fall back to using 3-D Secure
-  v1.0.2
+- Determine if card number is enrolled for 3-D Secure v2.
+  This can be used to decide if you should fall back to using 3-D Secure v1.0.2
 - 3DSMethod invocation information
 
 ************
@@ -30,7 +28,7 @@ This near-pseudocode describes the flow your code should perform.
          "acctNumber": "9171598723598723"
        }
 
-2. Send the request to 3dsecure.io. Consult the :ref:`requests guide
+2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
    <requests>` for information about how to make requests.
    A simple request performed using cURL:
 
@@ -69,14 +67,14 @@ This near-pseudocode describes the flow your code should perform.
 Response Data
 *************
 
-Successfull requests will have HTTP response code 200.
+Successful requests will have HTTP response code 200.
 
 .. _preauth-success:
 
 Success
 =======
 
-If the cardnumber is enrolled for 3-D Secure v2, the response might look
+If the card number is enrolled for 3-D Secure v2, the response might look
 something like:
 
 .. code-block:: json
