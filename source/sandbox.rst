@@ -1,12 +1,21 @@
 .. _sandbox:
 
-#######
-Sandbox
-#######
+#################
+Sandbox Testcases
+#################
 
-===================
-3DSMethod Testcases
-===================
+The sandbox contains a list of test cases meant to assist you in
+implementation.
+
+It is also the intension that you can use the sandbox for automatic integration
+testing of your service. We will not modify individual test cases and will
+deprecate them with a sufficient grace period, if need be.
+
+The 3-D Secure server sandbox validates input according to the specification.
+
+*************
+Generic Tests
+*************
 
 Unrecognized BIN
 """"""""""""""""
@@ -23,7 +32,12 @@ Nominal response:
 Success criteria:
   Your system handles the :ref:`not enrolled <not_enrolled>` response.
 
------------------
+*************
+Browser Tests
+*************
+
+These tests involve ``deviceChannel: 02``. This must be set in all
+authentication requests.
 
 3DS Method timeout
 """"""""""""""""""
@@ -37,7 +51,7 @@ Procedure:
 
   1. Perform the :ref:`preauth call <preauth-input>`.
   2. Execute the :ref:`3DS Method <3ds_method>`.
-  3. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
      The ``threeDSCompInd`` must be set dynamically, otherwise the test is
@@ -62,7 +76,7 @@ Procedure:
 
   1. Perform the :ref:`preauth call <preauth-input>`.
   2. Execute the :ref:`3DS Method <3ds_method>`, handle the timeout correctly.
-  3. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
      The ``threeDSCompInd`` must be set dynamically, otherwise the test is
@@ -111,7 +125,7 @@ Procedure:
 
   1. Perform the :ref:`preauth call <preauth-input>`.
   2. Execute the :ref:`3DS Method <3ds_method>`.
-  3. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
      The ``threeDSCompInd`` must be set dynamically, otherwise the test is
@@ -141,7 +155,7 @@ Procedure:
   Use an account number between ``9000105010482916`` and ``9000105038106791``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
-  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
 Nominal response:
@@ -161,7 +175,7 @@ Procedure:
   Use an account number between ``9000105038106791`` and ``9000105065730666``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
-  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
 Nominal response:
@@ -181,7 +195,7 @@ Procedure:
   Use an account number between ``9000105065730666`` and ``9000105093354541``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
-  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
 Nominal response:
@@ -201,7 +215,7 @@ Procedure:
   Use an account number between ``9000105113106175`` and ``9000105172916775``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
-  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
 Nominal response:
@@ -221,7 +235,7 @@ Procedure:
   Use an account number between ``9000105342632400`` and ``9000105380304639``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
-  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
   3. Handle timeout correctly.
 
@@ -273,6 +287,89 @@ Nominal response:
 
 Success criteria:
   The ``messageType`` is ``ARes`` and ``transStatus`` is ``A``.
+
+-----------------
+
+*********
+3RI Tests
+*********
+
+These tests involve ``deviceChannel: 03``. This must be set in all
+authentication requests.
+
+Transaction status ``Y``
+""""""""""""""""""""""""
+
+Test a transaction that is rejected with ``transStatus: Y``.
+
+Procedure:
+  Use an account number between ``9000110500000000`` and ``9000110599999999``.
+
+  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: Y``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
+
+-----------------
+
+Transaction status ``A``
+""""""""""""""""""""""""
+
+Test a transaction that is rejected with ``transStatus: A``.
+
+Procedure:
+  Use an account number between ``9000110600000000`` and ``9000110699999999``.
+
+  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: A``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``A``.
+
+-----------------
+
+Transaction status ``U``
+""""""""""""""""""""""""
+
+Test a transaction that is rejected with ``transStatus: U``.
+
+Procedure:
+  Use an account number between ``9000110700000000`` and ``9000110799999999``.
+
+  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: U``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``U``.
+
+-----------------
+
+Transaction status ``R``
+""""""""""""""""""""""""
+
+Test a transaction that is rejected with ``transStatus: R``.
+
+Procedure:
+  Use an account number between ``9000110800000000`` and ``9000110899999999``.
+
+  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: R``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``R``.
 
 -----------------
 
