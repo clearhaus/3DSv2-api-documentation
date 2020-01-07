@@ -294,6 +294,10 @@ display: block !important;
 
 
 /********************** argdesc content ***********************/
+.enumDescriptionHeader {
+  margin: 20px 0 5px 0;
+}
+
 .enumDescription {
     display: flex;
     flex-wrap: wrap;
