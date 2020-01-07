@@ -5,7 +5,6 @@ Guides
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   :name: mastertoc
    :hidden:
 
    versioning

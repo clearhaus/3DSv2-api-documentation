@@ -8,105 +8,123 @@ Sandbox
 3DSMethod Testcases
 ===================
 
------------------
-
-Invalid BIN
-"""""""""""
+Unrecognized BIN
+""""""""""""""""
 
 Test that your system handles account numbers that are not enrolled.
 
-Endpoint under test
-  ``https://service.sandbox.3dsecure.io/preauth``
+Procedure:
+  1. Send :ref:`preauth input <preauth-input>` using an account number between
+     ``9000100149672445`` and ``9000100158669649``.
 
-Input
-  Normal :ref:`/preauth <preauth-input>`, using an account number between
-  ``9000100149672445`` and ``9000100158669649``.
+Nominal response:
+  A :ref:`not enrolled <not_enrolled>` response.
 
-Expected Outcome
-  Your system should be able to handle the :ref:`not enrolled <not_enrolled>` response.
-
------------------
-
-Successful frictionless auth with 3DS Method timeout
-  Test that your system handles threeDSMethods that time out correctly, by
-  setting ``threeDSCompInd`` to ``N`` in the ``/auth`` call, after a timed out
-  3DSMethod call.
-
-Endpoint under test
-  - ``threeDSMethodURL``
-  - ``https://service.sandbox.3dsecure.io/auth``
-
-Input
-  Normal :ref:`/preauth <preauth-input>`, using an account number between
-  ``9000100434274192`` and ``9000100458973304``.
-
-  For the ``/auth``, use a nominal ``auth`` input with the same ``acctNumber``
-  as used in the preauth call.
-
-  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-  superfluous.
-
-Expected Outcome
-  A valid frictionless flow, resulting in an authentication response with authenticationValue.
+Success criteria:
+  Your system handles the :ref:`not enrolled <not_enrolled>` response.
 
 -----------------
 
-Successful frictionless auth with 3DS Method
-  Test a successful frictionless auth with a 3DS Method invocation.
+3DS Method timeout
+""""""""""""""""""
 
-Endpoint under test
-  - ``threeDSMethodURL``
-  - ``https://service.sandbox.3dsecure.io/auth``
+Test that your system handles 3DS Methods that time out.  Your system should
+correctly set ``threeDSCompInd`` to ``N`` in the ``/auth`` call, after a timed
+out 3DS Method call.
 
-Input
-  Normal :ref:`/preauth <preauth-input>`, using an account number between
-  ``9000100553679418`` and ``9000100595707805``.
+Procedure:
+  Use an account number between ``9000100434274192`` and ``9000100458973304``.
 
-  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-  superfluous.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Execute the :ref:`3DS Method <3ds_method>`.
+  3. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
 
-Expected Outcome
-  A valid frictionless flow, resulting in an authentication response with authenticationValue.
+     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+     superfluous.
 
------------------
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: Y``.
 
-Successful frictionless auth without 3DS Method
-  Test a successful frictionless auth without a 3DS Method invocation.  Expects
-  a received ``AReq`` value with ``"threeDSCompInd": "U"``.
-
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
-
-Input
-  Normal :ref:`/preauth <preauth-input>`, using an account number between
-  ``9000100659307466`` and ``9000100695973527``.
-
-  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-  superfluous.
-
-Expected Outcome
-  A valid frictionless flow, resulting in an authentication response with authenticationValue.
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
 
 -----------------
 
-Successful challenge auth with 3DS Method
-  Test a successful frictionless auth without a 3DS Method invocation.  Expects
-  a received ``AReq`` value with ``"threeDSCompInd": "Y"``.
+Frictionless auth with 3DS Method
+"""""""""""""""""""""""""""""""""
 
-Endpoint under test
-  - ``threeDSMethodURL``
-  - ``https://service.sandbox.3dsecure.io/auth``
-  - ``https://service.sandbox.3dsecure.io/postauth``
+Test that your system correctly handles a 3DS Method call.  Your system should
+correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
 
-Input
-  Normal :ref:`/preauth <preauth-input>`, using an account number between
-  ``9000100820989135`` and ``9000100886343862``.
+Procedure:
+  Use an account number between ``9000100553679418`` and ``9000100595707805``.
 
-  The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-  superfluous.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Execute the :ref:`3DS Method <3ds_method>`, handle the timeout correctly.
+  3. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
 
-Expected Outcome
-  A valid challenge flow with a 3DSMethod.
+     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+     superfluous.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: Y``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
+
+-----------------
+
+Frictionless auth without 3DS Method
+""""""""""""""""""""""""""""""""""""
+
+Test that your system correctly handles an auth without a 3DS Method.  Your
+system should correctly set ``threeDSCompInd`` to ``U`` in the ``/auth`` call.
+
+Procedure:
+  Use an account number between ``9000100659307466`` and ``9000100695973527``.
+
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+     superfluous.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: Y``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
+
+-----------------
+
+Challenge auth with 3DS Method
+""""""""""""""""""""""""""""""
+
+Test that your system correctly handles a 3DS Method call.  Your system should
+correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
+
+Procedure:
+  Use an account number between ``9000100820989135`` and ``9000100886343862``.
+
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Execute the :ref:`3DS Method <3ds_method>`.
+  3. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+     superfluous.
+  4. Handle the challenge in a browser.
+  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+
+Nominal response:
+  A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``Y`` or ``N``.
+
+Success criteria:
+  The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y`` or ``N``,
+  depending on how the challenge was handled.
 
 -----------------
 
@@ -114,112 +132,147 @@ Expected Outcome
 Frictionless Testcases
 ======================
 
-Rejected frictionless transaction 1
-  Test a transaction that is rejected with ``transStatus: N``.
+Frictionless transaction status ``N``
+"""""""""""""""""""""""""""""""""""""
 
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
+Test a transaction that is rejected with ``transStatus: N``.
 
-Input
-  Normal card flow using an account number between
-  ``9000105010482916`` and ``9000105038106791``.
+Procedure:
+  Use an account number between ``9000105010482916`` and ``9000105038106791``.
 
-Expected Outcome
-  Your system handles an :ref:`authentication response <auth-response>` with
-  ``transStatus: N``.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
 
------------------
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: N``.
 
-Rejected frictionless transaction 2
-  Test a transaction that is rejected with ``transStatus: U``.
-
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
-
-Input
-  Normal card flow using an account number between
-  ``9000105038106791`` and ``9000105065730666``.
-
-Expected Outcome
-  Your system handles an :ref:`authentication response <auth-response>` with
-  ``transStatus: U``.
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``N``.
 
 -----------------
 
-Rejected frictionless transaction 3
-  Test a transaction that is rejected with ``transStatus: R``.
+Frictionless transaction status ``U``
+"""""""""""""""""""""""""""""""""""""
 
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
+Test a transaction that is rejected with ``transStatus: U``.
 
-Input
-  Normal card flow using an account number between
-  ``9000105065730666`` and ``9000105093354541``.
+Procedure:
+  Use an account number between ``9000105038106791`` and ``9000105065730666``.
 
-Expected Outcome
-  Your system handles an :ref:`authentication response <auth-response>` with
-  ``transStatus: R``.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: U``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``U``.
+
+-----------------
+
+Frictionless transaction status ``R``
+"""""""""""""""""""""""""""""""""""""
+
+Test a transaction that is rejected with ``transStatus: R``.
+
+Procedure:
+  Use an account number between ``9000105065730666`` and ``9000105093354541``.
+
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: R``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``R``.
 
 -----------------
 
 Rejected frictionless transaction with ``cardholderInfo``
-  Test a transaction that is rejected with ``transStatus: N`` and contains ``cardholderInfo``
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
+Test a transaction that is rejected with ``transStatus: N`` and contains ``cardholderInfo``
 
-Input
-  Normal card flow using an account number between
-  ``9000105113106175`` and ``9000105172916775``.
+Procedure:
+  Use an account number between ``9000105113106175`` and ``9000105172916775``.
 
-Expected Outcome
-  Your system handles an :ref:`authentication response <auth-response>` with
-  ``transStatus: N`` and show the ``cardholderInfo`` to the Card Holder.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: N`` and ``cardholderInfo``.
+
+Success criteria:
+  Your system correctly displays ``cardholderInfo`` to the cardholder.
 
 -----------------
 
 DS Timeout
-  Transactions times out at DS
+""""""""""
 
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
+Transactions times out at DS
 
-Input
-  Normal card flow using an account number between
-  ``9000105342632400`` and ``9000105380304639``.
+Procedure:
+  Use an account number between ``9000105342632400`` and ``9000105380304639``.
 
-Expected Outcome
-  Your system handles a timeout at the DS.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Do a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+  3. Handle timeout correctly.
+
+Nominal response:
+  An :ref:`error object <error-object>`  with ``errorCode: 405``.
+
+Success criteria:
+  Your system gracefully handles timeouts and returned errors.
 
 -----------------
 
 Successful frictionless
-  A successful frictionless transaction.
+"""""""""""""""""""""""
 
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
+Handle a successful frictionless transaction.
 
-Input
-  Normal card flow using an account number between
-  ``9000105531598636`` and ``9000105572570541``.
+Procedure:
+  Use an account number between ``9000105531598636`` and ``9000105572570541``.
 
-Expected Outcome
-  Handle frictionless flow with transStatus ``Y``.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: Y``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
 
 -----------------
 
 Successful frictionless attempt
-  A successful frictionless transaction.
+"""""""""""""""""""""""""""""""
+
+Handle a successful frictionless transaction attempt.
 
 Endpoint under test
   - ``https://service.sandbox.3dsecure.io/auth``
 
-Input
-  Normal card flow using an account number between
-  ``9000105627843508`` and ``9000105688494389``.
+Procedure:
+  Use an account number between ``9000105627843508`` and ``9000105688494389``.
 
-Expected Outcome
-  Handle frictionless flow with transStatus ``A``.
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+Nominal response:
+  A :ref:`auth response <auth-response>` with ``transStatus: A``.
+
+Success criteria:
+  The ``messageType`` is ``ARes`` and ``transStatus`` is ``A``.
 
 -----------------
 

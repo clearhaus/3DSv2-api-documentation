@@ -140,6 +140,16 @@ Output
 .. raw:: html
   :file: _static/rreq_210.html
 
+
+Error object
+============
+
+.. _error-object:
+
+.. raw:: html
+  :file: _static/error_210.html
+
+
 Nested objects
 ==============
 
