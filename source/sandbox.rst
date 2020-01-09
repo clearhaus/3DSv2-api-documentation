@@ -142,10 +142,6 @@ Success criteria:
 
 -----------------
 
-======================
-Frictionless Testcases
-======================
-
 Frictionless transaction status ``N``
 """""""""""""""""""""""""""""""""""""
 
