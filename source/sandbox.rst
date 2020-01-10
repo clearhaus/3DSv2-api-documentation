@@ -114,8 +114,62 @@ Success criteria:
 
 -----------------
 
-Challenge auth with 3DS Method
-""""""""""""""""""""""""""""""
+Automatic Challenge pass
+""""""""""""""""""""""""
+
+Test that your system correctly handles a 3DS Method call.  Your system should
+correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
+
+Procedure:
+  Use an account number between ``9000100900000000`` and ``9000100999999999``.
+
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Execute the :ref:`3DS Method <3ds_method>`.
+  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+     superfluous.
+  4. The challenge will auto-submit, using javascript.
+  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+
+Nominal response:
+  A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``Y``.
+
+Success criteria:
+  The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y``.
+
+-----------------
+
+Automatic Challenge fail
+""""""""""""""""""""""""
+
+Test that your system correctly handles a 3DS Method call.  Your system should
+correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
+
+Procedure:
+  Use an account number between ``9000101000000000`` and ``9000101099999999``.
+
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  2. Execute the :ref:`3DS Method <3ds_method>`.
+  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
+     superfluous.
+  4. The challenge will auto-submit, using javascript.
+  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+
+Nominal response:
+  A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``N``.
+
+Success criteria:
+  The ``messageType`` is ``RReq`` and ``transStatus`` is ``N``.
+
+-----------------
+
+Manual Challenge auth with 3DS Method
+"""""""""""""""""""""""""""""""""""""
 
 Test that your system correctly handles a 3DS Method call.  Your system should
 correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
