@@ -1458,28 +1458,6 @@ Max length: 2048
 <td class='argdesc'><div class='decscription'>Fully qualified URL of 3DS Requestor website or customer care site. This data element provides additional information to the receiving 3-D Secure system if a problem arises and should provide contact information.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerOperatorID</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-Type: string
-</div>
-</div>
-<div class='inclusion'>Optional</div></td>
-<td class='argdesc'><div class='decscription'>DS assigned 3DS Server identifier. Each DS can provide a unique ID to each 3DS D Server on an individual basis.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSServerRefNumber</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-Type: string
-</div>
-</div>
-<div class='inclusion'>Optional</div></td>
-<td class='argdesc'><div class='decscription'>Unique identifier assigned by the EMVCo secretariat upon testing and approval.</div>
-<div class='conditions'>
-</div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
@@ -1497,19 +1475,8 @@ uuid
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSServerURL</td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-Type: string
-</div>
-</div>
-<div class='inclusion'>Optional</div></td>
-<td class='argdesc'><div class='decscription'>Fully qualified URL of the 3DS Server to which the DS will send the RReq message after the challenge has completed. Incorrect formatting will result in a failure to deliver the transaction results via the RReq message.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeRIInd</td></tr>
-<tr categories='PA NPA' channels='3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeRIInd</td></tr>
+<tr categories='PA NPA' channels='3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1536,8 +1503,8 @@ Regexp:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>transType</td></tr>
-<tr categories='PA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>transType</td></tr>
+<tr categories='PA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1568,8 +1535,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>workPhone</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>workPhone</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#phonenumber'>
