@@ -12,11 +12,22 @@
 Type: string
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>CReq</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -32,7 +43,18 @@ One of:
 <code><span class='pre'>2.2.0</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -49,7 +71,18 @@ MessageExtension object
 Max length: 10
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -77,7 +110,18 @@ uuid
 <div class='hidden dynamic' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -94,7 +138,18 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -113,7 +168,9 @@ One of:
 <code><span class='pre'>05</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Dimensions of the challenge window that has been displayed to the Cardholder. The ACS shall reply with content that is formatted to appropriately render in this window to provide the best possible user experience. Preconfigured sizes are width x height in pixels of the window displayed in the Cardholder browser window.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>

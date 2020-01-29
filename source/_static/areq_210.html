@@ -15,7 +15,18 @@ Type: string
 Max length: 64
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Additional information about the account optionally provided by the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -28,7 +39,18 @@ AcctInfo object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Additional information about the Cardholder’s account provided by the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -43,7 +65,18 @@ Regexp:
 <code><span class='pre'>^[0-9]{13,19}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Account number that will be used in the authorisation request for payment transactions. May be represented by PAN, token.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -58,7 +91,18 @@ Regexp:
 <code><span class='pre'>^(0[1-3]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of account. For example, for a multi-account card product.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -83,7 +127,18 @@ Max length: 11
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Acquiring institution identification code as assigned by the DS receiving the AReq message.</div>
 <div class='conditions'>
 <div class=''>
@@ -116,7 +171,18 @@ Max length: 35
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Acquirer-assigned Merchant identifier. This may be the same value that is used in authorisation requests sent on behalf of the 3DS Requestor and is represented in ISO 8583 formatting requirements.</div>
 <div class='conditions'>
 <div class=''>
@@ -140,7 +206,17 @@ One of:
 <code><span class='pre'>N</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates whether the Cardholder Shipping Address and Cardholder Billing Address are the same.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -154,7 +230,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The city of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -168,7 +255,18 @@ Type: string
 Length: 3
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The country of the Cardholder billing address Server associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -182,7 +280,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>First line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -196,7 +305,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Second line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -210,7 +330,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Third line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -224,7 +355,18 @@ Type: string
 Max length: 16
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>ZIP or other postal code of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -238,7 +380,18 @@ Type: string
 Max length: 3
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The state or province of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -252,7 +405,16 @@ Type: string
 Max length: 2048
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Exact content of the HTTP accept headers as sent to the 3DS Requestor from the Cardholder’s browser.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -274,7 +436,16 @@ One of:
 <code><span class='pre'>48</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Value representing the bit depth of the colour palette for displaying images, in bits per pixel. Obtained from Cardholder browser using the screen.colorDepth property.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -294,7 +465,16 @@ ip
 Max length: 45
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>IP address of the browser as returned by the HTTP headers to the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -305,7 +485,16 @@ Max length: 45
 Type: bool
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Boolean that represents the ability of the cardholder browser to execute Java. Value is returned from the navigator.javaEnabled property.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -322,7 +511,16 @@ Min length: 1
 Max length: 8
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Value representing the browser language as defined in IETF BCP47. Returned from navigator.language property.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -337,7 +535,16 @@ Regexp:
 <code><span class='pre'>^[0-9]{1,6}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Total height of the Cardholder’s screen in pixels. Value is returned from the screen.height property.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -352,7 +559,16 @@ Regexp:
 <code><span class='pre'>^[0-9]{1,6}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Total width of the cardholder’s screen in pixels. Value is returned from the screen.width property.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -367,7 +583,16 @@ Regexp:
 <code><span class='pre'>^[+-]?[0-9]{1,4}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Time-zone offset in minutes between UTC and the Cardholder browser local time. Note that the offset is positive if the local time zone is behind UTC and negative if it is ahead.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -381,7 +606,16 @@ Type: string
 Max length: 2048
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Exact content of the HTTP user-agent header. Note: If the total length of the User-Agent sent by the browser exceeds 2048 characters, truncate the excess portion.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -398,7 +632,18 @@ yymm
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Expiry Date of the PAN or token supplied to the 3DS Requestor by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -415,7 +660,18 @@ Min length: 2
 Max length: 45
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Name of the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -432,7 +688,18 @@ One of:
 <code><span class='pre'>03</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of channel interface being used to initiate the transaction.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -454,7 +721,16 @@ DeviceRenderOptions object
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Defines the SDK UI types that the device supports for displaying specific challenge user interfaces within the SDK.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -474,7 +750,18 @@ email
 Max length: 254
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The email address associated with the account that is either entered by the Cardholder, or is on file with the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -487,7 +774,18 @@ PhoneNumber object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The home phone number provided by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -512,7 +810,18 @@ Length: 4
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>DS-specific code describing the Merchant’s type of business, product or service.</div>
 <div class='conditions'>
 <div class=''>
@@ -551,7 +860,18 @@ Length: 3
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Country Code of the Merchant.</div>
 <div class='conditions'>
 <div class=''>
@@ -584,7 +904,18 @@ Max length: 40
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Merchant name assigned by the Acquirer or Payment System.</div>
 <div class='conditions'>
 <div class=''>
@@ -605,7 +936,18 @@ MerchantRiskIndicator object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Merchant’s assessment of the level of fraud risk for the specific authentication for both the cardholder and the authentication being conducted.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -621,7 +963,18 @@ One of:
 <code><span class='pre'>02</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the category of the message for a specific use case.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -645,7 +998,18 @@ MessageExtension object
 Max length: 10
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -656,11 +1020,22 @@ Max length: 10
 Type: string
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>AReq</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -671,11 +1046,22 @@ One of:
 Type: string
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>2.1.0</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -688,7 +1074,18 @@ PhoneNumber object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The mobile phone number provided by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -708,7 +1105,16 @@ url
 Max length: 256
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Fully qualified URL of the system that receives the CRes message or Error Message. The CRes message is posted by the ACS through the Cardholder browser at the end of the challenge and receipt of the RRes message.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -734,7 +1140,17 @@ Regexp:
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Purchase amount in minor units of currency with all punctuation removed.</div>
 <div class='conditions'>
 <div class=''>
@@ -778,7 +1194,17 @@ currency
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Currency in which purchase amount is expressed.</div>
 <div class='conditions'>
 <div class=''>
@@ -822,7 +1248,17 @@ yyyymmddhhmmss
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Date and time of the purchase expressed in UTC.</div>
 <div class='conditions'>
 <div class=''>
@@ -864,7 +1300,17 @@ Regexp:
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Minor units of currency as specified in the ISO 4217 currency exponent.</div>
 <div class='conditions'>
 <div class=''>
@@ -913,7 +1359,17 @@ To
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the maximum number of authorisations permitted for instalment payments.</div>
 <div class='conditions'>
 <div class=''>
@@ -948,11 +1404,22 @@ Required if threeDSRequestorAuthenticationInd is "03"</div>
 Type: bool
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>true</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>A value of True indicates that the transaction was de-tokenised prior to being received by the ACS. This data element will be populated by the system residing in the 3-D Secure domain where the de-tokenisation occurs (i.e., the 3DS Server or the DS).  Note: The Boolean value of true is the only valid response for this field when it is present.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -980,7 +1447,17 @@ yyyymmdd
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Date after which no further authorisations shall be performed.</div>
 <div class='conditions'>
 <div class=''>
@@ -1030,7 +1507,17 @@ Regexp:
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the minimum number of days between authorisations.</div>
 <div class='conditions'>
 <div class=''>
@@ -1071,7 +1558,16 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique ID created upon all installations of the 3DS Requestor App on a Consumer Device. This will be newly generated and stored by the 3DS SDK for each installation.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1085,7 +1581,16 @@ Type: string
 Max length: 64000
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>JWE Object (represented as a string) as defined in Section 6.2.2.1 containing data encrypted by the SDK for the DS to decrypt.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1101,7 +1606,16 @@ json.RawMessage object
 Max length: 256
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Public key component of the ephemeral key pair generated by the 3DS SDK and used to establish session keys between the 3DS SDK and ACS.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1123,7 +1637,16 @@ Value:
 99</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates maximum amount of time (in minutes) for all exchanges.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1137,7 +1660,16 @@ Type: string
 Max length: 32
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the vendor and version for the 3DS SDK that is integrated in a 3DS Requestor App, assigned by EMVCo when the 3DS SDK is approved.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1165,7 +1697,16 @@ uuid
 <div class='hidden dynamic' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1179,7 +1720,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>City portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1204,7 +1756,18 @@ Length: 3
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Country of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 <div class=''>
@@ -1242,7 +1805,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>First line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1256,7 +1830,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The second line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1270,7 +1855,18 @@ Type: string
 Max length: 50
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The third line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1284,7 +1880,18 @@ Type: string
 Max length: 16
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The ZIP or other postal code of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1298,7 +1905,18 @@ Type: string
 Max length: 3
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The state or province of the shipping address associated with the card being used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1315,7 +1933,16 @@ One of:
 <code><span class='pre'>U</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates whether the 3DS Method successfully completed.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -1339,7 +1966,17 @@ Regexp:
 <code><span class='pre'>^(0[1-6]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of Authentication request. This data element provides additional information to the ACS to determine the best approach for handing an authentication request.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -1367,7 +2004,9 @@ ThreeDSRequestorAuthenticationInfo210 object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Information about how the 3DS Requestor authenticated the cardholder before or during the transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1382,7 +2021,17 @@ Regexp:
 <code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates whether a challenge is requested for this transaction. For example: For 01-PA, a 3DS Requestor may have concerns about the transaction, and request a challenge. For 02-NPA, a challenge may be necessary when adding a new card to a wallet. For local/regional mandates or other variables.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -1407,7 +2056,18 @@ Type: string
 Max length: 35
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>DS assigned 3DS Requestor identifier. Each DS will provide a unique ID to each 3DS Requestor on an individual basis.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1421,7 +2081,18 @@ Type: string
 Max length: 40
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>DS assigned 3DS Requestor name. Each DS will provide a unique name to each 3DS Requestor on an individual basis.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1434,7 +2105,18 @@ ThreeDSRequestorPriorAuthenticationInfo object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Information about how the 3DS Requestor authenticated the cardholder as part of a previous 3DS transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1454,7 +2136,18 @@ url
 Max length: 2048
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Fully qualified URL of 3DS Requestor website or customer care site. This data element provides additional information to the receiving 3-D Secure system if a problem arises and should provide contact information.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1471,7 +2164,18 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -1486,7 +2190,16 @@ Regexp:
 <code><span class='pre'>^(0[1-5]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of 3RI request. This data element provides additional information to the ACS to determine the best approach for handing a 3RI request.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -1518,7 +2231,16 @@ One of:
 <code><span class='pre'>28</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the type of transaction being authenticated.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -1544,7 +2266,18 @@ PhoneNumber object
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>The work phone number provided by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>

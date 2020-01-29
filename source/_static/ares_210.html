@@ -28,7 +28,17 @@ One of:
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indication of whether a challenge is required for the transaction to be authorised due to local/regional mandates or other variable.</div>
 <div class='conditions'>
 <div class=''>
@@ -66,7 +76,18 @@ Type: string
 Max length: 32
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>DS assigned ACS identifier. Each DS can provide a unique ID to each ACS on an individual basis.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -80,7 +101,18 @@ Type: string
 Max length: 32
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -104,7 +136,16 @@ AcsRenderingType object
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
 <div class='conditions'>
 <div class=''>
@@ -138,7 +179,16 @@ Type: string
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Contains the JWS object (represented as a string) created by the ACS for the ARes message.</div>
 <div class='conditions'>
 <div class=''>
@@ -178,7 +228,18 @@ uuid
 <div class='hidden dynamic' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -209,7 +270,16 @@ Max length: 2048
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Fully qualified URL of the ACS to be used for the challenge. 02-BRW—3DS Requestor will post the CReq to this URL via the challenge window</div>
 <div class='conditions'>
 <div class=''>
@@ -247,7 +317,18 @@ Regexp:
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -305,7 +386,18 @@ Length: 28
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
 <div class='conditions'>
 <div class=''>
@@ -335,7 +427,17 @@ Type: string
 Max length: 128
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.  The Issuer can provide information to Cardholder.  For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”</div>
 <div class='conditions'>
 </div></td></tr>
@@ -360,7 +462,18 @@ Max length: 32
 <div class='hidden dynamic' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>EMVCo-assigned unique identifier to track approved DS.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -391,7 +504,18 @@ Max length: 36
 <div class='hidden dynamic' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -405,7 +529,18 @@ Type: string
 Max length: 2
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -422,7 +557,18 @@ MessageExtension object
 Max length: 10
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -433,11 +579,22 @@ Max length: 10
 Type: string
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>ARes</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -448,11 +605,22 @@ One of:
 Type: string
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>2.1.0</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -480,7 +648,16 @@ uuid
 <div class='hidden dynamic' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -497,7 +674,18 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -528,7 +716,18 @@ One of:
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -584,7 +783,18 @@ Value:
 <div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Provides information on why the Transaction Status field has the specified value.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>

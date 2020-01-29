@@ -18,7 +18,9 @@ validVersion
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>The most recent active protocol version that is supported for the ACS URL.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -36,7 +38,9 @@ Regexp:
 <code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Provides additional information to the 3DS Server. The element lists all applicable values for the card range.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -66,7 +70,9 @@ validVersion
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>The earliest (i.e. oldest) active protocol version that is supported by the ACS.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -83,7 +89,9 @@ validVersion
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>The most recent active protocol version that is supported for the DS.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -100,7 +108,9 @@ validVersion
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>The earliest (i.e. oldest) active protocol version that is supported by the DS.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -120,7 +130,9 @@ url
 Max length: 256
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>The ACS URL that will be used by the 3DS Method. Note: The 3DSMethodURL data element may be omitted if not supported by the ACS for this specific card range.</div>
 <div class='conditions'>
 </div></td></tr>
@@ -137,7 +149,18 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+<div>PA</div>
+<div>NPA</div>
+</div>
+<div class='channel'>
+<div>APP</div>
+<div>BRW</div>
+<div>3RI</div>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
