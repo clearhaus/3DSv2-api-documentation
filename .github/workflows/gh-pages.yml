@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout Source Code
+        uses: actions/checkout@v1
+      -
+        name: Build Documentation
+        env:
+          USER_ID: 1001
+        uses: docker://ddidier/sphinx-doc:2.2.1-1
+        with:
+          args: make html
+      -
+        name: Deploy to Github Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: gh-pages
+          build_dir: build/html
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}

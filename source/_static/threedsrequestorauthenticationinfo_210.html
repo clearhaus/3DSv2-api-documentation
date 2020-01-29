@@ -1,0 +1,74 @@
+<div class='message-info'>
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<thead>
+<tr>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSReqAuthData</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='maxLength'>
+Max length: 2048
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'> Data that documents and supports a specific authentication process.  In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, for method: 02—field can carry generic 3DS Requestor authentication information 03—data element can carry information about the provider of the federated ID and related information 04—data element can carry the FIDO attestation data (including the signature) In future versions of the specification, these details are expected to be included</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSReqAuthMethod</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-6])|([89][0-9])$</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</div>
+<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>No 3DS Requestor authentication occurred (i.e.  cardholder “logged in” as guest)</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using 3DS Requestor’s own credentials</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using federated ID</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using issuer credentials</div>
+<div class='enumKey'>05</div>
+<div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using third-party authentication</div>
+<div class='enumKey'>06</div>
+<div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using FIDO Authenticator</div>
+</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSReqAuthTimestamp</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-yyyymmddhhmm'>
+yyyymmddhhmm
+</a>
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Date and time in UTC of the cardholder authentication.</div>
+<div class='conditions'>
+</div></td></tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,69 @@
+@startuml
+title Authentication Flow
+autonumber
+skinparam handwritten true
+skinparam monochrome true
+
+skinparam sequence {
+	ArrowColor Black
+	ActorBorderColor black
+	LifeLineBorderColor black
+
+	ParticipantBorderColor black
+	ParticipantFontColor black
+	ParticipantBackgroundColor white
+
+	ActorFontColor black
+	ActorBackgroundColor white
+
+  NoteBackgroundColor white
+}
+
+
+actor Cardholder
+participant Requestor
+participant "3dsecure.io"
+participant ACS
+
+note over Cardholder, Requestor
+  Begin transaction
+end note
+Requestor -> "3dsecure.io": Versioning/3DS-Method determination
+activate "3dsecure.io"
+
+"3dsecure.io" -> Requestor: Card Range Data
+deactivate "3dsecure.io"
+
+|||
+
+Cardholder --> ACS: 3DS Method Invocation
+
+|||
+
+Requestor -> "3dsecure.io": Authentication Request
+activate "3dsecure.io"
+"3dsecure.io" -> Requestor: Authentication Response
+deactivate "3dsecure.io"
+
+|||
+
+== only if challenge flow ==
+Cardholder <--> ACS: Perform challenge
+
+|||
+
+ACS -> Requestor: Challenge complete callback
+
+|||
+
+Requestor -> "3dsecure.io" : Fetch challenge results
+activate "3dsecure.io"
+"3dsecure.io" -> Requestor : Return results
+deactivate "3dsecure.io"
+
+|||
+
+note over Cardholder, Requestor
+  Proceed to authorization
+end note
+@enduml

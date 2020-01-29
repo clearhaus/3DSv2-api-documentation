@@ -1,0 +1,83 @@
+<div class='message-info'>
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<thead>
+<tr>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSReqPriorAuthData</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='maxLength'>
+Max length: 2048
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Data that documents and supports a specific authentication process. In the current version of the specification this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. In future versions of the specification, these details are expected to be included.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSReqPriorAuthMethod</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-4])|([89][1-10])$</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Mechanism used by the Cardholder to previously authenticate to the 3DS Requestor.</div>
+<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Frictionless authentication occurred by ACS</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Cardholder challenge occurred by ACS</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>AVS verified</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Other issuer methods</div>
+</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSReqPriorAuthTimestamp</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-yyyymmddhhmm'>
+yyyymmddhhmm
+</a>
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>Date and time in UTC of the prior cardholder authentication.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSReqPriorRef</div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='maxLength'>
+Max length: 36
+</div>
+</div>
+<div class='inclusion'>Optional</div></td>
+<td class='argdesc'><div class='decscription'>This data element provides additional information to the ACS to determine the best approach for handing a request.</div>
+<div class='conditions'>
+</div></td></tr>
+</tbody>
+</table>
+</div>

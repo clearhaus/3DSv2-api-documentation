@@ -1,0 +1,325 @@
+/********************** Global ***********************/
+a {
+    color: #404040; 
+    transition: .3s;
+}
+a:hover {
+    text-decoration: underline;
+}
+/** Middel content **/ 
+.wy-nav-content {
+    max-width: 1200px !important;
+    margin: 0;
+    background: #fcfcfc;
+}
+
+/** DL STYLE **/
+dl:not(.docutils) dt {
+    display: table !important;
+    margin: 6px 0 !important;
+    font-size: 0.9em !important;
+    line-height: normal !important;
+    background: transparent !important;
+    color: #333 !important;
+    border-top: none !important;
+    padding: 0 !important;
+    position: relative !important; 
+}
+
+dd {
+    margin-left: 6px !important;
+}
+
+.note {
+    background: #e1eaeb !important;
+}
+
+.admonition-title {
+    background: #39757c !important;
+}
+
+/*Background color*/
+.wy-nav-content-wrap {
+    background: linear-gradient(35deg, rgb(57, 117, 124, 0.3) 0%, rgb(57, 117, 124, 0.3) 100%);
+}
+
+/********************** Sidebar ***********************/
+/**Mobil nav**/
+.wy-nav-top {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+/** Logo **/
+.wy-side-nav-search>a img.logo {
+    width: 230px;
+    height: 58px;
+}
+
+.fa-home:before, .icon-home:before {
+    display: none !important; 
+}
+
+.icon-home {
+    transition: .3s;
+    font-size: 25px;
+}
+
+.icon-home:hover {
+    background-color: transparent;
+    color: rgba(234, 136, 91)
+}
+
+.wy-side-nav-search input[type=text] {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: none;
+    border-radius: 100px;
+    width: 100%;
+    border: none;
+    padding: 1em 2em;
+    color: #eee !important;
+    margin-bottom: 10px;
+}
+
+.wy-side-nav-search input[type=text]::placeholder {
+    color: #ddd !important;
+}
+/** Sidebar -box**/
+.wy-nav-side {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+
+/** top of sidebar **/
+.wy-side-nav-search {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+
+/** Content in sidebar **/
+.caption-text {
+    color: rgba(234, 136, 91)
+}
+
+.toctree-expand {
+    visibility: hidden;
+}
+.wy-menu-vertical li.toctree-l2 span.toctree-expand {
+    margin-left: 10px;
+}
+
+.current, .internal, .wy-menu-vertical li.current {
+    background-color: transparent !important;
+}
+.current .current a.reference {
+    padding: .4045em 1.618em;
+}
+.internal li .internal {
+    padding: .4045em 1.718em;
+}
+.wy-menu-vertical li.toctree-l1.current>a {
+    border-bottom: none;
+    border-top: none;
+}
+
+.wy-menu-vertical a {
+    color: #bbb;
+}
+.current .current a {
+    color: #eee !important;
+}
+  
+/********************** Arg tabel content ***********************/
+.argtable td {
+    background-color: #fcfcfc !important;
+    border: none !important;
+    clear:both;
+}
+
+.argdef {
+    padding: 20px !important;
+    width: 400px;
+}
+
+
+.inclusion {
+    color: rgba(234, 136, 91) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0px !important;
+    clear: both;
+    margin-top: 10px;
+}
+
+.attributeName {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.attributeName:before {
+    content: "Attribute:  ";
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.argdef p:first-child {
+    color: #444 !important;
+}
+
+.argdef p {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+    font-weight: 600;
+}
+
+.argdesc {
+    padding: 20px !important;
+}
+
+.argdesc p {
+    color: #777;
+    font-size: 15px;
+}
+
+.argtable tr {
+    border-bottom: solid 1px #bbb !important;
+}
+
+/**Tags**/
+.type, .maxLength, .format, .length, .minLength {
+    float: right;
+    border: 1px solid #ccc;
+    padding: 5px 6px 3px;
+    border-radius: 200px;
+    margin: 0 0 12px 5px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.enum, .argdef p:last-child, .regexp, .integerString {
+    margin-top: 10px;
+    clear: both;
+}
+
+/**Media query**/
+@media only screen and (max-width: 980px) {
+    .argdef {
+        width: 250px;
+    }
+    .wy-table-responsive {
+        margin-bottom: 24px;
+        max-width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .wy-table-responsive table {
+        width: 100%
+    }
+    .wy-nav-top {
+        position: fixed;
+        width: 100%;
+    }
+    .wy-nav-content-wrap .wy-nav-content {
+        padding-top: 90px;
+    } 
+
+    .argdef {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .argdesc {
+        float: left;
+        width: 150px;
+        text-align: left;
+    }   
+
+    .argtable th {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .type, .maxLength, .format, .length, .minLength, .integerString {
+        float: left;
+    }
+}
+/********************** JSON ***********************/
+.json-example {
+    display: none; 
+    color: #bbb;
+    line-height: 2;
+}
+.json-example.active {
+display: block !important;
+}
+
+
+.json-example-container {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px -2px #111;
+    margin-bottom: 50px;
+}
+
+/********************** Select ***********************/
+#scenario_selector {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 4px 4px 8px;
+}
+#deviceChannelSelector{
+    margin-top: -5px;
+    margin-left: 10px;
+}
+#messageCategorySelector {
+    margin-top: -5px;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 768px) {
+    #scenario_selector {
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+        border: none !important;
+    }
+
+    #deviceChannelSelector {
+        margin: 10px 0;
+    }
+
+    #messageCategorySelector {
+        margin: 10px 0;
+    }
+}
+
+
+/********************** argdesc content ***********************/
+.enumDescriptionHeader {
+  margin: 20px 0 5px 0;
+}
+
+.enumDescription {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.enumKey {
+    font-weight: 600;
+    margin: 5px 10px 5px 0;
+    white-space: nowrap;
+    width: fit-content;
+    background: #fff;
+    border: solid 1px #e1e4e5;
+    font-size: 75%;
+    padding: 5px;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+    overflow-x: auto;
+}
+.enumValue {
+    width: calc(100% - 40px);
+}
+
+.conditions {
+    margin: 10px 0;
+    font-weight: 600;
+}
