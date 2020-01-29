@@ -72,7 +72,7 @@ Devoted team
 .. _what-is-a-3-d-secure-server:
 
 What is a 3-D Secure Server?
-===========================================
+============================
 
 A 3-D Secure Server is used in the financial industry, to facilitate cardholder
 authentication in preparation for e.g. making a purchase. The specification is
@@ -116,6 +116,22 @@ that you do not need to refer to the specification.
 
   * - :download:`EMVCo_3DS_SB214v1.pdf <specifications/EMVCo_3DS_SB214v1.pdf>`
     - Specification Bulletin No. 214 v1 (Cumulative updates to 2.2.0)
+
+Organizations involved in 3-D Secure
+====================================
+
+Requestor (3DSRequestor)
+  An organization performing 3-D Secure authentication on behalf of a merchant.
+  The requestor may be a merchant.
+
+3-D Secure Server (3DSS)
+  A server facilitating communication between the Requestor and Card Schemes.
+
+Directory Server (DS)
+  Card scheme service facilitating connections between 3-D Secure Server and ACS.
+
+Access Control Server (ACS)
+  Acts on behalf of issuer to support authentication of cardholders.
 
 Where to go from here
 =====================
