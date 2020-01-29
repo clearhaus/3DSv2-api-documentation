@@ -3,6 +3,9 @@
 3-D Secure version determination
 ================================
 
+There are currently three 3-D Secure versions, ``1.0.2``, ``2.1.0`` and ``2.2.0``.
+This is meant to be a guide to selecting between different 3-D Secure versions.
+
 1. If the :ref:`preauth <preauth-usage>` returns a :ref:`not_enrolled`, continue with 3DSv1.
 2. When card scheme is Visa, ``acsInfoInd`` is included. This can be used to
    determine if ACS supports challenges or only attempts.
