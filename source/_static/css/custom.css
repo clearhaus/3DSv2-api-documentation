@@ -127,7 +127,6 @@ dd {
   
 /********************** Arg tabel content ***********************/
 .argtable td {
-    background-color: #fcfcfc !important;
     border: none !important;
     clear:both;
 }
@@ -152,7 +151,6 @@ dd {
 }
 
 .attributeName:before {
-    content: "Attribute:  ";
     font-weight: 500;
     margin-right: 4px;
 }
@@ -176,8 +174,9 @@ dd {
     font-size: 15px;
 }
 
-.argtable tr {
-    border-bottom: solid 1px #bbb !important;
+tr.attributeNameRow td {
+  font-weight: 600;
+  padding-left: 24px;
 }
 
 /**Tags**/

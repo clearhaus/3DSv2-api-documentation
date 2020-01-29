@@ -4,14 +4,9 @@
 <col style='30%'>
 <col style='70%'>
 </colgroup>
-<thead>
-<tr>
-<th>Description</th>
-<th>Comment</th>
-</tr>
-</thead>
 <tbody>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>acctID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acctID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -24,7 +19,8 @@ Max length: 64
 <td class='argdesc'><div class='decscription'>Additional information about the account optionally provided by the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acctInfo</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acctInfo</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#acctinfo'>
@@ -36,7 +32,8 @@ AcctInfo object
 <td class='argdesc'><div class='decscription'>Additional information about the Cardholder’s account provided by the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>acctNumber</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acctNumber</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -50,21 +47,23 @@ Regexp:
 <td class='argdesc'><div class='decscription'>Account number that will be used in the authorisation request for payment transactions. May be represented by PAN, token.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acctType</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acctType</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-3])|([89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-3]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div></td>
 <td class='argdesc'><div class='decscription'>Indicates the type of account. For example, for a multi-account card product.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>acquirerBIN</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acquirerBIN</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -96,7 +95,8 @@ Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acquirerMerchantID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acquirerMerchantID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -128,7 +128,8 @@ Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>addrMatch</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>addrMatch</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -143,7 +144,8 @@ One of:
 <td class='argdesc'><div class='decscription'>Indicates whether the Cardholder Shipping Address and Cardholder Billing Address are the same.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>billAddrCity</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrCity</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -156,7 +158,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>The city of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>billAddrCountry</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>billAddrCountry</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -169,7 +172,8 @@ Length: 3
 <td class='argdesc'><div class='decscription'>The country of the Cardholder billing address Server associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>billAddrLine1</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrLine1</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -182,7 +186,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>First line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>billAddrLine2</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>billAddrLine2</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -195,7 +200,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>Second line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>billAddrLine3</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrLine3</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -208,7 +214,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>Third line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>billAddrPostCode</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>billAddrPostCode</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -221,7 +228,8 @@ Max length: 16
 <td class='argdesc'><div class='decscription'>ZIP or other postal code of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>billAddrState</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrState</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -234,7 +242,8 @@ Max length: 3
 <td class='argdesc'><div class='decscription'>The state or province of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>browserAcceptHeader</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>browserAcceptHeader</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -247,7 +256,8 @@ Max length: 2048
 <td class='argdesc'><div class='decscription'>Exact content of the HTTP accept headers as sent to the 3DS Requestor from the Cardholder’s browser.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd'><td class='argdef'><div class='attributeName'>browserColorDepth</div>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>browserColorDepth</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -268,7 +278,8 @@ One of:
 <td class='argdesc'><div class='decscription'>Value representing the bit depth of the colour palette for displaying images, in bits per pixel. Obtained from Cardholder browser using the screen.colorDepth property.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>browserIP</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>browserIP</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -287,7 +298,8 @@ Max length: 45
 <td class='argdesc'><div class='decscription'>IP address of the browser as returned by the HTTP headers to the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd'><td class='argdef'><div class='attributeName'>browserJavaEnabled</div>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>browserJavaEnabled</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: bool
@@ -297,7 +309,8 @@ Type: bool
 <td class='argdesc'><div class='decscription'>Boolean that represents the ability of the cardholder browser to execute Java. Value is returned from the navigator.javaEnabled property.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>browserLanguage</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>browserLanguage</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -313,7 +326,8 @@ Max length: 8
 <td class='argdesc'><div class='decscription'>Value representing the browser language as defined in IETF BCP47. Returned from navigator.language property.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd'><td class='argdef'><div class='attributeName'>browserScreenHeight</div>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>browserScreenHeight</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -327,7 +341,8 @@ Regexp:
 <td class='argdesc'><div class='decscription'>Total height of the Cardholder’s screen in pixels. Value is returned from the screen.height property.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>browserScreenWidth</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>browserScreenWidth</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -341,7 +356,8 @@ Regexp:
 <td class='argdesc'><div class='decscription'>Total width of the cardholder’s screen in pixels. Value is returned from the screen.width property.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd'><td class='argdef'><div class='attributeName'>browserTZ</div>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>browserTZ</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -355,7 +371,8 @@ Regexp:
 <td class='argdesc'><div class='decscription'>Time-zone offset in minutes between UTC and the Cardholder browser local time. Note that the offset is positive if the local time zone is behind UTC and negative if it is ahead.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>browserUserAgent</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>browserUserAgent</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -365,10 +382,11 @@ Max length: 2048
 </div>
 </div>
 <div class='inclusion'>Required</div></td>
-<td class='argdesc'><div class='decscription'>Exact content of the HTTP user-agent header.</div>
+<td class='argdesc'><div class='decscription'>Exact content of the HTTP user-agent header. Note: If the total length of the User-Agent sent by the browser exceeds 2048 characters, truncate the excess portion.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>cardExpiryDate</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>cardExpiryDate</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -384,7 +402,8 @@ yymm
 <td class='argdesc'><div class='decscription'>Expiry Date of the PAN or token supplied to the 3DS Requestor by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>cardholderName</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>cardholderName</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -400,7 +419,8 @@ Max length: 45
 <td class='argdesc'><div class='decscription'>Name of the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>deviceChannel</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>deviceChannel</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -425,7 +445,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><div class='attributeName'>deviceRenderOptions</div>
+<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow'><td class='attribute' colspan='2'>deviceRenderOptions</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#devicerenderoptions'>
@@ -437,7 +458,8 @@ DeviceRenderOptions object
 <td class='argdesc'><div class='decscription'>Defines the SDK UI types that the device supports for displaying specific challenge user interfaces within the SDK.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>email</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>email</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -456,7 +478,8 @@ Max length: 254
 <td class='argdesc'><div class='decscription'>The email address associated with the account that is either entered by the Cardholder, or is on file with the 3DS Requestor.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>homePhone</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>homePhone</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#phonenumber'>
@@ -468,7 +491,8 @@ PhoneNumber object
 <td class='argdesc'><div class='decscription'>The home phone number provided by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>mcc</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>mcc</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -500,7 +524,8 @@ Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>merchantCountryCode</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>merchantCountryCode</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -538,7 +563,8 @@ Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>merchantName</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>merchantName</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -570,7 +596,8 @@ Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>merchantRiskIndicator</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>merchantRiskIndicator</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#merchantriskindicator'>
@@ -582,7 +609,8 @@ MerchantRiskIndicator object
 <td class='argdesc'><div class='decscription'>Merchant’s assessment of the level of fraud risk for the specific authentication for both the cardholder and the authentication being conducted.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageCategory</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageCategory</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -604,7 +632,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageExtension</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageExtension</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Array of
@@ -620,7 +649,8 @@ Max length: 10
 <td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageType</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageType</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -642,7 +672,8 @@ One of:
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageVersion</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageVersion</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -656,7 +687,8 @@ One of:
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>mobilePhone</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>mobilePhone</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#phonenumber'>
@@ -668,7 +700,8 @@ PhoneNumber object
 <td class='argdesc'><div class='decscription'>The mobile phone number provided by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>notificationURL</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>notificationURL</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -687,7 +720,8 @@ Max length: 256
 <td class='argdesc'><div class='decscription'>Fully qualified URL of the system that receives the CRes message or Error Message. The CRes message is posted by the ACS through the Cardholder browser at the end of the challenge and receipt of the RRes message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>purchaseAmount</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>purchaseAmount</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -728,7 +762,8 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>purchaseCurrency</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>purchaseCurrency</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -771,7 +806,8 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>purchaseDate</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>purchaseDate</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -814,7 +850,8 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>purchaseExponent</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>purchaseExponent</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -855,7 +892,8 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>purchaseInstalData</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>purchaseInstalData</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -911,7 +949,8 @@ Required if threeDSRequestorAuthenticationInd is "03"</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is "03"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>payTokenInd</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>payTokenInd</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: bool
@@ -925,7 +964,8 @@ One of:
 <td class='argdesc'><div class='decscription'>A value of True indicates that the transaction was de-tokenised prior to being received by the ACS. This data element will be populated by the system residing in the 3-D Secure domain where the de-tokenisation occurs (i.e., the 3DS Server or the DS).  Note: The Boolean value of true is the only valid response for this field when it is present.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>recurringExpiry</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>recurringExpiry</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -976,7 +1016,8 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>recurringFrequency</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>recurringFrequency</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1025,7 +1066,8 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-odd'><td class='argdef'><div class='attributeName'>sdkAppID</div>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>sdkAppID</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1041,7 +1083,8 @@ uuid
 <td class='argdesc'><div class='decscription'>Universally unique ID created upon all installations of the 3DS Requestor App on a Consumer Device. This will be newly generated and stored by the 3DS SDK for each installation.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><div class='attributeName'>sdkEncData</div>
+<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow'><td class='attribute' colspan='2'>sdkEncData</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1054,7 +1097,8 @@ Max length: 64000
 <td class='argdesc'><div class='decscription'>JWE Object (represented as a string) as defined in Section 6.2.2.1 containing data encrypted by the SDK for the DS to decrypt.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-odd'><td class='argdef'><div class='attributeName'>sdkEphemPubKey</div>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>sdkEphemPubKey</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#json.rawmessage'>
@@ -1069,7 +1113,8 @@ Max length: 256
 <td class='argdesc'><div class='decscription'>Public key component of the ephemeral key pair generated by the 3DS SDK and used to establish session keys between the 3DS SDK and ACS.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><div class='attributeName'>sdkMaxTimeout</div>
+<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow'><td class='attribute' colspan='2'>sdkMaxTimeout</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1090,7 +1135,8 @@ Value:
 <td class='argdesc'><div class='decscription'>Indicates maximum amount of time (in minutes) for all exchanges.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-odd'><td class='argdef'><div class='attributeName'>sdkReferenceNumber</div>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>sdkReferenceNumber</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1103,7 +1149,8 @@ Max length: 32
 <td class='argdesc'><div class='decscription'>Identifies the vendor and version for the 3DS SDK that is integrated in a 3DS Requestor App, assigned by EMVCo when the 3DS SDK is approved.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><div class='attributeName'>sdkTransID</div>
+<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow'><td class='attribute' colspan='2'>sdkTransID</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1130,7 +1177,8 @@ uuid
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>shipAddrCity</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrCity</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1143,7 +1191,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>City portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>shipAddrCountry</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipAddrCountry</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1191,7 +1240,8 @@ Required if shipAddrState is not empty</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if shipAddrState is not empty</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>shipAddrLine1</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrLine1</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1204,7 +1254,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>First line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>shipAddrLine2</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipAddrLine2</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1217,7 +1268,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>The second line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>shipAddrLine3</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrLine3</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1230,7 +1282,8 @@ Max length: 50
 <td class='argdesc'><div class='decscription'>The third line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>shipAddrPostCode</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipAddrPostCode</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1243,7 +1296,8 @@ Max length: 16
 <td class='argdesc'><div class='decscription'>The ZIP or other postal code of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>shipAddrState</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrState</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1256,7 +1310,8 @@ Max length: 3
 <td class='argdesc'><div class='decscription'>The state or province of the shipping address associated with the card being used for this purchase.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even'><td class='argdef'><div class='attributeName'>threeDSCompInd</div>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSCompInd</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1281,14 +1336,15 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSRequestorAuthenticationInd</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorAuthenticationInd</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-6])|([89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-6]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div></td>
@@ -1310,7 +1366,8 @@ Regexp:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSRequestorAuthenticationInfo</div>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorAuthenticationInfo</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#threedsrequestorauthenticationinfo210'>
@@ -1322,14 +1379,15 @@ ThreeDSRequestorAuthenticationInfo210 object
 <td class='argdesc'><div class='decscription'>Information about how the 3DS Requestor authenticated the cardholder before or during the transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSRequestorChallengeInd</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorChallengeInd</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-4])|([89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div></td>
@@ -1347,7 +1405,8 @@ Regexp:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSRequestorID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1360,7 +1419,8 @@ Max length: 35
 <td class='argdesc'><div class='decscription'>DS assigned 3DS Requestor identifier. Each DS will provide a unique ID to each 3DS Requestor on an individual basis.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSRequestorName</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorName</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1373,7 +1433,8 @@ Max length: 40
 <td class='argdesc'><div class='decscription'>DS assigned 3DS Requestor name. Each DS will provide a unique name to each 3DS Requestor on an individual basis.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSRequestorPriorAuthenticationInfo</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorPriorAuthenticationInfo</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#threedsrequestorpriorauthenticationinfo'>
@@ -1385,7 +1446,8 @@ ThreeDSRequestorPriorAuthenticationInfo object
 <td class='argdesc'><div class='decscription'>Information about how the 3DS Requestor authenticated the cardholder as part of a previous 3DS transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSRequestorURL</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorURL</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1404,7 +1466,8 @@ Max length: 2048
 <td class='argdesc'><div class='decscription'>Fully qualified URL of 3DS Requestor website or customer care site. This data element provides additional information to the receiving 3-D Secure system if a problem arises and should provide contact information.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSServerOperatorID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerOperatorID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1414,7 +1477,8 @@ Type: string
 <td class='argdesc'><div class='decscription'>DS assigned 3DS Server identifier. Each DS can provide a unique ID to each 3DS D Server on an individual basis.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSServerRefNumber</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSServerRefNumber</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1424,7 +1488,8 @@ Type: string
 <td class='argdesc'><div class='decscription'>Unique identifier assigned by the EMVCo secretariat upon testing and approval.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSServerTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1440,7 +1505,8 @@ uuid
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSServerURL</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSServerURL</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1450,14 +1516,15 @@ Type: string
 <td class='argdesc'><div class='decscription'>Fully qualified URL of the 3DS Server to which the DS will send the RReq message after the challenge has completed. Incorrect formatting will result in a failure to deliver the transaction results via the RReq message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeRIInd</div>
+<tr categories='PA NPA' channels='3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeRIInd</td></tr>
+<tr categories='PA NPA' channels='3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-5])|([89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-5]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div></td>
@@ -1477,7 +1544,8 @@ Regexp:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>transType</div>
+<tr categories='PA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>transType</td></tr>
+<tr categories='PA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -1508,7 +1576,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>workPhone</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>workPhone</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#phonenumber'>

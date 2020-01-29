@@ -4,14 +4,9 @@
 <col style='30%'>
 <col style='70%'>
 </colgroup>
-<thead>
-<tr>
-<th>Description</th>
-<th>Comment</th>
-</tr>
-</thead>
 <tbody>
-<tr categories='PA NPA' channels='APP' class='row-even'><td class='argdef'><div class='attributeName'>acsRenderingType</div>
+<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acsRenderingType</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#acsrenderingtype'>
@@ -34,7 +29,8 @@ AcsRenderingType object
 <td class='argdesc'><div class='decscription'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>acsTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acsTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -58,17 +54,18 @@ uuid
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div></td>
-<td class='argdesc'><div class='decscription'>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</div>
+<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>authenticationType</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>authenticationType</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-3])$</span></code>
+<code><span class='pre'>^0[1-3]$</span></code>
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
@@ -119,7 +116,8 @@ Required if transStatus is one of [Y, N]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if transStatus is one of [Y, N]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>authenticationValue</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>authenticationValue</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -159,14 +157,15 @@ Required if transStatus is one of [Y, A]</div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
 Required if transStatus is one of [Y, A]</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even'><td class='argdef'><div class='attributeName'>challengeCancel</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>challengeCancel</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[14-8])$</span></code>
+<code><span class='pre'>^0[14-8]$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div></td>
@@ -188,7 +187,8 @@ Regexp:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>dsTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>dsTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -218,7 +218,8 @@ Max length: 36
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>eci</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>eci</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -231,7 +232,8 @@ Max length: 2
 <td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd'><td class='argdef'><div class='attributeName'>interactionCounter</div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>interactionCounter</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -252,7 +254,8 @@ Value:
 <td class='argdesc'><div class='decscription'>Indicates the number of authentication cycles attempted by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageCategory</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageCategory</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -274,7 +277,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageExtension</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageExtension</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Array of
@@ -290,7 +294,8 @@ Max length: 10
 <td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageType</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageType</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -312,7 +317,8 @@ One of:
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageVersion</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageVersion</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -326,7 +332,8 @@ One of:
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSServerTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -342,7 +349,8 @@ uuid
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>transStatus</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>transStatus</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -395,7 +403,8 @@ Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>transStatusReason</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>transStatusReason</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
