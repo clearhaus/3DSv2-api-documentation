@@ -71,6 +71,14 @@ Challenge request (CReq)
 .. raw:: html
   :file: _static/creq.html
 
+.. _final_cres_210:
+
+Challenge response (CRes)
+------------------------
+
+.. raw:: html
+  :file: _static/cres_210.html
+
 .. _postauth-endpoint:
 
 ``/postauth`` endpoint
