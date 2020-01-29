@@ -9,103 +9,103 @@ invoked.
 If not, continue with the :ref:`auth-usage` and include ``"threeDSCompInd": "U"``, to
 indicate that the 3DS Method was not available.
 
-1. Create a JSON object containing `threeDSServerTransID` from the `/preauth`
-   call:
+Create a JSON object containing `threeDSServerTransID` from the `/preauth`
+call:
 
-   .. code-block:: json
+.. code-block:: json
 
-     {
-       "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
-       "threeDSMethodNotificationURL": "<Requestor callback URL>"
-     }
+  {
+   "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
+   "threeDSMethodNotificationURL": "<Requestor callback URL>"
+  }
 
-2. Render a hidden HTML iframe in the Cardholder browser and send a form with a
-   field named `threeDSMethodData` containing the above JSON as Base64URL-encoded
-   to the `threeDSMethodURL`.
+Render a hidden HTML iframe in the Cardholder browser and send a form with a
+field named `threeDSMethodData` containing the above JSON as Base64URL-encoded
+to the `threeDSMethodURL`.
 
-   Below is a suggestion of what you can do:
+Below is a suggestion of what you can do:
 
-   a. Add an iframe to the users browser, either statically or using javascript.
+a. Add an iframe to the users browser, either statically or using javascript.
 
-      .. code-block:: javascript
-         :linenos:
+   .. code-block:: javascript
+      :linenos:
 
-         let displayBox = document.getElementById('displayBox');
+      let displayBox = document.getElementById('displayBox');
 
-         let iframe = document.createElement('iframe');
-         iframe.classList.add('hidden');
-         iframe.name = "threeDSMethodIframe";
+      let iframe = document.createElement('iframe');
+      iframe.classList.add('hidden');
+      iframe.name = "threeDSMethodIframe";
 
-         displayBox.appendChild(iframe);
+      displayBox.appendChild(iframe);
 
-     Resulting in something like the following html:
+  Resulting in something like the following html:
 
-     .. code-block:: html
+  .. code-block:: html
 
-        <iframe name="threeDSMethodIframe" class="hidden"/>
+     <iframe name="threeDSMethodIframe" class="hidden"/>
 
-   b. Create a HTML ``form``, likely using javascript, that contains the
-      input data and submit that form.
+b. Create a HTML ``form``, likely using javascript, that contains the
+   input data and submit that form.
 
-      With this static html:
+   With this static html:
 
-      .. code-block:: html
-         :linenos:
+   .. code-block:: html
+      :linenos:
 
-         <form class="" id="threeDSMethodForm">
-           <input type="hidden"
-            name="threeDSMethodData"
-            id="threeDSMethodData"/>
-         </form>
+      <form class="" id="threeDSMethodForm">
+        <input type="hidden"
+         name="threeDSMethodData"
+         id="threeDSMethodData"/>
+      </form>
 
-      You can submit with something like the following:
+   You can submit with something like the following:
 
-      .. code-block:: javascript
-         :linenos:
+   .. code-block:: javascript
+      :linenos:
 
-         // Generate the data object
-         let threeDSMethodData = {
-           threeDSServerTransID: '<TRANS ID>',
-           threeDSMethodNotificationURL: '<URL>'
-         }
+      // Generate the data object
+      let threeDSMethodData = {
+        threeDSServerTransID: '<TRANS ID>',
+        threeDSMethodNotificationURL: '<URL>'
+      }
 
-         // Get a reference to the form
-         let form = document.getElementById('threeDSMethodForm');
+      // Get a reference to the form
+      let form = document.getElementById('threeDSMethodForm');
 
-         // Set the form input value to the object,
-         // base64url-encode the data.
-         document.getElementById('threeDSMethodData').value =
-          btoa(JSON.stringify(threeDSMethodData));
+      // Set the form input value to the object,
+      // base64url-encode the data.
+      document.getElementById('threeDSMethodData').value =
+       btoa(JSON.stringify(threeDSMethodData));
 
-         // Fill out the form information and submit.
-         form.action = '<threeDSMethodURL>';
-         form.target = 'threeDSMethodIframe';
-         form.method = 'post';
-         form.submit();
+      // Fill out the form information and submit.
+      form.action = '<threeDSMethodURL>';
+      form.target = 'threeDSMethodIframe';
+      form.method = 'post';
+      form.submit();
 
-3. When the 3D Method call is finished, the browser iframe will be redirected to
-   ``threeDSMethodNotificationURL``.
-   If the callback is not received in 10 seconds, proceed with step 4.
+When the 3D Method call is finished, the browser iframe will be redirected to
+``threeDSMethodNotificationURL``.
+If the callback is not received in 10 seconds, proceed with step 4.
 
-   The method will be ``POST`` and will contain a form with the value
-   ``threeDSMethodData``, that can be used to identify the request.
+The method will be ``POST`` and will contain a form with the value
+``threeDSMethodData``, that can be used to identify the request.
 
-   The ``application/x-www-form-urlencoded`` form body looks like:
+The ``application/x-www-form-urlencoded`` form body looks like:
 
-   .. code-block::
+.. code-block::
 
-      threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ==
+   threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ==
 
 
-   The decoded value is like:
+The decoded value is like:
 
-   .. code-block:: json
+.. code-block:: json
 
-      {"threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"}
+   {"threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"}
 
-   Continue the authentication with the :ref:`auth-usage`, setting
-   ``"threeDSCompInd": "Y"``
+Continue the authentication with the :ref:`auth-usage`, setting
+``"threeDSCompInd": "Y"``
 
-4. If waiting for the callback takes more than 10 seconds, close the iframe
-   forcibly and continue the authentication with the :ref:`auth-usage`, setting
-   ``"threeDSCompInd": "N"``
+If waiting for the callback takes more than 10 seconds, close the iframe
+forcibly and continue the authentication with the :ref:`auth-usage`, setting
+``"threeDSCompInd": "N"``
