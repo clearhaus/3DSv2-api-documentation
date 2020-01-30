@@ -44,5 +44,19 @@ This near-pseudocode describes the flow your code should perform.
 See :ref:`the reference <postauth-input>` for the values returned.
 
 .. note::
-  The authentication cache expires 300 seconds after the 3-D Secure Server receives it
-  from the card scheme, it must be fetched before expiry.
+  The authentication cache expires 300 seconds after the 3-D Secure Server
+  receives it from the card scheme, it must be fetched before expiry. It will
+  return an error as examplified below.
+
+  .. code-block:: json
+     :caption: Authentication response after timeout.
+
+     {
+       "errorCode": "203",
+       "errorComponent": "S",
+       "errorDescription": "Unknown threeDSServerTransID",
+       "errorDetail": "Unknown threeDSServerTransID",
+       "messageType": "Erro",
+       "messageVersion": "2.2.0",
+       "threeDSServerTransID": "33eaca9c-5aff-41d9-ad75-a2cde347be2a"
+     }
