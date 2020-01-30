@@ -274,3 +274,13 @@ The following codes cannot be used:
 - 963
 - 964
 - 999
+
+.. _format-validversion:
+
+Valid Version
+-------------
+
+Valid 3-D Secure v2 versions:
+
+- ``2.1.0``
+- ``2.2.0``

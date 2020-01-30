@@ -188,7 +188,6 @@ tr.attributeNameRow td {
     margin: 0 0 12px 5px;
     text-align: center;
     align-items: center;
-    display: flex;
 }
 
 .enum, .argdef p:last-child, .regexp, .integerString {
