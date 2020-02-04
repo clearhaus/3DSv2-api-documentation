@@ -1,0 +1,171 @@
+<div class='message-info'>
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<tbody>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acsEndProtocolVersion</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
+<td class='argdesc'><div class='decscription'>The most recent active protocol version that is supported for the ACS URL.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acsInfoInd</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Array of
+<a href='#string'>
+string object
+</a>
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
+<td class='argdesc'><div class='decscription'>Provides additional information to the 3DS Server. The element lists all applicable values for the card range.</div>
+<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Authentication Available at ACS</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Attempts Supported by ACS or DS</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Decoupled Authentication Supported</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Whitelisting Supported</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acsStartProtocolVersion</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
+<td class='argdesc'><div class='decscription'>The earliest (i.e. oldest) active protocol version that is supported by the ACS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>dsEndProtocolVersion</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
+<td class='argdesc'><div class='decscription'>The most recent active protocol version that is supported for the DS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>dsStartProtocolVersion</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
+<td class='argdesc'><div class='decscription'>The earliest (i.e. oldest) active protocol version that is supported by the DS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSMethodURL</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-url'>
+url
+</a>
+</div>
+<div class='maxLength'>
+Max length: 256
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
+<td class='argdesc'><div class='decscription'>The ACS URL that will be used by the 3DS Method. Note: The 3DSMethodURL data element may be omitted if not supported by the ACS for this specific card range.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='format'>
+Format:
+<a href='#format-uuid'>
+uuid
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div></td>
+<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
+<div class='conditions'>
+</div></td></tr>
+</tbody>
+</table>
+</div>

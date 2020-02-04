@@ -71,9 +71,12 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
 .. TODO: Describe the callback.
 
 After the challenge has finished, the browser will be redirected to the
-``notificationURL``, where it will POST two values, 1) the ``threeDSSessionData``
-that was supplied before, as well as 2) a "final" challenge result ``CRes`` value.
-The final `CRes` looks something like this:
+``notificationURL``, where it will POST two values
+
+1. The ``threeDSSessionData`` that was supplied before, as well as
+2. A "final" challenge result ``CRes`` value.
+
+The :ref:`final challenge response (reference) <final_cres_210>` looks like this:
 
 
 .. code-block:: json

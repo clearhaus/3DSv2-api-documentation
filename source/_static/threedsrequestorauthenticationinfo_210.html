@@ -4,14 +4,9 @@
 <col style='30%'>
 <col style='70%'>
 </colgroup>
-<thead>
-<tr>
-<th>Description</th>
-<th>Comment</th>
-</tr>
-</thead>
 <tbody>
-<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSReqAuthData</div>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSReqAuthData</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -20,21 +15,26 @@ Type: string
 Max length: 2048
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'> Data that documents and supports a specific authentication process.  In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, for method: 02—field can carry generic 3DS Requestor authentication information 03—data element can carry information about the provider of the federated ID and related information 04—data element can carry the FIDO attestation data (including the signature) In future versions of the specification, these details are expected to be included</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>threeDSReqAuthMethod</div>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSReqAuthMethod</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-6])|([89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-6]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -53,7 +53,8 @@ Regexp:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>threeDSReqAuthTimestamp</div>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSReqAuthTimestamp</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -65,7 +66,9 @@ yyyymmddhhmm
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Date and time in UTC of the cardholder authentication.</div>
 <div class='conditions'>
 </div></td></tr>

@@ -26,56 +26,16 @@ for a selected authentication scenario. Please note the following:
 Input
 -----
 
-.. list-table::
-  :widths: 1 1 1 30
-  :header-rows: 1
-
-  * - Key
-    - Format
-    - Required
-    - Comments
-  * - acctNumber
-    - ``^[1-9]\d{12,18}$``
-    - Yes
-    - The cardholders account number or e.g. a tokenized PAN.
+.. raw:: html
+  :file: _static/preauth.html
 
 .. _preauth-response:
 
 Output
 ------
 
-.. list-table::
-  :widths: 1 1 1 30
-  :header-rows: 1
-
-  * - Key
-    - Format
-    - Required
-    - Comments
-  * - acsStartProtocolVersion
-    - messageVersion
-    - Yes
-    - 
-  * - acsEndProtocolVersion
-    - messageVersion
-    - Yes
-    - 
-  * - threeDSServerTransID
-    - UUID
-    - Yes
-    - 
-  * - dsStartProtocolVersion
-    - messageVersion
-    - No
-    - 
-  * - acsInfoInd
-    - ACSInfo
-    - No
-    - 
-  * - threeDSMethodURL
-    - URL
-    - No
-    - 
+.. raw:: html
+  :file: _static/cardrangedata.html
 
 .. _auth-endpoint:
 
@@ -111,6 +71,14 @@ Challenge request (CReq)
 .. raw:: html
   :file: _static/creq.html
 
+.. _final_cres_210:
+
+Challenge response (CRes)
+------------------------
+
+.. raw:: html
+  :file: _static/cres_210.html
+
 .. _postauth-endpoint:
 
 ``/postauth`` endpoint
@@ -121,16 +89,8 @@ Challenge request (CReq)
 Input
 -----
 
-.. list-table::
-  :widths: 1 1 1
-  :header-rows: 1
-
-  * - Key
-    - Format
-    - Required
-  * - threeDSServerTransID
-    - UUID
-    - Yes
+.. raw:: html
+  :file: _static/postauth.html
 
 .. _postauth-response:
 
@@ -147,7 +107,7 @@ Error object
 .. _error-object:
 
 .. raw:: html
-  :file: _static/error_210.html
+  :file: _static/erro_210.html
 
 
 Nested objects
@@ -314,3 +274,13 @@ The following codes cannot be used:
 - 963
 - 964
 - 999
+
+.. _format-validversion:
+
+Valid Version
+-------------
+
+Valid 3-D Secure v2 versions:
+
+- ``2.1.0``
+- ``2.2.0``

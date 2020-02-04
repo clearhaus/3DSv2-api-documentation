@@ -1,10 +1,14 @@
 /********************** Global ***********************/
 a {
-    color: #404040; 
+    color: #39757c; 
     transition: .3s;
 }
 a:hover {
+    color: #4D979D;
     text-decoration: underline;
+}
+a:visited {
+    color: #629195;
 }
 /** Middel content **/ 
 .wy-nav-content {
@@ -28,6 +32,7 @@ dl:not(.docutils) dt {
 
 dd {
     margin-left: 6px !important;
+    margin-bottom: 20px !important;
 }
 
 .note {
@@ -75,12 +80,12 @@ dd {
     width: 100%;
     border: none;
     padding: 1em 2em;
-    color: #eee !important;
+    color: #fff !important;
     margin-bottom: 10px;
 }
 
 .wy-side-nav-search input[type=text]::placeholder {
-    color: #ddd !important;
+    color: #eee !important;
 }
 /** Sidebar -box**/
 .wy-nav-side {
@@ -100,36 +105,40 @@ dd {
 .toctree-expand {
     visibility: hidden;
 }
-.wy-menu-vertical li.toctree-l2 span.toctree-expand {
-    margin-left: 10px;
-}
 
 .current, .internal, .wy-menu-vertical li.current {
     background-color: transparent !important;
 }
-.current .current a.reference {
-    padding: .4045em 1.618em;
-}
-.internal li .internal {
-    padding: .4045em 1.718em;
-}
+
+.wy-menu-vertical li.toctree-l2.current>a, .wy-menu-vertical li.toctree-l3.current>a, .wy-menu-vertical li.toctree-l4.current>a {
+    background: rgba(255, 255, 255, 0.1) !important;
+ }
+
 .wy-menu-vertical li.toctree-l1.current>a {
     border-bottom: none;
     border-top: none;
 }
 
+.wy-menu-vertical li.current a {
+    border-right: none;
+}
+
 .wy-menu-vertical a {
-    color: #bbb;
+    color: #fff;
 }
 .current .current a {
     color: #eee !important;
 }
+
+/********************** Table ***********************/
+thead p {
+    margin-bottom: 0
+}
   
 /********************** Arg tabel content ***********************/
 .argtable td {
-    background-color: #fcfcfc !important;
     border: none !important;
-    clear:both;
+    clear: both;
 }
 
 .argdef {
@@ -137,11 +146,10 @@ dd {
     width: 400px;
 }
 
-
 .inclusion {
     color: rgba(234, 136, 91) !important;
     font-weight: 600 !important;
-    margin-bottom: 0px !important;
+    margin-bottom: 12px !important;
     clear: both;
     margin-top: 10px;
 }
@@ -151,10 +159,12 @@ dd {
     font-weight: 600;
 }
 
+div.attributeName:empty {
+    display: none;
+}
+
 .attributeName:before {
-    content: "Attribute:  ";
     font-weight: 500;
-    margin-right: 4px;
 }
 
 .argdef p:first-child {
@@ -176,25 +186,57 @@ dd {
     font-size: 15px;
 }
 
-.argtable tr {
-    border-bottom: solid 1px #bbb !important;
+.argtable tr.attributeNameRow td {
+  font-weight: 600;
+  padding-left: 24px;
+}
+
+.argtable tr.attributeDetailRow td {
+    vertical-align: top;
 }
 
 /**Tags**/
-.type, .maxLength, .format, .length, .minLength {
+.requirements {
     float: right;
+}
+.type, .maxLength, .format, .length, .minLength {
     border: 1px solid #ccc;
-    padding: 5px 6px 3px;
+    padding: 4px 8px;
     border-radius: 200px;
-    margin: 0 0 12px 5px;
-    text-align: center;
-    align-items: center;
-    display: flex;
+    margin: 0 0 12px auto;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
+    width: max-content;
 }
 
-.enum, .argdef p:last-child, .regexp, .integerString {
+.enum, .category, .channel, .argdef p:last-child, .regexp, .integerString {
     margin-top: 10px;
+    margin-bottom: 12px;
     clear: both;
+}
+
+.enum code {
+    line-height: 22px;
+}
+
+/** Footer **/
+
+footer a.btn {
+    box-shadow: none;
+    text-decoration: none;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(234, 136, 91) !important;
+}
+footer a.btn:visited {
+    color: rgb(255, 255, 255) !important;
+}
+
+footer a.btn:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(209, 117, 75) !important;
+    box-shadow: rgba(27, 67, 111, 0.1) 0px 5px 10px 0px;
 }
 
 /**Media query**/
@@ -316,7 +358,7 @@ display: block !important;
     overflow-x: auto;
 }
 .enumValue {
-    width: calc(100% - 40px);
+    width: calc(100% - 44px);
 }
 
 .conditions {

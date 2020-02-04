@@ -97,4 +97,19 @@ General endpoint information
 1. We expect an average upstream request time of about 2 seconds, so should
    you.
 2. The request will time out after 10 seconds, after which integrators will
-   receive an error.
+   receive an error. The error returned will be
+
+   .. code-block:: json
+      :caption: Directory Server timeout response
+      :linenos:
+
+      {
+        "errorCode": "405",
+        "errorComponent": "S",
+        "errorDescription": "Unable to contact Directory Server",
+        "errorDetail": "Connection timeout",
+        "errorMessageType": "AReq",
+        "messageType": "Erro",
+        "messageVersion": "2.1.0",
+        "threeDSServerTransID": "2401433d-68be-4820-b1e7-5aa3b44dfa5a"
+      }

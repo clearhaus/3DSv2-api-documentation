@@ -4,14 +4,9 @@
 <col style='30%'>
 <col style='70%'>
 </colgroup>
-<thead>
-<tr>
-<th>Description</th>
-<th>Comment</th>
-</tr>
-</thead>
 <tbody>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>acsTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acsTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -34,11 +29,25 @@ uuid
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
-<td class='argdesc'><div class='decscription'>Universally Unique transaction identifier assigned by the ACS to identify a single transaction.</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div></td>
+<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>dsTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>dsTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -64,11 +73,25 @@ Max length: 36
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>errorCode</div>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>errorCode</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -95,7 +118,9 @@ One of:
 <code><span class='pre'>405</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Code indicating the type of problem identified in the message.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -138,7 +163,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>errorComponent</div>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>errorComponent</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -151,7 +177,9 @@ One of:
 <code><span class='pre'>A</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Code indicating the 3-D Secure component that identified the error.</div>
 <p class='enumDescriptionHeader'>Interpretation of values:</p>
 <div class='enumDescription'>
@@ -166,7 +194,8 @@ One of:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>errorDescription</div>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>errorDescription</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -175,11 +204,14 @@ Type: string
 Max length: 2048
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Text describing the problem identified in the message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd'><td class='argdef'><div class='attributeName'>errorDetail</div>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>errorDetail</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -188,11 +220,14 @@ Type: string
 Max length: 2048
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Additional detail regarding the problem identified in the message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even'><td class='argdef'><div class='attributeName'>errorMessageType</div>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>errorMessageType</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -210,47 +245,70 @@ One of:
 <code><span class='pre'>Erro</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div></td>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the Message Type that was identified as erroneous.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd'><td class='argdef'><div class='attributeName'>messageType</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageType</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='enum'>
-One of:
-<code><span class='pre'>AReq</span></code>
-<code><span class='pre'>ARes</span></code>
-<code><span class='pre'>CReq</span></code>
-<code><span class='pre'>CRes</span></code>
-<code><span class='pre'>PReq</span></code>
-<code><span class='pre'>PRes</span></code>
-<code><span class='pre'>RReq</span></code>
-<code><span class='pre'>RRes</span></code>
+Must be:
 <code><span class='pre'>Erro</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>messageVersion</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageVersion</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
 </div>
 <div class='enum'>
-One of:
+Must be:
 <code><span class='pre'>2.1.0</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-odd'><td class='argdef'><div class='attributeName'>sdkTransID</div>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>sdkTransID</td></tr>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -273,11 +331,23 @@ uuid
 <div class='hidden dynamic' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div></td>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even'><td class='argdef'><div class='attributeName'>threeDSServerTransID</div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -289,7 +359,20 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div></td>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div></td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
