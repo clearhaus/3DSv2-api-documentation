@@ -74,7 +74,7 @@ Challenge request (CReq)
 .. _final_cres_210:
 
 Challenge response (CRes)
-------------------------
+-------------------------
 
 .. raw:: html
   :file: _static/cres_210.html
