@@ -59,26 +59,25 @@ There are 3 API endpoints for this service, refer to :ref:`reference` for
 parameter definition. Brief descriptions are:
 
 /preauth
-  This is used when performing transactions from a browser (as opposed to using an SDK), where it will
-  return an optional 3-D Secure Method URL, which is used for browser
-  fingerprinting. This can support risk-based analysis and assist in ensuring
-  a flow where the cardholder is not challenged.
+  This is used when performing transactions from a browser (as opposed to using
+  an SDK), where it will return an optional 3-D Secure Method URL, which is
+  used for browser fingerprinting. This can support risk-based analysis and
+  assist in ensuring a flow where the cardholder is not challenged.
 
   While in the transition period between 3-D Secure v1 and v2, this endpoint
   can help determine if v1 should be used instead. This is documented in the
   :ref:`3ds_versioning` guide.
 
 /auth
-  A single call to receive all the data that is needed for authentication,
-  except for the 3-D Secure Method URL used for fingerprinting when performing
-  an authentication through a browser.
-  Under certain circumstances, the authentication flow will end successfully
-  here, this is called *frictionless* flow.
+  The primary API method to provide authentication data to the issuer.  Under
+  certain circumstances, the authentication flow will end successfully here,
+  this is called *frictionless* flow.
 
 /postauth
   Used when the ``/auth`` did not result in a frictionless flow, this endpoint
   returns the result of the challenge performed by the cardholder. In this case
-  the flow is called a *challenge* flow. Read more about this in :ref:`3ds_challenge_flow`.
+  the flow is called a *challenge* flow. Read more about this in
+  :ref:`3ds_challenge_flow`.
 
 Overview of Authentication Flow
 ===============================
