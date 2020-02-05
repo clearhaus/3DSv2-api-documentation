@@ -1,6 +1,6 @@
 /********************** Global ***********************/
 a {
-    color: #39757c; 
+    color: #629195;
     transition: .3s;
 }
 a:hover {
@@ -8,7 +8,7 @@ a:hover {
     text-decoration: underline;
 }
 a:visited {
-    color: #629195;
+    color: #39757c;
 }
 /** Middel content **/ 
 .wy-nav-content {
@@ -57,20 +57,6 @@ dd {
 .wy-side-nav-search>a img.logo {
     width: 230px;
     height: 58px;
-}
-
-.fa-home:before, .icon-home:before {
-    display: none !important; 
-}
-
-.icon-home {
-    transition: .3s;
-    font-size: 25px;
-}
-
-.icon-home:hover {
-    background-color: transparent;
-    color: rgba(234, 136, 91)
 }
 
 .wy-side-nav-search input[type=text] {
@@ -220,6 +206,14 @@ div.attributeName:empty {
     line-height: 22px;
 }
 
+code, .rst-content code {
+    font-weight: normal !important;
+    background: #FFFFFF;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 4px;
+    padding: 4px 5px;
+}
+
 /** Footer **/
 
 footer a.btn {
@@ -358,7 +352,7 @@ display: block !important;
     overflow-x: auto;
 }
 .enumValue {
-    width: calc(100% - 44px);
+    width: calc(100% - 55px);
 }
 
 .conditions {
