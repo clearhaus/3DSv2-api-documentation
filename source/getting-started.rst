@@ -4,20 +4,21 @@
 Getting Started
 ###############
 
-Sandbox environment
-===================
+This page is intented to familiarize you with superficial parts of the 3-D
+Secure v2 and to provide you with *some* understanding of how a 3-D Secure v2
+authentication flow looks.
 
-A sandbox environment is included to ease integration. It is
-provided as a service for continuous integration and for live tests.
-This is our own implementation so there will be some discrepancies with the
-production endpoint. The production endpoint is to be used only for production requests.
+Authentication
+==============
 
-.. warning::
-  Under *no* circumstances may real card numbers or other cardholder
-  information be sent to the sandbox.
+In 3-D Secure v2, cardholder authentication might not necessarily involve the
+cardholder.
 
-Authentication scenarios
-========================
+A authentication flow that does not involve the cardholder is called a
+*frictionless flow*, an flow that involves the cardholder is called a
+*challenge flow*.
+The *frictionless flow* utilizes device fingerprinting to verify cardholder
+involvement and involves fewer steps than a *challenge flow*.
 
 Authentications can be described broadly by the two variables below which are included in
 every transaction.
@@ -68,8 +69,8 @@ parameter definition. Brief descriptions are:
   :ref:`3ds_versioning` guide.
 
 /auth
-  A single call to receive all the data that is needed for authentication, 
-  except for the 3-D Secure Method URL used for fingerprinting when performing 
+  A single call to receive all the data that is needed for authentication,
+  except for the 3-D Secure Method URL used for fingerprinting when performing
   an authentication through a browser.
   Under certain circumstances, the authentication flow will end successfully
   here, this is called *frictionless* flow.
@@ -119,3 +120,15 @@ The following describes the individual points in the diagram:
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
    in the :ref:`postauth response <postauth-response>` section.
+
+Sandbox environment
+===================
+
+A sandbox environment is included to ease integration. It is
+provided as a service for continuous integration and for live tests.
+This is our own implementation so there will be some discrepancies with the
+production endpoint. The production endpoint is to be used only for production requests.
+
+.. warning::
+  Under *no* circumstances may real card numbers or other cardholder
+  information be sent to the sandbox.
