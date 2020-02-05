@@ -7,27 +7,66 @@ API Usage
 
    - Insert link to 3dservice 1.0.2 MPI documentation.
 
-Authentication through browser (BRW device channel)
-  1. Use the :ref:`/preauth <preauth-usage>` API call to determine 3-D Secure
-     version.
+Browser Authentication (BRW device channel)
+-------------------------------------------
 
-     This should be used when performing the request from the Browser or
-     if this is a merchant initiated request. This can help you decide
-     if you should fall back to 3-D Secure version 1.0.2
+1. Use the :ref:`/preauth <preauth-usage>` API call to:
 
-  2. Perform :ref:`3DS Method <3ds_method>` if ``threeDSMethodURL`` was
-     included in the ``/preauth`` response.
+   - Determine if card is enrolled in 3-D Secure v2
+   - Determine 3-D Secure v2 protocol version (``v2.1.0`` or ``v2.2.0``)
+   - Receive `threeDSMethodURL` to determine if the 3DS Method is required
 
-  3. Perform an authentication using the :ref:`auth-usage` call.
+2. Perform :ref:`3DS Method <3ds_method>` if ``threeDSMethodURL`` was
+   included in the ``/preauth`` response.
 
-     - You **must** include the ``threeDSServerTransID`` from the ``/preauth``
-       request in your message.
-     - You **must** set the ``threeDSCompInd`` to ``Y`` if the 3DS Method call
-       was successfull, otherwise ``N``.
+3. Perform an authentication using the :ref:`auth-usage` call.
 
-  4. If ``transStatus`` is ``C``, perform a :ref:`challenge flow <3ds_challenge_flow>` on the cardholder device.
-  5. Retrieve values from :ref:`postauth-endpoint` endpoint after
-     challenge flow has completed.
+   - You **must** include the ``threeDSServerTransID`` from the ``/preauth``
+     request in your message.
+   - You **must** set the ``threeDSCompInd`` to ``Y`` if the 3DS Method call
+     was successfull, otherwise ``N``.
+
+4. If ``transStatus`` is ``C``, perform a :ref:`challenge flow <3ds_challenge_flow>`
+   on the cardholder device.
+
+5. Retrieve values from :ref:`postauth-endpoint` endpoint after
+   challenge flow has completed.
+
+Mobile APP Authentication (SDK device channel)
+----------------------------------------------
+
+.. Note::
+  The specifics of how a flow is performed depends on the SDK.  Please get in
+  touch if you have issues with your SDK and we can assist.
+
+1. Use the :ref:`/preauth <preauth-usage>` API call to:
+
+   - Determine if card is enrolled in 3-D Secure v2
+   - Determine 3-D Secure v2 protocol version (``v2.1.0`` or ``v2.2.0``)
+
+2. Perform an authentication using the :ref:`auth-usage` call.
+
+3. If ``transStatus`` is ``C``, perform a :ref:`challenge flow <3ds_challenge_flow>`
+   on the cardholder device.
+
+4. Retrieve values from :ref:`postauth-endpoint` endpoint after challenge
+   flow has completed.
+
+3DS Requestor Initiated Authentication (3RI device channel)
+-----------------------------------------------------------
+
+.. note::
+  We have yet to determine and document use-cases for 3RI transactions.
+
+1. Use the :ref:`/preauth <preauth-usage>` API call to:
+
+   - Determine if card is enrolled in 3-D Secure v2
+   - Determine 3-D Secure v2 protocol version (``v2.1.0`` or ``v2.2.0``)
+
+2. Perform :ref:`3DS Method <3ds_method>` if ``threeDSMethodURL`` was
+   included in the ``/preauth`` response.
+
+3. Perform an authentication using the :ref:`auth-usage` call.
 
 .. toctree::
    :maxdepth: 2
