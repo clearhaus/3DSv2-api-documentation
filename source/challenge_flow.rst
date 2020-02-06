@@ -91,8 +91,8 @@ The :ref:`final challenge response (reference) <final_cres_210>` looks like this
      "transStatus": "Y"
    }
 
-Here ``transStatus`` will be either ``Y`` or ``N``. If the value is ``Y`` you
-can use the :ref:`postauth-usage` to fetch the results of the challenge.
+Here ``transStatus`` will be either ``Y`` or ``N``. You can use the
+:ref:`postauth-usage` to fetch the :ref:`results of the challenge <postauth-response>`.
 
 Handling timeouts
 *****************

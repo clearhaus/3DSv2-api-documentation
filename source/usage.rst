@@ -7,8 +7,7 @@ API Usage
 
    - Insert link to 3dservice 1.0.2 MPI documentation.
 
-Browser Authentication (BRW device channel)
--------------------------------------------
+**Browser Authentication (BRW device channel)**
 
 1. Use the :ref:`/preauth <preauth-usage>` API call to:
 
@@ -32,8 +31,7 @@ Browser Authentication (BRW device channel)
 5. Retrieve values from :ref:`postauth-endpoint` endpoint after
    challenge flow has completed.
 
-Mobile APP Authentication (SDK device channel)
-----------------------------------------------
+**Mobile APP Authentication (SDK device channel)**
 
 .. Note::
   The specifics of how a flow is performed depends on the SDK.  Please get in
@@ -52,8 +50,7 @@ Mobile APP Authentication (SDK device channel)
 4. Retrieve values from :ref:`postauth-endpoint` endpoint after challenge
    flow has completed.
 
-3DS Requestor Initiated Authentication (3RI device channel)
------------------------------------------------------------
+**3DS Requestor Initiated Authentication (3RI device channel)**
 
 .. note::
   We have yet to determine and document use-cases for 3RI transactions.
