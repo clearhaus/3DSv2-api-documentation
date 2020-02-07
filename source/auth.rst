@@ -67,7 +67,7 @@ This is an example of a successful (frictionless) authentication:
      "acsOperatorID": "3dsecure.io-standin-acs",
      "acsReferenceNumber": "3dsecure.io-standin-acs",
      "acsTransID": "43163cd0-c849-4924-82c1-7bec32b94881",
-     "authenticationValue": "1qjyGT2+HSxGuPg9YrCLSXc/J0s",
+     "authenticationValue": "mK225wGt2bLnnLB0UlRky0oHLnU=",
      "dsReferenceNumber": "3dsecure.io-standin-ds",
      "dsTransID": "1cf815e5-cc85-436f-8e13-9f5e5aea731f",
      "eci": "05",
