@@ -39,13 +39,16 @@ dd {
     background: #e1eaeb !important;
 }
 
-.admonition-title {
-    background: #39757c !important;
+.admonition.note .admonition-title {
+    background: rgba(57, 117, 124, 0.8) !important;
 }
 
 /*Background color*/
 .wy-nav-content-wrap {
     background: linear-gradient(35deg, rgb(57, 117, 124, 0.3) 0%, rgb(57, 117, 124, 0.3) 100%);
+}
+.wy-side-nav-search>a:hover, .wy-side-nav-search .wy-dropdown>a:hover {
+    background: rgba(255,255,255,0) !important;
 }
 
 /********************** Sidebar ***********************/
@@ -145,7 +148,7 @@ thead p {
     font-weight: 600;
 }
 
-div.attributeName:empty {
+div.attributeName:empty, div.conditions:empty {
     display: none;
 }
 
@@ -179,6 +182,10 @@ div.attributeName:empty {
 
 .argtable tr.attributeDetailRow td {
     vertical-align: top;
+}
+/** Lists **/
+.rst-content .section ol p, .rst-content .section ul p {
+    margin-bottom: 0;
 }
 
 /**Tags**/
