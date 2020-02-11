@@ -7,7 +7,7 @@ There are currently three 3-D Secure versions, ``1.0.2``, ``2.1.0`` and ``2.2.0`
 This is meant to be a guide to selecting between different 3-D Secure versions.
 
 1. If the :ref:`preauth call <preauth-usage>` returns a :ref:`not_enrolled`, continue with 3DSv1.
-2. If ``acsInfoInd`` is included, this informs if if ACS supports challenges or
+2. If ``acsInfoInd`` is included, this informs if ACS supports challenges or
    only attempts.
 
    To select between ``2.1.0`` and ``2.2.0``, use the highest supported version
