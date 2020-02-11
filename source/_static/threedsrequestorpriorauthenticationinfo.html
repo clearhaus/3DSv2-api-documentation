@@ -20,7 +20,16 @@ Max length: 2048
 </td>
 <td class='argdesc'><div class='decscription'>Data that documents and supports a specific authentication process. In the current version of the specification this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. In future versions of the specification, these details are expected to be included.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSReqPriorAuthMethod</td></tr>
 <tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -36,7 +45,7 @@ Regexp:
 <div class='inclusion'>Optional</div>
 </td>
 <td class='argdesc'><div class='decscription'>Mechanism used by the Cardholder to previously authenticate to the 3DS Requestor.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Frictionless authentication occurred by ACS</div>
@@ -48,7 +57,16 @@ Regexp:
 <div class='enumValue'>Other issuer methods</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSReqPriorAuthTimestamp</td></tr>
 <tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -67,7 +85,16 @@ yyyymmddhhmm
 </td>
 <td class='argdesc'><div class='decscription'>Date and time in UTC of the prior cardholder authentication.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSReqPriorRef</td></tr>
 <tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -83,7 +110,16 @@ Max length: 36
 </td>
 <td class='argdesc'><div class='decscription'>This data element provides additional information to the ACS to determine the best approach for handing a request.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 </tbody>
 </table>
 </div>

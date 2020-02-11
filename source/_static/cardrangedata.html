@@ -42,7 +42,7 @@ Regexp:
 <div class='inclusion'>Optional</div>
 </td>
 <td class='argdesc'><div class='decscription'>Provides additional information to the 3DS Server. The element lists all applicable values for the card range.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Authentication Available at ACS</div>
@@ -112,6 +112,40 @@ validVersion
 <div class='inclusion'>Optional</div>
 </td>
 <td class='argdesc'><div class='decscription'>The earliest (i.e. oldest) active protocol version that is supported by the DS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>endRange</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^[0-9]{13,19}$</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='decscription'>End of the card range.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>startRange</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Type: string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^[0-9]{13,19}$</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='decscription'>Start of the card range.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>threeDSMethodURL</td></tr>

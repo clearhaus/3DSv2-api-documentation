@@ -33,7 +33,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Additional information about the account optionally provided by the 3DS Requestor.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acctInfo</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -121,7 +130,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Indicates the type of account. For example, for a multi-account card product.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acquirerBIN</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -169,7 +187,16 @@ Required if messageCategory is "01"</div>
 Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acquirerMerchantID</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -217,7 +244,16 @@ Required if messageCategory is "01"</div>
 Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>addrMatch</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -247,7 +283,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Indicates whether the Cardholder Shipping Address and Cardholder Billing Address are the same.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrCity</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -276,7 +321,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The city of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>billAddrCountry</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -305,7 +359,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The country of the Cardholder billing address Server associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrLine1</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -334,7 +397,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>First line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>billAddrLine2</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -363,7 +435,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Second line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrLine3</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -392,7 +473,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Third line of the street address or equivalent local portion of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>billAddrPostCode</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -421,7 +511,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>ZIP or other postal code of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>billAddrState</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -450,7 +549,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The state or province of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>browserAcceptHeader</td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -545,7 +653,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>IP address of the browser as returned by the HTTP headers to the 3DS Requestor.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>browserJavaEnabled</td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -742,7 +859,20 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Expiry Date of the PAN or token supplied to the 3DS Requestor by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+<dt class='scheme_rule'>
+Mastercard</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>cardholderName</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -774,7 +904,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Name of the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>deviceChannel</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -805,7 +944,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Indicates the type of channel interface being used to initiate the transaction.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>App-based (APP)</div>
@@ -876,7 +1015,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The email address associated with the account that is either entered by the Cardholder, or is on file with the 3DS Requestor.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>homePhone</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -904,7 +1052,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The home phone number provided by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>mcc</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -952,7 +1109,16 @@ Required if messageCategory is "01"</div>
 Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>merchantCountryCode</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1006,7 +1172,16 @@ Required if messageCategory is "01"</div>
 Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>merchantName</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1054,7 +1229,16 @@ Required if messageCategory is "01"</div>
 Required if messageCategory is "01"</div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>merchantRiskIndicator</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1112,7 +1296,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Identifies the category of the message for a specific use case.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>PA - Payment</div>
@@ -1240,7 +1424,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The mobile phone number provided by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>notificationURL</td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1329,7 +1522,16 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>purchaseCurrency</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1387,7 +1589,16 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>purchaseDate</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1445,7 +1656,16 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>purchaseExponent</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1501,7 +1721,16 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>purchaseInstalData</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1572,7 +1801,16 @@ Required if threeDSRequestorAuthenticationInd is "03"</div>
 Required if threeDSRequestorAuthenticationInd is "03"</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is "03"</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>payTokenInd</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1602,7 +1840,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>A value of True indicates that the transaction was de-tokenised prior to being received by the ACS. This data element will be populated by the system residing in the 3-D Secure domain where the de-tokenisation occurs (i.e., the 3DS Server or the DS).  Note: The Boolean value of true is the only valid response for this field when it is present.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>recurringExpiry</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1668,7 +1915,16 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>recurringFrequency</td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1732,7 +1988,16 @@ Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>sdkAppID</td></tr>
 <tr categories='PA NPA' channels='APP' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -1950,7 +2215,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>City portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipAddrCountry</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2014,7 +2288,16 @@ Required if shipAddrState is not empty</div>
 Required if shipAddrState is not empty</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
 Required if shipAddrState is not empty</div>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrLine1</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2043,7 +2326,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>First line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipAddrLine2</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2072,7 +2364,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The second line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrLine3</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2101,7 +2402,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The third line of the street address or equivalent local portion of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipAddrPostCode</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2130,7 +2440,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The ZIP or other postal code of the shipping address requested by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>shipAddrState</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2159,7 +2478,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The state or province of the shipping address associated with the card being used for this purchase.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSCompInd</td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2188,7 +2516,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Indicates whether the 3DS Method successfully completed.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>Y</div>
 <div class='enumValue'>Successfully completed</div>
@@ -2226,7 +2554,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Indicates the type of Authentication request. This data element provides additional information to the ACS to determine the best approach for handing an authentication request.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Payment transaction</div>
@@ -2285,7 +2613,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Indicates whether a challenge is requested for this transaction. For example: For 01-PA, a 3DS Requestor may have concerns about the transaction, and request a challenge. For 02-NPA, a challenge may be necessary when adding a new card to a wallet. For local/regional mandates or other variables.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>No preference</div>
@@ -2297,7 +2625,16 @@ Channels:
 <div class='enumValue'>Challenge requested: Mandate</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSRequestorPriorAuthenticationInfo</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2360,7 +2697,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>Fully qualified URL of 3DS Requestor website or customer care site. This data element provides additional information to the receiving 3-D Secure system if a problem arises and should provide contact information.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2419,7 +2765,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Indicates the type of 3RI request. This data element provides additional information to the ACS to determine the best approach for handing a 3RI request.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Recurring transaction</div>
@@ -2433,7 +2779,16 @@ Channels:
 <div class='enumValue'>Account verification</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='PA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>transType</td></tr>
 <tr categories='PA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2464,7 +2819,7 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='decscription'>Identifies the type of transaction being authenticated.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Goods/ Service Purchase</div>
@@ -2478,7 +2833,16 @@ Channels:
 <div class='enumValue'>Prepaid Activation and Load</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required</dd>
+</dl></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>workPhone</td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2506,7 +2870,16 @@ Channels:
 </td>
 <td class='argdesc'><div class='decscription'>The work phone number provided by the Cardholder.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 </tbody>
 </table>
 </div>
