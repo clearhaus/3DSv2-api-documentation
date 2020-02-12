@@ -71,4 +71,4 @@ html_theme_options = {
     'logo_only': True,
 }
 
-html_favicon = '_static/assets/favicon.png'
+html_favicon = '_static/assets/favicon.ico'

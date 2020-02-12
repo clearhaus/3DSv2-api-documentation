@@ -4,7 +4,9 @@
 /auth endpoint
 ##############
 
-The ``/auth`` endpoint is used to initiate a 3-D Secure v2 authentication.
+The ``/auth`` endpoint is used to provide the issuer with data for performing
+an authentication. The resulting Authentication Response (``ARes``) can either
+be the final message due to a frictionless flow or lead to a challenge flow.
 
 ************
 Request flow
@@ -58,22 +60,41 @@ The transaction status is contained in the ``transStatus`` and
 This is an example of a successful (frictionless) authentication:
 
 .. code-block:: json
-  :caption: Examples Authentication Response (ARes)
-  :linenos:
+   :caption: Example of an Authentication frictionless response (ARes)
+   :linenos:
 
-  {
-    "acsOperatorID": "3dsecure.io-standin-acs",
-    "acsReferenceNumber": "3dsecure.io-standin-acs",
-    "acsTransID": "43163cd0-c849-4924-82c1-7bec32b94881",
-    "authenticationValue": "1qjyGT2+HSxGuPg9YrCLSXc/J0s",
-    "dsReferenceNumber": "3dsecure.io-standin-ds",
-    "dsTransID": "1cf815e5-cc85-436f-8e13-9f5e5aea731f",
-    "eci": "05",
-    "messageType": "ARes",
-    "messageVersion": "2.1.0",
-    "threeDSServerTransID": "3f1ed47a-2edc-4b0e-a4cf-bdb0f65d48c6",
-    "transStatus": "Y"
-  }
+   {
+     "acsOperatorID": "3dsecure.io-standin-acs",
+     "acsReferenceNumber": "3dsecure.io-standin-acs",
+     "acsTransID": "43163cd0-c849-4924-82c1-7bec32b94881",
+     "authenticationValue": "mK225wGt2bLnnLB0UlRky0oHLnU=",
+     "dsReferenceNumber": "3dsecure.io-standin-ds",
+     "dsTransID": "1cf815e5-cc85-436f-8e13-9f5e5aea731f",
+     "eci": "05",
+     "messageType": "ARes",
+     "messageVersion": "2.1.0",
+     "threeDSServerTransID": "3f1ed47a-2edc-4b0e-a4cf-bdb0f65d48c6",
+     "transStatus": "Y"
+   }
+
+.. code-block:: json
+   :caption: Example of an Authentication challenge response (ARes)
+   :linenos:
+
+   {
+     "acsChallengeMandated": "N",
+     "acsOperatorID": "3dsecureio-standin-acs",
+     "acsReferenceNumber": "3dsecureio-standin-acs",
+     "acsTransID": "b85d3eb5-d2d2-45af-bc1b-6188021ae602",
+     "acsURL": "https://acs.sandbox.3dsecure.io/browser/challenge/manual",
+     "authenticationType": "01",
+     "dsReferenceNumber": "3dsecureio-standin-ds",
+     "dsTransID": "496af67a-56ed-4fd3-bbcf-690b0df93c3d",
+     "messageType": "ARes",
+     "messageVersion": "2.1.0",
+     "threeDSServerTransID": "218565e2-0cae-4236-868e-09168275c8c6",
+     "transStatus": "C"
+   }
 
 
 To check if a transaction was successful:
@@ -81,9 +102,14 @@ To check if a transaction was successful:
 1. Parse as JSON
 2. Check that ``messageType`` is ``ARes``
 
-Please note that a 3-D Secure Server transaction is considered successful even if
+Note that a 3-D Secure Server transaction is considered successful even if
 ``transStatus`` is ``N``. There is a difference between an *authentication
-failure* and a *transaction failure*.
+failure* and a *transaction failure*. A failed authentication ``transStatus:
+N`` is a successful 3-D Secure transaction.
+
+If ``messageType`` is ``ARes`` and ``transStatus`` is ``C``, perform a
+:ref:`challenge flow <3ds_challenge_flow>`.
+
 
 Errors
 ======

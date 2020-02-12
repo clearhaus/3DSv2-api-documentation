@@ -4,20 +4,20 @@
 Getting Started
 ###############
 
-Sandbox environment
-===================
+This page is intented to familiarize you with superficial parts of the 3-D
+Secure v2 and to provide you with *some* understanding of a 3-D Secure v2
+authentication flow.
 
-A sandbox environment is included to ease integration. It is
-provided as a service for continuous integration and for live tests.
-This is our own implementation so there will be some discrepancies with the
-production endpoint. The production endpoint is to be used only for production requests.
+Authentication
+==============
 
-.. warning::
-  Under *no* circumstances may real card numbers or other cardholder
-  information be sent to the sandbox.
+In 3-D Secure v2, cardholder authentication might not necessarily involve the
+cardholder.
 
-Authentication scenarios
-========================
+An authentication flow not involving the cardholder is called a *frictionless
+flow*, whereas a flow involving the cardholder is called a *challenge flow*.
+The *frictionless flow* utilizes device fingerprinting to verify cardholder
+authenticity, providing a smoother flow for the cardholder.
 
 Authentications can be described broadly by the two variables below which are included in
 every transaction.
@@ -58,26 +58,25 @@ There are 3 API endpoints for this service, refer to :ref:`reference` for
 parameter definition. Brief descriptions are:
 
 /preauth
-  This is used when performing transactions from a browser (as opposed to using an SDK), where it will
-  return an optional 3-D Secure Method URL, which is used for browser
-  fingerprinting. This can support risk-based analysis and assist in ensuring
-  a flow where the cardholder is not challenged.
+  This is used when performing transactions from a browser (as opposed to using
+  an SDK). It will return an optional 3-D Secure Method URL, which is
+  used for browser fingerprinting. This can support risk-based analysis and
+  assist in ensuring a flow where the cardholder is not challenged.
 
   While in the transition period between 3-D Secure v1 and v2, this endpoint
   can help determine if v1 should be used instead. This is documented in the
   :ref:`3ds_versioning` guide.
 
 /auth
-  A single call to receive all the data that is needed for authentication, 
-  except for the 3-D Secure Method URL used for fingerprinting when performing 
-  an authentication through a browser.
-  Under certain circumstances, the authentication flow will end successfully
-  here, this is called *frictionless* flow.
+  The primary API method to provide authentication data to the issuer.  Under
+  certain circumstances, the authentication flow will end successfully here,
+  this is called a *frictionless* flow.
 
 /postauth
   Used when the ``/auth`` did not result in a frictionless flow, this endpoint
   returns the result of the challenge performed by the cardholder. In this case
-  the flow is called a *challenge* flow. Read more about this in :ref:`3ds_challenge_flow`.
+  the flow is called a *challenge* flow. Read more about this in
+  :ref:`3ds_challenge_flow`.
 
 Overview of Authentication Flow
 ===============================
@@ -119,3 +118,16 @@ The following describes the individual points in the diagram:
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
    in the :ref:`postauth response <postauth-response>` section.
+
+Sandbox environment
+===================
+
+A sandbox environment is included as a service for initial and continuous
+integration, and for live tests. This is our implementation so discrepancies
+with ACS implementations are unavoidable.
+
+.. warning::
+  1. *Under no circumstances* may real card numbers or other cardholder
+     information be sent to the sandbox.
+
+  2. The production endpoint is to be used only for production requests.

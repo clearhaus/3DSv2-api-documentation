@@ -13,13 +13,13 @@ Introduction
    server-information
    usage
    guides
+   examples
    reference
    sandbox
 
 .. note::
-  This documentation is a work in progress. (Updated December 22nd 2019)
-
   Currently this documentation only contains information about v2.1.0.
+  The server supports both 2.1.0 and 2.2.0.
 
 This is the documentation for the 3-D Secure Server provided by `3dsecure.io`_.
 It is a Software as a Service (SaaS) implementation, offering a language-agnostic
@@ -40,6 +40,7 @@ Candidates for integrating with this service:
 - Acquirers
 - Gateways
 - Merchants
+- Other Payment Service Providers
 
 Why choose this service by **3dsecure.io**?
 ===========================================

@@ -6,7 +6,8 @@
 </colgroup>
 <tbody>
 <tr categories='PA NPA' channels='APP' class='row-even attributeNameRow'><td class='attribute' colspan='2'>acsRenderingType</td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 <a href='#acsrenderingtype'>
@@ -36,12 +37,14 @@ Categories:
 Channels:
 <code>APP</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acsTransID</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -77,12 +80,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>authenticationType</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -116,9 +121,10 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Static</div>
@@ -154,7 +160,8 @@ Required if transStatus is one of [Y, N]</div>
 Required if transStatus is one of [Y, N]</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>authenticationValue</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -187,7 +194,8 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
 <div class='conditions'>
 <div class=''>
@@ -208,7 +216,8 @@ Required if transStatus is one of [Y, A]</div>
 Required if transStatus is one of [Y, A]</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow'><td class='attribute' colspan='2'>challengeCancel</td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -230,9 +239,10 @@ Channels:
 <code>APP</code>
 <code>BRW</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Indicator informing the ACS and the DS that the authentication has been canceled.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Cardholder selected "Cancel"</div>
@@ -250,7 +260,8 @@ Channels:
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>dsTransID</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -289,12 +300,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>eci</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -316,12 +329,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>interactionCounter</td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -350,12 +365,14 @@ Channels:
 <code>APP</code>
 <code>BRW</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates the number of authentication cycles attempted by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageCategory</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -379,9 +396,10 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Identifies the category of the message for a specific use case.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>PA - Payment</div>
@@ -391,7 +409,8 @@ Channels:
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageExtension</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Array of
@@ -416,12 +435,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageType</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -444,12 +465,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageVersion</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -472,12 +495,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -502,12 +527,14 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>transStatus</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -546,9 +573,10 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>Y</div>
 <div class='enumValue'>Authentication/ Account Verification Successful</div>
@@ -574,7 +602,8 @@ Required if messageCategory is "01"</div>
 Required if messageCategory is "01"</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>transStatusReason</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -615,9 +644,10 @@ Channels:
 <code>BRW</code>
 <code>3RI</code>
 </div>
-</div></td>
+</div>
+</td>
 <td class='argdesc'><div class='decscription'>Provides information on why the Transaction Status field has the specified value.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Card authentication failed</div>

@@ -6,7 +6,8 @@
 </colgroup>
 <tbody>
 <tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>deliveryEmailAddress</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -22,13 +23,22 @@ Max length: 254
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>For Electronic delivery, the email address to which the merchandise was delivered.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>deliveryTimeframe</td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -42,10 +52,9 @@ One of:
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates the merchandise delivery timeframe.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Electronic Delivery</div>
@@ -57,9 +66,19 @@ One of:
 <div class='enumValue'>Two-day or more shipping</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>giftCardAmount</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -70,13 +89,22 @@ Regexp:
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>For prepaid or gift card purchase, the purchase amount total of prepaid or gift card(s) in major units (for example, USD 123.45 is 123).</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>giftCardCount</td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -87,13 +115,22 @@ Regexp:
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>For prepaid or gift card purchase, total count of individual prepaid or gift cards/codes purchased.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>giftCardCurr</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -106,13 +143,22 @@ currency
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>For prepaid or gift card purchase, ISO 4217 three-digit currency code of the gift card, other than those listed in Table A.5.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>preOrderDate</td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -125,13 +171,22 @@ yyyymmdd
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>For a pre-ordered purchase, the expected date that the merchandise will be available.</div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>preOrderPurchaseInd</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -143,10 +198,9 @@ One of:
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates whether Cardholder is placing an order for merchandise with a future availability or release date.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Merchandise available</div>
@@ -154,9 +208,19 @@ One of:
 <div class='enumValue'>Future availability</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>reorderItemsInd</td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -168,10 +232,9 @@ One of:
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates whether the cardholder is reordering previously purchased merchandise.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>First time ordered</div>
@@ -179,9 +242,19 @@ One of:
 <div class='enumValue'>Reordered</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 <tr categories='' channels='' class='row-even attributeNameRow'><td class='attribute' colspan='2'>shipIndicator</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'><div class='attributeName'></div>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
 Type: string
@@ -198,10 +271,9 @@ One of:
 </div>
 </div>
 <div class='inclusion'>Optional</div>
-<div class='scenario'>
-</div></td>
+</td>
 <td class='argdesc'><div class='decscription'>Indicates shipping method chosen for the transaction. Merchants must choose the Shipping Indicator code that most accurately describes the cardholder’s specific transaction, not their general business. If one or more items are included in the sale, use the Shipping Indicator code for the physical goods, or if all digital goods, use the Shipping Indicator code that describes the most expensive item.</div>
-<p class='enumDescriptionHeader'>Interpretation of values:</p>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>Ship to cardholder’s billing address</div>
@@ -219,7 +291,16 @@ One of:
 <div class='enumValue'>Other (for example, Gaming, digital services not shipped, emedia subscriptions, etc.)</div>
 </div>
 <div class='conditions'>
-</div></td></tr>
+</div>
+<p class='enumDescriptionHeader'>
+Scheme specific rules:
+</p>
+<dl class='scheme_rules'>
+<dt class='scheme_rule'>
+Visa</dt>
+<dd class='scheme_rule'>
+Field is required if available</dd>
+</dl></td></tr>
 </tbody>
 </table>
 </div>

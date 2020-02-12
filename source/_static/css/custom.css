@@ -1,6 +1,6 @@
 /********************** Global ***********************/
 a {
-    color: #39757c; 
+    color: #629195;
     transition: .3s;
 }
 a:hover {
@@ -8,7 +8,7 @@ a:hover {
     text-decoration: underline;
 }
 a:visited {
-    color: #629195;
+    color: #39757c;
 }
 /** Middel content **/ 
 .wy-nav-content {
@@ -39,13 +39,16 @@ dd {
     background: #e1eaeb !important;
 }
 
-.admonition-title {
-    background: #39757c !important;
+.admonition.note .admonition-title {
+    background: rgba(57, 117, 124, 0.8) !important;
 }
 
 /*Background color*/
 .wy-nav-content-wrap {
     background: linear-gradient(35deg, rgb(57, 117, 124, 0.3) 0%, rgb(57, 117, 124, 0.3) 100%);
+}
+.wy-side-nav-search>a:hover, .wy-side-nav-search .wy-dropdown>a:hover {
+    background: rgba(255,255,255,0) !important;
 }
 
 /********************** Sidebar ***********************/
@@ -57,20 +60,6 @@ dd {
 .wy-side-nav-search>a img.logo {
     width: 230px;
     height: 58px;
-}
-
-.fa-home:before, .icon-home:before {
-    display: none !important; 
-}
-
-.icon-home {
-    transition: .3s;
-    font-size: 25px;
-}
-
-.icon-home:hover {
-    background-color: transparent;
-    color: rgba(234, 136, 91)
 }
 
 .wy-side-nav-search input[type=text] {
@@ -159,7 +148,7 @@ thead p {
     font-weight: 600;
 }
 
-div.attributeName:empty {
+div.attributeName:empty, div.conditions:empty {
     display: none;
 }
 
@@ -194,6 +183,10 @@ div.attributeName:empty {
 .argtable tr.attributeDetailRow td {
     vertical-align: top;
 }
+/** Lists **/
+.rst-content .section ol p, .rst-content .section ul p {
+    margin-bottom: 0;
+}
 
 /**Tags**/
 .requirements {
@@ -218,6 +211,14 @@ div.attributeName:empty {
 
 .enum code {
     line-height: 22px;
+}
+
+code, .rst-content code {
+    font-weight: normal !important;
+    background: #FFFFFF;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 4px;
+    padding: 4px 5px;
 }
 
 /** Footer **/
@@ -358,7 +359,7 @@ display: block !important;
     overflow-x: auto;
 }
 .enumValue {
-    width: calc(100% - 44px);
+    width: calc(100% - 55px);
 }
 
 .conditions {

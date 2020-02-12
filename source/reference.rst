@@ -21,6 +21,8 @@ for a selected authentication scenario. Please note the following:
 ``/preauth`` endpoint
 =====================
 
+For usage, refer to :ref:`preauth-usage`.
+
 .. _preauth-input:
 
 Input
@@ -41,6 +43,8 @@ Output
 
 ``/auth`` endpoint
 ==================
+
+For usage, refer to :ref:`auth-usage`.
 
 .. _auth-input:
 
@@ -63,6 +67,8 @@ Output
 Challenge flow
 ==============
 
+For usage, refer to :ref:`3ds_challenge_flow`.
+
 .. _creq-format:
 
 Challenge request (CReq)
@@ -74,7 +80,7 @@ Challenge request (CReq)
 .. _final_cres_210:
 
 Challenge response (CRes)
-------------------------
+-------------------------
 
 .. raw:: html
   :file: _static/cres_210.html
@@ -83,6 +89,8 @@ Challenge response (CRes)
 
 ``/postauth`` endpoint
 ======================
+
+For usage, refer to :ref:`postauth-usage`.
 
 .. _postauth-input:
 
