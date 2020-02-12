@@ -60,7 +60,7 @@ The transaction status is contained in the ``transStatus`` and
 This is an example of a successful (frictionless) authentication:
 
 .. code-block:: json
-   :caption: Example Authentication frictionless response (ARes)
+   :caption: Example of an Authentication frictionless response (ARes)
    :linenos:
 
    {
@@ -78,7 +78,7 @@ This is an example of a successful (frictionless) authentication:
    }
 
 .. code-block:: json
-   :caption: Example Authentication challenge response (ARes)
+   :caption: Example of an Authentication challenge response (ARes)
    :linenos:
 
    {

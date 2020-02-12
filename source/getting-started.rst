@@ -5,8 +5,8 @@ Getting Started
 ###############
 
 This page is intented to familiarize you with superficial parts of the 3-D
-Secure v2 and to provide you with *some* understanding of how a 3-D Secure v2
-authentication flow looks.
+Secure v2 and to provide you with *some* understanding of a 3-D Secure v2
+authentication flow.
 
 Authentication
 ==============
@@ -14,11 +14,10 @@ Authentication
 In 3-D Secure v2, cardholder authentication might not necessarily involve the
 cardholder.
 
-A authentication flow that does not involve the cardholder is called a
-*frictionless flow*, an flow that involves the cardholder is called a
-*challenge flow*.
+An authentication flow not involving the cardholder is called a *frictionless
+flow*, whereas a flow involving the cardholder is called a *challenge flow*.
 The *frictionless flow* utilizes device fingerprinting to verify cardholder
-involvement and involves fewer steps than a *challenge flow*.
+authenticity, providing a smoother flow for the cardholder.
 
 Authentications can be described broadly by the two variables below which are included in
 every transaction.
@@ -60,7 +59,7 @@ parameter definition. Brief descriptions are:
 
 /preauth
   This is used when performing transactions from a browser (as opposed to using
-  an SDK), where it will return an optional 3-D Secure Method URL, which is
+  an SDK). It will return an optional 3-D Secure Method URL, which is
   used for browser fingerprinting. This can support risk-based analysis and
   assist in ensuring a flow where the cardholder is not challenged.
 
@@ -71,7 +70,7 @@ parameter definition. Brief descriptions are:
 /auth
   The primary API method to provide authentication data to the issuer.  Under
   certain circumstances, the authentication flow will end successfully here,
-  this is called *frictionless* flow.
+  this is called a *frictionless* flow.
 
 /postauth
   Used when the ``/auth`` did not result in a frictionless flow, this endpoint
@@ -123,11 +122,12 @@ The following describes the individual points in the diagram:
 Sandbox environment
 ===================
 
-A sandbox environment is included to ease integration. It is
-provided as a service for continuous integration and for live tests.
-This is our own implementation so there will be some discrepancies with the
-production endpoint. The production endpoint is to be used only for production requests.
+A sandbox environment is included as a service for initial and continuous
+integration, and for live tests. This is our implementation so discrepancies
+with ACS implementations are unavoidable.
 
 .. warning::
-  Under *no* circumstances may real card numbers or other cardholder
-  information be sent to the sandbox.
+  1. *Under no circumstances* may real card numbers or other cardholder
+     information be sent to the sandbox.
+
+  2. The production endpoint is to be used only for production requests.

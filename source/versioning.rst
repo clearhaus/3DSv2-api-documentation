@@ -7,11 +7,11 @@ There are currently three 3-D Secure versions, ``1.0.2``, ``2.1.0`` and ``2.2.0`
 This is meant to be a guide to selecting between different 3-D Secure versions.
 
 1. If the :ref:`preauth call <preauth-usage>` returns a :ref:`not_enrolled`, continue with 3DSv1.
-2. If ``acsInfoInd`` is included, this informs if ACS supports challenges or
+2. If ``acsInfoInd`` is included, this indicates if ACS supports challenges or
    only attempts.
 
    To select between ``2.1.0`` and ``2.2.0``, use the highest supported version
-   between in ``dsEndProtocolVersion`` and ``acsEndProtocolVersion``, and the
+   between ``dsEndProtocolVersion`` and ``acsEndProtocolVersion``, and the
    versions your implementation supports.
 
 3. For Mastercard, ``acsInfoInd`` is often not available. Mastercard has
@@ -20,7 +20,7 @@ This is meant to be a guide to selecting between different 3-D Secure versions.
 
    You should note that if issuers do not support 3DSv2 (EMV 3DS) and their
    card range has been automatically enrolled, they may reject authorizations
-   made with EMV 3DS values against your Gateway.
+   made with EMV 3DS values.
 
    It is recommended that a fully authenticated or attempt 3DSv2 authorization
    that is rejected by the issuer, is retried with either 3DSv1 values or

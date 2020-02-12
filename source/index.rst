@@ -13,6 +13,7 @@ Introduction
    server-information
    usage
    guides
+   examples
    reference
    sandbox
 
