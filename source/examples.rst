@@ -21,7 +21,7 @@ Basic Authentication Example
    :linenos:
 
    {
-     "acctNumber": "9244988785642183",
+     "acctNumber": "9000100553679418",
      "notificationURL": "https://3ds_callback.example.org/challenge/end",
      "threeDSCompInd": "Y",
      "threeDSRequestorURL": "https://threedsrequestor.example.org",
