@@ -136,6 +136,9 @@ AcctInfo
 PhoneNumber
 -----------
 
+.. raw:: html
+  :file: _static/phonenumber.html
+
 MerchantRiskIndicator
 ---------------------
 
