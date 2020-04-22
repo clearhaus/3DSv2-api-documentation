@@ -39,7 +39,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
+<td class='argdesc'><div class='description'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>acsTransID</td></tr>
@@ -82,7 +82,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
+<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>authenticationType</td></tr>
@@ -123,7 +123,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</div>
+<td class='argdesc'><div class='description'>Indicates the type of authentication method the Issuer will use to challenge the Cardholder, whether in the ARes message or what was used by the ACS when in the RReq message.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
@@ -196,7 +196,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
+<td class='argdesc'><div class='description'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
 <div class='conditions'>
 <div class=''>
 Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
@@ -241,7 +241,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Indicator informing the ACS and the DS that the authentication has been canceled.</div>
+<td class='argdesc'><div class='description'>Indicator informing the ACS and the DS that the authentication has been canceled.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
@@ -302,7 +302,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
+<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the DS to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>eci</td></tr>
@@ -331,7 +331,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</div>
+<td class='argdesc'><div class='description'>Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>interactionCounter</td></tr>
@@ -367,7 +367,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Indicates the number of authentication cycles attempted by the Cardholder.</div>
+<td class='argdesc'><div class='description'>Indicates the number of authentication cycles attempted by the Cardholder.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageCategory</td></tr>
@@ -398,7 +398,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Identifies the category of the message for a specific use case.</div>
+<td class='argdesc'><div class='description'>Identifies the category of the message for a specific use case.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
@@ -437,7 +437,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
+<td class='argdesc'><div class='description'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>messageType</td></tr>
@@ -467,7 +467,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Identifies the type of message that is passed.</div>
+<td class='argdesc'><div class='description'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>messageVersion</td></tr>
@@ -497,7 +497,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
+<td class='argdesc'><div class='description'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow'><td class='attribute' colspan='2'>threeDSServerTransID</td></tr>
@@ -529,7 +529,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
+<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow'><td class='attribute' colspan='2'>transStatus</td></tr>
@@ -575,7 +575,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
+<td class='argdesc'><div class='description'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>Y</div>
@@ -646,7 +646,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='decscription'>Provides information on why the Transaction Status field has the specified value.</div>
+<td class='argdesc'><div class='description'>Provides information on why the Transaction Status field has the specified value.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
