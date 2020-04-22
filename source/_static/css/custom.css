@@ -123,6 +123,10 @@ dd {
 thead p {
     margin-bottom: 0
 }
+
+.wy-table-responsive table {
+    width: 100%
+}
   
 /********************** Arg tabel content ***********************/
 .argtable td {
@@ -253,9 +257,6 @@ footer a.btn:hover {
     }
 }
 @media only screen and (max-width: 768px) {
-    .wy-table-responsive table {
-        width: 100%
-    }
     .wy-nav-top {
         position: fixed;
         width: 100%;
