@@ -9,15 +9,15 @@
 If the :ref:`preauth-usage` response includes a ``threeDSMethodURL``,
 the 3DS method *must* be invoked.
 
-If ``threeDSMethodURL`` *is not* included in the ``/preauth`` response, continue
-with the :ref:`auth-usage` and set ``"threeDSCompInd": "U"``, to indicate that
-the 3DS Method was not available.
+If ``threeDSMethodURL`` *is not* included in the :ref:`preauth response
+<preauth-response>`, continue with the :ref:`auth-usage` and set
+``"threeDSCompInd": "U"``, to indicate that the 3DS Method was not available.
 
 Initiating 3DS Method
 ---------------------
 
-Create a JSON object containing `threeDSServerTransID` from the `/preauth`
-call:
+Create a JSON object containing ``threeDSServerTransID`` from the :ref:`preauth
+<preauth-usage>` call:
 
 .. code-block:: json
 
