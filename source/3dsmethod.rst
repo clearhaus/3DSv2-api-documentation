@@ -32,7 +32,7 @@ The procedure is as follows:
 
 #. Create a form with an input field named ``threeDSMethodData``
 
-#. This field must contain the above JSON message, Base64URL-encoded
+#. This field must contain the above JSON message, Base64-URL encoded
 
 #. Post the form to the ``threeDSMethodURL``, with the HTML iframe as a target
 
@@ -80,7 +80,7 @@ This form can be submitted using the following javascript:
    let form = document.getElementById('threeDSMethodForm');
 
    // 1. Serialize threeDSMethodData object into JSON
-   // 2. Base64url-encode it
+   // 2. Base64-URL encode it
    // 3. Store the value in the form input tag
    document.getElementById('threeDSMethodData').value =
     btoa(JSON.stringify(threeDSMethodData));
