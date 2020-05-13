@@ -3,11 +3,18 @@
 3DS Method invocation
 =====================
 
-If the :ref:`preauth-usage` response includes a `threeDSMethodURL`, the 3DS Method *must* be
-invoked.
+.. note::
+  Only used for browser authentications.
 
-If not, continue with the :ref:`auth-usage` and include ``"threeDSCompInd": "U"``, to
-indicate that the 3DS Method was not available.
+If the :ref:`preauth-usage` response includes a ``threeDSMethodURL``,
+the 3DS method *must* be invoked.
+
+If ``threeDSMethodURL`` *is not* included in the ``/preauth`` response, continue
+with the :ref:`auth-usage` and set ``"threeDSCompInd": "U"``, to indicate that
+the 3DS Method was not available.
+
+Initiating 3DS Method
+---------------------
 
 Create a JSON object containing `threeDSServerTransID` from the `/preauth`
 call:
@@ -19,76 +26,77 @@ call:
    "threeDSMethodNotificationURL": "<Requestor callback URL>"
   }
 
-Render a hidden HTML iframe in the Cardholder browser and send a form with a
-field named `threeDSMethodData` containing the above JSON as Base64URL-encoded
-to the `threeDSMethodURL`.
+The procedure is as follows:
 
-Below is a suggestion of what you can do:
+#. Render a hidden HTML iframe in the Cardholder browser
 
-a. Add an iframe to the users browser, either statically or using javascript.
+#. Create a form with an input field named ``threeDSMethodData``
 
-   .. code-block:: javascript
-      :linenos:
+#. This field must contain the above JSON message, Base64URL-encoded
 
-      let displayBox = document.getElementById('displayBox');
+#. Post the form to the ``threeDSMethodURL``, with the HTML iframe as a target
 
-      let iframe = document.createElement('iframe');
-      iframe.classList.add('hidden');
-      iframe.name = "threeDSMethodIframe";
+Example
+*******
 
-      displayBox.appendChild(iframe);
+Add an iframe to the users browser, here using javascript
 
-  Resulting in something like the following html:
+.. code-block:: javascript
 
-  .. code-block:: html
+   let displayBox = document.getElementById('displayBox');
 
-     <iframe name="threeDSMethodIframe" class="hidden"/>
+   let iframe = document.createElement('iframe');
+   iframe.classList.add('hidden');
+   iframe.name = "threeDSMethodIframe";
 
-b. Create a HTML ``form``, likely using javascript, that contains the
-   input data and submit that form.
+   displayBox.appendChild(iframe);
 
-   With this static html:
+Resulting in the following html
 
-   .. code-block:: html
-      :linenos:
+.. code-block:: html
 
-      <form class="" id="threeDSMethodForm">
-        <input type="hidden"
-         name="threeDSMethodData"
-         id="threeDSMethodData"/>
-      </form>
+   <iframe name="threeDSMethodIframe" class="hidden"/>
 
-   You can submit with something like the following:
+Create a HTML ``form``, that contains the input data. This:
 
-   .. code-block:: javascript
-      :linenos:
+.. code-block:: html
 
-      // Generate the data object
-      let threeDSMethodData = {
-        threeDSServerTransID: '<TRANS ID>',
-        threeDSMethodNotificationURL: '<URL>'
-      }
+   <form class="" id="threeDSMethodForm">
+     <input type="hidden" name="threeDSMethodData" id="threeDSMethodData"/>
+   </form>
 
-      // Get a reference to the form
-      let form = document.getElementById('threeDSMethodForm');
+Can be submitted with:
 
-      // Set the form input value to the object,
-      // base64url-encode the data.
-      document.getElementById('threeDSMethodData').value =
-       btoa(JSON.stringify(threeDSMethodData));
+.. code-block:: javascript
+   :linenos:
 
-      // Fill out the form information and submit.
-      form.action = '<threeDSMethodURL>';
-      form.target = 'threeDSMethodIframe';
-      form.method = 'post';
-      form.submit();
+   // Generate the data object with required input values
+   let threeDSMethodData = {
+     threeDSServerTransID: '<TRANS ID>',
+     threeDSMethodNotificationURL: '<URL>'
+   }
 
-When the 3D Method call is finished, the browser iframe will be redirected to
-``threeDSMethodNotificationURL``.
-If the callback is not received in 10 seconds, proceed with step 4.
+   // Get a reference to the form
+   let form = document.getElementById('threeDSMethodForm');
 
-The method will be ``POST`` and will contain a form with the value
-``threeDSMethodData``, that can be used to identify the request.
+   // 1. Serialize threeDSMethodData object into JSON
+   // 2. Base64url-encode it
+   // 3. Store the value in the form input tag
+   document.getElementById('threeDSMethodData').value =
+    btoa(JSON.stringify(threeDSMethodData));
+
+   // Fill out the form information and submit.
+   form.action = '<threeDSMethodURL>';
+   form.target = 'threeDSMethodIframe'; // id of iframe
+   form.method = 'post';
+   form.submit();
+
+Completion
+----------
+
+When the 3DS Method is finished, the hidden iframe will HTTP POST a form with
+the value ``threeDSMethodData`` to the ``threeDSMethodNotificationURL``.
+This body can be used to identify the request.
 
 The ``application/x-www-form-urlencoded`` form body looks like:
 
@@ -96,8 +104,7 @@ The ``application/x-www-form-urlencoded`` form body looks like:
 
    threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ==
 
-
-The decoded value is like:
+The value is Base64-URL encoded and decodes to:
 
 .. code-block:: json
 
@@ -106,6 +113,9 @@ The decoded value is like:
 Continue the authentication with the :ref:`auth-usage`, setting
 ``"threeDSCompInd": "Y"``
 
-If waiting for the callback takes more than 10 seconds, close the iframe
-forcibly and continue the authentication with the :ref:`auth-usage`, setting
+3DS Method failure
+******************
+
+If the callback is not received within 10 seconds, close the iframe and
+continue the authentication with the :ref:`auth-usage`, setting
 ``"threeDSCompInd": "N"``
