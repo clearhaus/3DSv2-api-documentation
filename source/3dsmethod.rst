@@ -4,7 +4,7 @@
 =====================
 
 .. note::
-  Only used for browser authentications.
+  Only used for browser authentication
 
 If the :ref:`preauth-usage` response includes a ``threeDSMethodURL``,
 the 3DS method *must* be invoked.
@@ -57,7 +57,7 @@ Resulting in the following html
 
    <iframe name="threeDSMethodIframe" class="hidden"/>
 
-Create a HTML ``form``, that contains the input data. This:
+Create a HTML ``form``, that contains the input field:
 
 .. code-block:: html
 
@@ -65,7 +65,7 @@ Create a HTML ``form``, that contains the input data. This:
      <input type="hidden" name="threeDSMethodData" id="threeDSMethodData"/>
    </form>
 
-Can be submitted with:
+This form can be submitted using the following javascript:
 
 .. code-block:: javascript
    :linenos:
@@ -94,13 +94,16 @@ Can be submitted with:
 Completion
 ----------
 
-When the 3DS Method is finished, the hidden iframe will HTTP POST a form with
-the value ``threeDSMethodData`` to the ``threeDSMethodNotificationURL``.
-This body can be used to identify the request.
+When the 3DS Method is finished, the hidden iframe will HTTP POST a form to the
+``threeDSMethodNotificationURL``.
 
-The ``application/x-www-form-urlencoded`` form body looks like:
+The POST body will contain the value ``threeDSMethodData``,  which can used to
+identify the request.
+An example ``application/x-www-form-urlencoded`` body:
+
 
 .. code-block::
+
 
    threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ==
 
@@ -116,6 +119,6 @@ Continue the authentication with the :ref:`auth-usage`, setting
 3DS Method failure
 ******************
 
-If the callback is not received within 10 seconds, close the iframe and
-continue the authentication with the :ref:`auth-usage`, setting
-``"threeDSCompInd": "N"``
+If the callback to ``threeDSMethodNotificationURL`` is not received within 10
+seconds, close the iframe and continue the authentication with the
+:ref:`auth-usage`, setting ``"threeDSCompInd": "N"``
