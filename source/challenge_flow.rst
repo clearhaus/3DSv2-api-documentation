@@ -44,11 +44,8 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
 
    // Generate the data object
    let creq = JSON.stringify({
-     // Browser will be redirected
-     notificationURL: "http://localhost:8270/missing",
      threeDSServerTransID: "ce2809be-b5ee-425b-9382-76a72a4f495b",
      acsTransID: "7b26d24f-4275-4044-97ee-4564c1b88fde",
-     dsTransID: "aacbd4f9-2e1e-4052-b9d8-412618c13285",
      messageVersion: "2.1.0",
      messageType: "CReq",
      challengeWindowSize: "01"
@@ -71,7 +68,8 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
 .. TODO: Describe the callback.
 
 After the challenge has finished, the browser will be redirected to the
-``notificationURL``, where it will POST two values
+`notification URL </reference.html#attr-AReq-notificationURL>`_, where it will
+POST two values
 
 1. The ``threeDSSessionData`` that was supplied before, as well as
 2. A "final" challenge result ``CRes`` value.
