@@ -56,6 +56,6 @@ Basic Authentication Example
      "purchaseAmount": "101",
      "purchaseCurrency": "840",
      "purchaseExponent": "2",
-     "purchaseDate": "20170316141312";
+     "purchaseDate": "20170316141312",
      "transType": "01"
    }
