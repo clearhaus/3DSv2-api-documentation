@@ -31,7 +31,7 @@ Add a form containing the appropriate input elements:
       name="creq"
       id="creq"/>
 
-     <!-- This input can carry up to 1024 Base64URL encoded characters -->
+     <!-- This input can carry up to 1024 Base64-URL encoded characters -->
      <input type="hidden"
       name="threeDSSessionData"
       id="threeDSSessionData"/>
@@ -56,8 +56,9 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
 
    // Set the form input value to the object,
    // base64url-encode the data.
+   // Notice: You have to define base64url() yourself.
    document.getElementById('creq').value =
-    btoa(creq);
+    base64url(creq);
 
    // Fill out the form information and submit.
    form.action = '<acsURL>'; // The acsURL from the ARes.

@@ -82,8 +82,9 @@ This form can be submitted using the following javascript:
    // 1. Serialize threeDSMethodData object into JSON
    // 2. Base64-URL encode it
    // 3. Store the value in the form input tag
+   // Notice: You have to define base64url() yourself.
    document.getElementById('threeDSMethodData').value =
-    btoa(JSON.stringify(threeDSMethodData));
+    base64url(JSON.stringify(threeDSMethodData));
 
    // Fill out the form information and submit.
    form.action = '<threeDSMethodURL>';
