@@ -6,18 +6,29 @@
 .. note::
   Only used for browser authentication
 
-If the :ref:`preauth-usage` response includes a ``threeDSMethodURL``,
-the 3DS method *must* be invoked.
+The 3DS Method can be optionally used by issuers to gather browser fingerprints
+using Javascript. This is done by loading a URL in a hidden iframe, before the
+authentication. This iframe will then execute some fingerprinting javascript,
+before POST'ing the a prespecified URL belonging to the requestor.  The 3DS
+Method fingerprint result is tied to the authentication by the
+``threeDSServerTransID``.
+
+Note: *3DS Method is not optional for requestors*.
+
+If `3DS Method URL`_ is included in the :ref:`preauth-usage` response, the
+3DS method *must* be invoked as explained in this guide.
 
 If ``threeDSMethodURL`` *is not* included in the :ref:`preauth response
-<preauth-response>`, continue with the :ref:`auth-usage` and set
-``"threeDSCompInd": "U"``, to indicate that the 3DS Method was not available.
+<preauth-response>`, continue with the :ref:`auth-usage` and set `3DS
+Completion indicator <reference.html#attr-AReq-threeDSCompInd>`_ to ``"U"``, to
+indicate that the 3DS Method was not available.
 
 Initiating 3DS Method
 ---------------------
 
 Create a JSON object containing ``threeDSServerTransID`` from the :ref:`preauth
-<preauth-usage>` call:
+<preauth-usage>` call and the callback URL you wish to receive the POST to in
+``threeDSMethodNotificationURL``:
 
 .. code-block:: json
 
@@ -115,11 +126,14 @@ The value is Base64-URL encoded and decodes to:
    {"threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"}
 
 Continue the authentication with the :ref:`auth-usage`, setting
-``"threeDSCompInd": "Y"``
+`3DS Completion indicator <reference.html#attr-AReq-threeDSCompInd>`_ to ``"Y"``.
 
 3DS Method failure
 ******************
 
 If the callback to ``threeDSMethodNotificationURL`` is not received within 10
-seconds, close the iframe and continue the authentication with the
-:ref:`auth-usage`, setting ``"threeDSCompInd": "N"``
+seconds from the POST call, it has failed.  Close the iframe and continue the
+authentication with the :ref:`auth-usage`, setting `3DS Completion indicator
+<reference.html#attr-AReq-threeDSCompInd>`_ to ``"N"``.
+
+.. _3DS Method URL: reference.html#attr-cardRangeData-threeDSMethodURL
