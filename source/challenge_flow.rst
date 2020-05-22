@@ -3,8 +3,19 @@
 Challenge flow
 ==============
 
+The point of the 3-D Secure flow is to verify that the true cardholder is a
+part of the authorization. The challenge flow is used to present a way of
+authenticating the cardholder using e.g. OTP or a federated identification
+method.
+
 Browser Challenge
 -----------------
+
+A challenge in the browser is performed either in an iframe or using the entire
+browser window.
+
+Initiate the challenge
+**********************
 
 Create a CReq :ref:`as described <creq-format>`, using the transaction ID's
 received in the :ref:`authentication response <auth-response>`.
@@ -66,17 +77,15 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
    form.method = 'post';
    form.submit();
 
-.. TODO: Describe the callback.
 
-After the challenge has finished, the browser will be redirected to the
-`notification URL </reference.html#attr-AReq-notificationURL>`_, where it will
-POST two values
+Receiving challenge results
+***************************
 
-1. The ``threeDSSessionData`` that was supplied before, as well as
-2. A "final" challenge result ``CRes`` value.
+After the challenge has finished, the iframe will POST to the `notification
+URL`_. The body will contain ``threeDSSessionData`` as supplied in the
+``CReq``, and the challenge result in the ``CRes``.
 
-The :ref:`final challenge response (reference) <final_cres_210>` looks like this:
-
+An example :ref:`challenge response <final_cres_210>` is:
 
 .. code-block:: json
    :linenos:
@@ -98,11 +107,13 @@ Handling timeouts
 
 1. You have 30 seconds from receiving the :ref:`authentication response <auth-response>` to start
    the challenge.
-2. Each interaction in the challenge window has a 10 minute timeout. So the cardholder can take
-   at least 10 minutes to complete the challenge.
+2. Each interaction in the challenge window has a 10 minute timeout. So the
+   cardholder can take at least 10 minutes to complete the challenge.
 
 SDK Challenge
 -------------
 
 The challenge should be handled by the SDK, please refer to the SDK
 specification for further information.
+
+.. _notification URL: reference.html#attr-AReq-notificationURL
