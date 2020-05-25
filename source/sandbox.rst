@@ -134,7 +134,7 @@ Procedure:
   5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
 
 Nominal response:
-  A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``Y``.
+  A :ref:`postauth response <postauth-response>` where ``transStatus`` is ``Y``.
 
 Success criteria:
   The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y``.
@@ -161,10 +161,34 @@ Procedure:
   5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
 
 Nominal response:
-  A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``N``.
+  A :ref:`postauth response <postauth-response>` where ``transStatus`` is ``N``.
 
 Success criteria:
   The ``messageType`` is ``RReq`` and ``transStatus`` is ``N``.
+
+-----------------
+
+Automatic Challenge pass without 3DS method
+"""""""""""""""""""""""""""""""""""""""""""
+
+Your system should correctly set ``threeDSCompInd`` to ``U`` in the ``/auth``
+call.
+
+Procedure:
+  Use an account number between ``9000101100000000`` and ``9000101199999999``.
+
+  1. Perform the :ref:`preauth call <preauth-input>`.
+  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+  4. The challenge will auto-submit, using javascript.
+  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+
+Nominal response:
+  A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``Y``.
+
+Success criteria:
+  The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y``.
 
 -----------------
 
@@ -222,7 +246,7 @@ Frictionless transaction status ``U``
 Test a transaction that is rejected with ``transStatus: U``.
 
 Procedure:
-  Use an account number between ``9000105038106791`` and ``9000105065730666``.
+  Use an account number between ``9000105038106792`` and ``9000105065730666``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
   2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
@@ -242,7 +266,7 @@ Frictionless transaction status ``R``
 Test a transaction that is rejected with ``transStatus: R``.
 
 Procedure:
-  Use an account number between ``9000105065730666`` and ``9000105093354541``.
+  Use an account number between ``9000105065730667`` and ``9000105093354541``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
   2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
