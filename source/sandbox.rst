@@ -178,11 +178,11 @@ Procedure:
   Use an account number between ``9000101100000000`` and ``9000101199999999``.
 
   1. Perform the :ref:`preauth call <preauth-input>`.
-  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
+  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
-  4. The challenge will auto-submit, using javascript.
-  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+  3. The challenge will auto-submit, using javascript.
+  4. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
 
 Nominal response:
   A :ref:`postauth response <postauth-response>` with ``transStatus`` either ``Y``.
