@@ -18,7 +18,8 @@ This near-pseudocode describes the flow your code should perform.
 
    Add compliance information for Mastercard/Visa requests.
 
-1. Generate the input as described in :ref:`the reference <auth-input>`.
+1. Generate the input as described in the reference (:ref:`2.1.0
+   <auth-input-210>`, :ref:`2.2.0 <auth-input-220>`).
 
 2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
    <requests>` for information about how to make requests.
@@ -52,8 +53,8 @@ Response Data
 Success
 =======
 
-A successful authentication request contains data as described in :ref:`the
-reference <auth-response>`.
+A successful authentication request contains data as described in the reference
+(:ref:`2.1.0 <auth-response-210>`, :ref:`2.2.0 <auth-response-220>`).
 The transaction status is contained in the ``transStatus`` and
 ``transStatusReason`` values.
 

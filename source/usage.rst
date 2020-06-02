@@ -28,8 +28,9 @@ API Usage
 4. If ``transStatus`` is ``C``, perform a :ref:`challenge flow <3ds_challenge_flow>`
    on the cardholder device.
 
-5. Retrieve values from :ref:`postauth-endpoint` endpoint after
-   challenge flow has completed.
+4. Retrieve values from the ``/postauth`` endpoint (ref. :ref:`2.1.0
+   <postauth-endpoint-210>`, :ref:`2.2.0 <postauth-endpoint-220>`) endpoint
+   after challenge flow has completed.
 
 **Mobile APP Authentication (SDK device channel)**
 
@@ -47,8 +48,9 @@ API Usage
 3. If ``transStatus`` is ``C``, perform a :ref:`challenge flow <3ds_challenge_flow>`
    on the cardholder device.
 
-4. Retrieve values from :ref:`postauth-endpoint` endpoint after challenge
-   flow has completed.
+4. Retrieve values from the ``/postauth`` endpoint (ref. :ref:`2.1.0
+   <postauth-endpoint-210>`, :ref:`2.2.0 <postauth-endpoint-220>`) endpoint
+   after challenge flow has completed.
 
 **3DS Requestor Initiated Authentication (3RI device channel)**
 

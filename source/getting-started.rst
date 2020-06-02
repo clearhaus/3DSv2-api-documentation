@@ -90,10 +90,11 @@ point of view:
 
 The following describes the individual points in the diagram:
 
-1. A call to the :ref:`preauth-endpoint` is performed if the
+1. A call to the :ref:`preauth-usage` is performed if the
    request originator is a cardholder using a browser. This is opposed to using a
    SDK or the authentication being Requestor initiated.
-2. The :ref:`preauth-response` contains:
+2. The ``/preauth`` response (ref. :ref:`2.1.0 <preauth-response-210>`,
+   :ref:`2.2.0 <preauth-response-220>`) contains:
 
    - Information that might be usable in determining whether to fall back to
      3-D Secure v1.
@@ -101,9 +102,10 @@ The following describes the individual points in the diagram:
 
 3. The cardholder browser invokes the received `threeDSMethodURL`, to allow the ACS to
    fingerprint the browser. See the :ref:`3ds_method` guide.
-4. The Requestor uses the :ref:`auth-endpoint` to send the information needed
+4. The Requestor uses the :ref:`auth-usage` to send the information needed
    for the 3-D Securer Server to assemble a ``AReq`` message.
-5. The Auth :ref:`auth-response` is an ``ARes``, as defined by the specification.
+5. The Auth response (ref. :ref:`2.1.0 <auth-response-210>`, :ref:`2.2.0
+   <auth-response-210>`) is an ``ARes``, as defined by the specification.
 
    This ``ARes`` contains either:
 
@@ -114,17 +116,18 @@ The following describes the individual points in the diagram:
 6. The cardholder completes the challenge on the their device. See the
    :ref:`3ds_challenge_flow` guide.
 7. The ACS informs the Requestor about the challenge result through a callback.
-8. The :ref:`postauth-endpoint` is used to fetch the results of the
+8. The :ref:`postauth-usage` is used to fetch the results of the
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
-   in the :ref:`postauth response <postauth-response>` section.
+   in the ``/postauth`` response (ref. :ref:`2.1.0 <postauth-response-210>`,
+   :ref:`2.1.0 <postauth-response-220>`) section.
 
 Sandbox environment
 ===================
 
 A sandbox environment is included as a service for initial and continuous
-integration, and for live tests. This is our implementation so discrepancies
-with ACS implementations are unavoidable.
+integration, and for live tests. This is our own implementation, so
+discrepancies with ACS implementations are unavoidable.
 
 .. warning::
   1. *Under no circumstances* may real card numbers or other cardholder

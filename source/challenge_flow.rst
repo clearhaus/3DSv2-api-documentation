@@ -17,8 +17,10 @@ browser window.
 Initiate the challenge
 **********************
 
-Create a CReq :ref:`as described <creq-format>`, using the transaction ID's
-received in the :ref:`authentication response <auth-response>`.
+Create a challenge request (CReq: :ref:`2.1.0 <creq-format-210>`, :ref:`2.2.0
+<creq-format-220>`), using the transaction ID's received in the ``/auth``
+response (ref. :ref:`2.1.0 <auth-response-210>`, :ref:`2.1.0
+<auth-response-220>`).
 
 Add an iframe to the users browser, either statically or using javascript.
 
@@ -85,14 +87,16 @@ After the challenge has finished, the iframe will POST to the `notification
 URL`_. The body will contain ``threeDSSessionData`` as supplied in the
 ``CReq``, and the challenge result in the ``CRes``.
 
-An example :ref:`challenge response <final_cres_210>` is:
+An example :ref:`challenge response <final-cres-210>` is:
 
 .. code-block:: json
    :linenos:
+   :caption: Example CRes, valid for both 2.1.0 and 2.2.0
 
    {
      "acsTransID": "5af5e779-4d44-4201-a2bf-4890eb9e0ba7",
      "challengeCompletionIndicator": "Y",
+     "sdkTransID": "76ef8bdc-daf3-43ec-808c-9dd64a7301ca",
      "messageType": "CRes",
      "messageVersion": "2.1.0",
      "threeDSServerTransID": "c1110574-2c6a-4ab8-a937-ef8d5a10ec39",
@@ -100,12 +104,13 @@ An example :ref:`challenge response <final_cres_210>` is:
    }
 
 Here ``transStatus`` will be either ``Y`` or ``N``. You can use the
-:ref:`postauth-usage` to fetch the :ref:`results of the challenge <postauth-response>`.
+:ref:`postauth-usage` to fetch the result of the challenge (ref. :ref:`2.1.0
+<postauth-response-210>`, :ref:`2.2.0 <postauth-response-220>`).
 
 Handling timeouts
 *****************
 
-1. You have 30 seconds from receiving the :ref:`authentication response <auth-response>` to start
+1. You have 30 seconds from receiving the authentication response to initiate
    the challenge.
 2. Each interaction in the challenge window has a 10 minute timeout. So the
    cardholder can take at least 10 minutes to complete the challenge.
