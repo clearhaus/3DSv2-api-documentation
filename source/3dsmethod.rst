@@ -21,7 +21,7 @@ If `3DS Method URL`_ is included in the :ref:`preauth-usage` response, the
 If ``threeDSMethodURL`` *is not* included in the ``/preauth`` response (ref.
 :ref:`2.1.0 <preauth-response-210>`, :ref:`2.1.0 <preauth-response-220>`),
 continue with the :ref:`auth-usage` and set `3DS Completion indicator
-<reference.html#attr-AReq-threeDSCompInd>`_ to ``"U"``, to indicate that the
+<specification_210.html#attr-AReq-threeDSCompInd>`_ to ``"U"``, to indicate that the
 3DS Method was not available.
 
 Initiating 3DS Method
@@ -127,7 +127,7 @@ The value is Base64-URL encoded and decodes to:
    {"threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9"}
 
 Continue the authentication with the :ref:`auth-usage`, setting
-`3DS Completion indicator <reference.html#attr-AReq-threeDSCompInd>`_ to ``"Y"``.
+`3DS Completion indicator <specification_210.html#attr-AReq-threeDSCompInd>`_ to ``"Y"``.
 
 3DS Method failure
 ******************
@@ -135,6 +135,6 @@ Continue the authentication with the :ref:`auth-usage`, setting
 If the callback to ``threeDSMethodNotificationURL`` is not received within 10
 seconds from the POST call, it has failed.  Close the iframe and continue the
 authentication with the :ref:`auth-usage`, setting `3DS Completion indicator
-<reference.html#attr-AReq-threeDSCompInd>`_ to ``"N"``.
+<specification_210.html#attr-AReq-threeDSCompInd>`_ to ``"N"``.
 
 .. _3DS Method URL: reference.html#attr-cardRangeData-threeDSMethodURL

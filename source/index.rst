@@ -16,10 +16,7 @@ Introduction
    examples
    reference
    sandbox
-
-.. note::
-  Currently this documentation only contains information about v2.1.0.
-  The server supports both 2.1.0 and 2.2.0.
+   changelog
 
 This is the documentation for the 3-D Secure Server provided by `3dsecure.io`_.
 It is a Software as a Service (SaaS) implementation, offering a language-agnostic
