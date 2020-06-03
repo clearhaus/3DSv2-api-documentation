@@ -9,11 +9,9 @@
 The 3DS Method can be optionally used by issuers to gather browser fingerprints
 using Javascript. This is done by loading a URL in a hidden iframe, before the
 authentication. This iframe will then execute some fingerprinting javascript,
-before POST'ing the a prespecified URL belonging to the requestor.  The 3DS
+before POST'ing to the prespecified URL belonging to the requestor.  The 3DS
 Method fingerprint result is tied to the authentication by the
 ``threeDSServerTransID``.
-
-Note: *3DS Method is not optional for requestors*.
 
 If `3DS Method URL`_ is included in the :ref:`preauth-usage` response, the
 3DS method *must* be invoked as explained in this guide.

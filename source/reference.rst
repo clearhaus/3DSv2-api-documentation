@@ -9,6 +9,7 @@ Reference
    :caption: Contents:
    :hidden:
 
+   differences
    specification_210
    specification_220
    specification_common

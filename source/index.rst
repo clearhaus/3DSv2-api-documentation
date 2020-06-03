@@ -24,10 +24,11 @@ HTTP API integration. This service supports all active versions of 3-D Secure ve
 (``2.1.0``, ``2.2.0``) and our goal was to make the documentation work on it’s own.
 Nevertheless, you may need to refer to the specifications during the implementation.
 
-A 3-D Secure Server is used for *cardholder authentication*. An authentication in 3-D Secure
-is the process of verifying cardholder involvement in e.g. a purchase. An authentication
-results from an *authentication flow* and proof of authentication is an *authentication value*.
-Get an overview of a 3-D Secure Server in :ref:`what-is-a-3-d-secure-server`
+A 3-D Secure Server is used for *cardholder authentication*. An authentication
+in 3-D Secure, is the process of verifying cardholder involvement in e.g. a
+purchase. An authentication results from an *authentication flow* and proof of
+authentication is an *authentication value*.  Get an overview of a 3-D Secure
+Server in :ref:`what-is-a-3-d-secure-server`
 
 Who should integrate with this service
 =======================================
@@ -64,7 +65,7 @@ Dedicated dashboard (under development)
   your 3-D Secure usage.
 
 Devoted team
-  We take pride in our job and are dedicated to provide a great service.
+  We take pride in our job and are dedicated to providing a great service.
 
 
 .. _what-is-a-3-d-secure-server:
@@ -80,7 +81,7 @@ words <https://www.emvco.com/about/overview/>`_:
     EMVCo exists to facilitate worldwide interoperability and acceptance of
     secure payment transactions
 
-The specification is public and can be found at `EMVCos document page
+The specification is public and can be found at `EMVCo's document page
 <https://www.emvco.com/emv-technologies/3d-secure/>`_.  The specifications are
 included here for ease of access. This guide intends to be self-contained, such
 that you do not need to refer to the specification.
@@ -115,12 +116,16 @@ that you do not need to refer to the specification.
   * - :download:`EMVCo_3DS_SB214v1.pdf <specifications/EMVCo_3DS_SB214v1.pdf>`
     - Specification Bulletin No. 214 v1 (Cumulative updates to 2.2.0)
 
-Organizations involved in 3-D Secure
-====================================
+Parts involved in 3-D Secure
+============================
 
 Requestor (3DSRequestor)
   An organization performing 3-D Secure authentication on behalf of a merchant.
   The requestor may be a merchant.
+
+3-D Secure SDK (SDK)
+  An SDK for e.g. a mobile phone platform or smart television, providing
+  platform native support for EMVCo 3DS authentication.
 
 3-D Secure Server (3DSS)
   A server facilitating communication between the Requestor and Card Schemes.
