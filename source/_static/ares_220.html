@@ -399,7 +399,7 @@ Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^0[1-4]$</span></code>
+<code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
@@ -437,6 +437,10 @@ Channels:
 <div class='enumValue'>Dynamic</div>
 <div class='enumKey'>03</div>
 <div class='enumValue'>OOB</div>
+<div class='enumKey'>04</div>
+<div class='enumValue'>Decoupled</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 <div class=''>
@@ -952,16 +956,9 @@ Required if messageCategory is "01"</div>
 <div class='type'>
 Type: string
 </div>
-<div class='length'>
-Length: 2
-</div>
-<div class='integerString'>
-Value:
-<code><span class='pre'>
-01</span></code>
-&#8230;
-<code><span class='pre'>
-26</span></code>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-9]|1[0-9]|2[0-6]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
@@ -1151,6 +1148,17 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='description'>This data element will be populated by the system setting Whitelist Status.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>3DS Server</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>DS</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>ACS</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
 <div class='conditions'>
 <div class=''>
 Required if whiteListStatus is not empty</div>

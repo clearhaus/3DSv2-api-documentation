@@ -1167,11 +1167,9 @@ Field is required unless market restrictions prevent it</dd>
 <div class='type'>
 Type: string
 </div>
-<div class='enum'>
-One of:
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
-<code><span class='pre'>03</span></code>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-3]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -1198,6 +1196,8 @@ Channels:
 <div class='enumValue'>Browser (BRW)</div>
 <div class='enumKey'>03</div>
 <div class='enumValue'>3DS Requestor Initiated (3RI)</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div></td></tr>
@@ -1528,10 +1528,9 @@ Channels:
 <div class='type'>
 Type: string
 </div>
-<div class='enum'>
-One of:
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-2]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -1556,6 +1555,8 @@ Channels:
 <div class='enumValue'>PA - Payment</div>
 <div class='enumKey'>02</div>
 <div class='enumValue'>NPA - Non-Payment</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div></td></tr>
@@ -2120,10 +2121,9 @@ Field is required if available</dd>
 <div class='type'>
 Type: string
 </div>
-<div class='enum'>
-One of:
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-2]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
@@ -2152,13 +2152,15 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='description'>This data element will be populated by the system residing in the 3-D Secure domain where the de- tokenisation occurs.</div>
+<td class='argdesc'><div class='description'>This data element will be populated by the system residing in the 3-D Secure domain where the de-tokenisation occurs.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <div class='enumDescription'>
 <div class='enumKey'>01</div>
 <div class='enumValue'>3-D Secure Server</div>
 <div class='enumKey'>02</div>
 <div class='enumValue'>Directory Server</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 <div class=''>
@@ -2908,7 +2910,7 @@ Type: string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^0[123]$</span></code>
+<code><span class='pre'>^(0[123]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div>
@@ -2926,6 +2928,17 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='description'>Value that represents the signature verification performed by the DS on the mechanism (e.g., FIDO) used by the cardholder to authenticate to the 3DS Requestor.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Verified</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Failed</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Not Performed</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
 <div class='conditions'>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorAuthenticationInd'><td class='attribute' colspan='2'>threeDSRequestorAuthenticationInd</td></tr>
@@ -2969,6 +2982,8 @@ Channels:
 <div class='enumValue'>Maintain card</div>
 <div class='enumKey'>06</div>
 <div class='enumValue'>Cardholder verification as part of EMV token ID&V</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div></td></tr>
@@ -3034,6 +3049,8 @@ Channels:
 <div class='enumValue'>No challenge requested (utilise whitelist exemption if no challenge required)</div>
 <div class='enumKey'>09</div>
 <div class='enumValue'>Challenge requested (whitelist prompt requested if challenge required)</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div>
@@ -3303,6 +3320,8 @@ Channels:
 <div class='enumValue'>Whitelist status check</div>
 <div class='enumKey'>11</div>
 <div class='enumValue'>Other payment</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div>
@@ -3459,6 +3478,17 @@ Channels:
 </div>
 </td>
 <td class='argdesc'><div class='description'>This data element will be populated by the system setting Whitelist Status.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>3DS Server</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>DS</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>ACS</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
 <div class='conditions'>
 <div class=''>
 Required if whiteListStatus is not empty</div>

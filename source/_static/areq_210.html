@@ -968,11 +968,9 @@ Field is required unless market restrictions prevent it</dd>
 <div class='type'>
 Type: string
 </div>
-<div class='enum'>
-One of:
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
-<code><span class='pre'>03</span></code>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-3]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -999,6 +997,8 @@ Channels:
 <div class='enumValue'>Browser (BRW)</div>
 <div class='enumKey'>03</div>
 <div class='enumValue'>3DS Requestor Initiated (3RI)</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div></td></tr>
@@ -1329,10 +1329,9 @@ Channels:
 <div class='type'>
 Type: string
 </div>
-<div class='enum'>
-One of:
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-2]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -1357,6 +1356,8 @@ Channels:
 <div class='enumValue'>PA - Payment</div>
 <div class='enumKey'>02</div>
 <div class='enumValue'>NPA - Non-Payment</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div></td></tr>
@@ -2655,6 +2656,8 @@ Channels:
 <div class='enumValue'>Maintain card</div>
 <div class='enumKey'>06</div>
 <div class='enumValue'>Cardholder verification as part of EMV token ID&V</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div></td></tr>
@@ -2710,6 +2713,8 @@ Channels:
 <div class='enumValue'>Challenge requested: 3DS Requestor Preference</div>
 <div class='enumKey'>04</div>
 <div class='enumValue'>Challenge requested: Mandate</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div>
@@ -2864,6 +2869,8 @@ Channels:
 <div class='enumValue'>Maintain card information</div>
 <div class='enumKey'>05</div>
 <div class='enumValue'>Account verification</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
 </div>
 <div class='conditions'>
 </div>
