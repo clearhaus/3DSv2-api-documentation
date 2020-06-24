@@ -12,7 +12,8 @@ Request flow
 
 This near-pseudocode describes the flow your code should perform.
 
-1. Generate the input as described in :ref:`the reference <postauth-input>`.
+1. Generate the input as described in the reference (:ref:`2.1.0
+   <postauth-input-210>`, :ref:`2.2.0 <postauth-input-220>`).
 
    .. code-block:: json
       :caption: Example /postauth input body
@@ -41,7 +42,8 @@ This near-pseudocode describes the flow your code should perform.
    Note that JSON is returned even if the HTTP status code is not ``200``, in
    all but the rarest cases.
 
-See :ref:`the reference <postauth-input>` for the values returned.
+See the reference (:ref:`2.1.0 <postauth-response-210>`, :ref:`2.2.0
+<postauth-response-220>`) for the values returned.
 
 .. note::
   The authentication cache expires 300 seconds after the 3-D Secure Server

@@ -184,7 +184,7 @@ string
 </div>
 <div class='enum'>
 Must be:
-<code><span class='pre'>2.1.0</span></code>
+<code><span class='pre'>2.2.0</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -221,18 +221,18 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'><div class='dynamic'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01'>Required</div>
-<div class='hidden dynamic' deviceChannel='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03'>Required</div>
-<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03'>Optional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
-<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
-<div class='hidden dynamic' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Optional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -247,6 +247,12 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
+<div class=''>
+Required if deviceChannel is "01"</div>
+<div class='hidden' messageCategory='01'>
+Required if deviceChannel is "01"</div>
+<div class='hidden' messageCategory='02'>
+Required if deviceChannel is "01"</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-CRes-threeDSServerTransID'><td class='attribute' colspan='2'>
 threeDSServerTransID<a class='link' href='#attr-CRes-threeDSServerTransID' title='Link to this attribute'></a>

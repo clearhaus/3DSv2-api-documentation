@@ -4,9 +4,9 @@
 Getting Started
 ###############
 
-This page is intented to familiarize you with superficial parts of the 3-D
-Secure v2 and to provide you with *some* understanding of a 3-D Secure v2
-authentication flow.
+This page is intented to familiarize you with parts of the 3-D Secure v2, and
+to provide you with *some* understanding of a 3-D Secure v2 authentication
+flow.
 
 Authentication
 ==============
@@ -14,13 +14,13 @@ Authentication
 In 3-D Secure v2, cardholder authentication might not necessarily involve the
 cardholder.
 
-An authentication flow not involving the cardholder is called a *frictionless
+An authentication flow not involving the cardholder, is called a *frictionless
 flow*, whereas a flow involving the cardholder is called a *challenge flow*.
 The *frictionless flow* utilizes device fingerprinting to verify cardholder
-authenticity, providing a smoother flow for the cardholder.
+authenticity, providing a smoother transaction for the cardholder.
 
-Authentications can be described broadly by the two variables below which are included in
-every transaction.
+The structure of an authentication transaction can be described broadly by the
+two variables below, which are included in every transaction.
 
 Message categories (``messageCategory``)
 ----------------------------------------
@@ -38,8 +38,8 @@ Device channels (``deviceChannel``)
 -----------------------------------
 
 APP
-  Authentications initiated on a mobile device, utilizing a dedicated 3-D
-  Secure SDK for the specific device.
+  Authentications initiated on a e.g. a mobile phone, utilizing a dedicated
+  native 3-D Secure SDK for the specific device.
   The message value is ``01``.
 
 BRW
@@ -59,9 +59,9 @@ parameter definition. Brief descriptions are:
 
 /preauth
   This is used when performing transactions from a browser (as opposed to using
-  an SDK). It will return an optional 3-D Secure Method URL, which is
-  used for browser fingerprinting. This can support risk-based analysis and
-  assist in ensuring a flow where the cardholder is not challenged.
+  an SDK). It will return an optional 3-D Secure Method URL, which is used for
+  browser fingerprinting. This can support risk-based analysis and assist in
+  ensuring a frictionless flow where the cardholder is not directly involved.
 
   While in the transition period between 3-D Secure v1 and v2, this endpoint
   can help determine if v1 should be used instead. This is documented in the
@@ -90,20 +90,24 @@ point of view:
 
 The following describes the individual points in the diagram:
 
-1. A call to the :ref:`preauth-endpoint` is performed if the
+1. A call to the :ref:`preauth-usage` is performed if the
    request originator is a cardholder using a browser. This is opposed to using a
    SDK or the authentication being Requestor initiated.
-2. The :ref:`preauth-response` contains:
+2. The ``/preauth`` response (ref. :ref:`2.1.0 <preauth-response-210>`,
+   :ref:`2.2.0 <preauth-response-220>`) contains:
 
    - Information that might be usable in determining whether to fall back to
      3-D Secure v1.
-   - An optional `threeDSMethodURL` that is invoked in the user browser.
+   - An optional ``threeDSMethodURL`` that is invoked in the user browser.
 
-3. The cardholder browser invokes the received `threeDSMethodURL`, to allow the ACS to
+3. The cardholder browser invokes the received ``threeDSMethodURL``, to allow the ACS to
    fingerprint the browser. See the :ref:`3ds_method` guide.
-4. The Requestor uses the :ref:`auth-endpoint` to send the information needed
-   for the 3-D Securer Server to assemble a ``AReq`` message.
-5. The Auth :ref:`auth-response` is an ``ARes``, as defined by the specification.
+4. The Requestor uses the :ref:`auth-usage` to send the information needed for
+   the 3-D Secure Server. The Server assembles a ``AReq`` message and transmits
+   it to the Directory Server.
+5. The Authentication response (ref. :ref:`2.1.0 <auth-response-210>`,
+   :ref:`2.2.0 <auth-response-210>`) is an ``ARes``, as defined by the
+   specification.
 
    This ``ARes`` contains either:
 
@@ -114,17 +118,18 @@ The following describes the individual points in the diagram:
 6. The cardholder completes the challenge on the their device. See the
    :ref:`3ds_challenge_flow` guide.
 7. The ACS informs the Requestor about the challenge result through a callback.
-8. The :ref:`postauth-endpoint` is used to fetch the results of the
+8. The :ref:`postauth-usage` is used to fetch the results of the
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
-   in the :ref:`postauth response <postauth-response>` section.
+   in the ``/postauth`` response (ref. :ref:`2.1.0 <postauth-response-210>`,
+   :ref:`2.1.0 <postauth-response-220>`) section.
 
 Sandbox environment
 ===================
 
 A sandbox environment is included as a service for initial and continuous
-integration, and for live tests. This is our implementation so discrepancies
-with ACS implementations are unavoidable.
+integration, and for live tests. This is our own implementation, so
+discrepancies with ACS implementations are unavoidable.
 
 .. warning::
   1. *Under no circumstances* may real card numbers or other cardholder

@@ -46,7 +46,7 @@ Request headers
 
 Authenticating requests
   Access to the service is granted by an API key. The API key is used on each
-  request using the ``APIKey`` HTTP header as such:
+  request using the ``APIKey`` HTTP header:
   ::
 
     APIKey: <YOUR UUID API KEY>

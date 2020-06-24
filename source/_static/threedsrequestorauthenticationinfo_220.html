@@ -15,12 +15,12 @@ threeDSReqAuthData<a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo
 string
 </div>
 <div class='maxLength'>
-Max length: 2048
+Max length: 20000
 </div>
 </div>
 <div class='inclusion'>Optional</div>
 </td>
-<td class='argdesc'><div class='description'> Data that documents and supports a specific authentication process.  In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, for method: 02—field can carry generic 3DS Requestor authentication information 03—data element can carry information about the provider of the federated ID and related information 04—data element can carry the FIDO attestation data (including the signature) In future versions of the specification, these details are expected to be included</div>
+<td class='argdesc'><div class='description'>Data that documents and supports a specific authentication process. In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, if the 3DS Requestor Authentication Method is: 03, then this element can carry information about the provider of the federated ID and related information. 06, then this element can carry the FIDO attestation data (including the signature). 07, then this element can carry FIDO Attestation data with the FIDO assurance data signed. 08, then this element can carry the SRC assurance data.</div>
 <div class='conditions'>
 </div>
 <p class='enumDescriptionHeader'>
@@ -43,7 +43,7 @@ string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-6]|[89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-8]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div>
@@ -63,6 +63,10 @@ Regexp:
 <div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using third-party authentication</div>
 <div class='enumKey'>06</div>
 <div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using FIDO Authenticator</div>
+<div class='enumKey'>07</div>
+<div class='enumValue'>Login to the cardholder account at the 3DS Requestor system using FIDO Authenticator (FIDO assurance data signed)</div>
+<div class='enumKey'>08</div>
+<div class='enumValue'>SRC Assurance Data</div>
 </div>
 <div class='conditions'>
 </div>

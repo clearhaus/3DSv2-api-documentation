@@ -676,7 +676,18 @@ One of:
 <code><span class='pre'>48</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -691,6 +702,30 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Value representing the bit depth of the colour palette for displaying images, in bits per pixel. Obtained from Cardholder browser using the screen.colorDepth property.</div>
 <div class='conditions'>
+<div class=''>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserIP'><td class='attribute' colspan='2'>
 browserIP<a class='link' href='#attr-AReq-browserIP' title='Link to this attribute'></a>
@@ -750,7 +785,18 @@ browserJavaEnabled<a class='link' href='#attr-AReq-browserJavaEnabled' title='Li
 bool
 </div>
 </div>
-<div class='inclusion'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -765,11 +811,61 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Boolean that represents the ability of the cardholder browser to execute Java. Value is returned from the navigator.javaEnabled property.</div>
 <div class='conditions'>
+<div class=''>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserLanguage'><td class='attribute' colspan='2'>
-browserLanguage<a class='link' href='#attr-AReq-browserLanguage' title='Link to this attribute'></a>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserJavascriptEnabled'><td class='attribute' colspan='2'>
+browserJavascriptEnabled<a class='link' href='#attr-AReq-browserJavascriptEnabled' title='Link to this attribute'></a>
 </td></tr>
 <tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+bool
+</div>
+</div>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>BRW</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Boolean that represents the ability of the cardholder browser execute JavaScript.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow' id='attr-AReq-browserLanguage'><td class='attribute' colspan='2'>
+browserLanguage<a class='link' href='#attr-AReq-browserLanguage' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -798,10 +894,10 @@ Channels:
 <td class='argdesc'><div class='description'>Value representing the browser language as defined in IETF BCP47. Returned from navigator.language property.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow' id='attr-AReq-browserScreenHeight'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserScreenHeight'><td class='attribute' colspan='2'>
 browserScreenHeight<a class='link' href='#attr-AReq-browserScreenHeight' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -812,7 +908,18 @@ Regexp:
 <code><span class='pre'>^[0-9]{1,6}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -827,11 +934,35 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Total height of the Cardholder’s screen in pixels. Value is returned from the screen.height property.</div>
 <div class='conditions'>
+<div class=''>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserScreenWidth'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow' id='attr-AReq-browserScreenWidth'><td class='attribute' colspan='2'>
 browserScreenWidth<a class='link' href='#attr-AReq-browserScreenWidth' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -842,7 +973,18 @@ Regexp:
 <code><span class='pre'>^[0-9]{1,6}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -857,11 +999,35 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Total width of the cardholder’s screen in pixels. Value is returned from the screen.width property.</div>
 <div class='conditions'>
+<div class=''>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow' id='attr-AReq-browserTZ'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserTZ'><td class='attribute' colspan='2'>
 browserTZ<a class='link' href='#attr-AReq-browserTZ' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -872,7 +1038,18 @@ Regexp:
 <code><span class='pre'>^[+-]?[0-9]{1,4}$</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -887,11 +1064,35 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Time-zone offset in minutes between UTC and the Cardholder browser local time. Note that the offset is positive if the local time zone is behind UTC and negative if it is ahead.</div>
 <div class='conditions'>
+<div class=''>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if browserJavascriptEnabled is true</div>
 </div></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-browserUserAgent'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow' id='attr-AReq-browserUserAgent'><td class='attribute' colspan='2'>
 browserUserAgent<a class='link' href='#attr-AReq-browserUserAgent' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -917,10 +1118,10 @@ Channels:
 <td class='argdesc'><div class='description'>Exact content of the HTTP user-agent header. Note: If the total length of the User-Agent sent by the browser exceeds 2048 characters, truncate the excess portion.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-cardExpiryDate'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-cardExpiryDate'><td class='attribute' colspan='2'>
 cardExpiryDate<a class='link' href='#attr-AReq-cardExpiryDate' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -964,10 +1165,10 @@ Mastercard</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-cardholderName'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-cardholderName'><td class='attribute' colspan='2'>
 cardholderName<a class='link' href='#attr-AReq-cardholderName' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1011,10 +1212,10 @@ Mastercard</dt>
 <dd class='scheme_rule'>
 Field is required unless market restrictions prevent it</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-deviceChannel'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-deviceChannel'><td class='attribute' colspan='2'>
 deviceChannel<a class='link' href='#attr-AReq-deviceChannel' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1054,10 +1255,10 @@ Channels:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow' id='attr-AReq-deviceRenderOptions'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow' id='attr-AReq-deviceRenderOptions'><td class='attribute' colspan='2'>
 deviceRenderOptions<a class='link' href='#attr-AReq-deviceRenderOptions' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1082,10 +1283,10 @@ Channels:
 <td class='argdesc'><div class='description'>Defines the SDK UI types that the device supports for displaying specific challenge user interfaces within the SDK.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-email'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-email'><td class='attribute' colspan='2'>
 email<a class='link' href='#attr-AReq-email' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1132,10 +1333,10 @@ Mastercard</dt>
 <dd class='scheme_rule'>
 Field is required unless market restrictions prevent it</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-homePhone'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-homePhone'><td class='attribute' colspan='2'>
 homePhone<a class='link' href='#attr-AReq-homePhone' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1175,10 +1376,10 @@ Mastercard</dt>
 <dd class='scheme_rule'>
 Field is required unless market restrictions prevent it</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-mcc'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-mcc'><td class='attribute' colspan='2'>
 mcc<a class='link' href='#attr-AReq-mcc' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1234,10 +1435,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-merchantCountryCode'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-merchantCountryCode'><td class='attribute' colspan='2'>
 merchantCountryCode<a class='link' href='#attr-AReq-merchantCountryCode' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1299,10 +1500,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-merchantName'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-merchantName'><td class='attribute' colspan='2'>
 merchantName<a class='link' href='#attr-AReq-merchantName' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1358,10 +1559,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-merchantRiskIndicator'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-merchantRiskIndicator'><td class='attribute' colspan='2'>
 merchantRiskIndicator<a class='link' href='#attr-AReq-merchantRiskIndicator' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1388,10 +1589,10 @@ Channels:
 <td class='argdesc'><div class='description'>Merchant's assessment of the level of fraud risk for the specific authentication for both the cardholder and the authentication being conducted.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-messageCategory'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-messageCategory'><td class='attribute' colspan='2'>
 messageCategory<a class='link' href='#attr-AReq-messageCategory' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1429,10 +1630,10 @@ Channels:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-messageExtension'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-messageExtension'><td class='attribute' colspan='2'>
 messageExtension<a class='link' href='#attr-AReq-messageExtension' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1463,10 +1664,10 @@ Channels:
 <td class='argdesc'><div class='description'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-messageType'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-messageType'><td class='attribute' colspan='2'>
 messageType<a class='link' href='#attr-AReq-messageType' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1495,10 +1696,10 @@ Channels:
 <td class='argdesc'><div class='description'>Identifies the type of message that is passed.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-messageVersion'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-messageVersion'><td class='attribute' colspan='2'>
 messageVersion<a class='link' href='#attr-AReq-messageVersion' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1506,7 +1707,7 @@ string
 </div>
 <div class='enum'>
 Must be:
-<code><span class='pre'>2.1.0</span></code>
+<code><span class='pre'>2.2.0</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -1527,10 +1728,10 @@ Channels:
 <td class='argdesc'><div class='description'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-mobilePhone'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-mobilePhone'><td class='attribute' colspan='2'>
 mobilePhone<a class='link' href='#attr-AReq-mobilePhone' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1570,10 +1771,10 @@ Mastercard</dt>
 <dd class='scheme_rule'>
 Field is required unless market restrictions prevent it</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeNameRow' id='attr-AReq-notificationURL'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeNameRow' id='attr-AReq-notificationURL'><td class='attribute' colspan='2'>
 notificationURL<a class='link' href='#attr-AReq-notificationURL' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1605,10 +1806,10 @@ Channels:
 <td class='argdesc'><div class='description'>Fully qualified URL of the system that receives the CRes message or Error Message. The CRes message is posted by the ACS through the Cardholder browser at the end of the challenge and receipt of the RRes message.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-purchaseAmount'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-purchaseAmount'><td class='attribute' colspan='2'>
 purchaseAmount<a class='link' href='#attr-AReq-purchaseAmount' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1641,27 +1842,28 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Purchase amount in minor units of currency with all punctuation removed.</div>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -1672,10 +1874,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-purchaseCurrency'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-purchaseCurrency'><td class='attribute' colspan='2'>
 purchaseCurrency<a class='link' href='#attr-AReq-purchaseCurrency' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1710,27 +1912,28 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Currency in which purchase amount is expressed.</div>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -1741,10 +1944,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-purchaseDate'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-purchaseDate'><td class='attribute' colspan='2'>
 purchaseDate<a class='link' href='#attr-AReq-purchaseDate' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1779,27 +1982,28 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Date and time of the purchase expressed in UTC.</div>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -1810,10 +2014,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-purchaseExponent'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-purchaseExponent'><td class='attribute' colspan='2'>
 purchaseExponent<a class='link' href='#attr-AReq-purchaseExponent' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1846,27 +2050,28 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Minor units of currency as specified in the ISO 4217 currency exponent.</div>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if messageCategory is "01" or messageCategory is "02" and threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02, 06, 07, 08, 09, 11]</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -1877,10 +2082,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-purchaseInstalData'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-purchaseInstalData'><td class='attribute' colspan='2'>
 purchaseInstalData<a class='link' href='#attr-AReq-purchaseInstalData' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -1920,35 +2125,36 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Indicates the maximum number of authorisations permitted for instalment payments.</div>
 <div class='conditions'>
 <div class=''>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='01'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='02'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='03'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is "03"</div>
+Required if threeDSRequestorAuthenticationInd is "03" or threeRIInd is "02"</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -1959,10 +2165,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-payTokenInd'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-payTokenInd'><td class='attribute' colspan='2'>
 payTokenInd<a class='link' href='#attr-AReq-payTokenInd' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2000,10 +2206,86 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-recurringExpiry'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-payTokenSource'><td class='attribute' colspan='2'>
+payTokenSource<a class='link' href='#attr-AReq-payTokenSource' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-2]|[89][0-9])$</span></code>
+</div>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>This data element will be populated by the system residing in the 3-D Secure domain where the de-tokenisation occurs.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>3-D Secure Server</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Directory Server</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
+<div class='conditions'>
+<div class=''>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='01'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='02'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='03'>
+Required if payTokenInd is true</div>
+<div class='hidden' messageCategory='01'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if payTokenInd is true</div>
+<div class='hidden' messageCategory='02'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if payTokenInd is true</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if payTokenInd is true</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-recurringExpiry'><td class='attribute' colspan='2'>
 recurringExpiry<a class='link' href='#attr-AReq-recurringExpiry' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2038,35 +2320,36 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Date after which no further authorisations shall be performed.</div>
 <div class='conditions'>
 <div class=''>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='03'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -2077,10 +2360,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-recurringFrequency'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-recurringFrequency'><td class='attribute' colspan='2'>
 recurringFrequency<a class='link' href='#attr-AReq-recurringFrequency' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2113,35 +2396,36 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
 <td class='argdesc'><div class='description'>Indicates the minimum number of days between authorisations.</div>
 <div class='conditions'>
 <div class=''>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='03'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if threeDSRequestorAuthenticationInd is one of [02, 03]</div>
+Required if threeDSRequestorAuthenticationInd is one of [02, 03] or threeRIInd is one of [01, 02]</div>
 </div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
@@ -2324,18 +2608,18 @@ uuid
 </a>
 </div>
 </div>
-<div class='inclusion'><div class='dynamic'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01'>Required</div>
-<div class='hidden dynamic' deviceChannel='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03'>Required</div>
-<div class='hidden dynamic' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03'>Optional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Required</div>
-<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Required</div>
-<div class='hidden dynamic' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Optional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
-<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -2350,6 +2634,12 @@ Channels:
 </td>
 <td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
+<div class=''>
+Required if deviceChannel is "01"</div>
+<div class='hidden' messageCategory='01'>
+Required if deviceChannel is "01"</div>
+<div class='hidden' messageCategory='02'>
+Required if deviceChannel is "01"</div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-shipAddrCity'><td class='attribute' colspan='2'>
 shipAddrCity<a class='link' href='#attr-AReq-shipAddrCity' title='Link to this attribute'></a>
@@ -2735,8 +3025,8 @@ Channels:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-threeDSRequestorAuthenticationInd'><td class='attribute' colspan='2'>
-threeDSRequestorAuthenticationInd<a class='link' href='#attr-AReq-threeDSRequestorAuthenticationInd' title='Link to this attribute'></a>
+<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-threeDSReqAuthMethodInd'><td class='attribute' colspan='2'>
+threeDSReqAuthMethodInd<a class='link' href='#attr-AReq-threeDSReqAuthMethodInd' title='Link to this attribute'></a>
 </td></tr>
 <tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -2746,7 +3036,49 @@ string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-6]|[89][0-9])$</span></code>
+<code><span class='pre'>^(0[123]|[89][0-9])$</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Value that represents the signature verification performed by the DS on the mechanism (e.g., FIDO) used by the cardholder to authenticate to the 3DS Requestor.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>Verified</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>Failed</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>Not Performed</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorAuthenticationInd'><td class='attribute' colspan='2'>
+threeDSRequestorAuthenticationInd<a class='link' href='#attr-AReq-threeDSRequestorAuthenticationInd' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-7]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -2783,10 +3115,10 @@ Channels:
 </div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorAuthenticationInfo'><td class='attribute' colspan='2'>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-AReq-threeDSRequestorAuthenticationInfo'><td class='attribute' colspan='2'>
 threeDSRequestorAuthenticationInfo<a class='link' href='#attr-AReq-threeDSRequestorAuthenticationInfo' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2800,10 +3132,10 @@ ThreeDSRequestorAuthenticationInfo object
 <td class='argdesc'><div class='description'>Information about how the 3DS Requestor authenticated the cardholder before or during the transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeNameRow' id='attr-AReq-threeDSRequestorChallengeInd'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorChallengeInd'><td class='attribute' colspan='2'>
 threeDSRequestorChallengeInd<a class='link' href='#attr-AReq-threeDSRequestorChallengeInd' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2811,7 +3143,7 @@ string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-9]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div>
@@ -2836,9 +3168,19 @@ Channels:
 <div class='enumKey'>02</div>
 <div class='enumValue'>No challenge requested</div>
 <div class='enumKey'>03</div>
-<div class='enumValue'>Challenge requested: 3DS Requestor Preference</div>
+<div class='enumValue'>Challenge requested (3DS Requestor preference)</div>
 <div class='enumKey'>04</div>
-<div class='enumValue'>Challenge requested: Mandate</div>
+<div class='enumValue'>Challenge requested (Mandate)</div>
+<div class='enumKey'>05</div>
+<div class='enumValue'>No challenge requested (transactional risk analysis is already performed)</div>
+<div class='enumKey'>06</div>
+<div class='enumValue'>No challenge requested (Data share only)</div>
+<div class='enumKey'>07</div>
+<div class='enumValue'>No challenge requested (strong consumer authentication is already performed)</div>
+<div class='enumKey'>08</div>
+<div class='enumValue'>No challenge requested (utilise whitelist exemption if no challenge required)</div>
+<div class='enumKey'>09</div>
+<div class='enumValue'>Challenge requested (whitelist prompt requested if challenge required)</div>
 <div class='enumKey'>80-99</div>
 <div class='enumValue'>Reserved for DS use</div>
 </div>
@@ -2853,10 +3195,117 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorPriorAuthenticationInfo'><td class='attribute' colspan='2'>
-threeDSRequestorPriorAuthenticationInfo<a class='link' href='#attr-AReq-threeDSRequestorPriorAuthenticationInfo' title='Link to this attribute'></a>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-threeDSRequestorDecMaxTime'><td class='attribute' colspan='2'>
+threeDSRequestorDecMaxTime<a class='link' href='#attr-AReq-threeDSRequestorDecMaxTime' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='maxLength'>
+Max length: 5
+</div>
+<div class='integerString'>
+From
+<code><span class='pre'>
+1</span></code>
+To
+<code><span class='pre'>
+10080</span></code>
+</div>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Indicates the maximum amount of time that the 3DS Requestor will wait for an ACS to provide the results of a Decoupled Authentication transaction (in minutes).</div>
+<div class='conditions'>
+<div class=''>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='01'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='02'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='03'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' messageCategory='01'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' messageCategory='02'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if threeDSRequestorDecReqInd is "Y"</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorDecReqInd'><td class='attribute' colspan='2'>
+threeDSRequestorDecReqInd<a class='link' href='#attr-AReq-threeDSRequestorDecReqInd' title='Link to this attribute'></a>
 </td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='enum'>
+One of:
+<code><span class='pre'>Y</span></code>
+<code><span class='pre'>N</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Indicates whether the 3DS Requestor requests the ACS to utilise Decoupled Authentication and agrees to utilise Decoupled Authentication if the ACS confirms its use.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-threeDSRequestorPriorAuthenticationInfo'><td class='attribute' colspan='2'>
+threeDSRequestorPriorAuthenticationInfo<a class='link' href='#attr-AReq-threeDSRequestorPriorAuthenticationInfo' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2883,10 +3332,10 @@ Channels:
 <td class='argdesc'><div class='description'>Information about how the 3DS Requestor authenticated the cardholder as part of a previous 3DS transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-threeDSRequestorURL'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-threeDSRequestorURL'><td class='attribute' colspan='2'>
 threeDSRequestorURL<a class='link' href='#attr-AReq-threeDSRequestorURL' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2929,10 +3378,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-threeDSServerTransID'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-threeDSServerTransID'><td class='attribute' colspan='2'>
 threeDSServerTransID<a class='link' href='#attr-AReq-threeDSServerTransID' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2963,10 +3412,10 @@ Channels:
 <td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='3RI' class='row-odd attributeNameRow' id='attr-AReq-threeRIInd'><td class='attribute' colspan='2'>
+<tr categories='PA NPA' channels='3RI' class='row-even attributeNameRow' id='attr-AReq-threeRIInd'><td class='attribute' colspan='2'>
 threeRIInd<a class='link' href='#attr-AReq-threeRIInd' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -2974,7 +3423,7 @@ string
 </div>
 <div class='regexp'>
 Regexp:
-<code><span class='pre'>^(0[1-5]|[89][0-9])$</span></code>
+<code><span class='pre'>^(0[1-9]|1[0-2]|[89][0-9])$</span></code>
 </div>
 </div>
 <div class='inclusion'>Required</div>
@@ -3003,6 +3452,18 @@ Channels:
 <div class='enumValue'>Maintain card information</div>
 <div class='enumKey'>05</div>
 <div class='enumValue'>Account verification</div>
+<div class='enumKey'>06</div>
+<div class='enumValue'>Split/delayed shipment</div>
+<div class='enumKey'>07</div>
+<div class='enumValue'>Top-up</div>
+<div class='enumKey'>08</div>
+<div class='enumValue'>Mail Order</div>
+<div class='enumKey'>09</div>
+<div class='enumValue'>Telephone Order</div>
+<div class='enumKey'>10</div>
+<div class='enumValue'>Whitelist status check</div>
+<div class='enumKey'>11</div>
+<div class='enumValue'>Other payment</div>
 <div class='enumKey'>80-99</div>
 <div class='enumValue'>Reserved for DS use</div>
 </div>
@@ -3017,10 +3478,10 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
 </dl></td></tr>
-<tr categories='PA' channels='APP BRW' class='row-even attributeNameRow' id='attr-AReq-transType'><td class='attribute' colspan='2'>
+<tr categories='PA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-transType'><td class='attribute' colspan='2'>
 transType<a class='link' href='#attr-AReq-transType' title='Link to this attribute'></a>
 </td></tr>
-<tr categories='PA' channels='APP BRW' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -3045,6 +3506,7 @@ Categories:
 Channels:
 <code>APP</code>
 <code>BRW</code>
+<code>3RI</code>
 </div>
 </div>
 </td>
@@ -3073,10 +3535,140 @@ Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
 </dl></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-workPhone'><td class='attribute' colspan='2'>
-workPhone<a class='link' href='#attr-AReq-workPhone' title='Link to this attribute'></a>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-whiteListStatus'><td class='attribute' colspan='2'>
+whiteListStatus<a class='link' href='#attr-AReq-whiteListStatus' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='enum'>
+One of:
+<code><span class='pre'>Y</span></code>
+<code><span class='pre'>N</span></code>
+<code><span class='pre'>E</span></code>
+<code><span class='pre'>P</span></code>
+<code><span class='pre'>R</span></code>
+<code><span class='pre'>U</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Enables the communication of trusted beneficiary/whitelist status between the ACS, the DS and the 3DS Requestor. Note: Valid values in the AReq message are Y or N</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>Y</div>
+<div class='enumValue'>3DS Requestor is whitelisted by cardholder</div>
+<div class='enumKey'>N</div>
+<div class='enumValue'>3DS Requestor is not whitelisted by cardholder</div>
+<div class='enumKey'>E</div>
+<div class='enumValue'>Not eligible as determined by issuer</div>
+<div class='enumKey'>P</div>
+<div class='enumValue'>Pending confirmation by cardholder</div>
+<div class='enumKey'>R</div>
+<div class='enumValue'>Cardholder rejected</div>
+<div class='enumKey'>U</div>
+<div class='enumValue'>Whitelist status unknown, unavailable, or does not apply</div>
+</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-AReq-whiteListStatusSource'><td class='attribute' colspan='2'>
+whiteListStatusSource<a class='link' href='#attr-AReq-whiteListStatusSource' title='Link to this attribute'></a>
 </td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[123]|[89][0-9])$</span></code>
+</div>
+</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03'>Conditional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Conditional</div></div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>This data element will be populated by the system setting Whitelist Status.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<div class='enumDescription'>
+<div class='enumKey'>01</div>
+<div class='enumValue'>3DS Server</div>
+<div class='enumKey'>02</div>
+<div class='enumValue'>DS</div>
+<div class='enumKey'>03</div>
+<div class='enumValue'>ACS</div>
+<div class='enumKey'>80-99</div>
+<div class='enumValue'>Reserved for DS use</div>
+</div>
+<div class='conditions'>
+<div class=''>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='01'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='02'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='03'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' messageCategory='01'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='01' messageCategory='01'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='02' messageCategory='01'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='03' messageCategory='01'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' messageCategory='02'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='01' messageCategory='02'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='02' messageCategory='02'>
+Required if whiteListStatus is not empty</div>
+<div class='hidden' deviceChannel='03' messageCategory='02'>
+Required if whiteListStatus is not empty</div>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-AReq-workPhone'><td class='attribute' colspan='2'>
+workPhone<a class='link' href='#attr-AReq-workPhone' title='Link to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>

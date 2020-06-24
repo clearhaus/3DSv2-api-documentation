@@ -18,11 +18,12 @@ This near-pseudocode describes the flow your code should perform.
 
  .. TODO: Add a link to 3dsmethod invocation
 
-1. Generate the input as described in :ref:`the reference <preauth-input>`.
+1. Generate the input as described in the reference (:ref:`2.1.0
+   <preauth-input-210>`, :ref:`2.2.0 <preauth-input-220>`).
    A request might look like:
 
    .. code-block:: json
-       :caption: /preauth example input
+       :caption: /preauth example input, same for versions 2.1.0 and 2.2.0
 
        {
          "acctNumber": "9171598723598723"
