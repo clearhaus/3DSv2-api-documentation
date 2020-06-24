@@ -1,0 +1,42 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+  aws-s3: circleci/aws-s3@1.0.15
+
+workflows:
+  main:
+    jobs:
+      - build
+jobs:
+  build:
+    environment:
+      AWS_REGION: eu-west-1
+      BUILD_DIR: build
+    docker:
+      - image: cimg/python:3.6
+    executor: python/default
+    steps:
+      - checkout
+      - run: pip install sphinx_rtd_theme sphinx
+      - run:
+          command: sphinx-build -b html source $BUILD_DIR
+          name: Build
+      - run:
+          command: pip install awscli
+          name: Install AWS Cli
+      - run:
+          name: Deploy to AWS
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              echo "On master branch, syncing to s3"
+              aws s3 sync $BUILD_DIR \
+              s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --delete
+            else
+              echo "Not master branch, dry run only"
+              aws s3 sync $BUILD_DIR \
+              s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --dryrun --delete
+            fi
+      - run:
+          name: Invalidate Cloudfront
+          command: aws cloudfront create-invalidation --distribution-id E7TJBG3FUU0TD --paths /*
