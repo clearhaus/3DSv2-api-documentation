@@ -1,8 +1,8 @@
 .. _specification_220:
 
-############################
-Message Specifications 2.2.0
-############################
+###################
+Specification 2.2.0
+###################
 
 The *scenario selector* below can be used to narrow down the required fields
 for a selected authentication scenario. Please note the following:
@@ -120,5 +120,51 @@ Error object
 Nested objects
 ==============
 
+ThreeDSRequestorAuthenticationInfo
+----------------------------------
+
 .. raw:: html
   :file: _static/threedsrequestorauthenticationinfo_220.html
+
+DeviceRenderOptions
+-------------------
+
+.. raw:: html
+  :file: _static/devicerenderoptions.html
+
+AcctInfo
+--------
+
+.. raw:: html
+  :file: _static/acctinfo.html
+
+PhoneNumber
+-----------
+
+.. raw:: html
+  :file: _static/phonenumber.html
+
+MerchantRiskIndicator
+---------------------
+
+.. raw:: html
+  :file: _static/merchantriskindicator.html
+
+MessageExtension
+----------------
+
+.. raw:: html
+  :file: _static/messageextension.html
+
+
+ThreeDSRequestorPriorAuthenticationInfo
+---------------------------------------
+
+.. raw:: html
+  :file: _static/threedsrequestorpriorauthenticationinfo.html
+
+ACSRenderingType
+----------------
+
+.. raw:: html
+  :file: _static/acsrenderingtype.html

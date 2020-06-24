@@ -367,3 +367,22 @@ display: block !important;
     margin: 10px 0;
     font-weight: 600;
 }
+
+
+/* Style the anchor used for attributes */
+td.attribute > a.link {
+  visibility: hidden;
+  font-family: FontAwesome; /* Used for the chain icon */
+  font-weight: normal;
+  padding-left: 7px;
+  vertical-align: middle;
+}
+
+td.attribute > a.link:after {
+  content: "\f0c1"; /* This becomes a chain in font-awesome */
+}
+
+td.attribute:hover > a.link {
+  visibility: visible;
+  text-decoration: none; /* Remove the underline when hovering over it */
+}
