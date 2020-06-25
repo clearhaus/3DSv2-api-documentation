@@ -343,24 +343,33 @@ display: block !important;
 }
 
 .enumDescription {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+  margin-top: 10px;
 }
+
 .enumKey {
+    /* override striped backgrounds in tables */
+    background-color: transparent !important;
+    text-align: right;
+    white-space: nowrap !important;
+    width: min-content;
+}
+
+.enumKey > span {
+    /* override striped backgrounds in tables */
+    background-color: transparent !important;
     font-weight: 600;
-    margin: 5px 10px 5px 0;
-    white-space: nowrap;
-    width: fit-content;
     background: #fff;
     border: solid 1px #e1e4e5;
     font-size: 75%;
     padding: 5px;
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
-    overflow-x: auto;
 }
+
 .enumValue {
-    width: calc(100% - 55px);
+    /* override striped backgrounds in tables */
+    background-color: transparent !important;
+    padding-left: 3px !important;
+    width: 100%;
 }
 
 .conditions {
