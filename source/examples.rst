@@ -13,7 +13,9 @@ all card schemes with dummy values.
 
 To get more information on individual fields, consult the reference.
 
-Basic Authentication Example
+.. _browser_example:
+
+Basic Browser Example
 ============================
 
 .. code-block:: json
@@ -21,7 +23,7 @@ Basic Authentication Example
    :linenos:
 
    {
-     "acctNumber": "9000100553679418",
+     "acctNumber": "9000100511111111",
      "notificationURL": "https://3ds_callback.example.org/challenge/end",
      "threeDSCompInd": "Y",
      "threeDSRequestorURL": "https://threedsrequestor.example.org",
@@ -58,4 +60,36 @@ Basic Authentication Example
      "purchaseExponent": "2",
      "purchaseDate": "20170316141312",
      "transType": "01"
+   }
+
+.. _threeri_example:
+
+Basic 3RI Example
+============================
+
+.. code-block:: json
+   :caption: Basic simple AReq example
+   :linenos:
+
+   {
+     "acctNumber": "9000110511111111",
+     "threeDSRequestorURL": "https://threedsrequestor.example.org",
+     "acquirerBIN": "438309",
+     "acquirerMerchantID": "00002000000",
+     "cardExpiryDate": "1910",
+     "billAddrCity": "Bill City Name",
+     "billAddrCountry": "840",
+     "billAddrLine1": "Bill Address Line 1",
+     "billAddrPostCode": "Bill Post Code",
+     "billAddrState": "CO",
+     "email": "example@example.com",
+     "cardholderName": "Cardholder Name",
+     "deviceChannel": "03",
+     "threeRIInd": "01",
+     "mcc": "5411",
+     "merchantCountryCode": "840",
+     "merchantName": "Dummy Merchant",
+     "messageCategory": "01",
+     "messageType": "AReq",
+     "messageVersion": "2.1.0"
    }

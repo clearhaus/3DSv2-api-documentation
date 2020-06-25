@@ -6,6 +6,7 @@ Sandbox Testcases
 
 The sandbox contains a list of test cases meant to assist you in
 implementation.
+More testcases can be added on demand.
 
 It is also the intension that you can use the sandbox for automatic integration
 testing of your service. We will not modify individual test cases and will
@@ -17,20 +18,11 @@ The 3-D Secure server sandbox validates input according to the specification.
 Generic Tests
 *************
 
-Unrecognized BIN
-""""""""""""""""
-
-Test that your system handles account numbers that are not enrolled.
-
-Procedure:
-  1. Send :ref:`preauth input <preauth-input-210>` using an account number between
-     ``9000100149672445`` and ``9000100158669649``.
-
-Nominal response:
-  A :ref:`not enrolled <not_enrolled>` response.
-
-Success criteria:
-  Your system handles the :ref:`not enrolled <not_enrolled>` response.
+==================== ==================== ==== ======
+Test                 Trigger PAN          Auth What's being tested in your system
+==================== ==================== ==== ======
+Card not enrolled    ``9000100111111111`` N/A  Handling :ref:`not enrolled <not_enrolled>` response.
+==================== ==================== ==== ======
 
 *************
 Browser Tests
@@ -39,330 +31,162 @@ Browser Tests
 These tests involve ``deviceChannel: 02``. This must be set in all
 authentication requests.
 
-3DS Method timeout
-""""""""""""""""""
-
-Test that your system handles 3DS Methods that time out.  Your system should
-correctly set ``threeDSCompInd`` to ``N`` in the ``/auth`` call, after a timed
-out 3DS Method call.
-
-Procedure:
-  Use an account number between ``9000100434274192`` and ``9000100458973304``.
-
+For all these tests:
   1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`, handle the timeout correctly.
-  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
+  2. Execute the :ref:`3DS Method <3ds_method>` if available.
+  3. Perform a regular :ref:`auth request <auth-usage>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
+  4. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>` if relevant.
+
+The ``/auth`` :ref:`browser example input <browser_example>` is usable for all
+cases. Just change the ``acctNumber`` or ``purchaseAmount`` where needed.
 
-     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-     superfluous.
+.. list-table:: Browser testcases
+   :header-rows: 1
+   :widths: 20, 10, 25, 45
 
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: Y``.
+   * - Testname
+     - Trigger PAN
+     - Success criteria
+     - What's being tested in your system
 
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
+   * - 3DS Method timeout
+     - ``9000100411111111``
+     - ``ARes`` with ``transStatus: Y``
+     - The ``threeDSCompInd`` being set correctly
 
------------------
+   * - Frictionless 3DS Method
+     - ``9000100511111111``
+     - ``ARes`` with ``transStatus: Y``
+     - Frictionless authentication with 3DS Method
 
-Frictionless auth with 3DS Method
-"""""""""""""""""""""""""""""""""
+   * - Frictionless no 3DS Method
+     - ``9000100611111111``
+     - ``ARes`` with ``transStatus: Y``
+     - Frictionless authentication without 3DS Method
 
-Test that your system correctly handles a 3DS Method call.  Your system should
-correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
+   * - Manual challenge
+     - ``9000100811111111``
+     - ``RReq`` with ``transStatus: Y`` or ``N``
+     - Challenge authentication without 3DS method
 
-Procedure:
-  Use an account number between ``9000100553679418`` and ``9000100595707805``.
+   * - Automatic Challenge pass
+     - ``9000100911111111``
+     - ``RReq`` with ``transStatus: Y``
+     - Successful challenge authentication with 3DS method
 
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`.
-  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
+       The challenge will auto-submit using javascript
 
-     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-     superfluous.
+   * - Automatic Challenge fail
+     - ``9000101011111111``
+     - ``RReq`` with ``transStatus: N``
+     - Failed challenge authentication with 3DS Method
 
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: Y``.
+       The challenge will auto-submit using javascript
 
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
+   * - Automatic Challenge pass
+     - ``9000101111111111``
+     - ``RReq`` with ``transStatus: Y``
+     - Successful challenge authentication without 3DS method
 
------------------
+       The challenge will auto-submit using javascript
 
-Frictionless auth without 3DS Method
-""""""""""""""""""""""""""""""""""""
+   * - Frictionless ``N``
+     - ``9000105001111111``
+     - ``ARes`` with ``transStatus: N``
+     - Frictionless authentication failure
 
-Test that your system correctly handles an auth without a 3DS Method.  Your
-system should correctly set ``threeDSCompInd`` to ``U`` in the ``/auth`` call.
+   * - Frictionless ``U``
+     - ``9000105041111111``
+     - ``ARes`` with ``transStatus: U``
+     - Frictionless authentication failure
 
-Procedure:
-  Use an account number between ``9000100659307466`` and ``9000100695973527``.
+   * - Frictionless ``R``
+     - ``9000105071111111``
+     - ``ARes`` with ``transStatus: R``
+     - Frictionless authentication failure
 
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
+   * - Frictionless ``A``
+     - ``9000105611111111``
+     - ``ARes`` with ``transStatus: A``
+     - Frictionless authentication attempt
 
-     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-     superfluous.
+   * - Frictionless ``cardholderInfo``
+     - ``9000105111111111``
+     - ``ARes`` with ``transStatus: N``
+     - Correctly displaying ``cardholderInfo`` to the cardholder
 
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: Y``.
+   * - DS Timeout
+     - ``9000105311111111``
+     - ``Erro`` with ``errorCode: 405``
+     - Correct handling of DS timeout
 
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
 
------------------
+To allow for integration testing with your authorization system, three
+different PANs have been added.
 
-Automatic Challenge pass
-""""""""""""""""""""""""
+.. list-table:: Scheme PAN testcases
+   :header-rows: 1
+   :widths: 20, 20, 20, 40
 
-Test that your system correctly handles a 3DS Method call.  Your system should
-correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
+   * - Testname
+     - Trigger PAN
+     - Trigger Amount
+     - Success criteria
 
-Procedure:
-  Use an account number between ``9000100900000000`` and ``9000100999999999``.
+   * - Manual Challenge
+     - ``2221000000000009``
 
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`.
-  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
+       ``4111111111111111``
 
-     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-     superfluous.
-  4. The challenge will auto-submit, using javascript.
-  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+       ``5500000000000004``
+     - ``20000``
+     - ``RReq`` with ``transStatus``  ``Y`` or ``N``
 
-Nominal response:
-  A :ref:`postauth response <postauth-response-210>` where ``transStatus`` is ``Y``.
+   * - Frictionless ``Y``
+     - ``2221000000000009``
 
-Success criteria:
-  The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y``.
+       ``4111111111111111``
 
------------------
+       ``5500000000000004``
+     - ``20001``
+     - ``ARes`` with ``transStatus``  ``Y``
 
-Automatic Challenge fail
-""""""""""""""""""""""""
+   * - Frictionless ``N``
+     - ``2221000000000009``
 
-Test that your system correctly handles a 3DS Method call.  Your system should
-correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
+       ``4111111111111111``
 
-Procedure:
-  Use an account number between ``9000101000000000`` and ``9000101099999999``.
+       ``5500000000000004``
+     - ``20002``
+     - ``ARes`` with ``transStatus``  ``N``
 
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`.
-  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
+   * - Frictionless ``A``
+     - ``2221000000000009``
 
-     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-     superfluous.
-  4. The challenge will auto-submit, using javascript.
-  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
+       ``4111111111111111``
 
-Nominal response:
-  A :ref:`postauth response <postauth-response-210>` where ``transStatus`` is ``N``.
+       ``5500000000000004``
+     - ``20003``
+     - ``ARes`` with ``transStatus``  ``A``
 
-Success criteria:
-  The ``messageType`` is ``RReq`` and ``transStatus`` is ``N``.
+   * - Automatic challenge pass
+     - ``2221000000000009``
 
------------------
+       ``4111111111111111``
 
-Automatic Challenge pass without 3DS method
-"""""""""""""""""""""""""""""""""""""""""""
+       ``5500000000000004``
+     - ``20004``
+     - ``RReq`` with ``transStatus``  ``Y``
 
-Your system should correctly set ``threeDSCompInd`` to ``U`` in the ``/auth``
-call.
+   * - Automatic challenge fail
+     - ``2221000000000009``
 
-Procedure:
-  Use an account number between ``9000101100000000`` and ``9000101199999999``.
+       ``4111111111111111``
 
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-  3. The challenge will auto-submit, using javascript.
-  4. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
-
-Nominal response:
-  A :ref:`postauth response <postauth-response-210>` with ``transStatus`` either ``Y``.
-
-Success criteria:
-  The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y``.
-
------------------
-
-Manual Challenge auth with 3DS Method
-"""""""""""""""""""""""""""""""""""""
-
-Test that your system correctly handles a 3DS Method call.  Your system should
-correctly set ``threeDSCompInd`` to ``Y`` in the ``/auth`` call.
-
-Procedure:
-  Use an account number between ``9000100820989135`` and ``9000100886343862``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`.
-  3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-     The ``threeDSCompInd`` must be set dynamically, otherwise the test is
-     superfluous.
-  4. Handle the challenge in a browser.
-  5. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>`.
-
-Nominal response:
-  A :ref:`postauth response <postauth-response-210>` with ``transStatus`` either ``Y`` or ``N``.
-
-Success criteria:
-  The ``messageType`` is ``RReq`` and ``transStatus`` is ``Y`` or ``N``,
-  depending on how the challenge was handled.
-
------------------
-
-Frictionless transaction status ``N``
-"""""""""""""""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: N``.
-
-Procedure:
-  Use an account number between ``9000105010482916`` and ``9000105038106791``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: N``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``N``.
-
------------------
-
-Frictionless transaction status ``U``
-"""""""""""""""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: U``.
-
-Procedure:
-  Use an account number between ``9000105038106792`` and ``9000105065730666``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: U``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``U``.
-
------------------
-
-Frictionless transaction status ``R``
-"""""""""""""""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: R``.
-
-Procedure:
-  Use an account number between ``9000105065730667`` and ``9000105093354541``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: R``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``R``.
-
------------------
-
-Rejected frictionless transaction with ``cardholderInfo``
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: N`` and contains ``cardholderInfo``
-
-Procedure:
-  Use an account number between ``9000105113106175`` and ``9000105172916775``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: N`` and ``cardholderInfo``.
-
-Success criteria:
-  Your system correctly displays ``cardholderInfo`` to the cardholder.
-
------------------
-
-DS Timeout
-""""""""""
-
-Transactions times out at DS
-
-Procedure:
-  Use an account number between ``9000105342632400`` and ``9000105380304639``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-  3. Handle timeout correctly.
-
-Nominal response:
-  An :ref:`error object <error-object-210>`  with ``errorCode: 405``.
-
-Success criteria:
-  Your system gracefully handles timeouts and returned errors.
-
------------------
-
-Successful frictionless
-"""""""""""""""""""""""
-
-Handle a successful frictionless transaction.
-
-Procedure:
-  Use an account number between ``9000105531598636`` and ``9000105572570541``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: Y``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
-
------------------
-
-Successful frictionless attempt
-"""""""""""""""""""""""""""""""
-
-Handle a successful frictionless transaction attempt.
-
-Endpoint under test
-  - ``https://service.sandbox.3dsecure.io/auth``
-
-Procedure:
-  Use an account number between ``9000105627843508`` and ``9000105688494389``.
-
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: A``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``A``.
-
------------------
+       ``5500000000000004``
+     - ``20005``
+     - ``RReq`` with ``transStatus`` ``N``
 
 *********
 3RI Tests
@@ -370,104 +194,38 @@ Success criteria:
 
 These tests involve ``deviceChannel: 03``. This must be set in all
 authentication requests.
+The ``/auth`` :ref:`3RI example input <threeri_example>` is usable for all
+cases. Just change the ``acctNumber`` where needed.
 
-Transaction status ``Y``
-""""""""""""""""""""""""
+For all these tests: Perform a regular :ref:`auth request <auth-usage>`.
+The ``/preauth`` call is optional. Any ``threeDSServerTransID`` received from
+it will not be used in a final 3DS Requestor Initiated transaction.
 
-Test a transaction that is rejected with ``transStatus: Y``.
+.. list-table:: Browser testcases
+   :header-rows: 1
+   :widths: 20, 10, 25, 45
 
-Procedure:
-  Use an account number between ``9000110500000000`` and ``9000110599999999``.
+   * - Testname
+     - Trigger PAN
+     - Success criteria
+     - What's being tested in your system
 
-  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
+   * - Frictionless ``Y``
+     - ``9000110511111111``
+     - ``ARes`` with ``transStatus: Y``
+     - Correctly sending a 3RI request
 
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: Y``.
+   * - Frictionless ``A``
+     - ``9000110611111111``
+     - ``ARes`` with ``transStatus: A``
+     - Correctly sending a 3RI request
 
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``Y``.
+   * - Frictionless ``U``
+     - ``9000110711111111``
+     - ``ARes`` with ``transStatus: U``
+     - Correctly sending a 3RI request
 
------------------
-
-Transaction status ``A``
-""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: A``.
-
-Procedure:
-  Use an account number between ``9000110600000000`` and ``9000110699999999``.
-
-  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: A``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``A``.
-
------------------
-
-Transaction status ``U``
-""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: U``.
-
-Procedure:
-  Use an account number between ``9000110700000000`` and ``9000110799999999``.
-
-  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: U``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``U``.
-
------------------
-
-Transaction status ``R``
-""""""""""""""""""""""""
-
-Test a transaction that is rejected with ``transStatus: R``.
-
-Procedure:
-  Use an account number between ``9000110800000000`` and ``9000110899999999``.
-
-  1. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
-     Use the same ``acctNumber`` as used in the ``preauth`` call.
-
-Nominal response:
-  A :ref:`auth response <auth-response-210>` with ``transStatus: R``.
-
-Success criteria:
-  The ``messageType`` is ``ARes`` and ``transStatus`` is ``R``.
-
------------------
-
-..
-  ===================
-  Challenge Testcases
-  ===================
-
-  - Successful frictionless
-    - [x] transStatus [Y, A]
-      - [ ] AuthenticationType [01, 02, 03]
-
-  - Failed frictionless
-    - [x] transStatus [N, U, R]
-      - [ ] transStatusReason
-    - [x] Filled/Empty cardholderInfo
-
-  - Successful challenge
-    - [ ] transStatus [C]
-    - [ ] acsChallengeMandated [Y, N]
-
-  - Failed challenge
-    - [ ] transStatus[N]
-
-
-  Timeouts:
-  - Challenge timeout
+   * - Frictionless ``R``
+     - ``9000110811111111``
+     - ``ARes`` with ``transStatus: R``
+     - Correctly sending a 3RI request
