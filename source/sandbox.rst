@@ -50,7 +50,7 @@ Procedure:
   Use an account number between ``9000100434274192`` and ``9000100458973304``.
 
   1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`.
+  2. Execute the :ref:`3DS Method <3ds_method>`, handle the timeout correctly.
   3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
@@ -75,7 +75,7 @@ Procedure:
   Use an account number between ``9000100553679418`` and ``9000100595707805``.
 
   1. Perform the :ref:`preauth call <preauth-input-210>`.
-  2. Execute the :ref:`3DS Method <3ds_method>`, handle the timeout correctly.
+  2. Execute the :ref:`3DS Method <3ds_method>`.
   3. Perform a regular :ref:`auth call <auth-usage>` using a nominal :ref:`auth input <auth-input-210>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
 
