@@ -16,6 +16,7 @@ June 25th, 2020
 
 1. Reformat testcase descriptions to be more concise.
 2. Add :ref:`3RI example input <threeri_example>`.
+3. Add `scheme <specification_210.html#attr-cardRangeData-scheme>`_ to ``/preauth`` output.
 
 June 24th, 2020
 ***************
