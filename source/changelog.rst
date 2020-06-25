@@ -11,8 +11,14 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+June 25th, 2020
+***************
+
+1. Reformat testcase descriptions to be more concise.
+2. Add :ref:`3RI example input <threeri_example>`.
+
 June 24th, 2020
-**************
+***************
 
 1. Reference for 3-D Secure version 2.2.0 was added (:ref:`link <specification_220>`).
    This required moving pages around and updating miscellaneous links.
