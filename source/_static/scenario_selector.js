@@ -83,7 +83,7 @@ class ScenarioSelector {
     $('.argtable tbody tr').removeClass('irrelevant');
 
     if (deviceChannel != "") {
-      var el = $('.argtable tbody tr:not([channels*="' + deviceChannel + '"])');
+      var el = $('.argtable > tbody > tr:not([channels*="' + deviceChannel + '"])');
 
       el.each(function(_) {
         var tr = $(this);
