@@ -4,6 +4,13 @@
 New in 2.2.0
 ############
 
+.. note::
+
+  We are working on a better vizualization of the differences between 2.1.0 and
+  2.2.0.
+
+  We are aware that this is not optimal.
+
 Decoupled Authentication
    Decoupled authentication is used to authenticate cardholder outside the EMV
    3DS protocol. For example the cardholder could be asked to phone her bank.
