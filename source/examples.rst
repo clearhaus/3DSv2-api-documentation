@@ -16,7 +16,7 @@ To get more information on individual fields, consult the reference.
 .. _browser_example:
 
 Basic Browser Example
-============================
+=====================
 
 .. code-block:: json
    :caption: Basic simple AReq example
@@ -65,7 +65,7 @@ Basic Browser Example
 .. _threeri_example:
 
 Basic 3RI Example
-============================
+=================
 
 .. code-block:: json
    :caption: Basic simple AReq example
