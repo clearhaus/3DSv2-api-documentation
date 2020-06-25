@@ -18,11 +18,12 @@ The 3-D Secure server sandbox validates input according to the specification.
 Generic Tests
 *************
 
-==================== ==================== ==== ======
-Test                 Trigger PAN          Auth What's being tested in your system
-==================== ==================== ==== ======
-Card not enrolled    ``9000100111111111`` N/A  Handling :ref:`not enrolled <not_enrolled>` response.
-==================== ==================== ==== ======
+==================== ==================== ======
+Test                 Trigger PAN          What's being tested in your system
+==================== ==================== ======
+Card not enrolled    ``9000100111111111`` Handling :ref:`not enrolled <not_enrolled>` response.
+                                          This test only involves the :ref:`preauth call <preauth-usage>`.
+==================== ==================== ======
 
 *************
 Browser Tests
@@ -32,7 +33,7 @@ These tests involve ``deviceChannel: 02``. This must be set in all
 authentication requests.
 
 For all these tests:
-  1. Perform the :ref:`preauth call <preauth-input-210>`.
+  1. Perform the :ref:`preauth call <preauth-usage>`.
   2. Execute the :ref:`3DS Method <3ds_method>` if available.
   3. Perform a regular :ref:`auth request <auth-usage>`.
      Use the same ``acctNumber`` as used in the ``preauth`` call.
