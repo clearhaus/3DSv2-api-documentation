@@ -86,6 +86,7 @@ point of view:
 
 .. image:: authentication.svg
     :align: center
+    :width: 550
     :alt: Authentication
 
 The following describes the individual points in the diagram:
