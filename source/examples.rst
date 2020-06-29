@@ -89,7 +89,7 @@ Basic 3RI Example
      "mcc": "5411",
      "merchantCountryCode": "840",
      "merchantName": "Dummy Merchant",
-     "messageCategory": "01",
+     "messageCategory": "02",
      "messageType": "AReq",
      "messageVersion": "2.1.0"
    }
