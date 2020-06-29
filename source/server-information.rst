@@ -44,6 +44,13 @@ Request headers
 
     Content-Type: application/json; charset=utf-8
 
+Allowed characters
+  Despite the charset being ``utf-8``, *only ASCII characters are allowed*.
+
+  Currently the ``2.1.0`` and ``2.2.0`` specifications only support ASCII
+  characters. There are indications that this may change in ``2.3.0``  (we've
+  heard rumors the specification should arrive late 2020).
+
 Authenticating requests
   Access to the service is granted by an API key. The API key is used on each
   request using the ``APIKey`` HTTP header:

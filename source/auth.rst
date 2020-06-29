@@ -8,6 +8,9 @@ The ``/auth`` endpoint is used to provide the issuer with data for performing
 an authentication. The resulting Authentication Response (``ARes``) can either
 be the final message due to a frictionless flow or lead to a challenge flow.
 
+Please note that only ASCII characters are allowed, as described in
+:ref:`requests`.
+
 ************
 Request flow
 ************

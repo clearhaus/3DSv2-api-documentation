@@ -11,6 +11,11 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+June 29th, 2020
+***************
+
+1. Clarify that only ASCII characters are allowed.
+
 June 25th, 2020
 ***************
 
