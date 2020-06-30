@@ -49,29 +49,29 @@ Channels:
 <td class='argdesc'><div class='description'>Indication of whether a challenge is required for the transaction to be authorised due to local/regional mandates or other variable.</div>
 <div class='conditions'>
 <div class=''>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-ARes-acsDecConInd'><td class='attribute' colspan='2'>
 acsDecConInd<a class='link' href='#attr-ARes-acsDecConInd' title='Permalink to this attribute'></a>
@@ -117,29 +117,29 @@ Channels:
 <td class='argdesc'><div class='description'>Indicates whether the ACS confirms utilisation of Decoupled Authentication and agrees to utilise Decoupled Authentication to authenticate the Cardholder.</div>
 <div class='conditions'>
 <div class=''>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if transStatus is "D"</div>
+Required if transStatus is "D"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-ARes-acsOperatorID'><td class='attribute' colspan='2'>
 acsOperatorID<a class='link' href='#attr-ARes-acsOperatorID' title='Permalink to this attribute'></a>
@@ -242,17 +242,17 @@ Channels:
 <td class='argdesc'><div class='description'>Identifies the ACS UI Template that the ACS will first present to the consumer.</div>
 <div class='conditions'>
 <div class=''>
-Required if deviceChannel is "01" and transStatus is "C"</div>
+Required if deviceChannel is "01" and transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if deviceChannel is "01" and transStatus is "C"</div>
+Required if deviceChannel is "01" and transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if deviceChannel is "01" and transStatus is "C"</div>
+Required if deviceChannel is "01" and transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP' class='row-odd attributeNameRow' id='attr-ARes-acsSignedContent'><td class='attribute' colspan='2'>
 acsSignedContent<a class='link' href='#attr-ARes-acsSignedContent' title='Permalink to this attribute'></a>
@@ -291,17 +291,17 @@ Channels:
 <td class='argdesc'><div class='description'>Contains the JWS object (represented as a string) created by the ACS for the ARes message.</div>
 <div class='conditions'>
 <div class=''>
-Required if transStatus is "C" and deviceChannel is "01"</div>
+Required if transStatus is "C"<br>Required if deviceChannel is "01"<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is "C" and deviceChannel is "01"</div>
+Required if transStatus is "C"<br>Required if deviceChannel is "01"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if transStatus is "C" and deviceChannel is "01"</div>
+Required if transStatus is "C"<br>Required if deviceChannel is "01"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-ARes-acsTransID'><td class='attribute' colspan='2'>
 acsTransID<a class='link' href='#attr-ARes-acsTransID' title='Permalink to this attribute'></a>
@@ -394,17 +394,17 @@ Channels:
 <td class='argdesc'><div class='description'>Fully qualified URL of the ACS to be used for the challenge. 02-BRW—3DS Requestor will post the CReq to this URL via the challenge window</div>
 <div class='conditions'>
 <div class=''>
-Required if deviceChannel is "02" and transStatus is "C"</div>
+Required if deviceChannel is "02"<br>Required if transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if deviceChannel is "02" and transStatus is "C"</div>
+Required if deviceChannel is "02"<br>Required if transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if deviceChannel is "02" and transStatus is "C"</div>
+Required if deviceChannel is "02"<br>Required if transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if transStatus is "C"</div>
+Required if transStatus is "C"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-ARes-authenticationType'><td class='attribute' colspan='2'>
 authenticationType<a class='link' href='#attr-ARes-authenticationType' title='Permalink to this attribute'></a>
@@ -482,29 +482,29 @@ Channels:
 </table>
 <div class='conditions'>
 <div class=''>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if transStatus is one of [C, D]</div>
+Required if transStatus is one of [C, D]<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-ARes-authenticationValue'><td class='attribute' colspan='2'>
 authenticationValue<a class='link' href='#attr-ARes-authenticationValue' title='Permalink to this attribute'></a>
@@ -548,21 +548,21 @@ Channels:
 <td class='argdesc'><div class='description'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01" and transStatus is one of [Y, A]</div>
+Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is one of [Y, A]</div>
+Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is one of [Y, A]</div>
+Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if transStatus is one of [Y, A]</div>
+Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if transStatus is one of [Y, A]</div>
+Required if transStatus is one of [Y, A]<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-ARes-cardholderInfo'><td class='attribute' colspan='2'>
 cardholderInfo<a class='link' href='#attr-ARes-cardholderInfo' title='Permalink to this attribute'></a>
@@ -606,29 +606,29 @@ Channels:
 <td class='argdesc'><div class='description'>Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.  The Issuer can provide information to Cardholder.  For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”</div>
 <div class='conditions'>
 <div class=''>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if acsDecConInd is "Y"</div>
+Required if acsDecConInd is "Y"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-ARes-dsReferenceNumber'><td class='attribute' colspan='2'>
 dsReferenceNumber<a class='link' href='#attr-ARes-dsReferenceNumber' title='Permalink to this attribute'></a>
@@ -892,11 +892,11 @@ Channels:
 <td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
 <div class=''>
-Required if deviceChannel is "01"</div>
+Required if deviceChannel is "01"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if deviceChannel is "01"</div>
+Required if deviceChannel is "01"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if deviceChannel is "01"</div>
+Required if deviceChannel is "01"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-ARes-threeDSServerTransID'><td class='attribute' colspan='2'>
 threeDSServerTransID<a class='link' href='#attr-ARes-threeDSServerTransID' title='Permalink to this attribute'></a>
@@ -1033,13 +1033,13 @@ Channels:
 </table>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01"</div>
+Required if messageCategory is "01"<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01"</div>
+Required if messageCategory is "01"<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01"</div>
+Required if messageCategory is "01"<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01"</div>
+Required if messageCategory is "01"<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-ARes-transStatusReason'><td class='attribute' colspan='2'>
 transStatusReason<a class='link' href='#attr-ARes-transStatusReason' title='Permalink to this attribute'></a>
@@ -1213,29 +1213,29 @@ Channels:
 </table>
 <div class='conditions'>
 <div class=''>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' messageCategory='02'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if transStatus is one of [N, U, R]</div>
+Required if transStatus is one of [N, U, R]<br></div>
 </div></td></tr>
 <tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-ARes-whiteListStatus'><td class='attribute' colspan='2'>
 whiteListStatus<a class='link' href='#attr-ARes-whiteListStatus' title='Permalink to this attribute'></a>
@@ -1383,29 +1383,29 @@ Channels:
 </table>
 <div class='conditions'>
 <div class=''>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' messageCategory='01'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='01'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' messageCategory='02'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 <div class='hidden' deviceChannel='03' messageCategory='02'>
-Required if whiteListStatus is not empty</div>
+Required if whiteListStatus is not empty<br></div>
 </div></td></tr>
 </tbody>
 </table>
