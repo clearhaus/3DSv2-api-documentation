@@ -1,0 +1,299 @@
+<div class='message-info'>
+<table class='docutils align-default colwidths-given argtable'>
+<colgroup>
+<col style='30%'>
+<col style='70%'>
+</colgroup>
+<tbody>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-acsEndProtocolVersion'><td class='attribute' colspan='2'>
+acsEndProtocolVersion<a class='link' href='#attr-cardRangeData-acsEndProtocolVersion' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='description'>The most recent active protocol version that is supported for the ACS URL.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-acsInfoInd'><td class='attribute' colspan='2'>
+acsInfoInd<a class='link' href='#attr-cardRangeData-acsInfoInd' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+Array of
+string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^(0[1-4]|[89][0-9])$</span></code>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+</td>
+<td class='argdesc'><div class='description'>Provides additional information to the 3DS Server. The element lists all applicable values for the card range.</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<table class='enumDescription'>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>01</span>
+</td>
+<td class='enumValue'>Authentication Available at ACS</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>02</span>
+</td>
+<td class='enumValue'>Attempts Supported by ACS or DS</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>03</span>
+</td>
+<td class='enumValue'>Decoupled Authentication Supported</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>04</span>
+</td>
+<td class='enumValue'>Whitelisting Supported</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>80-99</span>
+</td>
+<td class='enumValue'>Reserved for DS use</td>
+</tr>
+</table>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-acsStartProtocolVersion'><td class='attribute' colspan='2'>
+acsStartProtocolVersion<a class='link' href='#attr-cardRangeData-acsStartProtocolVersion' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='description'>The earliest (i.e. oldest) active protocol version that is supported by the ACS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-dsEndProtocolVersion'><td class='attribute' colspan='2'>
+dsEndProtocolVersion<a class='link' href='#attr-cardRangeData-dsEndProtocolVersion' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+</td>
+<td class='argdesc'><div class='description'>The most recent active protocol version that is supported for the DS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-dsStartProtocolVersion'><td class='attribute' colspan='2'>
+dsStartProtocolVersion<a class='link' href='#attr-cardRangeData-dsStartProtocolVersion' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-validversion'>
+validVersion
+</a>
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+</td>
+<td class='argdesc'><div class='description'>The earliest (i.e. oldest) active protocol version that is supported by the DS.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-endRange'><td class='attribute' colspan='2'>
+endRange<a class='link' href='#attr-cardRangeData-endRange' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^[0-9]{13,19}$</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='description'>End of the card range.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-startRange'><td class='attribute' colspan='2'>
+startRange<a class='link' href='#attr-cardRangeData-startRange' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^[0-9]{13,19}$</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='description'>Start of the card range.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-threeDSMethodURL'><td class='attribute' colspan='2'>
+threeDSMethodURL<a class='link' href='#attr-cardRangeData-threeDSMethodURL' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-url'>
+url
+</a>
+</div>
+<div class='maxLength'>
+Max length: 256
+</div>
+</div>
+<div class='inclusion'>Optional</div>
+</td>
+<td class='argdesc'><div class='description'>The ACS URL that will be used by the 3DS Method. Note: The 3DSMethodURL data element may be omitted if not supported by the ACS for this specific card range.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-cardRangeData-threeDSServerTransID'><td class='attribute' colspan='2'>
+threeDSServerTransID<a class='link' href='#attr-cardRangeData-threeDSServerTransID' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-uuid'>
+uuid
+</a>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-scheme'><td class='attribute' colspan='2'>
+scheme<a class='link' href='#attr-cardRangeData-scheme' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='enum'>
+One of:
+<code><span class='pre'>standin</span></code>
+<code><span class='pre'>visa</span></code>
+<code><span class='pre'>mastercard</span></code>
+<code><span class='pre'>amex</span></code>
+<code><span class='pre'>discover</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+</td>
+<td class='argdesc'><div class='description'>Account number Card Scheme</div>
+<p class='enumDescriptionHeader'>Meaning of values:</p>
+<table class='enumDescription'>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>standin</span>
+</td>
+<td class='enumValue'>3dsecure.io standin scheme (only in sandbox)</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>visa</span>
+</td>
+<td class='enumValue'>Visa</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>mastercard</span>
+</td>
+<td class='enumValue'>Mastercard</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>amex</span>
+</td>
+<td class='enumValue'>American Express</td>
+</tr>
+<tr class='enumEntry'>
+<td class='enumKey'>
+<span>discover</span>
+</td>
+<td class='enumValue'>Discover</td>
+</tr>
+</table>
+<div class='conditions'>
+</div></td></tr>
+</tbody>
+</table>
+</div>

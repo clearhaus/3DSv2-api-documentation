@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.2. /auth endpoint &mdash; 3DSecure.io  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/scenario_selector.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/scenario_selector.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doc_table.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.3. /postauth endpoint" href="postauth.html" />
+    <link rel="prev" title="3.1. /preauth endpoint" href="preauth.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server-information.html">2. Server information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="usage.html">3. API Usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="preauth.html">3.1. /preauth endpoint</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. /auth endpoint</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#request-flow">Request flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#response-data">Response Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#success">Success</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#errors">Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#general-endpoint-information">General endpoint information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="postauth.html">3.3. /postauth endpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guides.html">4. Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Authentication Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">6. Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sandbox.html">7. Sandbox Testcases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">8. Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">3DSecure.io</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="usage.html">3. API Usage</a> &raquo;</li>
+        
+      <li>3.2. /auth endpoint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/auth.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="auth-endpoint">
+<span id="auth-usage"></span><h1>3.2. /auth endpoint<a class="headerlink" href="#auth-endpoint" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">/auth</span></code> endpoint is used to provide the issuer with data for performing
+an authentication. The resulting Authentication Response (<code class="docutils literal notranslate"><span class="pre">ARes</span></code>) can either
+be the final message due to a frictionless flow or lead to a challenge flow.</p>
+<p>Please note that only ASCII characters are allowed, as described in
+<a class="reference internal" href="server-information.html#requests"><span class="std std-ref">Making requests to the 3-D Secure Server</span></a>.</p>
+<div class="section" id="request-flow">
+<h2>Request flow<a class="headerlink" href="#request-flow" title="Permalink to this headline">¶</a></h2>
+<p>This near-pseudocode describes the flow your code should perform.</p>
+<ol class="arabic">
+<li><p>Generate the input as described in the reference (<a class="reference internal" href="specification_210.html#auth-input-210"><span class="std std-ref">2.1.0</span></a>, <a class="reference internal" href="specification_220.html#auth-input-220"><span class="std std-ref">2.2.0</span></a>).</p></li>
+<li><p>Send the request to the 3-D Secure Server. Consult the <a class="reference internal" href="server-information.html#requests"><span class="std std-ref">requests guide</span></a> for information about how to make requests.
+A simple request performed using cURL:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">/auth request example using cURL</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, add request json to file &#39;input.json&#39;</span>
+<span class="nv">APIKEY</span><span class="o">=</span>********-****-****-****-************
+curl -H <span class="s2">&quot;APIKey: </span><span class="nv">$APIKEY</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s1">&#39;Content-Type: application/json; charset=utf-8&#39;</span> <span class="se">\</span>
+     -d @input.json <span class="se">\</span>
+        https://service.sandbox.3dsecure.io/auth
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>If the returned JSON has <code class="docutils literal notranslate"><span class="pre">&quot;messageType&quot;:</span> <span class="pre">&quot;Erro&quot;</span></code> or the HTTP response code
+is not <code class="docutils literal notranslate"><span class="pre">200</span></code>, then the request failed.</p>
+<p>Note that JSON is returned even if the HTTP status code is not <code class="docutils literal notranslate"><span class="pre">200</span></code>, in
+all but the rarest cases.</p>
+</li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">transStatus</span></code> is <code class="docutils literal notranslate"><span class="pre">C</span></code>, <a class="reference internal" href="challenge_flow.html#ds-challenge-flow"><span class="std std-ref">perform a challenge</span></a>
+on the cardholder device.</p>
+<p>Otherwise, the authentication has been completed.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="response-data">
+<h2>Response Data<a class="headerlink" href="#response-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="success">
+<h3>Success<a class="headerlink" href="#success" title="Permalink to this headline">¶</a></h3>
+<p>A successful authentication request contains data as described in the reference
+(<a class="reference internal" href="specification_210.html#auth-response-210"><span class="std std-ref">2.1.0</span></a>, <a class="reference internal" href="specification_220.html#auth-response-220"><span class="std std-ref">2.2.0</span></a>).
+The transaction status is contained in the <code class="docutils literal notranslate"><span class="pre">transStatus</span></code> and
+<code class="docutils literal notranslate"><span class="pre">transStatusReason</span></code> values.</p>
+<p>This is an example of a successful (frictionless) authentication:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Example of an Authentication frictionless response (ARes)</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;acsOperatorID&quot;</span><span class="p">:</span> <span class="s2">&quot;3dsecure.io-standin-acs&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;acsReferenceNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;3dsecure.io-standin-acs&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;acsTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;43163cd0-c849-4924-82c1-7bec32b94881&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;authenticationValue&quot;</span><span class="p">:</span> <span class="s2">&quot;mK225wGt2bLnnLB0UlRky0oHLnU=&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dsReferenceNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;3dsecure.io-standin-ds&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dsTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;1cf815e5-cc85-436f-8e13-9f5e5aea731f&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;eci&quot;</span><span class="p">:</span> <span class="s2">&quot;05&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messageType&quot;</span><span class="p">:</span> <span class="s2">&quot;ARes&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messageVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;threeDSServerTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;3f1ed47a-2edc-4b0e-a4cf-bdb0f65d48c6&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;transStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Example of an Authentication challenge response (ARes)</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;acsChallengeMandated&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;acsOperatorID&quot;</span><span class="p">:</span> <span class="s2">&quot;3dsecureio-standin-acs&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;acsReferenceNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;3dsecureio-standin-acs&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;acsTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;b85d3eb5-d2d2-45af-bc1b-6188021ae602&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;acsURL&quot;</span><span class="p">:</span> <span class="s2">&quot;https://acs.sandbox.3dsecure.io/browser/challenge/manual&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;authenticationType&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dsReferenceNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;3dsecureio-standin-ds&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dsTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;496af67a-56ed-4fd3-bbcf-690b0df93c3d&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messageType&quot;</span><span class="p">:</span> <span class="s2">&quot;ARes&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messageVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;threeDSServerTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;218565e2-0cae-4236-868e-09168275c8c6&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;transStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>To check if a transaction was successful:</p>
+<ol class="arabic simple">
+<li><p>Parse as JSON</p></li>
+<li><p>Check that <code class="docutils literal notranslate"><span class="pre">messageType</span></code> is <code class="docutils literal notranslate"><span class="pre">ARes</span></code></p></li>
+</ol>
+<p>Note that a 3-D Secure Server transaction is considered successful even if
+<code class="docutils literal notranslate"><span class="pre">transStatus</span></code> is <code class="docutils literal notranslate"><span class="pre">N</span></code>. There is a difference between an <em>authentication
+failure</em> and a <em>transaction failure</em>. A failed authentication <code class="docutils literal notranslate"><span class="pre">transStatus:</span>
+<span class="pre">N</span></code> is a successful 3-D Secure transaction.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">messageType</span></code> is <code class="docutils literal notranslate"><span class="pre">ARes</span></code> and <code class="docutils literal notranslate"><span class="pre">transStatus</span></code> is <code class="docutils literal notranslate"><span class="pre">C</span></code>, perform a
+<a class="reference internal" href="challenge_flow.html#ds-challenge-flow"><span class="std std-ref">challenge flow</span></a>.</p>
+</div>
+<div class="section" id="errors">
+<h3>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h3>
+<p>In all but the rarest cases an <code class="docutils literal notranslate"><span class="pre">Erro</span></code> message is returned on an error.</p>
+</div>
+</div>
+<div class="section" id="general-endpoint-information">
+<h2>General endpoint information<a class="headerlink" href="#general-endpoint-information" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>We expect an average upstream request time of about 2 seconds, so should
+you.</p></li>
+<li><p>The request will time out after 10 seconds, after which integrators will
+receive an error. The error returned will be</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Directory Server timeout response</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;errorCode&quot;</span><span class="p">:</span> <span class="s2">&quot;405&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;errorComponent&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;errorDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Unable to contact Directory Server&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;errorDetail&quot;</span><span class="p">:</span> <span class="s2">&quot;Connection timeout&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;errorMessageType&quot;</span><span class="p">:</span> <span class="s2">&quot;AReq&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messageType&quot;</span><span class="p">:</span> <span class="s2">&quot;Erro&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messageVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;threeDSServerTransID&quot;</span><span class="p">:</span> <span class="s2">&quot;2401433d-68be-4820-b1e7-5aa3b44dfa5a&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="postauth.html" class="btn btn-neutral float-right" title="3.3. /postauth endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="preauth.html" class="btn btn-neutral float-left" title="3.1. /preauth endpoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, 3DSecure.io
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

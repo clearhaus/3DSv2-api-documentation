@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Getting Started &mdash; 3DSecure.io  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/scenario_selector.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/scenario_selector.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doc_table.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Server information" href="server-information.html" />
+    <link rel="prev" title="Introduction" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#authentication">1.1. Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#message-categories-messagecategory">Message categories (<code class="docutils literal notranslate"><span class="pre">messageCategory</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-channels-devicechannel">Device channels (<code class="docutils literal notranslate"><span class="pre">deviceChannel</span></code>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#url-endpoints">1.2. URL Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-authentication-flow">1.3. Overview of Authentication Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sandbox-environment">1.4. Sandbox environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server-information.html">2. Server information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">3. API Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides.html">4. Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Authentication Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">6. Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sandbox.html">7. Sandbox Testcases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">8. Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">3DSecure.io</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1. Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/getting-started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<span id="id1"></span><h1>1. Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>This page is intented to familiarize you with parts of the 3-D Secure v2, and
+to provide you with <em>some</em> understanding of a 3-D Secure v2 authentication
+flow.</p>
+<div class="section" id="authentication">
+<h2>1.1. Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
+<p>In 3-D Secure v2, cardholder authentication might not necessarily involve the
+cardholder.</p>
+<p>An authentication flow not involving the cardholder, is called a <em>frictionless
+flow</em>, whereas a flow involving the cardholder is called a <em>challenge flow</em>.
+The <em>frictionless flow</em> utilizes device fingerprinting to verify cardholder
+authenticity, providing a smoother transaction for the cardholder.</p>
+<p>The structure of an authentication transaction can be described broadly by the
+two variables below, which are included in every transaction.</p>
+<div class="section" id="message-categories-messagecategory">
+<h3>Message categories (<code class="docutils literal notranslate"><span class="pre">messageCategory</span></code>)<a class="headerlink" href="#message-categories-messagecategory" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Payment</dt><dd><p>Used for the normal payment authentication flow.
+The message value is <code class="docutils literal notranslate"><span class="pre">01</span></code>.</p>
+</dd>
+<dt>Non-Payment</dt><dd><p>Used for e.g. cardholder account verification.
+The message value is <code class="docutils literal notranslate"><span class="pre">02</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="device-channels-devicechannel">
+<h3>Device channels (<code class="docutils literal notranslate"><span class="pre">deviceChannel</span></code>)<a class="headerlink" href="#device-channels-devicechannel" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>APP</dt><dd><p>Authentications initiated on a e.g. a mobile phone, utilizing a dedicated
+native 3-D Secure SDK for the specific device.
+The message value is <code class="docutils literal notranslate"><span class="pre">01</span></code>.</p>
+</dd>
+<dt>BRW</dt><dd><p>Authentications performed using a browser, similar to 3-D Secure version 1.
+The message value is <code class="docutils literal notranslate"><span class="pre">02</span></code>.</p>
+</dd>
+<dt>3RI</dt><dd><p>Authentications performed without cardholder involvement, used for e.g.
+getting 3-D Secure values for subsequent recurring transactions.
+The message value is <code class="docutils literal notranslate"><span class="pre">03</span></code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="url-endpoints">
+<h2>1.2. URL Endpoints<a class="headerlink" href="#url-endpoints" title="Permalink to this headline">¶</a></h2>
+<p>There are 3 API endpoints for this service, refer to <a class="reference internal" href="reference.html#reference"><span class="std std-ref">Reference</span></a> for
+parameter definition. Brief descriptions are:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">/preauth</span></kbd></dt>
+<dd><p>This is used when performing transactions from a browser (as opposed to using
+an SDK). It will return an optional 3-D Secure Method URL, which is used for
+browser fingerprinting. This can support risk-based analysis and assist in
+ensuring a frictionless flow where the cardholder is not directly involved.</p>
+<p>While in the transition period between 3-D Secure v1 and v2, this endpoint
+can help determine if v1 should be used instead. This is documented in the
+<a class="reference internal" href="versioning.html#ds-versioning"><span class="std std-ref">3-D Secure version determination</span></a> guide.</p>
+</dd>
+<dt><kbd><span class="option">/auth</span></kbd></dt>
+<dd><p>The primary API method to provide authentication data to the issuer.  Under
+certain circumstances, the authentication flow will end successfully here,
+this is called a <em>frictionless</em> flow.</p>
+</dd>
+<dt><kbd><span class="option">/postauth</span></kbd></dt>
+<dd><p>Used when the <code class="docutils literal notranslate"><span class="pre">/auth</span></code> did not result in a frictionless flow, this endpoint
+returns the result of the challenge performed by the cardholder. In this case
+the flow is called a <em>challenge</em> flow. Read more about this in
+<a class="reference internal" href="challenge_flow.html#ds-challenge-flow"><span class="std std-ref">Challenge flow</span></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="overview-of-authentication-flow">
+<h2>1.3. Overview of Authentication Flow<a class="headerlink" href="#overview-of-authentication-flow" title="Permalink to this headline">¶</a></h2>
+<p>This figure illustrates the authentication flow from a requestor
+point of view:</p>
+<a class="reference internal image-reference" href="_images/authentication.svg"><div align="center" class="align-center"><img alt="Authentication" src="_images/authentication.svg" width="550" /></div>
+</a>
+<p>The following describes the individual points in the diagram:</p>
+<ol class="arabic">
+<li><p>A call to the <a class="reference internal" href="preauth.html#preauth-usage"><span class="std std-ref">/preauth endpoint</span></a> is performed if the
+request originator is a cardholder using a browser. This is opposed to using a
+SDK or the authentication being Requestor initiated.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">/preauth</span></code> response (ref. <a class="reference internal" href="specification_210.html#preauth-response-210"><span class="std std-ref">2.1.0</span></a>,
+<a class="reference internal" href="specification_220.html#preauth-response-220"><span class="std std-ref">2.2.0</span></a>) contains:</p>
+<ul class="simple">
+<li><p>Information that might be usable in determining whether to fall back to
+3-D Secure v1.</p></li>
+<li><p>An optional <code class="docutils literal notranslate"><span class="pre">threeDSMethodURL</span></code> that is invoked in the user browser.</p></li>
+</ul>
+</li>
+<li><p>The cardholder browser invokes the received <code class="docutils literal notranslate"><span class="pre">threeDSMethodURL</span></code>, to allow the ACS to
+fingerprint the browser. See the <a class="reference internal" href="3dsmethod.html#ds-method"><span class="std std-ref">3DS Method invocation</span></a> guide.</p></li>
+<li><p>The Requestor uses the <a class="reference internal" href="auth.html#auth-usage"><span class="std std-ref">/auth endpoint</span></a> to send the information needed for
+the 3-D Secure Server. The Server assembles a <code class="docutils literal notranslate"><span class="pre">AReq</span></code> message and transmits
+it to the Directory Server.</p></li>
+<li><p>The Authentication response (ref. <a class="reference internal" href="specification_210.html#auth-response-210"><span class="std std-ref">2.1.0</span></a>,
+<a class="reference internal" href="specification_210.html#auth-response-210"><span class="std std-ref">2.2.0</span></a>) is an <code class="docutils literal notranslate"><span class="pre">ARes</span></code>, as defined by the
+specification.</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">ARes</span></code> contains either:</p>
+<ul class="simple">
+<li><p>The authentication result (<em>frictionless</em> flow)</p></li>
+<li><p>Information about how to proceed with the challenge (<em>challenge</em> flow)</p></li>
+<li><p>Information stating why the challenge cannot continue</p></li>
+</ul>
+</li>
+<li><p>The cardholder completes the challenge on the their device. See the
+<a class="reference internal" href="challenge_flow.html#ds-challenge-flow"><span class="std std-ref">Challenge flow</span></a> guide.</p></li>
+<li><p>The ACS informs the Requestor about the challenge result through a callback.</p></li>
+<li><p>The <a class="reference internal" href="postauth.html#postauth-usage"><span class="std std-ref">/postauth endpoint</span></a> is used to fetch the results of the
+authentication.</p></li>
+<li><p>Nominally a <code class="docutils literal notranslate"><span class="pre">RReq</span></code> is returned to the Requestor. Parameters are detailed
+in the <code class="docutils literal notranslate"><span class="pre">/postauth</span></code> response (ref. <a class="reference internal" href="specification_210.html#postauth-response-210"><span class="std std-ref">2.1.0</span></a>,
+<a class="reference internal" href="specification_220.html#postauth-response-220"><span class="std std-ref">2.1.0</span></a>) section.</p></li>
+</ol>
+</div>
+<div class="section" id="sandbox-environment">
+<h2>1.4. Sandbox environment<a class="headerlink" href="#sandbox-environment" title="Permalink to this headline">¶</a></h2>
+<p>A sandbox environment is included as a service for initial and continuous
+integration, and for live tests. This is our own implementation, so
+discrepancies with ACS implementations are unavoidable.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ol class="arabic simple">
+<li><p><em>Under no circumstances</em> may real card numbers or other cardholder
+information be sent to the sandbox.</p></li>
+<li><p>The production endpoint is to be used only for production requests.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="server-information.html" class="btn btn-neutral float-right" title="2. Server information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, 3DSecure.io
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

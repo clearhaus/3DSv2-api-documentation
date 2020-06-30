@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Sandbox Testcases &mdash; 3DSecure.io  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/scenario_selector.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/scenario_selector.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doc_table.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Changelog" href="changelog.html" />
+    <link rel="prev" title="6.4. Common" href="specification_common.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server-information.html">2. Server information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">3. API Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides.html">4. Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Authentication Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">6. Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Sandbox Testcases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generic-tests">7.1. Generic Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#browser-tests">7.2. Browser Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ri-tests">7.3. 3RI Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">8. Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">3DSecure.io</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>7. Sandbox Testcases</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/sandbox.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sandbox-testcases">
+<span id="sandbox"></span><h1>7. Sandbox Testcases<a class="headerlink" href="#sandbox-testcases" title="Permalink to this headline">¶</a></h1>
+<p>The sandbox contains a list of test cases meant to assist you in
+implementation.
+More testcases can be added on demand.</p>
+<p>It is also the intension that you can use the sandbox for automatic integration
+testing of your service. We will not modify individual test cases and will
+deprecate them with a sufficient grace period, if need be.</p>
+<p>The 3-D Secure server sandbox validates input according to the specification.</p>
+<div class="section" id="generic-tests">
+<h2>7.1. Generic Tests<a class="headerlink" href="#generic-tests" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Test</p></th>
+<th class="head"><p>Trigger PAN</p></th>
+<th class="head"><p>What’s being tested in your system</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Card not enrolled</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000100111111111</span></code></p></td>
+<td><p>Handling <a class="reference internal" href="preauth.html#not-enrolled"><span class="std std-ref">not enrolled</span></a> response.
+This test only involves the <a class="reference internal" href="preauth.html#preauth-usage"><span class="std std-ref">preauth call</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="browser-tests">
+<h2>7.2. Browser Tests<a class="headerlink" href="#browser-tests" title="Permalink to this headline">¶</a></h2>
+<p>These tests involve <code class="docutils literal notranslate"><span class="pre">deviceChannel:</span> <span class="pre">02</span></code>. This must be set in all
+authentication requests.</p>
+<dl class="simple">
+<dt>For all these tests:</dt><dd><ol class="arabic simple">
+<li><p>Perform the <a class="reference internal" href="preauth.html#preauth-usage"><span class="std std-ref">preauth call</span></a>.</p></li>
+<li><p>Execute the <a class="reference internal" href="3dsmethod.html#ds-method"><span class="std std-ref">3DS Method</span></a> if available.</p></li>
+<li><p>Perform a regular <a class="reference internal" href="auth.html#auth-usage"><span class="std std-ref">auth request</span></a>.
+Use the same <code class="docutils literal notranslate"><span class="pre">acctNumber</span></code> as used in the <code class="docutils literal notranslate"><span class="pre">preauth</span></code> call.</p></li>
+<li><p>Fetch the challenge result using the <a class="reference internal" href="postauth.html#postauth-usage"><span class="std std-ref">postauth endpoint</span></a> if relevant.</p></li>
+</ol>
+</dd>
+</dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">/auth</span></code> <a class="reference internal" href="examples.html#browser-example"><span class="std std-ref">browser example input</span></a> is usable for all
+cases. Just change the <code class="docutils literal notranslate"><span class="pre">acctNumber</span></code> or <code class="docutils literal notranslate"><span class="pre">purchaseAmount</span></code> where needed.</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Browser testcases</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 25%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Testname</p></th>
+<th class="head"><p>Trigger PAN</p></th>
+<th class="head"><p>Success criteria</p></th>
+<th class="head"><p>What’s being tested in your system</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3DS Method timeout</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000100411111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">threeDSCompInd</span></code> being set correctly</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless 3DS Method</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000100511111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code></p></td>
+<td><p>Frictionless authentication with 3DS Method</p></td>
+</tr>
+<tr class="row-even"><td><p>Frictionless no 3DS Method</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000100611111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code></p></td>
+<td><p>Frictionless authentication without 3DS Method</p></td>
+</tr>
+<tr class="row-odd"><td><p>Manual challenge</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000100811111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code> or <code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+<td><p>Challenge authentication without 3DS method</p></td>
+</tr>
+<tr class="row-even"><td><p>Automatic Challenge pass</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000100911111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code></p></td>
+<td><p>Successful challenge authentication with 3DS method</p>
+<p>The challenge will auto-submit using javascript</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Automatic Challenge fail</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000101011111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">N</span></code></p></td>
+<td><p>Failed challenge authentication with 3DS Method</p>
+<p>The challenge will auto-submit using javascript</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Automatic Challenge pass</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000101111111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code></p></td>
+<td><p>Successful challenge authentication without 3DS method</p>
+<p>The challenge will auto-submit using javascript</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000105001111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">N</span></code></p></td>
+<td><p>Frictionless authentication failure</p></td>
+</tr>
+<tr class="row-even"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">U</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000105041111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">U</span></code></p></td>
+<td><p>Frictionless authentication failure</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">R</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000105071111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">R</span></code></p></td>
+<td><p>Frictionless authentication failure</p></td>
+</tr>
+<tr class="row-even"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">A</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000105611111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">A</span></code></p></td>
+<td><p>Frictionless authentication attempt</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">cardholderInfo</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000105111111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">N</span></code></p></td>
+<td><p>Correctly displaying <code class="docutils literal notranslate"><span class="pre">cardholderInfo</span></code> to the cardholder</p></td>
+</tr>
+<tr class="row-even"><td><p>DS Timeout</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000105311111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Erro</span></code> with <code class="docutils literal notranslate"><span class="pre">errorCode:</span> <span class="pre">405</span></code></p></td>
+<td><p>Correct handling of DS timeout</p></td>
+</tr>
+</tbody>
+</table>
+<p>To allow for integration testing with your authorization system, three
+different PANs have been added.</p>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">Scheme PAN testcases</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Testname</p></th>
+<th class="head"><p>Trigger PAN</p></th>
+<th class="head"><p>Trigger Amount</p></th>
+<th class="head"><p>Success criteria</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Manual Challenge</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2221000000000009</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">4111111111111111</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">5500000000000004</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">20000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus</span></code>  <code class="docutils literal notranslate"><span class="pre">Y</span></code> or <code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">Y</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2221000000000009</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">4111111111111111</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">5500000000000004</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">20001</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus</span></code>  <code class="docutils literal notranslate"><span class="pre">Y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2221000000000009</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">4111111111111111</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">5500000000000004</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">20002</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus</span></code>  <code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">A</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2221000000000009</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">4111111111111111</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">5500000000000004</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">20003</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus</span></code>  <code class="docutils literal notranslate"><span class="pre">A</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Automatic challenge pass</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2221000000000009</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">4111111111111111</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">5500000000000004</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">20004</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus</span></code>  <code class="docutils literal notranslate"><span class="pre">Y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Automatic challenge fail</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2221000000000009</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">4111111111111111</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">5500000000000004</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">20005</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RReq</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus</span></code> <code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ri-tests">
+<h2>7.3. 3RI Tests<a class="headerlink" href="#ri-tests" title="Permalink to this headline">¶</a></h2>
+<p>These tests involve <code class="docutils literal notranslate"><span class="pre">deviceChannel:</span> <span class="pre">03</span></code>. This must be set in all
+authentication requests.
+The <code class="docutils literal notranslate"><span class="pre">/auth</span></code> <a class="reference internal" href="examples.html#threeri-example"><span class="std std-ref">3RI example input</span></a> is usable for all
+cases. Just change the <code class="docutils literal notranslate"><span class="pre">acctNumber</span></code> where needed.</p>
+<p>For all these tests: Perform a regular <a class="reference internal" href="auth.html#auth-usage"><span class="std std-ref">auth request</span></a>.
+The <code class="docutils literal notranslate"><span class="pre">/preauth</span></code> call is optional. Any <code class="docutils literal notranslate"><span class="pre">threeDSServerTransID</span></code> received from
+it will not be used in a final 3DS Requestor Initiated transaction.</p>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Browser testcases</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 25%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Testname</p></th>
+<th class="head"><p>Trigger PAN</p></th>
+<th class="head"><p>Success criteria</p></th>
+<th class="head"><p>What’s being tested in your system</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">Y</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000110511111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">Y</span></code></p></td>
+<td><p>Correctly sending a 3RI request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">A</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000110611111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">A</span></code></p></td>
+<td><p>Correctly sending a 3RI request</p></td>
+</tr>
+<tr class="row-even"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">U</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000110711111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">U</span></code></p></td>
+<td><p>Correctly sending a 3RI request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frictionless <code class="docutils literal notranslate"><span class="pre">R</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9000110811111111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARes</span></code> with <code class="docutils literal notranslate"><span class="pre">transStatus:</span> <span class="pre">R</span></code></p></td>
+<td><p>Correctly sending a 3RI request</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changelog.html" class="btn btn-neutral float-right" title="8. Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="specification_common.html" class="btn btn-neutral float-left" title="6.4. Common" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, 3DSecure.io
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

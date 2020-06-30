@@ -1,0 +1,397 @@
+/********************** Global ***********************/
+a {
+    color: #629195;
+    transition: .3s;
+}
+a:hover {
+    color: #4D979D;
+    text-decoration: underline;
+}
+a:visited {
+    color: #39757c;
+}
+/** Middel content **/ 
+.wy-nav-content {
+    max-width: 1200px !important;
+    margin: 0;
+    background: #fcfcfc;
+}
+
+/** DL STYLE **/
+dl:not(.docutils) dt {
+    display: table !important;
+    margin: 6px 0 !important;
+    font-size: 0.9em !important;
+    line-height: normal !important;
+    background: transparent !important;
+    color: #333 !important;
+    border-top: none !important;
+    padding: 0 !important;
+    position: relative !important; 
+}
+
+dd {
+    margin-left: 6px !important;
+    margin-bottom: 20px !important;
+}
+
+.note {
+    background: #e1eaeb !important;
+}
+
+.admonition.note .admonition-title {
+    background: rgba(57, 117, 124, 0.8) !important;
+}
+
+/*Background color*/
+.wy-nav-content-wrap {
+    background: linear-gradient(35deg, rgb(57, 117, 124, 0.3) 0%, rgb(57, 117, 124, 0.3) 100%);
+}
+.wy-side-nav-search>a:hover, .wy-side-nav-search .wy-dropdown>a:hover {
+    background: rgba(255,255,255,0) !important;
+}
+
+/********************** Sidebar ***********************/
+/**Mobil nav**/
+.wy-nav-top {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+/** Logo **/
+.wy-side-nav-search>a img.logo {
+    width: 230px;
+    height: 58px;
+}
+
+.wy-side-nav-search input[type=text] {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: none;
+    border-radius: 100px;
+    width: 100%;
+    border: none;
+    padding: 1em 2em;
+    color: #fff !important;
+    margin-bottom: 10px;
+}
+
+.wy-side-nav-search input[type=text]::placeholder {
+    color: #eee !important;
+}
+/** Sidebar -box**/
+.wy-nav-side {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+
+/** top of sidebar **/
+.wy-side-nav-search {
+    background-image: linear-gradient(35deg, rgb(57, 117, 124) 0%, rgb(57, 117, 124) 100%);
+}
+
+/** Content in sidebar **/
+.caption-text {
+    color: rgba(234, 136, 91)
+}
+
+.toctree-expand {
+    visibility: hidden;
+}
+
+.current, .internal, .wy-menu-vertical li.current {
+    background-color: transparent !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current>a, .wy-menu-vertical li.toctree-l3.current>a, .wy-menu-vertical li.toctree-l4.current>a {
+    background: rgba(255, 255, 255, 0.1) !important;
+ }
+
+.wy-menu-vertical li.toctree-l1.current>a {
+    border-bottom: none;
+    border-top: none;
+}
+
+.wy-menu-vertical li.current a {
+    border-right: none;
+}
+
+.wy-menu-vertical a {
+    color: #fff;
+}
+.current .current a {
+    color: #eee !important;
+}
+
+/********************** Table ***********************/
+thead p {
+    margin-bottom: 0
+}
+
+.wy-table-responsive table {
+    width: 100%
+}
+  
+/********************** Arg tabel content ***********************/
+.argtable td {
+    border: none !important;
+    clear: both;
+}
+
+.argdef {
+    padding: 20px !important;
+    width: 400px;
+}
+
+.inclusion {
+    color: rgba(234, 136, 91) !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+    clear: both;
+    margin-top: 10px;
+}
+
+.attributeName {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+div.attributeName:empty, div.conditions:empty {
+    display: none;
+}
+
+.attributeName:before {
+    font-weight: 500;
+}
+
+.argdef p:first-child {
+    color: #444 !important;
+}
+
+.argdef p {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+    font-weight: 600;
+}
+
+.argdesc {
+    padding: 20px !important;
+}
+
+.argdesc p {
+    color: #777;
+    font-size: 15px;
+}
+
+.argtable tr.attributeNameRow td {
+  font-weight: 600;
+  padding-left: 24px;
+}
+
+.argtable tr.attributeDetailRow td {
+    vertical-align: top;
+}
+/** Lists **/
+.rst-content .section ol p, .rst-content .section ul p {
+    margin-bottom: 0;
+}
+
+/**Tags**/
+.requirements {
+    float: right;
+}
+.type, .maxLength, .format, .length, .minLength {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 200px;
+    margin: 0 0 12px auto;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
+    width: max-content;
+}
+
+.enum, .category, .channel, .argdef p:last-child, .regexp, .integerString {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    clear: both;
+}
+
+.enum code {
+    line-height: 22px;
+}
+
+code, .rst-content code {
+    font-weight: normal !important;
+    background: #FFFFFF;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 4px;
+    padding: 4px 5px;
+}
+
+/** Footer **/
+
+footer a.btn {
+    box-shadow: none;
+    text-decoration: none;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(234, 136, 91) !important;
+}
+footer a.btn:visited {
+    color: rgb(255, 255, 255) !important;
+}
+
+footer a.btn:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(209, 117, 75) !important;
+    box-shadow: rgba(27, 67, 111, 0.1) 0px 5px 10px 0px;
+}
+
+/**Media query**/
+@media only screen and (max-width: 980px) {
+    .argdef {
+        width: 250px;
+    }
+    .wy-table-responsive {
+        margin-bottom: 24px;
+        max-width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .wy-nav-top {
+        position: fixed;
+        width: 100%;
+    }
+    .wy-nav-content-wrap .wy-nav-content {
+        padding-top: 90px;
+    } 
+
+    .argdef {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .argdesc {
+        float: left;
+        width: 150px;
+        text-align: left;
+    }   
+
+    .argtable th {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .type, .maxLength, .format, .length, .minLength, .integerString {
+        float: left;
+    }
+}
+/********************** JSON ***********************/
+.json-example {
+    display: none; 
+    color: #bbb;
+    line-height: 2;
+}
+.json-example.active {
+display: block !important;
+}
+
+
+.json-example-container {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px -2px #111;
+    margin-bottom: 50px;
+}
+
+/********************** Select ***********************/
+#scenario_selector {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 4px 4px 8px;
+}
+#deviceChannelSelector{
+    margin-top: -5px;
+    margin-left: 10px;
+}
+#messageCategorySelector {
+    margin-top: -5px;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 768px) {
+    #scenario_selector {
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+        border: none !important;
+    }
+
+    #deviceChannelSelector {
+        margin: 10px 0;
+    }
+
+    #messageCategorySelector {
+        margin: 10px 0;
+    }
+}
+
+
+/********************** argdesc content ***********************/
+.enumDescriptionHeader {
+  margin: 20px 0 5px 0;
+}
+
+.enumDescription {
+  margin-top: 10px;
+}
+
+.enumKey {
+    /* override striped backgrounds in tables */
+    background-color: transparent !important;
+    text-align: right;
+    white-space: nowrap !important;
+    width: min-content;
+}
+
+.enumKey > span {
+    /* override striped backgrounds in tables */
+    background-color: transparent !important;
+    font-weight: 600;
+    background: #fff;
+    border: solid 1px #e1e4e5;
+    font-size: 75%;
+    padding: 5px;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+}
+
+.enumValue {
+    /* override striped backgrounds in tables */
+    background-color: transparent !important;
+    padding-left: 3px !important;
+    width: 100%;
+}
+
+.conditions {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+
+/* Style the anchor used for attributes */
+td.attribute > a.link {
+  visibility: hidden;
+  font-family: FontAwesome; /* Used for the chain icon */
+  font-weight: normal;
+  padding-left: 7px;
+  vertical-align: middle;
+}
+
+td.attribute > a.link:after {
+  content: "\f0c1"; /* This becomes a chain in font-awesome */
+}
+
+td.attribute:hover > a.link {
+  visibility: visible;
+  text-decoration: none; /* Remove the underline when hovering over it */
+}
