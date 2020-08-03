@@ -69,7 +69,7 @@ cases. Just change the ``acctNumber`` or ``purchaseAmount`` where needed.
    * - Manual challenge
      - ``9000100811111111``
      - ``RReq`` with ``transStatus: Y`` or ``N``
-     - Challenge authentication without 3DS method
+     - Challenge authentication with 3DS method
 
    * - Automatic Challenge pass
      - ``9000100911111111``
