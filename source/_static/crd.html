@@ -5,8 +5,8 @@
 <col style='70%'>
 </colgroup>
 <tbody>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-acsEndProtocolVersion'><td class='attribute' colspan='2'>
-acsEndProtocolVersion<a class='link' href='#attr-cardRangeData-acsEndProtocolVersion' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-CRD-acsEndProtocolVersion'><td class='attribute' colspan='2'>
+acsEndProtocolVersion<a class='link' href='#attr-CRD-acsEndProtocolVersion' title='Permalink to this attribute'></a>
 </td></tr>
 <tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -26,8 +26,8 @@ validVersion
 <td class='argdesc'><div class='description'>The most recent active protocol version that is supported for the ACS URL.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-acsInfoInd'><td class='attribute' colspan='2'>
-acsInfoInd<a class='link' href='#attr-cardRangeData-acsInfoInd' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-CRD-acsInfoInd'><td class='attribute' colspan='2'>
+acsInfoInd<a class='link' href='#attr-CRD-acsInfoInd' title='Permalink to this attribute'></a>
 </td></tr>
 <tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -79,8 +79,8 @@ Regexp:
 </table>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-acsStartProtocolVersion'><td class='attribute' colspan='2'>
-acsStartProtocolVersion<a class='link' href='#attr-cardRangeData-acsStartProtocolVersion' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-CRD-acsStartProtocolVersion'><td class='attribute' colspan='2'>
+acsStartProtocolVersion<a class='link' href='#attr-CRD-acsStartProtocolVersion' title='Permalink to this attribute'></a>
 </td></tr>
 <tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -100,8 +100,8 @@ validVersion
 <td class='argdesc'><div class='description'>The earliest (i.e. oldest) active protocol version that is supported by the ACS.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-dsEndProtocolVersion'><td class='attribute' colspan='2'>
-dsEndProtocolVersion<a class='link' href='#attr-cardRangeData-dsEndProtocolVersion' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-CRD-dsEndProtocolVersion'><td class='attribute' colspan='2'>
+dsEndProtocolVersion<a class='link' href='#attr-CRD-dsEndProtocolVersion' title='Permalink to this attribute'></a>
 </td></tr>
 <tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -121,8 +121,8 @@ validVersion
 <td class='argdesc'><div class='description'>The most recent active protocol version that is supported for the DS.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-dsStartProtocolVersion'><td class='attribute' colspan='2'>
-dsStartProtocolVersion<a class='link' href='#attr-cardRangeData-dsStartProtocolVersion' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-CRD-dsStartProtocolVersion'><td class='attribute' colspan='2'>
+dsStartProtocolVersion<a class='link' href='#attr-CRD-dsStartProtocolVersion' title='Permalink to this attribute'></a>
 </td></tr>
 <tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -142,8 +142,8 @@ validVersion
 <td class='argdesc'><div class='description'>The earliest (i.e. oldest) active protocol version that is supported by the DS.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-endRange'><td class='attribute' colspan='2'>
-endRange<a class='link' href='#attr-cardRangeData-endRange' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-CRD-endRange'><td class='attribute' colspan='2'>
+endRange<a class='link' href='#attr-CRD-endRange' title='Permalink to this attribute'></a>
 </td></tr>
 <tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
@@ -161,10 +161,42 @@ Regexp:
 <td class='argdesc'><div class='description'>End of the card range.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-cardRangeData-startRange'><td class='attribute' colspan='2'>
-startRange<a class='link' href='#attr-cardRangeData-startRange' title='Permalink to this attribute'></a>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-CRD-messageType'><td class='attribute' colspan='2'>
+messageType<a class='link' href='#attr-CRD-messageType' title='Permalink to this attribute'></a>
 </td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<div class='attributeName'></div>
+<div class='requirements'>
+<div class='type'>
+string
+</div>
+<div class='enum'>
+Must be:
+<code><span class='pre'>CRD</span></code>
+</div>
+</div>
+<div class='inclusion'>Required</div>
+<div class='scenario'>
+<div class='category'>
+Categories:
+<code>PA</code>
+<code>NPA</code>
+</div>
+<div class='channel'>
+Channels:
+<code>APP</code>
+<code>BRW</code>
+<code>3RI</code>
+</div>
+</div>
+</td>
+<td class='argdesc'><div class='description'>Identifies the type of message that is passed.</div>
+<div class='conditions'>
+</div></td></tr>
+<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-CRD-startRange'><td class='attribute' colspan='2'>
+startRange<a class='link' href='#attr-CRD-startRange' title='Permalink to this attribute'></a>
+</td></tr>
+<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -180,10 +212,10 @@ Regexp:
 <td class='argdesc'><div class='description'>Start of the card range.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-threeDSMethodURL'><td class='attribute' colspan='2'>
-threeDSMethodURL<a class='link' href='#attr-cardRangeData-threeDSMethodURL' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-CRD-threeDSMethodURL'><td class='attribute' colspan='2'>
+threeDSMethodURL<a class='link' href='#attr-CRD-threeDSMethodURL' title='Permalink to this attribute'></a>
 </td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -204,10 +236,10 @@ Max length: 256
 <td class='argdesc'><div class='description'>The ACS URL that will be used by the 3DS Method. Note: The 3DSMethodURL data element may be omitted if not supported by the ACS for this specific card range.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-cardRangeData-threeDSServerTransID'><td class='attribute' colspan='2'>
-threeDSServerTransID<a class='link' href='#attr-cardRangeData-threeDSServerTransID' title='Permalink to this attribute'></a>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-CRD-threeDSServerTransID'><td class='attribute' colspan='2'>
+threeDSServerTransID<a class='link' href='#attr-CRD-threeDSServerTransID' title='Permalink to this attribute'></a>
 </td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>
@@ -238,10 +270,10 @@ Channels:
 <td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
 <div class='conditions'>
 </div></td></tr>
-<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-cardRangeData-scheme'><td class='attribute' colspan='2'>
-scheme<a class='link' href='#attr-cardRangeData-scheme' title='Permalink to this attribute'></a>
+<tr categories='' channels='' class='row-even attributeNameRow' id='attr-CRD-scheme'><td class='attribute' colspan='2'>
+scheme<a class='link' href='#attr-CRD-scheme' title='Permalink to this attribute'></a>
 </td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
+<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
 <div class='attributeName'></div>
 <div class='requirements'>
 <div class='type'>

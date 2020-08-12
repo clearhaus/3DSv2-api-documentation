@@ -387,8 +387,9 @@ billAddrCountry<a class='link' href='#attr-AReq-billAddrCountry' title='Permalin
 <div class='type'>
 string
 </div>
-<div class='length'>
-Length: 3
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^\d{3}$</span></code>
 </div>
 </div>
 <div class='inclusion'>Optional</div>
@@ -406,7 +407,7 @@ Channels:
 </div>
 </div>
 </td>
-<td class='argdesc'><div class='description'>The ISO 3166-1 numeric three-digit country code of the Cardholder billing address Server associated with the card used for this purchase.</div>
+<td class='argdesc'><div class='description'>The ISO 3166-1 numeric three-digit country code of the Cardholder billing address associated with the card used for this purchase.</div>
 <div class='conditions'>
 </div>
 <p class='enumDescriptionHeader'>
@@ -1275,14 +1276,15 @@ merchantCountryCode<a class='link' href='#attr-AReq-merchantCountryCode' title='
 <div class='type'>
 string
 </div>
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^\d{3}$</span></code>
+</div>
 <div class='format'>
 Format:
 <a href='specification_common.html#format-country'>
 country
 </a>
-</div>
-<div class='length'>
-Length: 3
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
@@ -2448,8 +2450,9 @@ shipAddrCountry<a class='link' href='#attr-AReq-shipAddrCountry' title='Permalin
 <div class='type'>
 string
 </div>
-<div class='length'>
-Length: 3
+<div class='regexp'>
+Regexp:
+<code><span class='pre'>^\d{3}$</span></code>
 </div>
 </div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>

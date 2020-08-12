@@ -37,7 +37,7 @@ Output
 ------
 
 .. raw:: html
-  :file: _static/cardrangedata.html
+  :file: _static/crd.html
 
 .. _auth-endpoint-210:
 

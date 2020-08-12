@@ -11,6 +11,11 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+August 12th, 2020
+*****************
+
+1. Add ``messageType: CRD`` to ``/preauth`` response
+
 June 29th, 2020
 ***************
 
