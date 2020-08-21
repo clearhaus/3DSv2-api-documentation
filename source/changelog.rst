@@ -11,6 +11,15 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+August 21st, 2020
+*****************
+
+1. Add proper support for ``2.2.0`` tests in the sandbox
+2. Ensure that automatic version determination works with sandbox tests
+3. Removed ``startRange``, ``endRange`` from ``preauth`` response.
+4. Add missing ``2.2.0`` transStatusReason descriptions
+5. Fix ``2.2.0`` ``acsRenderingType`` difference mention. The change is in ``RReq``, not in ``ARes``.
+
 August 12th, 2020
 *****************
 
