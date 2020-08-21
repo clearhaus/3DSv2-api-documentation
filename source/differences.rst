@@ -64,7 +64,6 @@ Modified data elements
 
 ``ARes``
    - ``acsChallengeMandated``
-   - ``acsRenderingType``
    - ``authenticationType``
    - ``authenticationValue``
    - ``cardholderInfo``
@@ -73,6 +72,7 @@ Modified data elements
 
 ``RReq``
    - ``authenticationType``
+   - ``acsRenderingType``
    - ``authenticationValue``
    - ``challengeCancel``
    - ``transStatus``
