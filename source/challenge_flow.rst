@@ -22,7 +22,7 @@ Create a challenge request (CReq: :ref:`2.1.0 <creq-format-210>`, :ref:`2.2.0
 response (ref. :ref:`2.1.0 <auth-response-210>`, :ref:`2.1.0
 <auth-response-220>`).
 
-Add an iframe to the users browser, either statically or using javascript.
+Add an iframe to the users browser, either statically or using JavaScript.
 
 .. code-block:: javascript
    :linenos:

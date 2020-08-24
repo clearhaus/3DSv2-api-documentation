@@ -85,21 +85,21 @@ Sending ``messageVersion: 2.2.0`` with these PANs will result in an error.
      - ``RReq`` with ``transStatus: Y``
      - Successful challenge authentication with 3DS method
 
-       The challenge will auto-submit using javascript
+       The challenge will auto-submit using JavaScript
 
    * - Automatic Challenge fail
      - ``9000101011111111``
      - ``RReq`` with ``transStatus: N``
      - Failed challenge authentication with 3DS Method
 
-       The challenge will auto-submit using javascript
+       The challenge will auto-submit using JavaScript
 
    * - Automatic Challenge pass
      - ``9000101111111111``
      - ``RReq`` with ``transStatus: Y``
      - Successful challenge authentication without 3DS method
 
-       The challenge will auto-submit using javascript
+       The challenge will auto-submit using JavaScript
 
    * - Frictionless ``N``
      - ``9000105001111111``
@@ -175,21 +175,21 @@ Sending ``messageVersion: 2.1.0`` with these PANs will result in an error.
      - ``RReq`` with ``transStatus: Y``
      - Successful challenge authentication with 3DS method
 
-       The challenge will auto-submit using javascript
+       The challenge will auto-submit using JavaScript
 
    * - Automatic Challenge fail
      - ``9001101011111111``
      - ``RReq`` with ``transStatus: N``
      - Failed challenge authentication with 3DS Method
 
-       The challenge will auto-submit using javascript
+       The challenge will auto-submit using JavaScript
 
    * - Automatic Challenge pass
      - ``9001101111111111``
      - ``RReq`` with ``transStatus: Y``
      - Successful challenge authentication without 3DS method
 
-       The challenge will auto-submit using javascript
+       The challenge will auto-submit using JavaScript
 
    * - Frictionless ``N``
      - ``9001105001111111``

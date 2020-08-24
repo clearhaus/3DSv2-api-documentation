@@ -7,8 +7,8 @@
   Only used for browser authentication
 
 The 3DS Method can be optionally used by issuers to gather browser fingerprints
-using Javascript. This is done by loading a URL in a hidden iframe, before the
-authentication. This iframe will then execute some fingerprinting javascript,
+using JavaScript. This is done by loading a URL in a hidden iframe, before the
+authentication. This iframe will then execute some fingerprinting JavaScript,
 before POST'ing to the prespecified URL belonging to the requestor.  The 3DS
 Method fingerprint result is tied to the authentication by the
 ``threeDSServerTransID``.
@@ -49,7 +49,7 @@ The procedure is as follows:
 Example
 *******
 
-Add an iframe to the users browser, here using javascript
+Add an iframe to the users browser, here using JavaScript
 
 .. code-block:: javascript
 
@@ -75,7 +75,7 @@ Create a HTML ``form``, that contains the input field:
      <input type="hidden" name="threeDSMethodData" id="threeDSMethodData"/>
    </form>
 
-This form can be submitted using the following javascript:
+This form can be submitted using the following JavaScript:
 
 .. code-block:: javascript
    :linenos:
