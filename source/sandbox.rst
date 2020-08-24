@@ -227,7 +227,7 @@ Scheme test PANs
 To allow for integration testing with your authorization system, three
 different PANs exist in the sandbox.
 
-These cards support versions ``2.1.0`` and ``2.2.0``, you need to force
+These cards support versions ``2.1.0`` and ``2.2.0``. You need to force
 ``2.1.0`` if your system automatically upgrades to ``2.2.0``.
 
 .. list-table:: Scheme PAN testcases
