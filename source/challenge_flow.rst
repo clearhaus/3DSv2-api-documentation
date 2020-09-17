@@ -95,7 +95,7 @@ An example :ref:`challenge response <final-cres-210>` is:
 
    {
      "acsTransID": "5af5e779-4d44-4201-a2bf-4890eb9e0ba7",
-     "challengeCompletionIndicator": "Y",
+     "challengeCompletionInd": "Y",
      "sdkTransID": "76ef8bdc-daf3-43ec-808c-9dd64a7301ca",
      "messageType": "CRes",
      "messageVersion": "2.1.0",

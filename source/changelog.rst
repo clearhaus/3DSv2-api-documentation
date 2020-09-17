@@ -11,6 +11,12 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+September 17th, 2020
+********************
+
+1. Fixed error in sandbox, field ``challengeCompletionInd`` was incorrectly
+   ``challengeCompletionIndicator``.
+
 August 21st, 2020
 *****************
 
