@@ -57,8 +57,8 @@ html_static_path = ['_static']
 html_css_files = [
     'overrides.css',  # overrides for wide tables in RTD theme
     'scenario_selector.css', # Scenario selector
-    'doc_table.css', # Overrides for documentation input table
-    'css/custom.css' #Extra styling for matching documentation with the website
+    'css/custom.css', #Extra styling for matching documentation with the website
+    'css/reference.css' #Extra styling for matching documentation with the website
 ]
 
 html_js_files = [

@@ -1,28 +1,21 @@
-<div class='message-info'>
-<table class='docutils align-default colwidths-given argtable'>
-<colgroup>
-<col style='30%'>
-<col style='70%'>
-</colgroup>
-<tbody>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData'><td class='attribute' colspan='2'>
+<div class='reference-object'>
+<div categories='' channels='' class='row-even attribute-header' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData'><div class='attribute-name'>
 threeDSReqAuthData<a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='' channels='' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
 <div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
-</div>
-<div class='maxLength'>
-Max length: 2048
-</div>
-</div>
 <div class='inclusion'>Optional</div>
-</td>
-<td class='argdesc'><div class='description'> Data that documents and supports a specific authentication process.  In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, for method: 02—field can carry generic 3DS Requestor authentication information 03—data element can carry information about the provider of the federated ID and related information 04—data element can carry the FIDO attestation data (including the signature) In future versions of the specification, these details are expected to be included</div>
-<div class='conditions'>
+<div class='requirements'>
+<div class='maxLength'>
+Max length:
+<code><span class='pre'>2048</span></code>
 </div>
+</div>
+</div>
+<div class='argdesc'><div class='description'> Data that documents and supports a specific authentication process.  In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, for method: 02—field can carry generic 3DS Requestor authentication information 03—data element can carry information about the provider of the federated ID and related information 04—data element can carry the FIDO attestation data (including the signature) In future versions of the specification, these details are expected to be included</div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
 </p>
@@ -31,24 +24,25 @@ Scheme specific rules:
 Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
-</dl></td></tr>
-<tr categories='' channels='' class='row-odd attributeNameRow' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod'><td class='attribute' colspan='2'>
+</dl></div>
+</div></div>
+<div categories='' channels='' class='row-odd attribute-header' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod'><div class='attribute-name'>
 threeDSReqAuthMethod<a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='' channels='' class='row-odd attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
 </div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='' channels='' class='row-odd attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
+<div class='inclusion'>Optional</div>
+<div class='requirements'>
 <div class='regexp'>
 Regexp:
 <code><span class='pre'>^(0[1-6]|[89][0-9])$</span></code>
 </div>
 </div>
-<div class='inclusion'>Optional</div>
-</td>
-<td class='argdesc'><div class='description'>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</div>
+</div>
+<div class='argdesc'><div class='description'>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <table class='enumDescription'>
 <tr class='enumEntry'>
@@ -88,8 +82,6 @@ Regexp:
 <td class='enumValue'>Login to the cardholder account at the 3DS Requestor system using FIDO Authenticator</td>
 </tr>
 </table>
-<div class='conditions'>
-</div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
 </p>
@@ -98,28 +90,27 @@ Scheme specific rules:
 Visa</dt>
 <dd class='scheme_rule'>
 Field is required</dd>
-</dl></td></tr>
-<tr categories='' channels='' class='row-even attributeNameRow' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp'><td class='attribute' colspan='2'>
+</dl></div>
+</div></div>
+<div categories='' channels='' class='row-even attribute-header' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp'><div class='attribute-name'>
 threeDSReqAuthTimestamp<a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='' channels='' class='row-even attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
 </div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='' channels='' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
+<div class='inclusion'>Optional</div>
+<div class='requirements'>
 <div class='format'>
 Format:
 <a href='specification_common.html#format-yyyymmddhhmm'>
-yyyymmddhhmm
+<code><span class='pre'>yyyymmddhhmm</span></code>
 </a>
 </div>
 </div>
-<div class='inclusion'>Optional</div>
-</td>
-<td class='argdesc'><div class='description'>Date and time in UTC of the cardholder authentication.</div>
-<div class='conditions'>
 </div>
+<div class='argdesc'><div class='description'>Date and time in UTC of the cardholder authentication.</div>
 <p class='enumDescriptionHeader'>
 Scheme specific rules:
 </p>
@@ -128,7 +119,6 @@ Scheme specific rules:
 Visa</dt>
 <dd class='scheme_rule'>
 Field is required if available</dd>
-</dl></td></tr>
-</tbody>
-</table>
+</dl></div>
+</div></div>
 </div>

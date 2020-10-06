@@ -1,21 +1,15 @@
-<div class='message-info'>
-<table class='docutils align-default colwidths-given argtable'>
-<colgroup>
-<col style='30%'>
-<col style='70%'>
-</colgroup>
-<tbody>
-<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow' id='attr-CRes-acsCounterAtoS'><td class='attribute' colspan='2'>
+<div class='reference-object'>
+<div categories='PA NPA' channels='APP' class='row-even attribute-header' id='attr-CRes-acsCounterAtoS'><div class='attribute-name'>
 acsCounterAtoS<a class='link' href='#attr-CRes-acsCounterAtoS' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
 <div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
-</div>
-</div>
 <div class='inclusion'>Required</div>
+<div class='requirements'>
+</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -27,26 +21,17 @@ Channels:
 <code>APP</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Counter used as a security measure in the ACS to 3DS SDK secure channel.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-CRes-acsTransID'><td class='attribute' colspan='2'>
+</div>
+<div class='argdesc'><div class='description'>Counter used as a security measure in the ACS to 3DS SDK secure channel.</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-header' id='attr-CRes-acsTransID'><div class='attribute-name'>
 acsTransID<a class='link' href='#attr-CRes-acsTransID' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-details'><div class='arg'>
+<div class='argdef'>
 <div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
-</div>
-<div class='format'>
-Format:
-<a href='specification_common.html#format-uuid'>
-uuid
-</a>
-</div>
-</div>
 <div class='inclusion'><div class='dynamic'>Required</div>
 <div class='hidden dynamic' deviceChannel='01'>Required</div>
 <div class='hidden dynamic' deviceChannel='02'>Required</div>
@@ -59,6 +44,14 @@ uuid
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Required</div></div>
+<div class='requirements'>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-uuid'>
+<code><span class='pre'>uuid</span></code>
+</a>
+</div>
+</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -72,26 +65,29 @@ Channels:
 <code>3RI</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow' id='attr-CRes-challengeCompletionInd'><td class='attribute' colspan='2'>
-challengeCompletionInd<a class='link' href='#attr-CRes-challengeCompletionInd' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
 </div>
+<div class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the ACS to identify a single transaction.</div>
+<div class='conditions'>
+</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP' class='row-even attribute-header' id='attr-CRes-challengeCompletionInd'><div class='attribute-name'>
+challengeCompletionInd<a class='link' href='#attr-CRes-challengeCompletionInd' title='Permalink to this attribute'></a>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
+<div class='inclusion'>Required</div>
+<div class='requirements'>
 <div class='enum'>
 One of:
+<div class='value-container'>
 <code><span class='pre'>Y</span></code>
 <code><span class='pre'>N</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
+</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -103,27 +99,27 @@ Channels:
 <code>APP</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Indicator of the state of the ACS challenge cycle and whether the challenge has completed or will require additional messages.  Shall be populated in all CRes messages to convey the current state of the transaction.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-CRes-messageExtension'><td class='attribute' colspan='2'>
+</div>
+<div class='argdesc'><div class='description'>Indicator of the state of the ACS challenge cycle and whether the challenge has completed or will require additional messages.  Shall be populated in all CRes messages to convey the current state of the transaction.</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-header' id='attr-CRes-messageExtension'><div class='attribute-name'>
 messageExtension<a class='link' href='#attr-CRes-messageExtension' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
+</div>
+<div class='attribute-type'>
 Array of
 <a href='#messageextension'>
-MessageExtension object
-</a>
-</div>
-<div class='maxLength'>
-Max length: 10
-</div>
-</div>
+MessageExtension object</a>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
 <div class='inclusion'>Optional</div>
+<div class='requirements'>
+<div class='maxLength'>
+Max length:
+<code><span class='pre'>10</span></code>
+</div>
+</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -137,25 +133,24 @@ Channels:
 <code>3RI</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-CRes-messageType'><td class='attribute' colspan='2'>
-messageType<a class='link' href='#attr-CRes-messageType' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
 </div>
+<div class='argdesc'><div class='description'>Data necessary to support requirements not otherwise defined in the 3-D Secure message are carried in a Message Extension.</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-even attribute-header' id='attr-CRes-messageType'><div class='attribute-name'>
+messageType<a class='link' href='#attr-CRes-messageType' title='Permalink to this attribute'></a>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
+<div class='inclusion'>Required</div>
+<div class='requirements'>
 <div class='enum'>
 Must be:
 <code><span class='pre'>CRes</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -169,25 +164,24 @@ Channels:
 <code>3RI</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Identifies the type of message that is passed.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-CRes-messageVersion'><td class='attribute' colspan='2'>
-messageVersion<a class='link' href='#attr-CRes-messageVersion' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
 </div>
+<div class='argdesc'><div class='description'>Identifies the type of message that is passed.</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-header' id='attr-CRes-messageVersion'><div class='attribute-name'>
+messageVersion<a class='link' href='#attr-CRes-messageVersion' title='Permalink to this attribute'></a>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
+<div class='inclusion'>Required</div>
+<div class='requirements'>
 <div class='enum'>
 Must be:
 <code><span class='pre'>2.2.0</span></code>
 </div>
 </div>
-<div class='inclusion'>Required</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -201,26 +195,17 @@ Channels:
 <code>3RI</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeNameRow' id='attr-CRes-sdkTransID'><td class='attribute' colspan='2'>
+</div>
+<div class='argdesc'><div class='description'>Protocol version identifier This shall be the Protocol Version Number of the specification utilised by the system creating this message.</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP' class='row-even attribute-header' id='attr-CRes-sdkTransID'><div class='attribute-name'>
 sdkTransID<a class='link' href='#attr-CRes-sdkTransID' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP' class='row-even attributeDetailRow'><td class='argdef'>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
 <div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
-</div>
-<div class='format'>
-Format:
-<a href='specification_common.html#format-uuid'>
-uuid
-</a>
-</div>
-</div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01'>Required</div>
 <div class='hidden dynamic' deviceChannel='02'>Optional</div>
@@ -233,6 +218,14 @@ uuid
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Required</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='requirements'>
+<div class='format'>
+Format:
+<a href='specification_common.html#format-uuid'>
+<code><span class='pre'>uuid</span></code>
+</a>
+</div>
+</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -244,8 +237,8 @@ Channels:
 <code>APP</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
+</div>
+<div class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS SDK to identify a single transaction.</div>
 <div class='conditions'>
 <div class=''>
 Required if deviceChannel is "01"<br></div>
@@ -253,24 +246,25 @@ Required if deviceChannel is "01"<br></div>
 Required if deviceChannel is "01"<br></div>
 <div class='hidden' messageCategory='02'>
 Required if deviceChannel is "01"<br></div>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeNameRow' id='attr-CRes-threeDSServerTransID'><td class='attribute' colspan='2'>
+</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-header' id='attr-CRes-threeDSServerTransID'><div class='attribute-name'>
 threeDSServerTransID<a class='link' href='#attr-CRes-threeDSServerTransID' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-odd attributeDetailRow'><td class='argdef'>
-<div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
 </div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-odd attribute-details'><div class='arg'>
+<div class='argdef'>
+<div class='attributeName'></div>
+<div class='inclusion'>Required</div>
+<div class='requirements'>
 <div class='format'>
 Format:
 <a href='specification_common.html#format-uuid'>
-uuid
+<code><span class='pre'>uuid</span></code>
 </a>
 </div>
 </div>
-<div class='inclusion'>Required</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -284,25 +278,17 @@ Channels:
 <code>3RI</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
-<div class='conditions'>
-</div></td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeNameRow' id='attr-CRes-transStatus'><td class='attribute' colspan='2'>
+</div>
+<div class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div></div>
+</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-even attribute-header' id='attr-CRes-transStatus'><div class='attribute-name'>
 transStatus<a class='link' href='#attr-CRes-transStatus' title='Permalink to this attribute'></a>
-</td></tr>
-<tr categories='PA NPA' channels='APP BRW 3RI' class='row-even attributeDetailRow'><td class='argdef'>
+</div>
+<div class='attribute-type'>
+string</div></div>
+<div categories='PA NPA' channels='APP BRW 3RI' class='row-even attribute-details'><div class='arg'>
+<div class='argdef'>
 <div class='attributeName'></div>
-<div class='requirements'>
-<div class='type'>
-string
-</div>
-<div class='enum'>
-One of:
-<code><span class='pre'>Y</span></code>
-<code><span class='pre'>N</span></code>
-</div>
-</div>
 <div class='inclusion'><div class='dynamic'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='01'>Conditional</div>
 <div class='hidden dynamic' deviceChannel='02'>Conditional</div>
@@ -315,6 +301,15 @@ One of:
 <div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Optional</div>
 <div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
+<div class='requirements'>
+<div class='enum'>
+One of:
+<div class='value-container'>
+<code><span class='pre'>Y</span></code>
+<code><span class='pre'>N</span></code>
+</div>
+</div>
+</div>
 <div class='scenario'>
 <div class='category'>
 Categories:
@@ -328,8 +323,8 @@ Channels:
 <code>3RI</code>
 </div>
 </div>
-</td>
-<td class='argdesc'><div class='description'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
+</div>
+<div class='argdesc'><div class='description'>Indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
 <p class='enumDescriptionHeader'>Meaning of values:</p>
 <table class='enumDescription'>
 <tr class='enumEntry'>
@@ -354,7 +349,6 @@ Required if messageCategory is "01"<br></div>
 Required if messageCategory is "01"<br></div>
 <div class='hidden' deviceChannel='03'>
 Required if messageCategory is "01"<br></div>
-</div></td></tr>
-</tbody>
-</table>
+</div></div>
+</div></div>
 </div>

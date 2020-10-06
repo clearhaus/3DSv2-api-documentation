@@ -80,10 +80,10 @@ class ScenarioSelector {
   }
 
   filterOnScenario(deviceChannel, messageCategory) {
-    $('.argtable tbody tr').removeClass('irrelevant');
+    $('.reference-object > div').removeClass('irrelevant');
 
     if (deviceChannel != "") {
-      var el = $('.argtable > tbody > tr:not([channels*="' + deviceChannel + '"])');
+      var el = $('.reference-object > div:not([channels*="' + deviceChannel + '"])');
 
       el.each(function(_) {
         var tr = $(this);
@@ -94,7 +94,7 @@ class ScenarioSelector {
     }
 
     if (messageCategory != "") {
-      var el = $('.argtable tbody tr:not([categories*="' + messageCategory + '"])');
+      var el = $('.reference-object > div:not([categories*="' + messageCategory + '"])');
 
       el.each(function(_) {
         var tr = $(this);

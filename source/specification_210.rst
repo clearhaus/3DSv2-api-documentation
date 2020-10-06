@@ -33,8 +33,8 @@ Input
 
 .. _preauth-response-210:
 
-Output
-------
+Output (CRD)
+------------
 
 .. raw:: html
   :file: _static/crd.html
@@ -48,16 +48,16 @@ For usage, refer to :ref:`auth-usage`.
 
 .. _auth-input-210:
 
-Input
------
+Input (AReq)
+------------
 
 .. raw:: html
   :file: _static/areq_210.html
 
 .. _auth-response-210:
 
-Output
-------
+Output (ARes)
+-------------
 
 .. raw:: html
   :file: _static/ares_210.html
@@ -102,8 +102,8 @@ Input
 
 .. _postauth-response-210:
 
-Output
-------
+Output (RReq)
+-------------
 
 .. raw:: html
   :file: _static/rreq_210.html

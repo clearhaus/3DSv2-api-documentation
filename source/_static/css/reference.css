@@ -1,0 +1,135 @@
+.attribute-header {
+  display: flex;
+  align-items: baseline;
+  background-color: #F4F6F6;
+  padding: 10px 15px;
+}
+
+.attribute-name {
+  font-weight: bold;
+  font-size: 1.2;
+}
+
+.attribute-type {
+  text-transform: capitalize;
+  margin-left: 18px;
+  font-size: 0.8em;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+}
+
+/* Arg wraps the attribute definitions+description divs*/
+.arg {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.argdef {
+  width: 30%;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+.argdesc {
+  width: 70%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .arg {
+        display: block;
+    }
+
+    .argdef {
+        width: 100%;
+    }
+
+    .argdesc {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .attribute-header {
+      display: block;
+    }
+
+    .attribute-name {
+      width: 100%;
+    }
+
+    .attribute-type {
+      margin-left: 0;
+      margin-top: 3px;
+    }
+}
+
+/** Attribute definitions **/
+
+.type {
+  display: inline;
+}
+
+.maxLength, .format, .minLength, .length,
+.regexp, .enum, .category, .channel {
+    margin: 10px 0;
+}
+
+.value-container {
+  margin-left: 10px;
+  margin-right: 8px;
+  line-height: 1.4em;
+}
+
+/** Attribute description **/
+
+.inclusion {
+    font-weight: bold;
+    color: #DE8C64;
+}
+
+.scheme_rules {
+    margin-top: 5px;
+}
+.scheme_rules dt {
+    font-weight: bold;
+}
+.scheme_rule {
+    margin-top: 5px;
+}
+
+.enumDescriptionHeader {
+  font-weight: bold;
+  color: #777;
+  margin: 20px 0 0 0;
+}
+
+.enumDescription {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+.enumKey {
+  box-sizing: border-box;
+}
+
+.enumKey > span {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+    font-weight: 600;
+    font-size: 75%;
+    padding: 0 4px;
+    white-space: nowrap !important;
+    background-color: #fff;
+    border: solid 1px #e1e4e5;
+    display: table;
+    margin: 0px 15px 0 0;
+    border-radius: 3px;
+}
+
+.enumValue {
+  vertical-align: middle;
+}
+
+.conditions {
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-top: 20px;
+}
