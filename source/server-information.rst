@@ -55,7 +55,8 @@ Request headers
     Content-Type: application/json; charset=utf-8
 
 Allowed characters
-  Despite the charset being ``utf-8``, *only ASCII characters are allowed*.
+  Despite the charset being ``utf-8``, only ASCII characters are allowed in
+  ``cardholderName``.
 
   Currently the ``2.1.0`` and ``2.2.0`` specifications only support ASCII
   characters. There are indications that this may change in ``2.3.0``  (we've
