@@ -15,6 +15,7 @@ November 11th, 2020
 *******************
 
 #. Update list of supported card schemes
+#. Clarify that cardholderName must be ASCII
 
 September 17th, 2020
 ********************
