@@ -92,17 +92,25 @@ An example :ref:`challenge response <final-cres-210>` is:
 
 .. code-block:: json
    :linenos:
-   :caption: Example CRes, valid for both 2.1.0 and 2.2.0
+   :caption: Example CRes, valid for both 2.1.0.
 
    {
-     "acsTransID": "5af5e779-4d44-4201-a2bf-4890eb9e0ba7",
-     "challengeCompletionInd": "Y",
-     "sdkTransID": "76ef8bdc-daf3-43ec-808c-9dd64a7301ca",
-     "messageType": "CRes",
-     "messageVersion": "2.1.0",
-     "threeDSServerTransID": "c1110574-2c6a-4ab8-a937-ef8d5a10ec39",
-     "transStatus": "Y"
-   }
+      "acsTransID": "87791cee-2514-436c-bed8-a63a87bbdf01",
+      "challengeCompletionInd": "Y",
+      "messageType": "CRes",
+      "messageVersion": "2.1.0",
+      "threeDSServerTransID": "d41f6200-0435-49ee-aa11-f366f0661c6f",
+      "transStatus": "Y"
+    }
+
+The POST body containing the ``CRes``` for this example is
+
+.. code-block::
+
+   cres=eyJhY3NUcmFuc0lEIjoiODc3OTFjZWUtMjUxNC00MzZjLWJlZDgtYTYzYTg3YmJkZjAxIiwiY2hhbGxlbmdlQ29tcGxldGlvbkluZCI6IlkiLCJtZXNzYWdlVHlwZSI6IkNSZXMiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJkNDFmNjIwMC0wNDM1LTQ5ZWUtYWExMS1mMzY2ZjA2NjFjNmYiLCJ0cmFuc1N0YXR1cyI6IlkifQ
+
+Your code must be able to handle that the Base64-URL encoded ``cres`` POST
+value can include padding.
 
 Here ``transStatus`` will be either ``Y`` or ``N``. You can use the
 :ref:`postauth-usage` to fetch the result of the challenge (ref. :ref:`2.1.0

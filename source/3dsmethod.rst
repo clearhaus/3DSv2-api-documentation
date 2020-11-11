@@ -127,6 +127,9 @@ The value is Base64-URL encoded and decodes to:
 Continue the authentication with the :ref:`auth-usage`, setting
 `3DS Completion indicator <specification_210.html#attr-AReq-threeDSCompInd>`_ to ``"Y"``.
 
+Your system must be able to receive both padded and unpadded Base64-URL values,
+in the 3DS Method completion callbacks.
+
 3DS Method failure
 ******************
 
