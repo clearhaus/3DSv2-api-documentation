@@ -92,7 +92,7 @@ An example :ref:`challenge response <final-cres-210>` is:
 
 .. code-block:: json
    :linenos:
-   :caption: Example CRes, valid for both 2.1.0.
+   :caption: Example CRes, valid for 2.1.0.
 
    {
       "acsTransID": "87791cee-2514-436c-bed8-a63a87bbdf01",
