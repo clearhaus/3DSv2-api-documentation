@@ -15,7 +15,8 @@ November 11th, 2020
 *******************
 
 #. Update list of supported card schemes
-#. Clarify that cardholderName must be ASCII
+#. Clarify that ``cardholderName`` must be ASCII
+#. Mention that ``browserColorDepth`` is not always valid by specifiction, provide solution
 
 September 17th, 2020
 ********************
