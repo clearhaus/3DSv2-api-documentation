@@ -4,8 +4,12 @@ This is the documentation for the 3dsecure.io 3-D Secure Server.
 
 ## Status
 
-The service, sandbox and documentation are all running in beta. Beta means functional, but needs
-polish and/or minor changes.
+The service and sandbox are production ready and live.
+
+The documentation is subject to changes because of
+
+1. The practicality of authentications differ from scheme to scheme
+2. The minutiae of a complex specification
 
 ## About
 
