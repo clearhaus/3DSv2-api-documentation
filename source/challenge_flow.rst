@@ -70,6 +70,7 @@ Fill out the form inputs and submit them to the ACS URL in the iframe.
    // Set the form input value to the object,
    // base64url-encode the data.
    // Notice: You have to define base64url() yourself.
+   // Warning: The Base64-URL value must not be padded with '='
    document.getElementById('creq').value =
     base64url(creq);
 

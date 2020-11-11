@@ -93,6 +93,7 @@ This form can be submitted using the following JavaScript:
    // 2. Base64-URL encode it
    // 3. Store the value in the form input tag
    // Notice: You have to define base64url() yourself.
+   // Warning: The Base64-URL value must not be padded with '='
    document.getElementById('threeDSMethodData').value =
     base64url(JSON.stringify(threeDSMethodData));
 
@@ -112,11 +113,10 @@ The POST body will contain the value ``threeDSMethodData``,  which can used to
 identify the request.
 An example ``application/x-www-form-urlencoded`` body:
 
-
 .. code-block::
 
 
-   threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ==
+   threeDSMethodData=eyJ0aHJlZURTTWV0aG9kRGF0YSI6ICJkNDYxZjEwNS0xNzkyLTQwN2YtOTVmZi05YTQ5NmZkOTE4YTkifQ
 
 The value is Base64-URL encoded and decodes to:
 

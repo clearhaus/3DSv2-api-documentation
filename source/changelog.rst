@@ -19,6 +19,26 @@ November 11th, 2020
 #. Mention that ``browserColorDepth`` is not always valid by specifiction, provide solution
 #. Update :ref:`preauth <preauth-success>` timeout that has been changed from 30, to 80 seconds.
 #. Improve text in ``threeDSRequestorChallengeInd`` description in reference.
+#. The sandbox has historically handled Base64-URL encoding wrong, since it has required the
+   ``CReq`` values received to include padding, while allowing both with and without padding
+   for the 3DS Method input.
+
+   EMVCo has clarified that Base64-URL encoding *must not* include padding.
+   Currently for both ``CReq`` and 3DS Method, padding is allowed but not required.
+   In January 2021, the sandbox will be changed to disallow padding, requests that include
+   padding will then fail.
+
+   It is suggested that you remove padding the mentioned requests at your leisure, but sooner
+   rather than later.
+
+   The pages described both the challenge flow and 3DS Method has been updated to mention that
+   padding is not allowed.
+
+   Your system _should_ be able to receive messages both with and without padding, until
+   further updates from EMVCo.
+   Currently the sandbox uses padding in the challenge responses (``CRes``) messages.
+   This will be true until January, to ensure that your systems are compatible
+   and don't reject messages with padding.
 
 September 17th, 2020
 ********************
