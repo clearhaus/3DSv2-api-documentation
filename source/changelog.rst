@@ -18,6 +18,7 @@ November 11th, 2020
 #. Clarify that ``cardholderName`` must be ASCII
 #. Mention that ``browserColorDepth`` is not always valid by specifiction, provide solution
 #. Update :ref:`preauth <preauth-success>` timeout that has been changed from 30, to 80 seconds.
+#. Improve text in ``threeDSRequestorChallengeInd`` description in reference.
 
 September 17th, 2020
 ********************
