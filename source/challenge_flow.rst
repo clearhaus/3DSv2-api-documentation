@@ -110,8 +110,8 @@ Here ``transStatus`` will be either ``Y`` or ``N``. You can use the
 Handling timeouts
 *****************
 
-1. You have 30 seconds from receiving the authentication response to initiate
-   the challenge.
+1. You have 30 seconds from receiving the :ref:`authentication response
+   <auth-usage>` to initiate the challenge.
 2. Each interaction in the challenge window has a 10 minute timeout. So the
    cardholder can take at least 10 minutes to complete the challenge.
 
