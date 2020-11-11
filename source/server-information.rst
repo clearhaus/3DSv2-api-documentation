@@ -16,13 +16,23 @@ Connecting to the server
 Supported card schemes
 ======================
 
-+-----------------+--------------------------------------------------------------+
-| Card Scheme     | Program name                                                 |
-+=================+==============================================================+
-| Mastercard      | Mastercard Identity Check (previously Mastercard SecureCode) |
-+-----------------+--------------------------------------------------------------+
-| Visa            | Visa Secure (previously Verified by Visa)                    |
-+-----------------+--------------------------------------------------------------+
++------------------+--------------------------------------------------------------+
+| Card Scheme      | Program name                                                 |
++==================+==============================================================+
+| Mastercard       | Mastercard Identity Check (previously Mastercard SecureCode) |
++------------------+--------------------------------------------------------------+
+| Visa             | Visa Secure (previously Verified by Visa)                    |
++------------------+--------------------------------------------------------------+
+| Discover/Diners  | ProtectBuy                                                   |
++------------------+--------------------------------------------------------------+
+| American Express | SafeKey                                                      |
++------------------+--------------------------------------------------------------+
+| JCB              | J/Secure 2.0                                                 |
++------------------+--------------------------------------------------------------+
+| Dankort/FBF      | Secured By Nets, EMV SBN                                     |
++------------------+--------------------------------------------------------------+
+| UPI [#f1]_       | UnionPay 3-D Secure                                          |
++------------------+--------------------------------------------------------------+
 
 Versions supported
 ================================
@@ -68,3 +78,8 @@ Authenticating requests
     content-length: 15
 
     Invalid API Key
+
+.. rubric:: FootNotes
+
+.. [#f1] We are currently waiting for a 3rd part before UPI will issue us productoin certificates.
+         We expect to be able to exchange certificates late November 2020.

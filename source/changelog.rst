@@ -11,6 +11,11 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+November 11th, 2020
+*******************
+
+#. Update list of supported card schemes
+
 September 17th, 2020
 ********************
 
