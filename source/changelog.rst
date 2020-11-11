@@ -17,6 +17,7 @@ November 11th, 2020
 #. Update list of supported card schemes
 #. Clarify that ``cardholderName`` must be ASCII
 #. Mention that ``browserColorDepth`` is not always valid by specifiction, provide solution
+#. Update :ref:`preauth <preauth-success>` timeout that has been changed from 30, to 80 seconds.
 
 September 17th, 2020
 ********************
