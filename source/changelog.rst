@@ -34,7 +34,7 @@ November 11th, 2020
    The pages described both the challenge flow and 3DS Method has been updated to mention that
    padding is not allowed.
 
-   Your system _should_ be able to receive messages both with and without padding, until
+   Your system *should* be able to receive messages both with and without padding, until
    further updates from EMVCo.
    Currently the sandbox uses padding in the challenge responses (``CRes``) messages.
    This will be true until January, to ensure that your systems are compatible
