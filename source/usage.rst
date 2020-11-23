@@ -63,10 +63,7 @@ API Usage
    - Determine if card is enrolled in 3-D Secure v2
    - Determine 3-D Secure v2 protocol version (``v2.1.0`` or ``v2.2.0``)
 
-2. Perform :ref:`3DS Method <3ds_method>` if ``threeDSMethodURL`` was
-   included in the ``/preauth`` response.
-
-3. Perform an authentication using the :ref:`auth-usage` call.
+2. Perform an authentication using the :ref:`auth-usage` call.
 
 .. toctree::
    :maxdepth: 2
