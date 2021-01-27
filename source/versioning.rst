@@ -11,6 +11,14 @@ There are currently three 3-D Secure versions, ``1.0.2``, ``2.1.0`` and ``2.2.0`
    <specification_220.html#attr-cardRangeData-acsInfoInd>`_) is included, this
    indicates if ACS supports challenges or only attempts.
 
-   To select between ``2.1.0`` and ``2.2.0``, use the highest supported version
-   between ``dsEndProtocolVersion`` and ``acsEndProtocolVersion``, and the
-   versions your implementation supports.
+   To select between ``2.1.0`` and ``2.2.0``, we suggest using the highest version
+   that all parties support, including your implementation. Exemplified:
+
+   - If ``dsEndProtocolVersion: 2.2.0`` and ``acsEndProtocolVersion: 2.1.0``, then the ACS
+     does not support ``2.2.0`` and you must use ``2.1.0``
+
+   - It would be safe to use ``2.2.0`` if ``dsEndProtocolVersion: 2.2.0`` and
+     ``acsEndProtocolVersion: 2.2.0``
+
+   - If ``acsStartProtocolVersion: 2.2.0`` and ``acsEndProtocolVersion: 2.2.0``, then the ACS
+     is not able to receive messages with protocol version ``2.1.0``
