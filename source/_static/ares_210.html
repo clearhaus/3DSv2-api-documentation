@@ -220,15 +220,15 @@ Channels:
 <div class='argdesc'><div class='description'>Contains the JWS object (represented as a string) created by the ACS for the ARes message.</div>
 <div class='conditions'>
 <div class=''>
-Required if transStatus is "C"<br>Required if deviceChannel is "01"<br></div>
+Required if transStatus is "C" and deviceChannel is "01"<br></div>
 <div class='hidden' deviceChannel='01'>
 Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if transStatus is "C"<br>Required if deviceChannel is "01"<br></div>
+Required if transStatus is "C" and deviceChannel is "01"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
 Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if transStatus is "C"<br>Required if deviceChannel is "01"<br></div>
+Required if transStatus is "C" and deviceChannel is "01"<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='02'>
 Required if transStatus is "C"<br></div>
 </div></div>
@@ -326,15 +326,15 @@ Channels:
 <div class='argdesc'><div class='description'>Fully qualified URL of the ACS to be used for the challenge. 02-BRW—3DS Requestor will post the CReq to this URL via the challenge window</div>
 <div class='conditions'>
 <div class=''>
-Required if deviceChannel is "02"<br>Required if transStatus is "C"<br></div>
+Required if deviceChannel is "02" and transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='02'>
 Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='01'>
-Required if deviceChannel is "02"<br>Required if transStatus is "C"<br></div>
+Required if deviceChannel is "02" and transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='01'>
 Required if transStatus is "C"<br></div>
 <div class='hidden' messageCategory='02'>
-Required if deviceChannel is "02"<br>Required if transStatus is "C"<br></div>
+Required if deviceChannel is "02" and transStatus is "C"<br></div>
 <div class='hidden' deviceChannel='02' messageCategory='02'>
 Required if transStatus is "C"<br></div>
 </div></div>
@@ -481,13 +481,13 @@ Channels:
 <div class='argdesc'><div class='description'>Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication Value may be used to provide proof of authentication.</div>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
+Required if messageCategory is "01" and transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
+Required if messageCategory is "01" and transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
+Required if messageCategory is "01" and transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01"<br>Required if transStatus is one of [Y, A]<br></div>
+Required if messageCategory is "01" and transStatus is one of [Y, A]<br></div>
 <div class='hidden' messageCategory='01'>
 Required if transStatus is one of [Y, A]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
@@ -1156,13 +1156,13 @@ Channels:
 </table>
 <div class='conditions'>
 <div class=''>
-Required if messageCategory is "01"<br>Required if transStatus is one of [N, U, R]<br></div>
+Required if messageCategory is "01" and transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='01'>
-Required if messageCategory is "01"<br>Required if transStatus is one of [N, U, R]<br></div>
+Required if messageCategory is "01" and transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='02'>
-Required if messageCategory is "01"<br>Required if transStatus is one of [N, U, R]<br></div>
+Required if messageCategory is "01" and transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='03'>
-Required if messageCategory is "01"<br>Required if transStatus is one of [N, U, R]<br></div>
+Required if messageCategory is "01" and transStatus is one of [N, U, R]<br></div>
 <div class='hidden' messageCategory='01'>
 Required if transStatus is one of [N, U, R]<br></div>
 <div class='hidden' deviceChannel='01' messageCategory='01'>
