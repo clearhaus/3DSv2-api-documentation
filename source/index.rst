@@ -60,9 +60,8 @@ Competitive pricing
   We offer plans you can grow with. Our pricing is aimed at both low scale
   users as well as high scale enterprise users.
 
-Dedicated dashboard (under development)
-  Use our dedicated dashboard to gain insight into
-  your 3-D Secure usage.
+Dashboard
+  Use our dashboard to gain insight into your 3-D Secure usage.
 
 Devoted team
   We take pride in our job and are dedicated to providing a great service.
