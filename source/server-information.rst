@@ -31,7 +31,7 @@ Supported card schemes
 +------------------+--------------------------------------------------------------+
 | Dankort/FBF      | Secured By Nets, EMV SBN                                     |
 +------------------+--------------------------------------------------------------+
-| UPI [#f1]_       | UnionPay 3-D Secure                                          |
+| UPI              | UnionPay 3-D Secure                                          |
 +------------------+--------------------------------------------------------------+
 
 Versions supported
@@ -81,6 +81,3 @@ Authenticating requests
     Invalid API Key
 
 .. rubric:: FootNotes
-
-.. [#f1] We are currently waiting for a 3rd part before UPI will issue us productoin certificates.
-         We expect to be able to exchange certificates late November 2020.
