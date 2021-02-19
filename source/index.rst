@@ -43,7 +43,7 @@ Candidates for integrating with this service:
 Why choose this service by **3dsecure.io**?
 ===========================================
 
-We believe our service is a great product! Let us list a few reasons why.
+We believe our service is a great product, let us list a few reasons why.
 
 Developed to have no downtime
   Updates and deployments have been engineered to have no downtime
