@@ -26,7 +26,8 @@ This near-pseudocode describes the flow your code should perform.
        :caption: /preauth example input, same for versions 2.1.0 and 2.2.0
 
        {
-         "acctNumber": "9171598723598723"
+         "acctNumber": "4111111111111111",
+         "ds": "visa"
        }
 
 2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
