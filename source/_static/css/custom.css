@@ -192,7 +192,7 @@ footer a.btn:hover {
 }
 
 /* Style the anchor used for attributes */
-td.attribute > a.link {
+div.attribute-name > a.link {
   visibility: hidden;
   font-family: FontAwesome; /* Used for the chain icon */
   font-weight: normal;
@@ -200,11 +200,11 @@ td.attribute > a.link {
   vertical-align: middle;
 }
 
-td.attribute > a.link:after {
+div.attribute-name > a.link:after {
   content: "\f0c1"; /* This becomes a chain in font-awesome */
 }
 
-td.attribute:hover > a.link {
+div.attribute-name:hover > a.link {
   visibility: visible;
   text-decoration: none; /* Remove the underline when hovering over it */
 }
