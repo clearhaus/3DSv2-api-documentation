@@ -84,6 +84,8 @@ something like:
     {
       "acsStartProtocolVersion": "2.1.0",
       "acsEndProtocolVersion": "2.2.0",
+      "dsStartProtocolVersion": "2.1.0",
+      "dsEndProtocolVersion": "2.2.0",
       "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
       "threeDSMethodURL": "https://acs.tld/3dsmethod"
     }
