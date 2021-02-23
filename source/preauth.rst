@@ -103,7 +103,8 @@ something like:
 BIN not enrolled error
 ======================
 
-When the card number is not enrolled by a known card scheme, the response will be:
+When the card number is not enrolled by a known card scheme, the response will
+look like:
 
 .. code-block:: json
   :linenos:
