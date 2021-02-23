@@ -114,7 +114,7 @@ look like:
     "errorCode": "305",
     "errorComponent": "S",
     "errorDescription": "Unknown BIN",
-    "errorDetail": "BIN not enrolled by any known scheme",
+    "errorDetail": "No CRD found, card with BIN ****** is not enrolled with any known DS",
     "messageVersion": "2.2.0"
   }
 
