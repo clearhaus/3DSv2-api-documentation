@@ -3552,7 +3552,18 @@ threeDSServerTransID<a class='link' href='#attr-AReq-threeDSServerTransID' title
 string</div></div>
 <div categories='PA NPA' channels='APP BRW 3RI' class='row-even attribute-details'><div class='arg'>
 <div class='argdef'>
-<div class='inclusion'>Required</div>
+<div class='inclusion'><div class='dynamic'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01'>Optional</div>
+<div class='hidden dynamic' deviceChannel='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03'>Optional</div>
+<div class='hidden dynamic' messageCategory='01'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='01'>Optional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='01'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='01'>Optional</div>
+<div class='hidden dynamic' messageCategory='02'>Conditional</div>
+<div class='hidden dynamic' deviceChannel='01' messageCategory='02'>Optional</div>
+<div class='hidden dynamic' deviceChannel='02' messageCategory='02'>Required</div>
+<div class='hidden dynamic' deviceChannel='03' messageCategory='02'>Optional</div></div>
 <div class='requirements'>
 <div class='format'>
 Format:
@@ -3575,7 +3586,15 @@ Channels:
 </div>
 </div>
 </div>
-<div class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div></div>
+<div class='argdesc'><div class='description'>Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction.</div>
+<div class='conditions'>
+<div class=''>
+Required if deviceChannel is "02"<br></div>
+<div class='hidden' messageCategory='01'>
+Required if deviceChannel is "02"<br></div>
+<div class='hidden' messageCategory='02'>
+Required if deviceChannel is "02"<br></div>
+</div></div>
 </div></div>
 <div categories='PA NPA' channels='3RI' class='row-odd attribute-header' id='attr-AReq-threeRIInd'><div class='attribute-name'>
 threeRIInd<a class='link' href='#attr-AReq-threeRIInd' title='Permalink to this attribute'></a>
