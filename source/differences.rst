@@ -38,6 +38,7 @@ New data elements
    - ``browserJavascriptEnabled``
    - ``whiteListStatus``
    - ``whiteListStatusSource``
+   - ``payTokenSource``
 
 ``ARes``
    - ``acsDecConInd``
@@ -61,6 +62,13 @@ Modified data elements
    - ``browserTZ``
    - ``browserColorDepth``
    - ``purchaseInstalData``
+   - ``purchaseAmount``
+   - ``purchaseExponent``
+   - ``purchaseCurrency``
+   - ``purchaseDate``
+   - ``transType``
+   - ``recurringExpiry``
+   - ``recurringFrequency``
 
 ``ARes``
    - ``acsChallengeMandated``
