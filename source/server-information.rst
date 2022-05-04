@@ -59,8 +59,10 @@ Allowed characters
   ``cardholderName``.
 
   Currently the ``2.1.0`` and ``2.2.0`` specifications only support ASCII
-  characters. There are indications that this may change in ``2.3.0``  (we've
-  heard rumors the specification should arrive late 2020).
+  characters.
+  The ``2.3.0.0`` specification has removed any character requirements for
+  ``cardholderName``, indicating that all ``utf-8`` characters are allowed.
+  It remains unclear if card schemes will allow ``utf-8`` characters.
 
 Authenticating requests
   Access to the service is granted by an API key. The API key is used on each
