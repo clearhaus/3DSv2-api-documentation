@@ -31,7 +31,7 @@ jobs:
           s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --delete
           aws cloudfront create-invalidation --distribution-id E7TJBG3FUU0TD --paths '/3dsv2/*'
 
-      - name: Deploy to AWS
+      - name: Deploy to AWS - Dry-run
         if: ${{ github.ref != 'refs/heads/master' }}
         run: |
           aws s3 sync $BUILD_DIR \
