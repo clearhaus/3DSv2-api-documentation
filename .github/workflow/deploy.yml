@@ -1,0 +1,38 @@
+name: Deploy
+on:
+  - push
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: eu-west-1
+      BUILD_DIR: build
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.6'
+
+      - name: Install
+        run: pip install sphinx_rtd_theme sphinx
+
+      - name: Build
+        run: sphinx-build -b html source $BUILD_DIR
+
+      - name: Install AWS Cli
+        run: pip install awscli
+
+      - name: Deploy to AWS
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: |
+          aws s3 sync $BUILD_DIR \
+          s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --delete
+          aws cloudfront create-invalidation --distribution-id E7TJBG3FUU0TD --paths '/3dsv2/*'
+
+      - name: Deploy to AWS
+        if: ${{ github.ref != 'refs/heads/master' }}
+        run: |
+          aws s3 sync $BUILD_DIR \
+          s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --dryrun --delete
