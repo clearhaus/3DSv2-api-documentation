@@ -26,6 +26,9 @@ jobs:
 
       - name: Deploy to AWS
         if: ${{ github.ref == 'refs/heads/master' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws s3 sync $BUILD_DIR \
           s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --delete
@@ -33,6 +36,9 @@ jobs:
 
       - name: Deploy to AWS - Dry-run
         if: ${{ github.ref != 'refs/heads/master' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws s3 sync $BUILD_DIR \
           s3://clrhs-prod-nonpci-docs-3dsecure-io/3dsv2 --dryrun --delete
