@@ -10,15 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.6'
-
-      - name: Install
-        run: pip install sphinx_rtd_theme sphinx
-
       - name: Build
-        run: sphinx-build -b html source $BUILD_DIR
+        run: make
 
       - name: Install AWS Cli
         run: pip install awscli
