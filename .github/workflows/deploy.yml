@@ -12,7 +12,7 @@ jobs:
         run: |
           mkdir build
           chmod 777 build
-          make
+          docker run --rm -v $PWD:/opt -w /opt -e USER_ID=$UID ddidier/sphinx-doc:2.2.1-1 sphinx-build -b html source build
 
       - name: Install AWS Cli
         run: pip install awscli
