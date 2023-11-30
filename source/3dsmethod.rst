@@ -139,3 +139,4 @@ authentication with the :ref:`auth-usage`, setting `3DS Completion indicator
 <specification_210.html#attr-AReq-threeDSCompInd>`_ to ``"N"``.
 
 .. _3DS Method URL: reference.html#attr-cardRangeData-threeDSMethodURL
+.. _3DS Method failure:
