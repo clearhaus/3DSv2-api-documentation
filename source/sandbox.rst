@@ -202,9 +202,15 @@ Read :ref:`postauth usage <postauth-usage>` for understanding how to fetch chall
       - Manual challenge with `transStatus` `Y` or `N`
       - `transStatus` `C` in `ARes` see `ARes outcome`_
 
-********
+*****
+Error
+*****
+
+If the last four digits do not match any of the given test cases above, an error will be given.
+
+****************
 Browser Examples
-********
+****************
 
 .. list-table:: Browser testcases
     :header-rows: 1
