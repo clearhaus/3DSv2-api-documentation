@@ -6,11 +6,10 @@ Sandbox Testcases
 
 The sandbox contains a list of test cases meant to assist you in
 implementation.
-More testcases can be added on demand.
 
 It is also the intension that you can use the sandbox for automatic integration
-testing of your service. We will not modify individual test cases and will
-deprecate them with a sufficient grace period, if need be.
+testing of your service. We will not modify individual test cases. If need be,
+we can deprecate them with a sufficient grace period.
 
 The 3-D Secure server sandbox validates input according to the specification.
 
@@ -40,336 +39,227 @@ For all these tests:
   4. Fetch the challenge result using the :ref:`postauth endpoint <postauth-usage>` if relevant.
 
 The ``/auth`` :ref:`browser example input <browser_example>` is usable for all
-cases. Just change the ``acctNumber`` or ``purchaseAmount`` where needed.
+cases. Just change the last four digit in ``acctNumber`` where needed.
 
-Message Version ``2.1.0``
--------------------------
 
-These tests have a :ref:`preauth <preauth-usage>` response with
-``acsEndProtocolVersion: 2.1.0``.  This means your system should automatically
-fall back to using verson ``2.1.0``.
+Message version
+---------------
 
-Sending ``messageVersion: 2.2.0`` with these PANs will result in an error.
+This section determines the outcome of the :ref:`preauth <preauth-usage>`. The response is with
+``acsEndProtocolVersion: 2.1.0`` and/or ``acsEndProtocolVersion: 2.2.0``.  This means your system should automatically
+be able to determine ``messageVersion``.
+Sending a wrong ``messageVersion`` will result in an error.
 
-.. list-table:: Browser testcases
-   :header-rows: 1
-   :widths: 20, 10, 25, 45
+Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
 
-   * - Testname
-     - Trigger PAN
-     - Success criteria
-     - What's being tested in your system
-
-   * - 3DS Method timeout
-     - ``9000100411111111``
-     - ``ARes`` with ``transStatus: Y``
-     - The ``threeDSCompInd`` being set correctly
-
-   * - Frictionless 3DS Method
-     - ``9000100511111111``
-     - ``ARes`` with ``transStatus: Y``
-     - Frictionless authentication with 3DS Method
-
-   * - Frictionless no 3DS Method
-     - ``9000100611111111``
-     - ``ARes`` with ``transStatus: Y``
-     - Frictionless authentication without 3DS Method
-
-   * - Manual challenge
-     - ``9000100811111111``
-     - ``RReq`` with ``transStatus: Y`` or ``N``
-     - Challenge authentication with 3DS method
-
-   * - Automatic Challenge pass
-     - ``9000100911111111``
-     - ``RReq`` with ``transStatus: Y``
-     - Successful challenge authentication with 3DS method
-
-       The challenge will auto-submit using JavaScript
-
-   * - Automatic Challenge fail
-     - ``9000101011111111``
-     - ``RReq`` with ``transStatus: N``
-     - Failed challenge authentication with 3DS Method
-
-       The challenge will auto-submit using JavaScript
-
-   * - Automatic Challenge pass
-     - ``9000101111111111``
-     - ``RReq`` with ``transStatus: Y``
-     - Successful challenge authentication without 3DS method
-
-       The challenge will auto-submit using JavaScript
-
-   * - Frictionless ``N``
-     - ``9000105001111111``
-     - ``ARes`` with ``transStatus: N``
-     - Frictionless authentication failure
-
-   * - Frictionless ``U``
-     - ``9000105041111111``
-     - ``ARes`` with ``transStatus: U``
-     - Frictionless authentication failure
-
-   * - Frictionless ``R``
-     - ``9000105071111111``
-     - ``ARes`` with ``transStatus: R``
-     - Frictionless authentication failure
-
-   * - Frictionless ``A``
-     - ``9000105611111111``
-     - ``ARes`` with ``transStatus: A``
-     - Frictionless authentication attempt
-
-   * - Frictionless ``cardholderInfo``
-     - ``9000105111111111``
-     - ``ARes`` with ``transStatus: N``
-     - Correctly displaying ``cardholderInfo`` to the cardholder
-
-   * - DS Timeout
-     - ``9000105311111111``
-     - ``Erro`` with ``errorCode: 405``
-     - Correct handling of DS timeout
-
-Message Version ``2.2.0``
--------------------------
-
-These tests have a :ref:`preauth <preauth-usage>` response with
-``acsEndProtocolVersion: 2.2.0``.  If your system supports version ``2.2.0``,
-you can use these testcases to verify that your system automatically upgrades
-to version ``2.2.0``.
-
-Sending ``messageVersion: 2.1.0`` with these PANs will result in an error.
 
 .. list-table:: Browser testcases
-   :header-rows: 1
-   :widths: 20, 10, 25, 45
+    :header-rows: 1
+    :widths: 20, 10, 25, 45
 
-   * - Testname
-     - Trigger PAN
-     - Success criteria
-     - What's being tested in your system
+    * - First digit
+      - PAN last 4
+      - Description
+      - Requirements
 
-   * - 3DS Method timeout
-     - ``9001100411111111``
-     - ``ARes`` with ``transStatus: Y``
-     - The ``threeDSCompInd`` being set correctly
+    * - 0
+      - 0xxx
+      - Range `messageVersion` `2.1` and `2.2`
+      - n/a
 
-   * - Frictionless 3DS Method
-     - ``9001100511111111``
-     - ``ARes`` with ``transStatus: Y``
-     - Frictionless authentication with 3DS Method
+    * - 1
+      - 1xxx
+      - `messageVersion` `2.1`
+      - n/a
 
-   * - Frictionless no 3DS Method
-     - ``9001100611111111``
-     - ``ARes`` with ``transStatus: Y``
-     - Frictionless authentication without 3DS Method
+    * - 2
+      - 2xxx
+      - `messageVersion` `2.2`
+      - n/a
 
-   * - Manual challenge
-     - ``9001100811111111``
-     - ``RReq`` with ``transStatus: Y`` or ``N``
-     - Challenge authentication with 3DS method
+3DS Method
+-----------
 
-   * - Automatic Challenge pass
-     - ``9001100911111111``
-     - ``RReq`` with ``transStatus: Y``
-     - Successful challenge authentication with 3DS method
+If 3DS Method URL is included in the :ref:`preauth <preauth-usage>` endpoint response, the 3DS method must be invoked as explained in this guide
+:ref:`3DS Method Invocation <3ds_method>`.
 
-       The challenge will auto-submit using JavaScript
-
-   * - Automatic Challenge fail
-     - ``9001101011111111``
-     - ``RReq`` with ``transStatus: N``
-     - Failed challenge authentication with 3DS Method
-
-       The challenge will auto-submit using JavaScript
-
-   * - Automatic Challenge pass
-     - ``9001101111111111``
-     - ``RReq`` with ``transStatus: Y``
-     - Successful challenge authentication without 3DS method
-
-       The challenge will auto-submit using JavaScript
-
-   * - Frictionless ``N``
-     - ``9001105001111111``
-     - ``ARes`` with ``transStatus: N``
-     - Frictionless authentication failure
-
-   * - Frictionless ``U``
-     - ``9001105041111111``
-     - ``ARes`` with ``transStatus: U``
-     - Frictionless authentication failure
-
-   * - Frictionless ``R``
-     - ``9001105071111111``
-     - ``ARes`` with ``transStatus: R``
-     - Frictionless authentication failure
-
-   * - Frictionless ``A``
-     - ``9001105611111111``
-     - ``ARes`` with ``transStatus: A``
-     - Frictionless authentication attempt
-
-   * - Frictionless ``cardholderInfo``
-     - ``9001105111111111``
-     - ``ARes`` with ``transStatus: N``
-     - Correctly displaying ``cardholderInfo`` to the cardholder
-
-   * - DS Timeout
-     - ``9001105311111111``
-     - ``Erro`` with ``errorCode: 405``
-     - Correct handling of DS timeout
-
-Scheme test PANs
-----------------
-
-To allow for integration testing with your authorization system, three
-different PANs exist in the sandbox.
-
-These cards support versions ``2.1.0`` and ``2.2.0``. You need to force
-``2.1.0`` if your system automatically upgrades to ``2.2.0``.
-
-.. list-table:: Scheme PAN testcases
-   :header-rows: 1
-   :widths: 20, 20, 20, 40
-
-   * - Testname
-     - Trigger PAN
-     - Trigger Amount
-     - Success criteria
-
-   * - Manual Challenge
-     - ``2221000000000009``
-
-       ``4111111111111111``
-
-       ``5500000000000004``
-     - ``20000``
-     - ``RReq`` with ``transStatus``  ``Y`` or ``N``
-
-   * - Frictionless ``Y``
-     - ``2221000000000009``
-
-       ``4111111111111111``
-
-       ``5500000000000004``
-     - ``20001``
-     - ``ARes`` with ``transStatus``  ``Y``
-
-   * - Frictionless ``N``
-     - ``2221000000000009``
-
-       ``4111111111111111``
-
-       ``5500000000000004``
-     - ``20002``
-     - ``ARes`` with ``transStatus``  ``N``
-
-   * - Frictionless ``A``
-     - ``2221000000000009``
-
-       ``4111111111111111``
-
-       ``5500000000000004``
-     - ``20003``
-     - ``ARes`` with ``transStatus``  ``A``
-
-   * - Automatic challenge pass
-     - ``2221000000000009``
-
-       ``4111111111111111``
-
-       ``5500000000000004``
-     - ``20004``
-     - ``RReq`` with ``transStatus``  ``Y``
-
-   * - Automatic challenge fail
-     - ``2221000000000009``
-
-       ``4111111111111111``
-
-       ``5500000000000004``
-     - ``20005``
-     - ``RReq`` with ``transStatus`` ``N``
-
-*********
-3RI Tests
-*********
-
-These tests involve ``deviceChannel: 03``. This must be set in all
-authentication requests.
-The ``/auth`` :ref:`3RI example input <threeri_example>` is usable for all
-cases. Just change the ``acctNumber`` where needed.
-
-For all these tests: Perform a regular :ref:`auth request <auth-usage>`.
-The ``/preauth`` call is optional. Any ``threeDSServerTransID`` received from
-it will not be used in a final 3DS Requestor Initiated transaction.
-
-Message Version ``2.1.0``
--------------------------
-
-Sending ``messageVersion: 2.2.0`` with these PANs will result in an error.
+Read :ref:`3DS Method failure <3DS Method failure>` if the 3DS method has a timeout.
 
 .. list-table:: Browser testcases
-   :header-rows: 1
-   :widths: 20, 10, 25, 45
+    :header-rows: 1
+    :widths: 20, 10, 25, 45
 
-   * - Testname
-     - Trigger PAN
-     - Success criteria
-     - What's being tested in your system
+    * - Second digit
+      - PAN last 4
+      - Description
+      - Requirements
 
-   * - Frictionless ``Y``
-     - ``9000110511111111``
-     - ``ARes`` with ``transStatus: Y``
-     - Correctly sending a 3RI request
+    * - 0
+      - x0xx
+      - With 3DS method included
+      - n/a
 
-   * - Frictionless ``A``
-     - ``9000110611111111``
-     - ``ARes`` with ``transStatus: A``
-     - Correctly sending a 3RI request
+    * - 1
+      - x1xx
+      - With 3DS method missing
+      - n/a
 
-   * - Frictionless ``U``
-     - ``9000110711111111``
-     - ``ARes`` with ``transStatus: U``
-     - Correctly sending a 3RI request
+    * - 2
+      - x2xx
+      - With 3DS method timeout
+      - n/a
 
-   * - Frictionless ``R``
-     - ``9000110811111111``
-     - ``ARes`` with ``transStatus: R``
-     - Correctly sending a 3RI request
 
-Message Version ``2.2.0``
--------------------------
+ARes outcome
+-------------
 
-Sending ``messageVersion: 2.1.0`` with these PANs will result in an error.
+This section determines the outcome of the ARes.
+
+Read :ref:`Auth usage <auth-usage>` to understand the flow.
 
 .. list-table:: Browser testcases
-   :header-rows: 1
-   :widths: 20, 10, 25, 45
+    :header-rows: 1
+    :widths: 20, 10, 25, 45
 
-   * - Testname
-     - Trigger PAN
-     - Success criteria
-     - What's being tested in your system
+    * - Third digit
+      - PAN last 4
+      - Description
+      - Requirements
 
-   * - Frictionless ``Y``
-     - ``9001110511111111``
-     - ``ARes`` with ``transStatus: Y``
-     - Correctly sending a 3RI request
+    * - 0
+      - xx03
+      - Frictionless `transStatus` `Y`
+      - n/a
 
-   * - Frictionless ``A``
-     - ``9001110611111111``
-     - ``ARes`` with ``transStatus: A``
-     - Correctly sending a 3RI request
+    * - 1
+      - xx13
+      - Frictionless `transStatus` `N`
+      - n/a
 
-   * - Frictionless ``U``
-     - ``9001110711111111``
-     - ``ARes`` with ``transStatus: U``
-     - Correctly sending a 3RI request
+    * - 2
+      - xx23
+      - Frictionless `transStatus` `A`
+      - n/a
 
-   * - Frictionless ``R``
-     - ``9001110811111111``
-     - ``ARes`` with ``transStatus: R``
-     - Correctly sending a 3RI request
+    * - 3
+      - xx33
+      - Frictionless `transStatus` `R`
+      - n/a
+
+    * - 4
+      - xx43
+      - Frictionless `transStatus` `I`
+      - only supported with `messageVersion 2.2`
+
+    * - 5
+      - xx53
+      - Frictionless `transStatus` `U`
+      - n/a
+
+    * - 6
+      - xx63
+      - DS timeout
+      - n/a
+
+    * - 7
+      - xx7x
+      - `transStatus` `C`
+      - Complete the `Challenge flow`_
+
+
+
+Challenge flow
+---------------
+
+This section determines the outcome of the challenge flow.
+
+The challenge flow must be invoked as explained in this guide :ref:`Challenge flow guide <3ds_challenge_flow>`.
+After the challenge flow invoke ``/postauth`` to fetch the challenge result.
+
+Read :ref:`postauth usage <postauth-usage>` for understanding how to fetch challenge result.
+
+.. list-table:: Browser testcases
+    :header-rows: 1
+    :widths: 20, 10, 25, 45
+
+    * - Fourth digit
+      - PAN last 4
+      - Description
+      - Requirements
+
+    * - 0
+      - xx70
+      - Challenge flow automatically passes `transStatus` `Y`
+      - `transStatus` `C` in `ARes` see `ARes outcome`_
+
+    * - 1
+      - xx71
+      - Challenge flow automatically fails  `transStatus` `N`
+      - `transStatus` `C` in `ARes` see `ARes outcome`_
+
+    * - 2
+      - xx72
+      - Manual challenge with `transStatus` `Y` or `N`
+      - `transStatus` `C` in `ARes` see `ARes outcome`_
+
+*****
+Error
+*****
+
+If the last four digits do not match any of the given test cases above, an error will be given.
+
+****************
+Browser Examples
+****************
+
+.. list-table:: Browser testcases
+    :header-rows: 1
+    :widths: 20, 10, 15, 25, 45
+
+    * - Testname
+      - PAN example
+      - PAN last 4
+      - Success criteria
+      - What's being tested in your system
+
+    * - 3DS Method timeout ``messageVersion 2.1 - 2.2``
+      - ``5000100411110203``
+      - ``0203``
+      - ``ARes`` with ``transStatus: Y``
+      - The ``threeDSCompInd`` being set correctly
+
+
+    * - Frictionless 3DS Method ``messageVersion 2.2``
+      - ``4000100511112003``
+      - ``2003``
+      - ``ARes`` with ``transStatus: Y``
+      - Frictionless authentication with 3DS Method
+
+    * - Frictionless no 3DS Method ``messageVersion 2.1``
+      - ``6000100611111203``
+      - ``1203``
+      - ``ARes`` with ``transStatus: Y``
+      - Frictionless authentication without 3DS Method
+
+    * - Manual challenge ``messageVersion 2.1``
+      - ``3000100811111072``
+      - ``1072``
+      - ``RReq`` with ``transStatus: Y`` or ``N``
+      - Challenge authentication with 3DS method
+
+    * - Automatic Challenge pass ``messageVersion 2.2``
+      - ``7000100911112070``
+      - ``2070``
+      - ``RReq`` with ``transStatus: Y``
+      - Successful challenge authentication with 3DS method
+
+        The challenge will auto-submit using JavaScript
+
+    * - Automatic Challenge fail ``messageVersion 2.1``
+      - ``3000101011111071``
+      - ``1071``
+      - ``RReq`` with ``transStatus: N``
+      - Failed challenge authentication with 3DS Method
+
+        The challenge will auto-submit using JavaScript
+
