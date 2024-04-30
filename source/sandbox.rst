@@ -237,7 +237,7 @@ Browser Examples
 
     * - Frictionless no 3DS Method ``messageVersion 2.1``
       - ``6000100611111103``
-      - ``1203``
+      - ``1103``
       - ``ARes`` with ``transStatus: Y``
       - Frictionless authentication without 3DS Method
 
