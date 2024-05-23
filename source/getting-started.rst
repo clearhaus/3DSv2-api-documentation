@@ -95,7 +95,8 @@ The following describes the individual points in the diagram:
    request originator is a cardholder using a browser. This is opposed to using a
    SDK or the authentication being Requestor initiated.
 2. The ``/preauth`` response (ref. :ref:`2.1.0 <preauth-response-210>`,
-   :ref:`2.2.0 <preauth-response-220>`) contains:
+   :ref:`2.2.0 <preauth-response-220>`,
+   :ref:`2.3.1.1 <preauth-response-2311>`) contains:
 
    - Information that might be usable in determining whether to fall back to
      3-D Secure v1.
@@ -107,7 +108,7 @@ The following describes the individual points in the diagram:
    the 3-D Secure Server. The Server assembles a ``AReq`` message and transmits
    it to the Directory Server.
 5. The Authentication response (ref. :ref:`2.1.0 <auth-response-210>`,
-   :ref:`2.2.0 <auth-response-210>`) is an ``ARes``, as defined by the
+   :ref:`2.2.0 <auth-response-210>`, :ref:`2.3.1.1 <auth-response-2311>`) is an ``ARes``, as defined by the
    specification.
 
    This ``ARes`` contains either:
@@ -123,7 +124,7 @@ The following describes the individual points in the diagram:
    authentication.
 9. Nominally a ``RReq`` is returned to the Requestor. Parameters are detailed
    in the ``/postauth`` response (ref. :ref:`2.1.0 <postauth-response-210>`,
-   :ref:`2.1.0 <postauth-response-220>`) section.
+   :ref:`2.1.0 <postauth-response-220>`, :ref:`2.3.1.1 <postauth-response-2311>`) section.
 
 Sandbox environment
 ===================
