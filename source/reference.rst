@@ -12,6 +12,7 @@ Reference
    differences
    specification_210
    specification_220
+   specification_2311
    specification_common
 
 :ref:`Version 2.1.0 message specification <specification_210>`
@@ -20,5 +21,8 @@ Reference
 :ref:`Version 2.2.0 message specification <specification_220>`
    The specification for the JSON objects contained in version 2.2.0.
 
+:ref:`Version 2.3.1.1 message specification <specification_2311>`
+   The specification for the JSON objects contained in version 2.3.1.1.
+
 :ref:`Common message specification <specification_common>`
-   The specification for the JSON objects in common between versions 2.1.0 and 2.2.0.
+   The specification for the JSON objects in common between versions 2.1.0 2.2.0 and 2.3.1.1.
