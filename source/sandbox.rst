@@ -46,8 +46,8 @@ Message version
 ---------------
 
 This section determines the outcome of the :ref:`preauth <preauth-usage>`. The response is with
-``acsEndProtocolVersion: 2.1.0`` and/or ``acsEndProtocolVersion: 2.2.0``.  This means your system should automatically
-be able to determine ``messageVersion``.
+``acsEndProtocolVersion: 2.1.0``, ``acsEndProtocolVersion: 2.2.0`` and/or ``acsEndProtocolVersion: 2.3.1``.
+This means your system should automatically be able to determine ``messageVersion``.
 Sending a wrong ``messageVersion`` will result in an error.
 
 Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
@@ -55,7 +55,6 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
 
 .. list-table:: Browser testcases
     :header-rows: 1
-    :widths: 20, 10, 25, 45
 
     * - First digit
       - PAN last 4
@@ -77,6 +76,11 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
       - `messageVersion` `2.2`
       - n/a
 
+    * - 3
+      - 3xxx
+      - `messageVersion` `2.3`
+      - n/a
+
 3DS Method
 -----------
 
@@ -87,7 +91,6 @@ Read :ref:`3DS Method failure <3DS Method failure>` if the 3DS method has a time
 
 .. list-table:: Browser testcases
     :header-rows: 1
-    :widths: 20, 10, 25, 45
 
     * - Second digit
       - PAN last 4
@@ -119,7 +122,6 @@ Read :ref:`Auth usage <auth-usage>` to understand the flow.
 
 .. list-table:: Browser testcases
     :header-rows: 1
-    :widths: 20, 10, 25, 45
 
     * - Third digit
       - PAN last 4
@@ -180,7 +182,7 @@ Read :ref:`postauth usage <postauth-usage>` for understanding how to fetch chall
 
 .. list-table:: Browser testcases
     :header-rows: 1
-    :widths: 20, 10, 25, 45
+    :widths: 20, 15, 25, 40
 
     * - Fourth digit
       - PAN last 4
@@ -214,7 +216,7 @@ Browser Examples
 
 .. list-table:: Browser testcases
     :header-rows: 1
-    :widths: 20, 10, 15, 25, 45
+    :widths: 20, 15, 15, 25, 40
 
     * - Testname
       - PAN example
@@ -262,4 +264,3 @@ Browser Examples
       - Failed challenge authentication with 3DS Method
 
         The challenge will auto-submit using JavaScript
-
