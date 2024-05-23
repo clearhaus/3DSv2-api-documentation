@@ -21,10 +21,10 @@ Comments, pull requests and general feedback is welcome from anyone.
 
 The 3-D Secure v2 specification is defined by EMVCo, their list of 3-D Secure v2
 documentation can be found [on their documentation
-page](https://www.emvco.com/document-search/?action=search_documents&publish_date=&emvco_document_version=&emvco_document_book=&px_search=&emvco_document_technology%5B%5D=3-d-secure).
+page](https://www.emvco.com/specifications/?tax%5Bspecifications_categories%5D%5B32%5D%5B%5D=84&tax%5Bspecifications_categories%5D%5B33%5D%5B%5D=447).
 
-Specifically, the primary documentation can be found in [EMV® 3-D Secure
-Protocol and Core Functions Specification.](https://www.emvco.com/wp-content/uploads/documents/EMVCo_3DS_Spec_v220_122018.pdf)
+Specifically, the primary documentation can be found in named "EMV® 3-D Secure
+Protocol and Core Functions Specification".
 
 The spec is currently at version 2.2.0.
 
