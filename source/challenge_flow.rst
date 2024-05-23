@@ -18,9 +18,8 @@ Initiate the challenge
 **********************
 
 Create a challenge request (CReq: :ref:`2.1.0 <creq-format-210>`, :ref:`2.2.0
-<creq-format-220>`), using the transaction ID's received in the ``/auth``
-response (ref. :ref:`2.1.0 <auth-response-210>`, :ref:`2.1.0
-<auth-response-220>`).
+<creq-format-220>`, :ref:`2.3.1.1 <creq-format-2311>`), using the transaction ID's received in the ``/auth``
+response (ref. :ref:`2.1.0 <auth-response-210>`, :ref:`2.2.0 <auth-response-220>`, :ref:`2.3.1.1 <auth-response-2311>`).
 
 Add an iframe to the users browser, either statically or using JavaScript.
 
@@ -114,7 +113,7 @@ value can include padding.
 
 Here ``transStatus`` will be either ``Y`` or ``N``. You can use the
 :ref:`postauth-usage` to fetch the result of the challenge (ref. :ref:`2.1.0
-<postauth-response-210>`, :ref:`2.2.0 <postauth-response-220>`).
+<postauth-response-210>`, :ref:`2.2.0 <postauth-response-220>`, :ref:`2.3.1.1 <postauth-response-2311>`).
 
 Handling timeouts
 *****************
