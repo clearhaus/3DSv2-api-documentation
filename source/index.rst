@@ -21,7 +21,7 @@ Introduction
 This is the documentation for the 3-D Secure Server provided by `3dsecure.io`_.
 It is a Software as a Service (SaaS) implementation, offering a language-agnostic
 HTTP API integration. This service supports all active versions of 3-D Secure version 2
-(``2.1.0``, ``2.2.0``) and our goal was to make the documentation work on it’s own.
+(``2.1.0``, ``2.2.0``, ``2.3.1``) and our goal was to make the documentation work on it’s own.
 Nevertheless, you may need to refer to the specifications during the implementation.
 
 A 3-D Secure Server is used for *cardholder authentication*. An authentication
@@ -115,6 +115,15 @@ that you do not need to refer to the specification.
 
   * - :download:`EMVCo_3DS_SB214v1.pdf <specifications/EMVCo_3DS_SB214v1.pdf>`
     - Specification Bulletin No. 214 v1 (Cumulative updates to 2.2.0)
+
+  * - :download:`EMVCo_3DS_Spec_v2311.pdf <specifications/EMVCo_3DS_Spec_v2311.pdf>`
+    - Specification 2.3.1.1
+
+  * - :download:`EMVCo_3DS_SDKSpec_v2311.pdf <specifications/EMV_3DS_SDK-Spec_v2.3.1.1_20230530-1.pdf>`
+    - SDK Specification 2.3.1.1
+
+  * - :download:`EMVCo_3DS_SB279v1.pdf <specifications/EMVCo_3DS_SB279v1.pdf>`
+    - Update document describing changes between 2.2.0 and 2.3.1.
 
 Parts involved in 3-D Secure
 ============================
