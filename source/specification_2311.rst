@@ -52,7 +52,7 @@ Input (AReq)
 ------------
 
 .. raw:: html
-  :file: _static/areq_2311.html
+  :file: _static/areq_231.html
 
 .. _auth-response-2311:
 
@@ -60,7 +60,7 @@ Output (ARes)
 -------------
 
 .. raw:: html
-  :file: _static/ares_2311.html
+  :file: _static/ares_231.html
 
 .. _challenge-flow-messages-2311:
 
@@ -69,7 +69,7 @@ Challenge flow
 
 For usage, refer to :ref:`3ds_challenge_flow`.
 
-.. _creq-format-2311:
+.. _creq-format-231:
 
 Challenge request (CReq)
 ------------------------
@@ -83,7 +83,7 @@ Challenge response (CRes)
 -------------------------
 
 .. raw:: html
-  :file: _static/cres_2311.html
+  :file: _static/cres_231.html
 
 .. _postauth-endpoint-2311:
 
@@ -106,7 +106,7 @@ Output (RReq)
 -------------
 
 .. raw:: html
-  :file: _static/rreq_2311.html
+  :file: _static/rreq_231.html
 
 
 Error object
@@ -115,7 +115,7 @@ Error object
 .. _error-object-2311:
 
 .. raw:: html
-  :file: _static/erro_2311.html
+  :file: _static/erro_231.html
 
 Nested objects
 ==============
@@ -124,7 +124,7 @@ ThreeDSRequestorAuthenticationInfo
 ----------------------------------
 
 .. raw:: html
-  :file: _static/threedsrequestorauthenticationinfo_2311.html
+  :file: _static/threedsrequestorauthenticationinfo_231.html
 
 DeviceRenderOptions
 -------------------
