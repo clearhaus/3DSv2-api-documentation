@@ -116,7 +116,7 @@ that you do not need to refer to the specification.
   * - :download:`EMVCo_3DS_SB214v1.pdf <specifications/EMVCo_3DS_SB214v1.pdf>`
     - Specification Bulletin No. 214 v1 (Cumulative updates to 2.2.0)
 
-  * - :download:`EMVCo_3DS_Spec_v2311.pdf <specifications/EMVCo_3DS_Spec_v2311.pdf>`
+  * - :download:`EMVCo_3DS_spec_v2311.pdf <specifications/EMVCo_3DS_spec_v2311.pdf>`
     - Specification 2.3.1.1
 
   * - :download:`EMVCo_3DS_SDKSpec_v2311.pdf <specifications/EMV_3DS_SDK-Spec_v2.3.1.1_20230530-1.pdf>`
