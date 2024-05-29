@@ -1,183 +1,244 @@
-<div class='reference-object'>
-  <div categories='' channels='' class='row-even attribute-header' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData'><div class='attribute-name'>
-    threeDSReqAuthData
-    <a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData' title='Permalink to this attribute'></a>
-  </div>
-  <div class='attribute-type'>
-    json
-  </div></div>
-  <div categories='' channels='' class='row-even attribute-details'><div class='arg'>
-    <div class='argdef'>
-      <div class='attributeName'></div>
-      <div class='inclusion'>Optional</div>
-      <div class='requirements'>
-  <div class='maxLength'>
-    Max length:
-    <code><span class='pre'>20000</span></code>
-  </div>
-</div>
+<div class="reference-object">
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData"
+  >
+    <div class="attribute-name">
+      threeDSReqAuthData
+      <a
+        class="link"
+        href="#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthData"
+        title="Permalink to this attribute"
+      ></a>
     </div>
-    <div class='argdesc'><div class='description'>Data that documents and supports a specific authentication process. In the current version of the specification, this data element is not defined in detail, however the intention is that for each 3DS Requestor Authentication Method, this field carry data that the ACS can use to verify the authentication process. For example, if the 3DS Requestor Authentication Method is: 03, then this element can carry information about the provider of the federated ID and related information. 06, then this element can carry the FIDO attestation data (including the signature). 07, then this element can carry FIDO Attestation data with the FIDO assurance data signed. 08, then this element can carry the SRC assurance data.</div>
-    <p class='enumDescriptionHeader'>
-      Scheme specific rules:
-    </p>
-    <dl class='scheme_rules'>
-      <dt class='scheme_rule'>
-        Visa
-      </dt>
-      <dd class='scheme_rule'>
-        Field is required if available
-      </dd>
-    </dl></div>
-  </div></div>
-  <div categories='' channels='' class='row-odd attribute-header' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod'><div class='attribute-name'>
-    threeDSReqAuthMethod
-    <a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod' title='Permalink to this attribute'></a>
+    <div class="attribute-type">json</div>
   </div>
-  <div class='attribute-type'>
-    string
-  </div></div>
-  <div categories='' channels='' class='row-odd attribute-details'><div class='arg'>
-    <div class='argdef'>
-      <div class='attributeName'></div>
-      <div class='inclusion'>Optional</div>
-      <div class='requirements'>
-  <div class='enum'>
-    One of:
-    <div class='value-container'>
-      <code><span class='pre'>01</span></code>
-      <code><span class='pre'>02</span></code>
-      <code><span class='pre'>03</span></code>
-      <code><span class='pre'>04</span></code>
-      <code><span class='pre'>05</span></code>
-      <code><span class='pre'>06</span></code>
-      <code><span class='pre'>07</span></code>
-      <code><span class='pre'>08</span></code>
-      <code><span class='pre'>09</span></code>
-      <code><span class='pre'>10</span></code>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="attributeName"></div>
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">20000</span></code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Data that documents and supports a specific authentication process. In
+          the current version of the specification, this data element is not
+          defined in detail, however the intention is that for each 3DS
+          Requestor Authentication Method, this field carry data that the ACS
+          can use to verify the authentication process. For example, if the 3DS
+          Requestor Authentication Method is: 03, then this element can carry
+          information about the provider of the federated ID and related
+          information. 06, then this element can carry the FIDO attestation data
+          (including the signature). 07, then this element can carry FIDO
+          Attestation data with the FIDO assurance data signed. 08, then this
+          element can carry the SRC assurance data.
+        </div>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required if available</dd>
+        </dl>
+      </div>
     </div>
   </div>
-</div>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod"
+  >
+    <div class="attribute-name">
+      threeDSReqAuthMethod
+      <a
+        class="link"
+        href="#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthMethod"
+        title="Permalink to this attribute"
+      ></a>
     </div>
-    <div class='argdesc'><div class='description'>Mechanism used by the Cardholder to authenticate to the 3DS Requestor.</div>
-    <p class='enumDescriptionHeader'>Meaning of values:</p>
-    <table class='enumDescription'>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>01</span>
-        </td>
-        <td class='enumValue'>No 3DS Requestor authentication occurred (i.e., Cardholder “logged in” as guest)</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>02</span>
-        </td>
-        <td class='enumValue'>Login to the Cardholder account at the 3DS Requestor system using 3DS Requestor's own credentials</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>03</span>
-        </td>
-        <td class='enumValue'>Login to the Cardholder account at the 3DS Requestor system using federated ID</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>04</span>
-        </td>
-        <td class='enumValue'>Login to the Cardholder account at the 3DS Requestor system using Issuer credentials</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>05</span>
-        </td>
-        <td class='enumValue'>Login to the Cardholder account at the 3DS Requestor system using third-party authentication</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>06</span>
-        </td>
-        <td class='enumValue'>Login to the Cardholder account at the 3DS Requestor system using FIDO Authenticator</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>07</span>
-        </td>
-        <td class='enumValue'>Login to the Cardholder account at the 3DS Requestor system using FIDO Authenticator (FIDO Assertion or Attestation data signed)</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>08</span>
-        </td>
-        <td class='enumValue'>SRC Assurance Data</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>09</span>
-        </td>
-        <td class='enumValue'>SPC Authentication</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>10</span>
-        </td>
-        <td class='enumValue'>Electronic ID Authentication Data</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>11-79</span>
-        </td>
-        <td class='enumValue'>Reserved for EMVCo future use (values invalid until defined by EMVCo)</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>80-99</span>
-        </td>
-        <td class='enumValue'>Reserved for DS use</td>
-      </tr>
-    </table>
-    <p class='enumDescriptionHeader'>
-      Scheme specific rules:
-    </p>
-    <dl class='scheme_rules'>
-      <dt class='scheme_rule'>
-        Visa
-      </dt>
-      <dd class='scheme_rule'>
-        Field is required
-      </dd>
-    </dl></div>
-  </div></div>
-  <div categories='' channels='' class='row-even attribute-header' id='attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp'><div class='attribute-name'>
-    threeDSReqAuthTimestamp
-    <a class='link' href='#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp' title='Permalink to this attribute'></a>
+    <div class="attribute-type">string</div>
   </div>
-  <div class='attribute-type'>
-    string
-  </div></div>
-  <div categories='' channels='' class='row-even attribute-details'><div class='arg'>
-    <div class='argdef'>
-      <div class='attributeName'></div>
-      <div class='inclusion'>Optional</div>
-      <div class='requirements'>
-  <div class='format'>
-    Format:
-    <a href='specification_common.html#format-yyyymmddhhmm'>
-      <code><span class='pre'>yyyymmddhhmm</span></code>
-    </a>
-  </div>
-</div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="attributeName"></div>
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+              <code><span class="pre">05</span></code>
+              <code><span class="pre">06</span></code>
+              <code><span class="pre">07</span></code>
+              <code><span class="pre">08</span></code>
+              <code><span class="pre">09</span></code>
+              <code><span class="pre">10</span></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Mechanism used by the Cardholder to authenticate to the 3DS Requestor.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">
+              No 3DS Requestor authentication occurred (i.e., Cardholder “logged
+              in” as guest)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">
+              Login to the Cardholder account at the 3DS Requestor system using
+              3DS Requestor's own credentials
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">
+              Login to the Cardholder account at the 3DS Requestor system using
+              federated ID
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04</span>
+            </td>
+            <td class="enumValue">
+              Login to the Cardholder account at the 3DS Requestor system using
+              Issuer credentials
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>05</span>
+            </td>
+            <td class="enumValue">
+              Login to the Cardholder account at the 3DS Requestor system using
+              third-party authentication
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>06</span>
+            </td>
+            <td class="enumValue">
+              Login to the Cardholder account at the 3DS Requestor system using
+              FIDO Authenticator
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>07</span>
+            </td>
+            <td class="enumValue">
+              Login to the Cardholder account at the 3DS Requestor system using
+              FIDO Authenticator (FIDO Assertion or Attestation data signed)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>08</span>
+            </td>
+            <td class="enumValue">SRC Assurance Data</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>09</span>
+            </td>
+            <td class="enumValue">SPC Authentication</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>10</span>
+            </td>
+            <td class="enumValue">Electronic ID Authentication Data</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>11-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80-99</span>
+            </td>
+            <td class="enumValue">Reserved for DS use</td>
+          </tr>
+        </table>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required</dd>
+        </dl>
+      </div>
     </div>
-    <div class='argdesc'><div class='description'>Date and time in UTC of the cardholder authentication.</div>
-    <p class='enumDescriptionHeader'>
-      Scheme specific rules:
-    </p>
-    <dl class='scheme_rules'>
-      <dt class='scheme_rule'>
-        Visa
-      </dt>
-      <dd class='scheme_rule'>
-        Field is required if available
-      </dd>
-    </dl></div>
-  </div></div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp"
+  >
+    <div class="attribute-name">
+      threeDSReqAuthTimestamp
+      <a
+        class="link"
+        href="#attr-ThreeDSRequestorAuthenticationInfo-threeDSReqAuthTimestamp"
+        title="Permalink to this attribute"
+      ></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="attributeName"></div>
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="format">
+            Format:
+            <a href="specification_common.html#format-yyyymmddhhmm">
+              <code><span class="pre">yyyymmddhhmm</span></code>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Date and time in UTC of the cardholder authentication.
+        </div>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required if available</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
 </div>
