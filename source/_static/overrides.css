@@ -3,12 +3,13 @@
   max-width: 1000px;
 }
 
-.wy-table-responsive table td, .wy-table-responsive table th {
-    white-space: normal;
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+  white-space: normal;
 }
 
 .wy-table-responsive {
-    margin-bottom: 24px;
-    max-width: 100%;
-    overflow: visible;
+  margin-bottom: 24px;
+  max-width: 100%;
+  overflow: visible;
 }
