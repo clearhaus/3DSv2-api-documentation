@@ -42,5 +42,5 @@ The code is formatted with Prettier. To format the code, run:
 
 ```
 npm install -g prettier
-prettier . --write
+prettier . --write --bracket-same-line
 ```
