@@ -1,7 +1,7 @@
 .attribute-header {
   display: flex;
   align-items: baseline;
-  background-color: #F4F6F6;
+  background-color: #f4f6f6;
   padding: 10px 15px;
 }
 
@@ -14,7 +14,8 @@
   text-transform: capitalize;
   margin-left: 18px;
   font-size: 0.8em;
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", Courier, monospace;
 }
 
 /* Arg wraps the attribute definitions+description divs*/
@@ -35,31 +36,31 @@
 }
 
 @media only screen and (max-width: 1100px) {
-    .arg {
-        display: block;
-    }
+  .arg {
+    display: block;
+  }
 
-    .argdef {
-        width: 100%;
-    }
+  .argdef {
+    width: 100%;
+  }
 
-    .argdesc {
-        width: 100%;
-        padding-left: 10px;
-    }
+  .argdesc {
+    width: 100%;
+    padding-left: 10px;
+  }
 
-    .attribute-header {
-      display: block;
-    }
+  .attribute-header {
+    display: block;
+  }
 
-    .attribute-name {
-      width: 100%;
-    }
+  .attribute-name {
+    width: 100%;
+  }
 
-    .attribute-type {
-      margin-left: 0;
-      margin-top: 3px;
-    }
+  .attribute-type {
+    margin-left: 0;
+    margin-top: 3px;
+  }
 }
 
 /** Attribute definitions **/
@@ -68,9 +69,15 @@
   display: inline;
 }
 
-.maxLength, .format, .minLength, .length,
-.regexp, .enum, .category, .channel {
-    margin: 10px 0;
+.maxLength,
+.format,
+.minLength,
+.length,
+.regexp,
+.enum,
+.category,
+.channel {
+  margin: 10px 0;
 }
 
 .value-container {
@@ -82,18 +89,18 @@
 /** Attribute description **/
 
 .inclusion {
-    font-weight: bold;
-    color: #DE8C64;
+  font-weight: bold;
+  color: #de8c64;
 }
 
 .scheme_rules {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .scheme_rules dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 .scheme_rule {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .enumDescriptionHeader {
@@ -112,16 +119,17 @@
 }
 
 .enumKey > span {
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
-    font-weight: 600;
-    font-size: 75%;
-    padding: 0 4px;
-    white-space: nowrap !important;
-    background-color: #fff;
-    border: solid 1px #e1e4e5;
-    display: table;
-    margin: 0px 15px 0 0;
-    border-radius: 3px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 75%;
+  padding: 0 4px;
+  white-space: nowrap !important;
+  background-color: #fff;
+  border: solid 1px #e1e4e5;
+  display: table;
+  margin: 0px 15px 0 0;
+  border-radius: 3px;
 }
 
 .enumValue {
@@ -129,7 +137,7 @@
 }
 
 .conditions {
-    font-weight: bold;
-    line-height: 1.6em;
-    margin-top: 20px;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-top: 20px;
 }
