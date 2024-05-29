@@ -19,17 +19,17 @@ class ScenarioSelector {
 
     // Start listening to input selectors.
     var self = this;
-    categorySelector.change(function() {
+    categorySelector.change(function () {
       self.scenarioSelectListener(self);
     });
 
-    channelSelector.change(function() {
+    channelSelector.change(function () {
       self.scenarioSelectListener(self);
     });
   }
 
   messageCategoryToValue(input) {
-    switch(input) {
+    switch (input) {
       case "P":
         return "01";
       case "NP":
@@ -40,7 +40,7 @@ class ScenarioSelector {
   }
 
   deviceChannelToValue(input) {
-    switch(input) {
+    switch (input) {
       case "APP":
         return "01";
       case "BRW":
@@ -57,15 +57,18 @@ class ScenarioSelector {
     var parsedURL = new URL(currentURL);
 
     if (deviceChannel == this.defaultDeviceChannel() || deviceChannel == "") {
-      parsedURL.searchParams.delete('deviceChannel');
+      parsedURL.searchParams.delete("deviceChannel");
     } else {
-      parsedURL.searchParams.set('deviceChannel', deviceChannel);
+      parsedURL.searchParams.set("deviceChannel", deviceChannel);
     }
 
-    if (messageCategory == this.defaultMessageCategory() || messageCategory == "") {
-      parsedURL.searchParams.delete('messageCategory');
+    if (
+      messageCategory == this.defaultMessageCategory() ||
+      messageCategory == ""
+    ) {
+      parsedURL.searchParams.delete("messageCategory");
     } else {
-      parsedURL.searchParams.set('messageCategory', messageCategory);
+      parsedURL.searchParams.set("messageCategory", messageCategory);
     }
 
     window.history.replaceState({}, "", parsedURL.href);
@@ -80,63 +83,72 @@ class ScenarioSelector {
   }
 
   filterOnScenario(deviceChannel, messageCategory) {
-    $('.reference-object > div').removeClass('irrelevant');
+    $(".reference-object > div").removeClass("irrelevant");
 
     if (deviceChannel != "") {
-      var el = $('.reference-object > div:not([channels*="' + deviceChannel + '"])');
+      var el = $(
+        '.reference-object > div:not([channels*="' + deviceChannel + '"])',
+      );
 
-      el.each(function(_) {
+      el.each(function (_) {
         var tr = $(this);
-        if (tr.attr('channels') != "") {
-          tr.addClass('irrelevant');
+        if (tr.attr("channels") != "") {
+          tr.addClass("irrelevant");
         }
       });
     }
 
     if (messageCategory != "") {
-      var el = $('.reference-object > div:not([categories*="' + messageCategory + '"])');
+      var el = $(
+        '.reference-object > div:not([categories*="' + messageCategory + '"])',
+      );
 
-      el.each(function(_) {
+      el.each(function (_) {
         var tr = $(this);
-        if (tr.attr('categories') != "") {
-          tr.addClass('irrelevant');
+        if (tr.attr("categories") != "") {
+          tr.addClass("irrelevant");
         }
       });
     }
 
     // Hide inclusion requirement
-    $('div.inclusion > div.dynamic:not([class*=hidden])').addClass('hidden');
+    $("div.inclusion > div.dynamic:not([class*=hidden])").addClass("hidden");
 
     // Hide conditional descriptions.
-    $('div.conditions > div:not([class*=hidden])').addClass('hidden');
+    $("div.conditions > div:not([class*=hidden])").addClass("hidden");
 
     if (messageCategory == "") {
       var mcSelector = ":not([messageCategory])";
     } else {
-      var mcSelector = '[messageCategory="'+ this.messageCategoryToValue(messageCategory) +'"]';
+      var mcSelector =
+        '[messageCategory="' +
+        this.messageCategoryToValue(messageCategory) +
+        '"]';
     }
 
     if (deviceChannel == "") {
       var dcSelector = ":not([deviceChannel])";
     } else {
-      var dcSelector = '[deviceChannel="'+ this.deviceChannelToValue(deviceChannel) +'"]';
+      var dcSelector =
+        '[deviceChannel="' + this.deviceChannelToValue(deviceChannel) + '"]';
     }
 
     // Show selected inclusions
-    var inclusionSelector = 'div.inclusion > div.dynamic' + dcSelector + mcSelector;
-    $(inclusionSelector).removeClass('hidden');
+    var inclusionSelector =
+      "div.inclusion > div.dynamic" + dcSelector + mcSelector;
+    $(inclusionSelector).removeClass("hidden");
 
     // Show selected conditions
-    var conditonsSelector = 'div.conditions > div' + dcSelector + mcSelector;
-    $(conditonsSelector).removeClass('hidden');
+    var conditonsSelector = "div.conditions > div" + dcSelector + mcSelector;
+    $(conditonsSelector).removeClass("hidden");
   }
 
   setScenarioFromURL() {
     var currentURL = window.location.href;
     var parsedURL = new URL(currentURL);
 
-    var dc = parsedURL.searchParams.get('deviceChannel')
-    var mc = parsedURL.searchParams.get('messageCategory')
+    var dc = parsedURL.searchParams.get("deviceChannel");
+    var mc = parsedURL.searchParams.get("messageCategory");
 
     if (dc != null && dc != "") {
       this.channelSelector.value = dc;
@@ -149,17 +161,17 @@ class ScenarioSelector {
   }
 
   defaultDeviceChannel() {
-    this.channelSelector.options[0].value
+    this.channelSelector.options[0].value;
   }
 
   defaultMessageCategory() {
-    this.categorySelector.options[0].value
+    this.categorySelector.options[0].value;
   }
 }
 
-$(document).ready(function() {
-  var categorySelector = $('select.messageCategory');
-  var channelSelector = $('select.deviceChannel');
+$(document).ready(function () {
+  var categorySelector = $("select.messageCategory");
+  var channelSelector = $("select.deviceChannel");
 
   if (categorySelector.length == 0 || channelSelector.length == 0) {
     return;
