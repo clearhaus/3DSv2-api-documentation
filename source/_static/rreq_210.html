@@ -5,20 +5,18 @@
     class="row-even attribute-header"
     id="attr-RReq-acsRenderingType">
     <div class="attribute-name">
-      acsRenderingType
-      <a
+      acsRenderingType<a
         class="link"
         href="#attr-RReq-acsRenderingType"
         title="Permalink to this attribute"></a>
     </div>
     <div class="attribute-type">
-      <a href="#acsrenderingtype"> AcsRenderingType object </a>
+      <a href="#acsrenderingtype"> AcsRenderingType object</a>
     </div>
   </div>
   <div categories="PA NPA" channels="APP" class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Required</div>
           <div class="hidden dynamic" deviceChannel="01">Required</div>
@@ -73,8 +71,7 @@
     class="row-odd attribute-header"
     id="attr-RReq-acsTransID">
     <div class="attribute-name">
-      acsTransID
-      <a
+      acsTransID<a
         class="link"
         href="#attr-RReq-acsTransID"
         title="Permalink to this attribute"></a>
@@ -87,7 +84,6 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Required</div>
           <div class="hidden dynamic" deviceChannel="01">Required</div>
@@ -151,8 +147,7 @@
     class="row-even attribute-header"
     id="attr-RReq-authenticationType">
     <div class="attribute-name">
-      authenticationType
-      <a
+      authenticationType<a
         class="link"
         href="#attr-RReq-authenticationType"
         title="Permalink to this attribute"></a>
@@ -165,7 +160,6 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Conditional</div>
           <div class="hidden dynamic" deviceChannel="01">Conditional</div>
@@ -246,39 +240,53 @@
           </tr>
         </table>
         <div class="conditions">
-          <div class="">Required if transStatus is one of [Y, N]<br /></div>
+          <div class="">
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
+          </div>
           <div class="hidden" deviceChannel="01">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="02">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="02">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="02">
-            Required if transStatus is one of [Y, N]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, N]<br />
           </div>
         </div>
       </div>
@@ -290,8 +298,7 @@
     class="row-odd attribute-header"
     id="attr-RReq-authenticationValue">
     <div class="attribute-name">
-      authenticationValue
-      <a
+      authenticationValue<a
         class="link"
         href="#attr-RReq-authenticationValue"
         title="Permalink to this attribute"></a>
@@ -304,7 +311,6 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Conditional</div>
           <div class="hidden dynamic" deviceChannel="01">Conditional</div>
@@ -363,32 +369,40 @@
         </div>
         <div class="conditions">
           <div class="">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [Y, A]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="01">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [Y, A]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [Y, A]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [Y, A]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if transStatus is one of [Y, A]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
-            Required if transStatus is one of [Y, A]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if transStatus is one of [Y, A]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if transStatus is one of [Y, A]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
         </div>
       </div>
@@ -400,8 +414,7 @@
     class="row-even attribute-header"
     id="attr-RReq-challengeCancel">
     <div class="attribute-name">
-      challengeCancel
-      <a
+      challengeCancel<a
         class="link"
         href="#attr-RReq-challengeCancel"
         title="Permalink to this attribute"></a>
@@ -414,7 +427,6 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Optional</div>
         <div class="requirements">
           <div class="regexp">
@@ -498,8 +510,7 @@
     class="row-odd attribute-header"
     id="attr-RReq-dsTransID">
     <div class="attribute-name">
-      dsTransID
-      <a
+      dsTransID<a
         class="link"
         href="#attr-RReq-dsTransID"
         title="Permalink to this attribute"></a>
@@ -512,7 +523,6 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Required</div>
           <div class="hidden dynamic" deviceChannel="01">Required</div>
@@ -580,8 +590,7 @@
     class="row-even attribute-header"
     id="attr-RReq-eci">
     <div class="attribute-name">
-      eci
-      <a
+      eci<a
         class="link"
         href="#attr-RReq-eci"
         title="Permalink to this attribute"></a>
@@ -594,7 +603,6 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Optional</div>
         <div class="requirements">
           <div class="maxLength">
@@ -630,8 +638,7 @@
     class="row-odd attribute-header"
     id="attr-RReq-interactionCounter">
     <div class="attribute-name">
-      interactionCounter
-      <a
+      interactionCounter<a
         class="link"
         href="#attr-RReq-interactionCounter"
         title="Permalink to this attribute"></a>
@@ -641,7 +648,6 @@
   <div categories="PA NPA" channels="APP BRW" class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="length">
@@ -650,9 +656,9 @@
           </div>
           <div class="integerString">
             Value:
-            <code><span class="pre"> 00 </span></code>
+            <code><span class="pre"> 00</span></code>
             &#8230;
-            <code><span class="pre"> 99 </span></code>
+            <code><span class="pre"> 99</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -682,8 +688,7 @@
     class="row-even attribute-header"
     id="attr-RReq-messageCategory">
     <div class="attribute-name">
-      messageCategory
-      <a
+      messageCategory<a
         class="link"
         href="#attr-RReq-messageCategory"
         title="Permalink to this attribute"></a>
@@ -696,7 +701,6 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="regexp">
@@ -738,6 +742,14 @@
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
+              <span>80 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Identity Check Insights (without authentication)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
               <span>80-99</span>
             </td>
             <td class="enumValue">Reserved for DS use</td>
@@ -752,15 +764,14 @@
     class="row-odd attribute-header"
     id="attr-RReq-messageExtension">
     <div class="attribute-name">
-      messageExtension
-      <a
+      messageExtension<a
         class="link"
         href="#attr-RReq-messageExtension"
         title="Permalink to this attribute"></a>
     </div>
     <div class="attribute-type">
       Array of
-      <a href="#messageextension"> MessageExtension object </a>
+      <a href="#messageextension"> MessageExtension object</a>
     </div>
   </div>
   <div
@@ -769,7 +780,6 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Optional</div>
         <div class="requirements">
           <div class="maxLength">
@@ -805,8 +815,7 @@
     class="row-even attribute-header"
     id="attr-RReq-messageType">
     <div class="attribute-name">
-      messageType
-      <a
+      messageType<a
         class="link"
         href="#attr-RReq-messageType"
         title="Permalink to this attribute"></a>
@@ -819,7 +828,6 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="enum">
@@ -854,8 +862,7 @@
     class="row-odd attribute-header"
     id="attr-RReq-messageVersion">
     <div class="attribute-name">
-      messageVersion
-      <a
+      messageVersion<a
         class="link"
         href="#attr-RReq-messageVersion"
         title="Permalink to this attribute"></a>
@@ -868,7 +875,6 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="enum">
@@ -904,8 +910,7 @@
     class="row-even attribute-header"
     id="attr-RReq-threeDSServerTransID">
     <div class="attribute-name">
-      threeDSServerTransID
-      <a
+      threeDSServerTransID<a
         class="link"
         href="#attr-RReq-threeDSServerTransID"
         title="Permalink to this attribute"></a>
@@ -918,8 +923,32 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
-        <div class="inclusion">Required</div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -947,6 +976,7 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>
@@ -956,8 +986,7 @@
     class="row-odd attribute-header"
     id="attr-RReq-transStatus">
     <div class="attribute-name">
-      transStatus
-      <a
+      transStatus<a
         class="link"
         href="#attr-RReq-transStatus"
         title="Permalink to this attribute"></a>
@@ -970,7 +999,6 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Conditional</div>
           <div class="hidden dynamic" deviceChannel="01">Conditional</div>
@@ -1076,15 +1104,21 @@
           </tr>
         </table>
         <div class="conditions">
-          <div class="">Required if messageCategory is "01"<br /></div>
+          <div class="">
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+          </div>
           <div class="hidden" deviceChannel="01">
-            Required if messageCategory is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if messageCategory is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if messageCategory is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
         </div>
       </div>
@@ -1096,8 +1130,7 @@
     class="row-even attribute-header"
     id="attr-RReq-transStatusReason">
     <div class="attribute-name">
-      transStatusReason
-      <a
+      transStatusReason<a
         class="link"
         href="#attr-RReq-transStatusReason"
         title="Permalink to this attribute"></a>
@@ -1110,7 +1143,6 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Conditional</div>
           <div class="hidden dynamic" deviceChannel="01">Conditional</div>
@@ -1292,35 +1324,121 @@
             </td>
             <td class="enumValue">3RI transaction not supported</td>
           </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80 (mastercard)</span>
+            </td>
+            <td class="enumValue">Identity Check Insights</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80 (visa)</span>
+            </td>
+            <td class="enumValue">Error Connecting to ACS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>81 (visa)</span>
+            </td>
+            <td class="enumValue">ACS Timed Out</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>82 (visa)</span>
+            </td>
+            <td class="enumValue">Invalid Response from ACS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>83 (visa)</span>
+            </td>
+            <td class="enumValue">System Error Response from ACS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>84 (visa)</span>
+            </td>
+            <td class="enumValue">Internal Error While Generating CAVV</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>85 (visa)</span>
+            </td>
+            <td class="enumValue">VMID not eligible for requested program</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>86 (visa)</span>
+            </td>
+            <td class="enumValue">Protocol Version Not Supported by ACS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>87 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Transaction is excluded from Attempts Processing, because Device
+              Channel is 3RI
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>87 (visa)</span>
+            </td>
+            <td class="enumValue">
+              Transaction is excluded from Attempts Processing (includes non-
+              reloadable pre-paid cards and Non- Payments (NPA))
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>88 (visa)</span>
+            </td>
+            <td class="enumValue">
+              Requested program not supported by the ACS
+            </td>
+          </tr>
         </table>
         <div class="conditions">
           <div class="">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [N, U, R]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
+            R]<br />
           </div>
           <div class="hidden" deviceChannel="01">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [N, U, R]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
+            R]<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [N, U, R]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
+            R]<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if messageCategory is "01"<br />
-            Required if transStatus is one of [N, U, R]<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
+            R]<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if transStatus is one of [N, U, R]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
-            Required if transStatus is one of [N, U, R]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if transStatus is one of [N, U, R]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if transStatus is one of [N, U, R]<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
         </div>
       </div>

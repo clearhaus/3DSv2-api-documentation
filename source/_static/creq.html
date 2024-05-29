@@ -5,8 +5,7 @@
     class="row-even attribute-header"
     id="attr-CReq-messageType">
     <div class="attribute-name">
-      messageType
-      <a
+      messageType<a
         class="link"
         href="#attr-CReq-messageType"
         title="Permalink to this attribute"></a>
@@ -54,8 +53,7 @@
     class="row-odd attribute-header"
     id="attr-CReq-messageVersion">
     <div class="attribute-name">
-      messageVersion
-      <a
+      messageVersion<a
         class="link"
         href="#attr-CReq-messageVersion"
         title="Permalink to this attribute"></a>
@@ -74,11 +72,8 @@
           <div class="enum">
             One of:
             <div class="value-container">
-              <code><span class="pre">2.0.1</span></code>
-              <code><span class="pre">2.1.1</span></code>
               <code><span class="pre">2.1.0</span></code>
               <code><span class="pre">2.2.0</span></code>
-              <code><span class="pre">2.3.0</span></code>
               <code><span class="pre">2.3.1</span></code>
             </div>
           </div>
@@ -111,15 +106,14 @@
     class="row-even attribute-header"
     id="attr-CReq-messageExtension">
     <div class="attribute-name">
-      messageExtension
-      <a
+      messageExtension<a
         class="link"
         href="#attr-CReq-messageExtension"
         title="Permalink to this attribute"></a>
     </div>
     <div class="attribute-type">
       Array of
-      <a href="#messageextension"> MessageExtension object </a>
+      <a href="#messageextension"> MessageExtension object</a>
     </div>
   </div>
   <div
@@ -164,8 +158,7 @@
     class="row-odd attribute-header"
     id="attr-CReq-acsTransID">
     <div class="attribute-name">
-      acsTransID
-      <a
+      acsTransID<a
         class="link"
         href="#attr-CReq-acsTransID"
         title="Permalink to this attribute"></a>
@@ -242,8 +235,7 @@
     class="row-even attribute-header"
     id="attr-CReq-threeDSServerTransID">
     <div class="attribute-name">
-      threeDSServerTransID
-      <a
+      threeDSServerTransID<a
         class="link"
         href="#attr-CReq-threeDSServerTransID"
         title="Permalink to this attribute"></a>
@@ -257,7 +249,32 @@
     <div class="arg">
       <div class="argdef">
         <div class="attributeName"></div>
-        <div class="inclusion">Required</div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -294,8 +311,7 @@
     class="row-odd attribute-header"
     id="attr-CReq-challengeWindowSize">
     <div class="attribute-name">
-      challengeWindowSize
-      <a
+      challengeWindowSize<a
         class="link"
         href="#attr-CReq-challengeWindowSize"
         title="Permalink to this attribute"></a>
