@@ -38,7 +38,7 @@ Output (CRD)
 ------------
 
 .. raw:: html
-  :file: _static/crd.html
+  :file: _static/crd_220.html
 
 .. _auth-endpoint-210:
 
