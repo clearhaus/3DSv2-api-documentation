@@ -12,9 +12,10 @@ for a selected authentication scenario. Please note the following:
    even though they will never appear in the same message.
 2. When a Message Category or a Device Channel is selected, messages will be
    filtered if they are not relevant for the selection. The inclusion might
-   change from e.g. required to optional
+   change from e.g. required to optional.
 
-.. include:: _static/scenario_selector.html
+.. raw:: html
+  :file: _static/scenario_selector.html
 
 .. _preauth-endpoint-2311:
 
