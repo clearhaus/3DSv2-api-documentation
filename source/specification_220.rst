@@ -162,7 +162,7 @@ ThreeDSRequestorPriorAuthenticationInfo
 ---------------------------------------
 
 .. raw:: html
-  :file: _static/threedsrequestorpriorauthenticationinfo.html
+  :file: _static/threedsrequestorpriorauthenticationinfo_220.html
 
 ACSRenderingType
 ----------------
