@@ -151,7 +151,7 @@ Read :ref:`Auth usage <auth-usage>` to understand the flow.
     * - 4
       - xx43
       - Frictionless `transStatus` `I`
-      - only supported with `messageVersion 2.2`
+      - only supported with `messageVersion 2.2` or greater
 
     * - 5
       - xx53
