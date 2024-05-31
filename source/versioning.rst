@@ -3,7 +3,7 @@
 3-D Secure version determination
 ================================
 
-There are currently four 3-D Secure versions, ``1.0.2``, ``2.1.0``, ``2.2.0`` and ``2.3.1.1``.
+There are currently three 3-D Secure versions, ``2.1.0``, ``2.2.0`` and ``2.3.1.1``.
 
 1. If the :ref:`preauth call <preauth-usage>` returns a :ref:`not_enrolled`, continue with 3DSv1.
 2. If ``acsInfoInd``
