@@ -45,9 +45,9 @@ cases. Just change the last four digit in ``acctNumber`` where needed.
 Message version
 ---------------
 
-This section determines the outcome of the :ref:`preauth <preauth-usage>`. The response is with
-``acsEndProtocolVersion: 2.1.0`` and/or ``acsEndProtocolVersion: 2.2.0``.  This means your system should automatically
-be able to determine ``messageVersion``.
+This section determines the outcome of the :ref:`preauth <preauth-usage>`. The response in preauth will return
+a range of supported ``messageVersion`` both for DS and ACS.
+This means your system should automatically be able to determine ``messageVersion``.
 Sending a wrong ``messageVersion`` will result in an error.
 
 Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
@@ -64,7 +64,7 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
 
     * - 0
       - 0xxx
-      - Range `messageVersion` `2.1` and `2.2`
+      - Range `messageVersion` from `2.1` to `2.3.1`
       - n/a
 
     * - 1
@@ -75,6 +75,11 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
     * - 2
       - 2xxx
       - `messageVersion` `2.2`
+      - n/a
+
+    * - 3
+      - 3xxx
+      - `messageVersion` `2.3.1`
       - n/a
 
 3DS Method
@@ -149,7 +154,7 @@ Read :ref:`Auth usage <auth-usage>` to understand the flow.
     * - 4
       - xx43
       - Frictionless `transStatus` `I`
-      - only supported with `messageVersion 2.2`
+      - only supported with `messageVersion 2.2` or greater
 
     * - 5
       - xx53
