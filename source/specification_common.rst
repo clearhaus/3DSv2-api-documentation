@@ -37,13 +37,6 @@ MessageExtension
 .. raw:: html
   :file: _static/messageextension.html
 
-
-ThreeDSRequestorPriorAuthenticationInfo
----------------------------------------
-
-.. raw:: html
-  :file: _static/threedsrequestorpriorauthenticationinfo.html
-
 ACSRenderingType
 ----------------
 
