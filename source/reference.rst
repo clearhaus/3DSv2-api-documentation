@@ -25,4 +25,4 @@ Reference
    The specification for the JSON objects contained in version 2.3.1.1.
 
 :ref:`Common message specification <specification_common>`
-   The specification for the JSON objects in common between versions 2.1.0 2.2.0 and 2.3.1.1.
+   The specification for the JSON objects in common between versions 2.1.0, 2.2.0 and 2.3.1.1.
