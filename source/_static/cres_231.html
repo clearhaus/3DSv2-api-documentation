@@ -16,6 +16,7 @@
   <div categories="PA NPA" channels="APP" class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements"></div>
         <div class="scenario">
@@ -58,6 +59,7 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Required</div>
           <div class="hidden dynamic" deviceChannel="01">Required</div>
@@ -132,6 +134,7 @@
   <div categories="PA NPA" channels="APP" class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="enum">
@@ -187,6 +190,7 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">Optional</div>
         <div class="requirements">
           <div class="maxLength">
@@ -236,6 +240,7 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="enum">
@@ -284,6 +289,7 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="enum">
@@ -330,6 +336,7 @@
   <div categories="PA NPA" channels="APP" class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Conditional</div>
           <div class="hidden dynamic" deviceChannel="01">Required</div>
@@ -413,7 +420,33 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Required</div>
+        <div class="attributeName"></div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -441,6 +474,7 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>
@@ -464,6 +498,7 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
+        <div class="attributeName"></div>
         <div class="inclusion">
           <div class="dynamic">Conditional</div>
           <div class="hidden dynamic" deviceChannel="01">Conditional</div>
