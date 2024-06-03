@@ -59,27 +59,22 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
     * - First digit
       - PAN last 4
       - Description
-      - Requirements
 
     * - 0
       - 0xxx
-      - Range `messageVersion` `2.1` and `2.2`
-      - n/a
+      - Range `messageVersion` `2.1`, `2.2` and `2.3.1.1`
 
     * - 1
       - 1xxx
       - `messageVersion` `2.1`
-      - n/a
 
     * - 2
       - 2xxx
       - `messageVersion` `2.2`
-      - n/a
 
     * - 3
       - 3xxx
       - `messageVersion` `2.3`
-      - n/a
 
 3DS Method
 -----------
@@ -95,22 +90,18 @@ Read :ref:`3DS Method failure <3DS Method failure>` if the 3DS method has a time
     * - Second digit
       - PAN last 4
       - Description
-      - Requirements
 
     * - 0
       - x0xx
       - With 3DS method included
-      - n/a
 
     * - 1
       - x1xx
       - With 3DS method missing
-      - n/a
 
     * - 2
       - x2xx
       - With 3DS method timeout
-      - n/a
 
 
 ARes outcome
