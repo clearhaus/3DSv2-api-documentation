@@ -13,7 +13,7 @@ The ACS can determine decoupled authentication fallback for a authentication tra
 If a fallback is determined, `threeDSRequestorPriorAuthenticationInfo`is required.
 
 The requestor can set the TTL for the transaction by setting the `threeDSRequestorDecMaxTime`.
-The threeDSRequestorDecMaxTime accepts numeric values between `00001` and `10080`which
+The threeDSRequestorDecMaxTime accepts numeric values between `00001` and `10080` which
 determines the TTL in minutes.
 
 Once the cardholder has authenticated the transaction and the 3-D secure server has
