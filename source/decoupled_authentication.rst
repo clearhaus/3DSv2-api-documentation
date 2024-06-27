@@ -3,17 +3,17 @@
 Decoupled Authentication
 =========================
 
-The decoupled authentication is a feature that allows you to authenticate
+Decoupled authentication is a feature that allows you to authenticate
 the cardholder during the payment process. This is a different approach to
 challenge flow where the authentication is done in one simultaneous flow.
-The decoupled authentication is a two-step process where the authentication
+Decoupled authentication is a two-step process, where the authentication
 is done in a separate flow from the payment process.
 
 The ACS can determine decoupled authentication fallback for a authentication transaction.
 If a fallback is determined, `threeDSRequestorPriorAuthenticationInfo`is required.
 
 The requestor can set the TTL for the transaction by setting the `threeDSRequestorDecMaxTime`.
-The threeDSRequestorDecMaxTime accepts numeric values between `00001` and `10080` which
+The `threeDSRequestorDecMaxTime` accepts numeric values between `00001` and `10080` which
 determines the TTL in minutes.
 
 Once the cardholder has authenticated the transaction and the 3-D secure server has
