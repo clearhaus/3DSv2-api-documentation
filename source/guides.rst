@@ -10,6 +10,8 @@ Guides
    versioning
    3dsmethod
    challenge_flow
+   decoupled_authentication
+
 
 These guides are designed to assist you in integration by using examples.
 
@@ -25,3 +27,7 @@ These guides are designed to assist you in integration by using examples.
 
 :ref:`Challenge Flow <3ds_challenge_flow>`
   Guides you through the Challenge Flow implementation.
+
+:ref:`Decoupled Authentication <3ds_decoupled_authentication>`
+  Guides you through the Decoupled Authentication implementation.
+
