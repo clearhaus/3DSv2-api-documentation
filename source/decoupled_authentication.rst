@@ -10,7 +10,7 @@ The ACS can determine decoupled authentication fallback for a authentication tra
 If a fallback is determined, `threeDSRequestorPriorAuthenticationInfo` is required.
 
 The requestor can set the TTL for the transaction by setting the `threeDSRequestorDecMaxTime`.
-The `threeDSRequestorDecMaxTime` accepts numeric values between `00001` and `10080` which
+The `threeDSRequestorDecMaxTime` accepts numeric values between `00001` and `10080` (7 days) which
 determines the TTL in minutes.
 
 Once the cardholder has authenticated the transaction and the 3-D secure server has
@@ -26,7 +26,7 @@ by making a request towards the `/postauth` endpoint.
 Decoupled authentication flow example
 **************************************
 
-The following examples show the AReq and ARes messages for the decoupled authentication flow.
+The following examples show an AReq and ARes messages for a decoupled authentication flow.
 
 .. code-block:: json
    :linenos:
@@ -93,7 +93,7 @@ The following examples show the AReq and ARes messages for the decoupled authent
         "transStatus": "D"
     }
 
-Once the cardholder have authenticated the transaction, the 3-D secure server will notify the requestor.
+Once the cardholder has authenticated the transaction, the 3-D secure server will notify the requestor.
 The requestor can then retrieve the authentication value by making a request towards the `/postauth` endpoint.
 
 

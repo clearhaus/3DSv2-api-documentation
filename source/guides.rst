@@ -12,7 +12,6 @@ Guides
    challenge_flow
    decoupled_authentication
 
-
 These guides are designed to assist you in integration by using examples.
 
 .. note::
