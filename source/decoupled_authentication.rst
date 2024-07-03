@@ -6,7 +6,7 @@ Decoupled Authentication
 There are four different authentication flows in the 3-D Secure protocol. The decoupled authentication
 flow is one of them. The decoupled authentication flow is an asynchronous process.
 
-The ACS can determine decoupled authentication fallback for a authentication transaction.
+The ACS can determine decoupled authentication fallback for an authentication transaction.
 If a fallback is determined, `threeDSRequestorPriorAuthenticationInfo` is required.
 
 The requestor can set the TTL for the transaction by setting the `threeDSRequestorDecMaxTime`.
