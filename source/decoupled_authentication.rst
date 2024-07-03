@@ -26,7 +26,7 @@ by making a request towards the `/postauth` endpoint.
 Decoupled authentication flow example
 **************************************
 
-The following examples show an AReq and ARes messages for a decoupled authentication flow.
+The following examples show AReq and ARes messages for a decoupled authentication flow.
 
 .. code-block:: json
    :linenos:
