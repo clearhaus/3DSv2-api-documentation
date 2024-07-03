@@ -13,11 +13,11 @@ The requestor can set the TTL for the transaction by setting the `threeDSRequest
 The `threeDSRequestorDecMaxTime` accepts numeric values between `00001` and `10080` (7 days) which
 determines the TTL in minutes.
 
-Once the cardholder has authenticated the transaction and the 3-D secure server has
-received the `RReq`, the 3-D secure server will notify the requestor by utilizing the
+Once the cardholder has authenticated the transaction and the 3-D Secure Server has
+received the `RReq`, the 3-D Secure Server will notify the requestor by utilizing the
 `notificationURL` which will contain the `threeDSServerTransID` and `messageVersion`.
 If no RReq is received within the TTL, the transaction will be considered as failed.
-The 3-D secure server will only try to notify the requestor once.
+The 3-D Secure Server will only try to notify the requestor once.
 
 The requestor shall use the `threeDSServerTransID` to retrieve the authentication value
 by making a request towards the `/postauth` endpoint.
@@ -93,7 +93,7 @@ The following examples show AReq and ARes messages for a decoupled authenticatio
         "transStatus": "D"
     }
 
-Once the cardholder has authenticated the transaction, the 3-D secure server will notify the requestor.
+Once the cardholder has authenticated the transaction, the 3-D Secure Server will notify the requestor.
 The requestor can then retrieve the authentication value by making a request towards the `/postauth` endpoint.
 
 
