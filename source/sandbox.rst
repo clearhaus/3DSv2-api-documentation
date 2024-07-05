@@ -166,7 +166,22 @@ Read :ref:`Auth usage <auth-usage>` to understand the flow.
       - `transStatus` `C`
       - Complete the `Challenge flow`_
 
+    * - 8
+      - xx83
+      - `transStatus` `D`
+      - Complete the `Decoupled Authentication`_
 
+Decoupled Authentication
+-------------------------
+The decoupled authentication flow is explained in this guide :ref:`Decoupled Authentication <3ds_decoupled_authentication>`.
+
+
+In the sandbox environment, you can control the timing of decoupled authentication completion using the `threeDSRequestorDecMaxTime` parameter.
+This parameter sets a timer, in seconds (with a maximum of 30 seconds) e.g. `"threeDSRequestorDecMaxTime": "00005"` will set the timer to 5 seconds,
+after which the 3-D Secure server will notify the requestor via the notificationURL.
+Once the notification is received, the requestor should call the :ref:`postauth endpoint <postauth-usage>` to fetch the decoupled authentication result.
+
+Currently, the sandbox environment only returns a transStatus value of Y for completed decoupled authentications.
 
 Challenge flow
 ---------------
@@ -201,6 +216,7 @@ Read :ref:`postauth usage <postauth-usage>` for understanding how to fetch chall
       - xx72
       - Manual challenge with `transStatus` `Y` or `N`
       - `transStatus` `C` in `ARes` see `ARes outcome`_
+
 
 *****
 Error
