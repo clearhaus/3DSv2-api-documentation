@@ -1,0 +1,184 @@
+<div class="reference-object">
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorAuthData">
+    <div class="attribute-name">
+      threeDSReqPriorAuthData<a
+        class="link"
+        href="#attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorAuthData"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">2048</span></code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Data that documents and supports a specific authentication process. In
+          the current version of the specification this data element is not
+          defined in detail, however the intention is that for each 3DS
+          Requestor Authentication Method, this field carry data that the ACS
+          can use to verify the authentication process. In future versions of
+          the specification, these details are expected to be included.
+        </div>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required if available</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorAuthMethod">
+    <div class="attribute-name">
+      threeDSReqPriorAuthMethod<a
+        class="link"
+        href="#attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorAuthMethod"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="regexp">
+            Regexp:
+            <code><span class="pre">^(0[1-4])|([89][1-10])$</span></code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Mechanism used by the Cardholder to previously authenticate to the 3DS
+          Requestor.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">
+              Frictionless authentication occurred by ACS
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">Cardholder challenge occurred by ACS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">AVS verified</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04</span>
+            </td>
+            <td class="enumValue">Other issuer methods</td>
+          </tr>
+        </table>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required if available</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorAuthTimestamp">
+    <div class="attribute-name">
+      threeDSReqPriorAuthTimestamp<a
+        class="link"
+        href="#attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorAuthTimestamp"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="format">
+            Format:
+            <a href="specification_common.html#format-yyyymmddhhmm">
+              <code><span class="pre">yyyymmddhhmm</span></code>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Date and time in UTC of the prior cardholder authentication.
+        </div>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required if available</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorRef">
+    <div class="attribute-name">
+      threeDSReqPriorRef<a
+        class="link"
+        href="#attr-ThreeDSRequestorPriorAuthenticationInfo-threeDSReqPriorRef"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">36</span></code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          This data element provides additional information to the ACS to
+          determine the best approach for handing a request.
+        </div>
+        <p class="enumDescriptionHeader">Scheme specific rules:</p>
+        <dl class="scheme_rules">
+          <dt class="scheme_rule">Visa</dt>
+          <dd class="scheme_rule">Field is required if available</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
