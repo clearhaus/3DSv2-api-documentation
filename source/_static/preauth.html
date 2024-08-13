@@ -1,129 +1,146 @@
-<div class='reference-object'>
-  <div categories='PA NPA' channels='APP' class='row-even attribute-header' id='attr-PreAuth-acctNumber'><div class='attribute-name'>
-    acctNumber
-    <a class='link' href='#attr-PreAuth-acctNumber' title='Permalink to this attribute'></a>
+<div class="reference-object">
+  <div
+    categories="PA NPA"
+    channels="APP"
+    class="row-even attribute-header"
+    id="attr-PreAuth-acctNumber">
+    <div class="attribute-name">
+      acctNumber
+      <a
+        class="link"
+        href="#attr-PreAuth-acctNumber"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
   </div>
-  <div class='attribute-type'>
-    string
-  </div></div>
-  <div categories='PA NPA' channels='APP' class='row-even attribute-details'><div class='arg'>
-    <div class='argdef'>
-      <div class='attributeName'></div>
-      <div class='inclusion'>Required</div>
-      <div class='requirements'>
-  <div class='regexp'>
-    Regexp:
-    <code><span class='pre'>^[0-9]{13,19}$</span></code>
-  </div>
-</div>
-      <div class='scenario'>
-        <div class='category'>
-          Categories:
-          <code>PA</code>
-          <code>NPA</code>
+  <div categories="PA NPA" channels="APP" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="attributeName"></div>
+        <div class="inclusion">Required</div>
+        <div class="requirements">
+          <div class="regexp">
+            Regexp:
+            <code><span class="pre">^[0-9]{13,19}$</span></code>
+          </div>
         </div>
-        <div class='channel'>
-          Channels:
-          <code>APP</code>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Account number that will be used in the authorisation request for
+          payment transactions. May be represented by PAN, token.
         </div>
       </div>
     </div>
-    <div class='argdesc'><div class='description'>Account number that will be used in the authorisation request for payment transactions. May be represented by PAN, token.</div></div>
-  </div></div>
-  <div categories='' channels='' class='row-odd attribute-header' id='attr-PreAuth-ds'><div class='attribute-name'>
-    ds
-    <a class='link' href='#attr-PreAuth-ds' title='Permalink to this attribute'></a>
   </div>
-  <div class='attribute-type'>
-    string
-  </div></div>
-  <div categories='' channels='' class='row-odd attribute-details'><div class='arg'>
-    <div class='argdef'>
-      <div class='attributeName'></div>
-      <div class='inclusion'>Optional</div>
-      <div class='requirements'>
-  <div class='enum'>
-    One of:
-    <div class='value-container'>
-      <code><span class='pre'>standin</span></code>
-      <code><span class='pre'>visa</span></code>
-      <code><span class='pre'>mastercard</span></code>
-      <code><span class='pre'>jcb</span></code>
-      <code><span class='pre'>amex</span></code>
-      <code><span class='pre'>protectbuy</span></code>
-      <code><span class='pre'>sbn</span></code>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-PreAuth-ds">
+    <div class="attribute-name">
+      ds
+      <a
+        class="link"
+        href="#attr-PreAuth-ds"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="attributeName"></div>
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">standin</span></code>
+              <code><span class="pre">visa</span></code>
+              <code><span class="pre">mastercard</span></code>
+              <code><span class="pre">jcb</span></code>
+              <code><span class="pre">amex</span></code>
+              <code><span class="pre">protectbuy</span></code>
+              <code><span class="pre">sbn</span></code>
+              <code><span class="pre">fime</span></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Directory Server used in 3DS payment flow. This field is used to
+          signal which DS to use on co-branded cards. Required for using the
+          Dankort side on a Visa/Dankort
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>standin</span>
+            </td>
+            <td class="enumValue">
+              3dsecure.io standin directory server and scheme (only in sandbox)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>visa</span>
+            </td>
+            <td class="enumValue">Visa</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>mastercard</span>
+            </td>
+            <td class="enumValue">Mastercard</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>jcb</span>
+            </td>
+            <td class="enumValue">JCB</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>amex</span>
+            </td>
+            <td class="enumValue">American Express</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>protectbuy</span>
+            </td>
+            <td class="enumValue">ProtectBuy (Discover/Diners)</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>sbn</span>
+            </td>
+            <td class="enumValue">
+              Secured by Nets (Dankort/Forbrugsforeningen)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>fime</span>
+            </td>
+            <td class="enumValue">EMVCo LoA</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
-</div>
-    </div>
-    <div class='argdesc'><div class='description'>Directory Server used in 3DS payment flow. This field is used to signal which DS to use on co-branded cards. Required for using the Dankort side on a Visa/Dankort</div>
-    <p class='enumDescriptionHeader'>Meaning of values:</p>
-    <table class='enumDescription'>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>standin</span>
-        </td>
-        <td class='enumValue'>3dsecure.io standin directory server and scheme (only in sandbox)</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>visa</span>
-        </td>
-        <td class='enumValue'>Visa</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>mastercard</span>
-        </td>
-        <td class='enumValue'>Mastercard</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>jcb</span>
-        </td>
-        <td class='enumValue'>JCB</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>amex</span>
-        </td>
-        <td class='enumValue'>American Express</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>protectbuy</span>
-        </td>
-        <td class='enumValue'>ProtectBuy (Discover/Diners)</td>
-      </tr>
-      <tr class='enumEntry'>
-        <td class='enumKey'>
-          <span>sbn</span>
-        </td>
-        <td class='enumValue'>Secured by Nets (Dankort/Forbrugsforeningen)</td>
-      </tr>
-    </table></div>
-  </div></div>
-  <div categories='' channels='' class='row-even attribute-header' id='attr-PreAuth-maxMessageVersion'><div class='attribute-name'>
-    maxMessageVersion
-    <a class='link' href='#attr-PreAuth-maxMessageVersion' title='Permalink to this attribute'></a>
-  </div>
-  <div class='attribute-type'>
-    string
-  </div></div>
-  <div categories='' channels='' class='row-even attribute-details'><div class='arg'>
-    <div class='argdef'>
-      <div class='attributeName'></div>
-      <div class='inclusion'>Optional</div>
-      <div class='requirements'>
-  <div class='enum'>
-    One of:
-    <div class='value-container'>
-      <code><span class='pre'>2.2.0</span></code>
-      <code><span class='pre'>2.3.1</span></code>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class='argdesc'><div class='description'>Maximum specification version number of the message response.</div></div>
-  </div></div>
 </div>
