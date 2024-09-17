@@ -11,6 +11,13 @@ Select changes are added here.
 
 Pull requests and issues are welcome.
 
+September 17th, 2024
+*********************
+Updated preauth response to include two new fields:
+- ``acsProtocolVersions``: Array of objects containing the list of Protocol versions supported by the ACS for the card range,
+  with their associated ACS information indicator, the 3DS method URL, and the list of supported message extensions.
+- ``dsProtocolVersions``: Contains the list of active protocol versions supported by the DS.
+
 November 11th, 2020
 *******************
 
