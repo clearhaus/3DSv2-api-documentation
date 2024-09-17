@@ -80,56 +80,56 @@ If the card number is enrolled for 3-D Secure v2, the response might look
 something like:
 
 .. code-block:: json
-  :linenos:
+   :linenos:
 
-    {
-      "acsStartProtocolVersion": "2.1.0",
-      "acsEndProtocolVersion": "2.2.0",
-      "dsStartProtocolVersion": "2.1.0",
-      "dsEndProtocolVersion": "2.2.0",
-      "dsProtocolVersions": [
-          "2.1.0",
-          "2.2.0"
-      ],
-			"acsProtocolVersions": [
-    		{
-    		  "acsInfoInd": [
-    		    "01",
-    		    "02",
-    		    "84",
-    		    "85",
-    		    "86",
-    		    "87",
-    		    "88",
-    		    "89",
-    		    "92",
-    		    "93",
-    		    "94"
-    		  ],
-    		  "threeDSMethodURL": "https://acs.tld/3dsmethod",
-    		  "version": "2.1.0"
-    		},
-    		{
-    		  "acsInfoInd": [
-    		    "01",
-    		    "02",
-    		    "84",
-    		    "85",
-    		    "86",
-    		    "87",
-    		    "88",
-    		    "89",
-    		    "92",
-    		    "93",
-    		    "94"
-    		  ],
-    		  "threeDSMethodURL": "https://acs.tld/3dsmethod",
-    		  "version": "2.2.0"
-    		}
-  		],
-      "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
-      "threeDSMethodURL": "https://acs.tld/3dsmethod"
-    }
+   {
+     "acsStartProtocolVersion": "2.1.0",
+     "acsEndProtocolVersion": "2.2.0",
+     "dsStartProtocolVersion": "2.1.0",
+     "dsEndProtocolVersion": "2.2.0",
+     "dsProtocolVersions": [
+       "2.1.0",
+       "2.2.0"
+     ],
+     "acsProtocolVersions": [
+       {
+         "acsInfoInd": [
+           "01",
+           "02",
+           "84",
+           "85",
+           "86",
+           "87",
+           "88",
+           "89",
+           "92",
+           "93",
+           "94"
+         ],
+         "threeDSMethodURL": "https://acs.tld/3dsmethod",
+         "version": "2.1.0"
+       },
+       {
+         "acsInfoInd": [
+           "01",
+           "02",
+           "84",
+           "85",
+           "86",
+           "87",
+           "88",
+           "89",
+           "92",
+           "93",
+           "94"
+         ],
+         "threeDSMethodURL": "https://acs.tld/3dsmethod",
+         "version": "2.2.0"
+       }
+     ],
+     "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
+     "threeDSMethodURL": "https://acs.tld/3dsmethod"
+   }
 
 .. note::
 
