@@ -10,10 +10,20 @@ be found in the revision history.
 
 Pull requests and issues are welcome.
 
-May 23th, 2024
+TBD, 2024
 *************
 
-#. Added documentation for the ``v2.3.1.1`` specification.
+#. Added documentation for the ``v2.3.1`` specification.
+
+September 17th, 2024
+*********************
+
+Updated preauth response to include two new fields:
+
+* ``acsProtocolVersions``: Array of objects containing the list of Protocol versions supported by the ACS for the card range,
+  with their associated ACS information indicator, the 3DS method URL, and the list of supported message extensions.
+* ``dsProtocolVersions``: Contains the list of active protocol versions supported by the DS.
+>>>>>>> master
 
 November 11th, 2020
 *******************
