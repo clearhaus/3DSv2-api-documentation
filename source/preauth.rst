@@ -19,15 +19,16 @@ This near-pseudocode describes the flow your code should perform.
  .. TODO: Add a link to 3dsmethod invocation
 
 1. Generate the input as described in the reference (:ref:`2.1.0
-   <preauth-input-210>`, :ref:`2.2.0 <preauth-input-220>`).
+   <preauth-input-210>`, :ref:`2.2.0 <preauth-input-220>`, :ref:`2.3.1 <preauth-input-2311>`).
    A request might look like:
 
    .. code-block:: json
-       :caption: /preauth example input, same for versions 2.1.0 and 2.2.0
+       :caption: /preauth example input, same for all versions
 
        {
          "acctNumber": "4111111111111111",
-         "ds": "visa"
+         "ds": "visa",
+         "maxMessageVersion": "2.3.1", // Optional: defaults to 2.2.0
        }
 
 2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
@@ -80,7 +81,8 @@ If the card number is enrolled for 3-D Secure v2, the response might look
 something like:
 
 .. code-block:: json
-   :linenos:
+  :caption: /preauth 2.2.0 example response
+  :linenos:
 
    {
      "acsStartProtocolVersion": "2.1.0",
@@ -130,6 +132,50 @@ something like:
      "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
      "threeDSMethodURL": "https://acs.tld/3dsmethod"
    }
+
+If ``maxMessageVersion`` is ``2.3.1``, the response will look like this:
+
+.. code-block:: json
+  :caption: /preauth 2.3.1 example response
+  :linenos:
+
+    {
+      "dsProtocolVersions": [
+        "2.2.0",
+        "2.3.1"
+      ],
+      "acsProtocolVersions": [
+        {
+          "version": "2.2.0",
+          "acsInfoInd": [
+            "01",
+            "02"
+          ],
+          "threeDSMethodURL": "https://www.acs.com/script1",
+          "supportedMsgExt": [
+            {
+              "id": "A000000802-001",
+              "version": "2.0"
+            },
+            {
+              "id": "A000000802-004",
+              "version": "1.0"
+            }
+          ]
+        },
+        {
+          "version": "2.3.1",
+          "acsInfoInd": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "81"
+          ],
+          "threeDSMethodURL": "https://www.acs.com/script3"
+        }
+      ]
+    }
 
 .. note::
 
