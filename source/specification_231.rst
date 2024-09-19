@@ -1,7 +1,7 @@
-.. _specification_2311:
+.. _specification_231:
 
 ###################
-Specification 2.3.1.1
+Specification 2.3.1
 ###################
 
 The *scenario selector* below can be used to narrow down the required fields
@@ -17,14 +17,14 @@ for a selected authentication scenario. Please note the following:
 .. raw:: html
   :file: _static/scenario_selector.html
 
-.. _preauth-endpoint-2311:
+.. _preauth-endpoint-231:
 
 ``/preauth`` endpoint
 =====================
 
 For usage, refer to :ref:`preauth-usage`.
 
-.. _preauth-input-2311:
+.. _preauth-input-231:
 
 Input
 -----
@@ -32,7 +32,7 @@ Input
 .. raw:: html
   :file: _static/preauth.html
 
-.. _preauth-response-2311:
+.. _preauth-response-231:
 
 Output (CRD)
 ------------
@@ -40,14 +40,14 @@ Output (CRD)
 .. raw:: html
   :file: _static/crd.html
 
-.. _auth-endpoint-2311:
+.. _auth-endpoint-231:
 
 ``/auth`` endpoint
 ==================
 
 For usage, refer to :ref:`auth-usage`.
 
-.. _auth-input-2311:
+.. _auth-input-231:
 
 Input (AReq)
 ------------
@@ -55,7 +55,7 @@ Input (AReq)
 .. raw:: html
   :file: _static/areq_231.html
 
-.. _auth-response-2311:
+.. _auth-response-231:
 
 Output (ARes)
 -------------
@@ -63,7 +63,7 @@ Output (ARes)
 .. raw:: html
   :file: _static/ares_231.html
 
-.. _challenge-flow-messages-2311:
+.. _challenge-flow-messages-231:
 
 Challenge flow
 ==============
@@ -78,7 +78,7 @@ Challenge request (CReq)
 .. raw:: html
   :file: _static/creq.html
 
-.. _final-cres-2311:
+.. _final-cres-231:
 
 Challenge response (CRes)
 -------------------------
@@ -86,14 +86,14 @@ Challenge response (CRes)
 .. raw:: html
   :file: _static/cres_231.html
 
-.. _postauth-endpoint-2311:
+.. _postauth-endpoint-231:
 
 ``/postauth`` endpoint
 ======================
 
 For usage, refer to :ref:`postauth-usage`.
 
-.. _postauth-input-2311:
+.. _postauth-input-231:
 
 Input
 -----
@@ -101,7 +101,7 @@ Input
 .. raw:: html
   :file: _static/postauth.html
 
-.. _postauth-response-2311:
+.. _postauth-response-231:
 
 Output (RReq)
 -------------
@@ -113,7 +113,7 @@ Output (RReq)
 Error object
 ============
 
-.. _error-object-2311:
+.. _error-object-231:
 
 .. raw:: html
   :file: _static/erro_231.html

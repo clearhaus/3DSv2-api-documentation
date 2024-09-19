@@ -8,7 +8,7 @@ API Usage
 1. Use the :ref:`/preauth <preauth-usage>` API call to:
 
    - Determine if card is enrolled in 3-D Secure v2
-   - Determine 3-D Secure v2 protocol version (``v2.1.0``, ``v2.2.0`` or ``v2.3.1.1``)
+   - Determine 3-D Secure v2 protocol version (``v2.1.0``, ``v2.2.0`` or ``v2.3.1``)
    - Receive ``threeDSMethodURL`` to determine if the 3DS Method is required
 
 2. Perform :ref:`3DS Method <3ds_method>` if ``threeDSMethodURL`` was
@@ -25,7 +25,7 @@ API Usage
    on the cardholder device.
 
 5. Retrieve values from the ``/postauth`` endpoint (ref. :ref:`2.1.0
-   <postauth-endpoint-210>`, :ref:`2.2.0 <postauth-endpoint-220>`, :ref:`2.3.1.1 <postauth-endpoint-2311>`) endpoint
+   <postauth-endpoint-210>`, :ref:`2.2.0 <postauth-endpoint-220>`, :ref:`2.3.1 <postauth-endpoint-231>`) endpoint
    after challenge flow has completed.
 
 **Mobile APP Authentication (SDK device channel)**
@@ -38,7 +38,7 @@ API Usage
 
    - Determine if card is enrolled in 3-D Secure v2. This is not required, but
      will determine if authentication should proceed outside the SDK.
-   - Determine 3-D Secure v2 protocol version (``v2.1.0``, ``v2.2.0`` or ``v2.3.1.1``)
+   - Determine 3-D Secure v2 protocol version (``v2.1.0``, ``v2.2.0`` or ``v2.3.1``)
 
 2. Perform an authentication using the :ref:`auth-usage` call.
 
@@ -46,7 +46,7 @@ API Usage
    on the cardholder device.
 
 4. Retrieve values from the ``/postauth`` endpoint (ref. :ref:`2.1.0
-   <postauth-endpoint-210>`, :ref:`2.2.0 <postauth-endpoint-220>`, :ref:`2.3.1.1 <postauth-endpoint-2311>`) endpoint
+   <postauth-endpoint-210>`, :ref:`2.2.0 <postauth-endpoint-220>`, :ref:`2.3.1 <postauth-endpoint-231>`) endpoint
    after challenge flow has completed.
 
 **3DS Requestor Initiated Authentication (3RI device channel)**
@@ -57,7 +57,7 @@ API Usage
 1. Use the :ref:`/preauth <preauth-usage>` API call to:
 
    - Determine if card is enrolled in 3-D Secure v2
-   - Determine 3-D Secure v2 protocol version (``v2.1.0``, ``v2.2.0`` or ``v2.3.1.1``)
+   - Determine 3-D Secure v2 protocol version (``v2.1.0``, ``v2.2.0`` or ``v2.3.1``)
 
 2. Perform an authentication using the :ref:`auth-usage` call.
 

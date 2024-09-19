@@ -17,7 +17,7 @@ If `3DS Method URL`_ is included in the :ref:`preauth-usage` response, the
 3DS method *must* be invoked as explained in this guide.
 
 If ``threeDSMethodURL`` *is not* included in the ``/preauth`` response (ref.
-:ref:`2.1.0 <preauth-response-210>`, :ref:`2.2.0 <preauth-response-220>`, :ref:`2.3.1.1 <preauth-response-2311>`),
+:ref:`2.1.0 <preauth-response-210>`, :ref:`2.2.0 <preauth-response-220>`, :ref:`2.3.1 <preauth-response-231>`),
 continue with the :ref:`auth-usage` and set `3DS Completion indicator
 <specification_210.html#attr-AReq-threeDSCompInd>`_ to ``"U"``, to indicate that the
 3DS Method was not available.

@@ -62,7 +62,7 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
 
     * - 0
       - 0xxx
-      - Range `messageVersion` `2.1`, `2.2` and `2.3.1.1`
+      - Range `messageVersion` `2.1`, `2.2` and `2.3.1`
 
     * - 1
       - 1xxx

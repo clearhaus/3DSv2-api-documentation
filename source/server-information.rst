@@ -39,7 +39,7 @@ Versions supported
 
 - 2.1.0
 - 2.2.0
-- 2.3.1.1
+- 2.3.1
 
 .. _requests:
 
@@ -61,7 +61,7 @@ Allowed characters
 
   Currently the ``2.1.0`` and ``2.2.0`` specifications only support ASCII
   characters.
-  The ``2.3.0.0`` specification has removed any character requirements for
+  The ``2.3.1`` specification has removed any character requirements for
   ``cardholderName``, indicating that all ``utf-8`` characters are allowed.
   It remains unclear if card schemes will allow ``utf-8`` characters.
 
