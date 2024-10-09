@@ -15,11 +15,11 @@ determines the TTL in minutes.
 
 The requestor shall use the `threeDSServerTransID` to retrieve the authentication value
 by making a request towards the `/postauth` endpoint.
-Once we receive the authentication value from the ACS, we will only store the authentication value for 20 minutes.
-We suggest that the requestor should poll the `/postauth` endpoint at least every 20 minutes.
-If the requestor does not poll the `/postauth` endpoint within the TTL, the authentication value will be deleted.
+Once we receive the authentication value from the ACS, we will only store it for 20 minutes.
+We therefore suggest that the requestor should poll the `/postauth` endpoint at least every 20 minutes.
+The authentication value is deleted when the TTL has passed.
 
-If the 3-D secure server has not received the RReq message the following response will be returned:
+If the 3-D Secure Server has not received the RReq message the following response will be returned:
 
 .. code-block:: json
    :linenos:
