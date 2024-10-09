@@ -13,14 +13,27 @@ The requestor can set the TTL for the transaction by setting the `threeDSRequest
 The `threeDSRequestorDecMaxTime` accepts numeric values between `00001` and `10080` (7 days) which
 determines the TTL in minutes.
 
-Once the cardholder has authenticated the transaction and the 3-D Secure Server has
-received the `RReq`, the 3-D Secure Server will notify the requestor by utilizing the
-`notificationURL` which will contain the `threeDSServerTransID` and `messageVersion`.
-If no RReq is received within the TTL, the transaction will be considered as failed.
-The 3-D Secure Server will only try to notify the requestor once.
-
 The requestor shall use the `threeDSServerTransID` to retrieve the authentication value
 by making a request towards the `/postauth` endpoint.
+Once we receive the authentication value from the ACS, we will only store the authentication value for 20 minutes.
+We suggest that the requestor should poll the `/postauth` endpoint at least every 20 minutes.
+If the requestor does not poll the `/postauth` endpoint within the TTL, the authentication value will be deleted.
+
+If the 3-D secure server has not received the RReq message the following response will be returned:
+
+.. code-block:: json
+   :linenos:
+   :caption: Example RReq not received
+
+   {
+        "errorCode": "305",
+        "errorComponent": "S",
+        "errorDescription": "No RReq has been received",
+        "errorDetail": "No response from directory server yet",
+        "messageType": "Erro",
+        "messageVersion": "2.2.0",
+        "threeDSServerTransID": "8700f0ef-0e96-471c-b107-1d2534f3f5a5"
+   }   
 
 
 Decoupled authentication flow example
@@ -92,10 +105,6 @@ The following examples show AReq and ARes messages for a decoupled authenticatio
         "threeDSServerTransID": "5a8007b9-6d26-49cf-a371-3f722bba4ffc",
         "transStatus": "D"
     }
-
-Once the cardholder has authenticated the transaction, the 3-D Secure Server will notify the requestor.
-The requestor can then retrieve the authentication value by making a request towards the `/postauth` endpoint.
-
 
 .. code-block:: json
    :linenos:
