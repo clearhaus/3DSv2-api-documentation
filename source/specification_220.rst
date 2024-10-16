@@ -38,7 +38,7 @@ Output (CRD)
 ------------
 
 .. raw:: html
-  :file: _static/crd.html
+  :file: _static/crd_220.html
 
 .. _auth-endpoint-220:
 
@@ -162,7 +162,7 @@ ThreeDSRequestorPriorAuthenticationInfo
 ---------------------------------------
 
 .. raw:: html
-  :file: _static/threedsrequestorpriorauthenticationinfo.html
+  :file: _static/threedsrequestorpriorauthenticationinfo_220.html
 
 ACSRenderingType
 ----------------

@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = '3DSecure.io'
-copyright = '2019, 3DSecure.io'
+copyright = '2024, 3DSecure.io'
 author = '3DSecure.io'
 
 
