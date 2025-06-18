@@ -169,3 +169,15 @@ ACSRenderingType
 
 .. raw:: html
   :file: _static/acsrenderingtype.html
+
+RecurringInd
+----------------
+
+.. raw:: html
+  :file: _static/recurringind_231.html
+
+SellerInfo
+----------
+
+.. raw:: html
+  :file: _static/sellerinfo_231.html
