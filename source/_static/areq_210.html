@@ -966,8 +966,7 @@
         <div class="description">
           Value representing the bit depth of the colour palette for displaying
           images, in bits per pixel. Obtained from Cardholder browser using the
-          screen.colorDepth property. In case the actual value does not exist in
-          the allowed values, use the closest lower value.
+          screen.colorDepth property.
         </div>
       </div>
     </div>
@@ -1391,9 +1390,7 @@
         </div>
       </div>
       <div class="argdesc">
-        <div class="description">
-          Name of the Cardholder. Must be ASCII characters.
-        </div>
+        <div class="description">Name of the Cardholder.</div>
         <p class="enumDescriptionHeader">Scheme specific rules:</p>
         <dl class="scheme_rules">
           <dt class="scheme_rule">Visa</dt>
@@ -1871,8 +1868,8 @@
         <div class="requirements">
           <div class="format">
             Format:
-            <a href="specification_common.html#format-country">
-              <code><span class="pre">country</span></code>
+            <a href="specification_common.html#format-countrycode">
+              <code><span class="pre">countryCode</span></code>
             </a>
           </div>
           <div class="regexp">
@@ -2125,10 +2122,10 @@
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
-              <span>80 (mastercard)</span>
+              <span>80</span>
             </td>
             <td class="enumValue">
-              Identity Check Insights (without authentication)
+              Identity Check Insights (without authentication) - MasterCard
             </td>
           </tr>
           <tr class="enumEntry">
@@ -2463,9 +2460,9 @@
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2473,9 +2470,9 @@
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2483,9 +2480,9 @@
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2493,9 +2490,9 @@
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2609,9 +2606,9 @@
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2619,9 +2616,9 @@
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2629,9 +2626,9 @@
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2639,9 +2636,9 @@
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2757,9 +2754,9 @@
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2767,9 +2764,9 @@
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2777,9 +2774,9 @@
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2787,9 +2784,9 @@
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2897,16 +2894,14 @@
         <div class="description">
           Minor units of currency as specified in the ISO 4217 currency
           exponent. This data should be available from your acquirer or card
-          scheme. The standard is maintained at currency-iso.org. Note that the
-          exponent used in authorization may differ, e.g. ISK has ISO 4217
-          exponent 0, but exponent 2 in Visa systems.
+          scheme. The standard is maintained at currency-iso.org.
         </div>
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2914,9 +2909,9 @@
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2924,9 +2919,9 @@
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -2934,9 +2929,9 @@
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />Required
-            if <a href="#attr-AReq-messageCategory">messageCategory</a> is "02"
-            and
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if
+            <a href="#attr-AReq-messageCategory">messageCategory</a> is "02" and
             <a href="#attr-AReq-threeDSRequestorAuthenticationInd"
               >threeDSRequestorAuthenticationInd</a
             >
@@ -3272,9 +3267,7 @@
       </div>
       <div class="argdesc">
         <div class="description">
-          Date after which no further authorisations shall be performed. This is
-          a required field for recurring transactions, we suggest setting it at
-          a reasonably high value if you don't have a defined expiry date.
+          Date after which no further authorisations shall be performed.
         </div>
         <div class="conditions">
           <div class="">
@@ -4464,8 +4457,8 @@
     </div>
   </div>
   <div
-    categories=""
-    channels=""
+    categories="PA NPA"
+    channels="APP BRW"
     class="row-odd attribute-header"
     id="attr-AReq-threeDSRequestorAuthenticationInfo">
     <div class="attribute-name">
@@ -4480,11 +4473,23 @@
       >
     </div>
   </div>
-  <div categories="" channels="" class="row-odd attribute-details">
+  <div categories="PA NPA" channels="APP BRW" class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Optional</div>
         <div class="requirements"></div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+          </div>
+        </div>
       </div>
       <div class="argdesc">
         <div class="description">
@@ -4536,11 +4541,10 @@
       <div class="argdesc">
         <div class="description">
           Indicates whether a challenge is requested for this transaction. For
-          example: 1) For 01-PA, a 3DS Requestor may have concerns about the
-          transaction, and request a challenge. 2) For 02-NPA, a challenge may
-          be necessary when adding a new card to a wallet. 3) For local/regional
-          mandates or other variables, this includes sending '04', requiring
-          challenge for PSD2 compliance.
+          example: For 01-PA, a 3DS Requestor may have concerns about the
+          transaction, and request a challenge. For 02-NPA, a challenge may be
+          necessary when adding a new card to a wallet. For local/regional
+          mandates or other variables.
         </div>
         <p class="enumDescriptionHeader">Meaning of values:</p>
         <table class="enumDescription">
@@ -4681,10 +4685,9 @@
       <div class="argdesc">
         <div class="description">
           Fully qualified URL of 3DS Requestor website or customer care site.
-          According to the specification, this data element provides additional
-          information to the receiving 3-D Secure system if a problem arises and
-          should provide contact information. In practice card schemes expect a
-          merchant URL here.
+          This data element provides additional information to the receiving 3-D
+          Secure system if a problem arises and should provide contact
+          information.
         </div>
         <p class="enumDescriptionHeader">Scheme specific rules:</p>
         <dl class="scheme_rules">
@@ -4713,32 +4716,7 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">
-          <div class="dynamic">Conditional</div>
-          <div class="hidden dynamic" deviceChannel="01">Optional</div>
-          <div class="hidden dynamic" deviceChannel="02">Required</div>
-          <div class="hidden dynamic" deviceChannel="03">Optional</div>
-          <div class="hidden dynamic" messageCategory="01">Conditional</div>
-          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
-            Optional
-          </div>
-          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
-            Required
-          </div>
-          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
-            Optional
-          </div>
-          <div class="hidden dynamic" messageCategory="02">Conditional</div>
-          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
-            Optional
-          </div>
-          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
-            Required
-          </div>
-          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
-            Optional
-          </div>
-        </div>
+        <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -4765,20 +4743,6 @@
         <div class="description">
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
-        </div>
-        <div class="conditions">
-          <div class="">
-            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
-            "02"<br />
-          </div>
-          <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
-            "02"<br />
-          </div>
-          <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
-            "02"<br />
-          </div>
         </div>
       </div>
     </div>

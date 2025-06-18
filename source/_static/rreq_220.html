@@ -63,52 +63,70 @@
         </div>
         <div class="conditions">
           <div class="">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
+            Required if <a href="#attr-ARes-messageType">messageType</a> is
+            "ARes" and <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            "01" and <a href="#attr-RReq-transStatus">transStatus</a> is "C"<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
+            Required if <a href="#attr-ARes-messageType">messageType</a> is
+            "ARes" and <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            "01" and <a href="#attr-RReq-transStatus">transStatus</a> is "C"<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
+            Required if <a href="#attr-ARes-messageType">messageType</a> is
+            "ARes" and <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            "01" and <a href="#attr-RReq-transStatus">transStatus</a> is "C"<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
+            Required if <a href="#attr-ARes-messageType">messageType</a> is
+            "ARes" and <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            "01" and <a href="#attr-RReq-transStatus">transStatus</a> is "C"<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
+            Required if <a href="#attr-ARes-messageType">messageType</a> is
+            "ARes" and <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            "01" and <a href="#attr-RReq-transStatus">transStatus</a> is "C"<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
+            Required if <a href="#attr-ARes-messageType">messageType</a> is
+            "ARes" and <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            "01" and <a href="#attr-RReq-transStatus">transStatus</a> is "C"<br />
           </div>
         </div>
       </div>
@@ -425,23 +443,27 @@
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, A]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [Y, A]<br />
           </div>
           <div class="hidden" messageCategory="01">
             Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
@@ -770,51 +792,51 @@
         </div>
         <div class="conditions">
           <div class="">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="02">
-            Required if <a href="#attr-ARes-acsDecConInd">acsDecConInd</a> is
+            Required if <a href="#attr-RReq-acsDecConInd">acsDecConInd</a> is
             not "Y"<br />
           </div>
         </div>
@@ -881,10 +903,10 @@
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
-              <span>80 (mastercard)</span>
+              <span>80</span>
             </td>
             <td class="enumValue">
-              Identity Check Insights (without authentication)
+              Identity Check Insights (without authentication) - MasterCard
             </td>
           </tr>
           <tr class="enumEntry">
@@ -1112,15 +1134,15 @@
         </div>
         <div class="conditions">
           <div class="">
-            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
         </div>
@@ -1146,32 +1168,7 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">
-          <div class="dynamic">Required</div>
-          <div class="hidden dynamic" deviceChannel="01">Required</div>
-          <div class="hidden dynamic" deviceChannel="02">Required</div>
-          <div class="hidden dynamic" deviceChannel="03">Required</div>
-          <div class="hidden dynamic" messageCategory="01">Required</div>
-          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
-            Required
-          </div>
-          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
-            Required
-          </div>
-          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
-            Required
-          </div>
-          <div class="hidden dynamic" messageCategory="02">Required</div>
-          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
-            Required
-          </div>
-          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
-            Required
-          </div>
-          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
-            Required
-          </div>
-        </div>
+        <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -1199,7 +1196,6 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
-        <div class="conditions"></div>
       </div>
     </div>
   </div>
@@ -1329,19 +1325,19 @@
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01"<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
           </div>
         </div>
       </div>
@@ -1587,105 +1583,31 @@
               Authentication attempted but not performed by the cardholder
             </td>
           </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>80 (mastercard)</span>
-            </td>
-            <td class="enumValue">Identity Check Insights</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>80 (visa)</span>
-            </td>
-            <td class="enumValue">Error Connecting to ACS</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>81 (visa)</span>
-            </td>
-            <td class="enumValue">ACS Timed Out</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>82 (visa)</span>
-            </td>
-            <td class="enumValue">Invalid Response from ACS</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>83 (visa)</span>
-            </td>
-            <td class="enumValue">System Error Response from ACS</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>84 (visa)</span>
-            </td>
-            <td class="enumValue">Internal Error While Generating CAVV</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>85 (visa)</span>
-            </td>
-            <td class="enumValue">VMID not eligible for requested program</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>86 (visa)</span>
-            </td>
-            <td class="enumValue">Protocol Version Not Supported by ACS</td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>87 (mastercard)</span>
-            </td>
-            <td class="enumValue">
-              Transaction is excluded from Attempts Processing, because Device
-              Channel is 3RI
-            </td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>87 (visa)</span>
-            </td>
-            <td class="enumValue">
-              Transaction is excluded from Attempts Processing (includes non-
-              reloadable pre-paid cards and Non- Payments (NPA))
-            </td>
-          </tr>
-          <tr class="enumEntry">
-            <td class="enumKey">
-              <span>88 (visa)</span>
-            </td>
-            <td class="enumValue">
-              Requested program not supported by the ACS
-            </td>
-          </tr>
         </table>
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
-            R]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
-            R]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
-            R]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-AReq-messageCategory">messageCategory</a> is "01" and
-            <a href="#attr-RReq-transStatus">transStatus</a> is one of [N, U,
-            R]<br />
+            <a href="#attr-RReq-messageCategory">messageCategory</a> is "01"<br />
+            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
+            of [N, U, R]<br />
           </div>
           <div class="hidden" messageCategory="01">
             Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
