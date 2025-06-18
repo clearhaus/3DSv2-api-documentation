@@ -102,7 +102,7 @@ url
 
 Fully qualified URL
 
-.. _format-country:
+.. _format-countrycode:
 
 country
 -------
