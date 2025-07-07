@@ -10,8 +10,8 @@ be found in the revision history.
 
 Pull requests and issues are welcome.
 
-TBD, 2024
-*************
+July 7th, 2025
+***************
 
 #. Added documentation for the ``v2.3.1`` specification.
 
