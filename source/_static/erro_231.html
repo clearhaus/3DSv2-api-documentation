@@ -183,6 +183,9 @@
               <code><span class="pre">202</span></code>
               <code><span class="pre">203</span></code>
               <code><span class="pre">204</span></code>
+              <code><span class="pre">205</span></code>
+              <code><span class="pre">206</span></code>
+              <code><span class="pre">207</span></code>
               <code><span class="pre">301</span></code>
               <code><span class="pre">302</span></code>
               <code><span class="pre">303</span></code>
@@ -248,6 +251,29 @@
               <span>204</span>
             </td>
             <td class="enumValue">Duplicate Data Element</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>205</span>
+            </td>
+            <td class="enumValue">
+              Overlap in the card ranges provided by the DS in the PRes message
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>206</span>
+            </td>
+            <td class="enumValue">Action is not possible for the card range</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>207</span>
+            </td>
+            <td class="enumValue">
+              Data Element value is in the range of 'Reserved for DS use' or
+              'Reserved for EMVCo future use' and is not recognised
+            </td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -462,7 +488,32 @@
   <div categories="" channels="" class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Optional</div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="enum">
             One of:
@@ -484,6 +535,7 @@
         <div class="description">
           Identifies the Message Type that was identified as erroneous.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>
@@ -557,7 +609,7 @@
         <div class="requirements">
           <div class="enum">
             Must be:
-            <code><span class="pre">2.2.0</span></code>
+            <code><span class="pre">2.3.1</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -651,37 +703,37 @@
         </div>
         <div class="conditions">
           <div class="hidden" deviceChannel="02">
-            Required if <a href="#attr-Erro-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />Required if
             <a href="#attr-Erro-messageType">messageType</a> is one of [AReq,
             ARes, CReq, CRes, RReq, RRes]<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if <a href="#attr-Erro-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />Required if
             <a href="#attr-Erro-messageType">messageType</a> is one of [AReq,
             ARes, CReq, CRes, RReq, RRes]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if <a href="#attr-Erro-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />Required if
             <a href="#attr-Erro-messageType">messageType</a> is one of [AReq,
             ARes, CReq, CRes, RReq, RRes]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if <a href="#attr-Erro-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />Required if
             <a href="#attr-Erro-messageType">messageType</a> is one of [AReq,
             ARes, CReq, CRes, RReq, RRes]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="02">
-            Required if <a href="#attr-Erro-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />Required if
             <a href="#attr-Erro-messageType">messageType</a> is one of [AReq,
             ARes, CReq, CRes, RReq, RRes]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="02">
-            Required if <a href="#attr-Erro-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />Required if
             <a href="#attr-Erro-messageType">messageType</a> is one of [AReq,
             ARes, CReq, CRes, RReq, RRes]<br />
@@ -709,7 +761,32 @@
     class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Required</div>
+        <div class="inclusion">
+          <div class="dynamic">Optional</div>
+          <div class="hidden dynamic" deviceChannel="01">Optional</div>
+          <div class="hidden dynamic" deviceChannel="02">Optional</div>
+          <div class="hidden dynamic" deviceChannel="03">Optional</div>
+          <div class="hidden dynamic" messageCategory="01">Optional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Optional
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Optional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Optional
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -737,6 +814,7 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>

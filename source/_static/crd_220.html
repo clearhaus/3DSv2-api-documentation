@@ -5,7 +5,8 @@
     class="row-even attribute-header"
     id="attr-CRD-acsEndProtocolVersion">
     <div class="attribute-name">
-      acsEndProtocolVersion<a
+      acsEndProtocolVersion
+      <a
         class="link"
         href="#attr-CRD-acsEndProtocolVersion"
         title="Permalink to this attribute"></a>
@@ -39,7 +40,8 @@
     class="row-odd attribute-header"
     id="attr-CRD-acsInfoInd">
     <div class="attribute-name">
-      acsInfoInd<a
+      acsInfoInd
+      <a
         class="link"
         href="#attr-CRD-acsInfoInd"
         title="Permalink to this attribute"></a>
@@ -53,7 +55,7 @@
         <div class="requirements">
           <div class="regexp">
             Regexp:
-            <code><span class="pre">^(0[1-9]|1[01]|[89][0-9])$</span></code>
+            <code><span class="pre">^(0[1-4]|[89][0-9])$</span></code>
           </div>
         </div>
       </div>
@@ -94,6 +96,79 @@
             </td>
             <td class="enumValue">Reserved for DS use</td>
           </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Supports Smart Authentication Stand-In Service
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>81 (mastercard)</span>
+            </td>
+            <td class="enumValue">Supports Smart Authentication Direct</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>90 (mastercard)</span>
+            </td>
+            <td class="enumValue">Supports Identity Check Express</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>91 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Supports Authentication Express Merchant Delegation for Identity
+              Check Express (Type I)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>92 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Supports Authentication Express Low Fraud Merchant (Type II)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>93 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Participates in Authentication Express Wallet Delegation
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>94 (mastercard)</span>
+            </td>
+            <td class="enumValue">
+              Participates in Authentication Express Wallet Delegation
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80 (visa)</span>
+            </td>
+            <td class="enumValue">TRA Supported by issuer</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>81 (visa)</span>
+            </td>
+            <td class="enumValue">Data-only Supported by Issuer</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>82 (visa)</span>
+            </td>
+            <td class="enumValue">
+              Delegated Authentication Supported by issuer
+            </td>
+          </tr>
         </table>
       </div>
     </div>
@@ -104,7 +179,8 @@
     class="row-even attribute-header"
     id="attr-CRD-acsStartProtocolVersion">
     <div class="attribute-name">
-      acsStartProtocolVersion<a
+      acsStartProtocolVersion
+      <a
         class="link"
         href="#attr-CRD-acsStartProtocolVersion"
         title="Permalink to this attribute"></a>
@@ -138,7 +214,8 @@
     class="row-odd attribute-header"
     id="attr-CRD-dsEndProtocolVersion">
     <div class="attribute-name">
-      dsEndProtocolVersion<a
+      dsEndProtocolVersion
+      <a
         class="link"
         href="#attr-CRD-dsEndProtocolVersion"
         title="Permalink to this attribute"></a>
@@ -148,7 +225,7 @@
   <div categories="" channels="" class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Optional</div>
+        <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -171,7 +248,8 @@
     class="row-even attribute-header"
     id="attr-CRD-dsStartProtocolVersion">
     <div class="attribute-name">
-      dsStartProtocolVersion<a
+      dsStartProtocolVersion
+      <a
         class="link"
         href="#attr-CRD-dsStartProtocolVersion"
         title="Permalink to this attribute"></a>
@@ -181,7 +259,7 @@
   <div categories="" channels="" class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Optional</div>
+        <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -205,7 +283,8 @@
     class="row-odd attribute-header"
     id="attr-CRD-messageType">
     <div class="attribute-name">
-      messageType<a
+      messageType
+      <a
         class="link"
         href="#attr-CRD-messageType"
         title="Permalink to this attribute"></a>
@@ -252,7 +331,8 @@
     class="row-even attribute-header"
     id="attr-CRD-threeDSMethodURL">
     <div class="attribute-name">
-      threeDSMethodURL<a
+      threeDSMethodURL
+      <a
         class="link"
         href="#attr-CRD-threeDSMethodURL"
         title="Permalink to this attribute"></a>
@@ -291,7 +371,8 @@
     class="row-odd attribute-header"
     id="attr-CRD-threeDSServerTransID">
     <div class="attribute-name">
-      threeDSServerTransID<a
+      threeDSServerTransID
+      <a
         class="link"
         href="#attr-CRD-threeDSServerTransID"
         title="Permalink to this attribute"></a>
@@ -304,7 +385,32 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Required</div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -332,6 +438,7 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>
@@ -341,7 +448,8 @@
     class="row-even attribute-header"
     id="attr-CRD-scheme">
     <div class="attribute-name">
-      scheme<a
+      scheme
+      <a
         class="link"
         href="#attr-CRD-scheme"
         title="Permalink to this attribute"></a>
@@ -359,8 +467,11 @@
               <code><span class="pre">standin</span></code>
               <code><span class="pre">visa</span></code>
               <code><span class="pre">mastercard</span></code>
+              <code><span class="pre">jcb</span></code>
+              <code><span class="pre">upi</span></code>
               <code><span class="pre">amex</span></code>
-              <code><span class="pre">discover</span></code>
+              <code><span class="pre">protectbuy</span></code>
+              <code><span class="pre">sbn</span></code>
             </div>
           </div>
         </div>
@@ -391,15 +502,35 @@
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
+              <span>jcb</span>
+            </td>
+            <td class="enumValue">JCB</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>upi</span>
+            </td>
+            <td class="enumValue">UnionPay International</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
               <span>amex</span>
             </td>
             <td class="enumValue">American Express</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
-              <span>discover</span>
+              <span>protectbuy</span>
             </td>
-            <td class="enumValue">Discover</td>
+            <td class="enumValue">ProtectBuy (Discover/Diners)</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>sbn</span>
+            </td>
+            <td class="enumValue">
+              Secured by Nets (Dankort/Forbrugsforeningen)
+            </td>
           </tr>
         </table>
       </div>

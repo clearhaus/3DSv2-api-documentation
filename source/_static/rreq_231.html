@@ -212,14 +212,14 @@
     categories="PA NPA"
     channels="APP BRW 3RI"
     class="row-even attribute-header"
-    id="attr-RReq-authenticationType">
+    id="attr-RReq-authenticationMethod">
     <div class="attribute-name">
-      authenticationType<a
+      authenticationMethod<a
         class="link"
-        href="#attr-RReq-authenticationType"
+        href="#attr-RReq-authenticationMethod"
         title="Permalink to this attribute"></a>
     </div>
-    <div class="attribute-type">string</div>
+    <div class="attribute-type">Array of string</div>
   </div>
   <div
     categories="PA NPA"
@@ -254,9 +254,38 @@
           </div>
         </div>
         <div class="requirements">
+          <div class="minLength">
+            Min length:
+            <code><span class="pre">1</span></code>
+          </div>
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">99</span></code>
+          </div>
           <div class="regexp">
             Regexp:
-            <code><span class="pre">^(0[1-4]|[89][0-9])$</span></code>
+            <code><span class="pre">^[0-9]{2}$</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+              <code><span class="pre">05</span></code>
+              <code><span class="pre">06</span></code>
+              <code><span class="pre">07</span></code>
+              <code><span class="pre">08</span></code>
+              <code><span class="pre">09</span></code>
+              <code><span class="pre">10</span></code>
+              <code><span class="pre">11</span></code>
+              <code><span class="pre">12</span></code>
+              <code><span class="pre">13</span></code>
+              <code><span class="pre">14</span></code>
+              <code><span class="pre">15</span></code>
+              <code><span class="pre">16</span></code>
+            </div>
           </div>
         </div>
         <div class="scenario">
@@ -275,9 +304,8 @@
       </div>
       <div class="argdesc">
         <div class="description">
-          Indicates the type of authentication method the Issuer will use to
-          challenge the Cardholder, whether in the ARes message or what was used
-          by the ACS when in the RReq message.
+          Authentication approach that the ACS used to authenticate the
+          Cardholder for this specific transaction.
         </div>
         <p class="enumDescriptionHeader">Meaning of values:</p>
         <table class="enumDescription">
@@ -285,25 +313,106 @@
             <td class="enumKey">
               <span>01</span>
             </td>
-            <td class="enumValue">Static</td>
+            <td class="enumValue">Static Passcode</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
               <span>02</span>
             </td>
-            <td class="enumValue">Dynamic</td>
+            <td class="enumValue">SMS OTP</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
               <span>03</span>
             </td>
-            <td class="enumValue">OOB</td>
+            <td class="enumValue">Key fob or EMV card reader OTP</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
               <span>04</span>
             </td>
+            <td class="enumValue">App OTP</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>05</span>
+            </td>
+            <td class="enumValue">OTP Other</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>06</span>
+            </td>
+            <td class="enumValue">KBA</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>07</span>
+            </td>
+            <td class="enumValue">OOB Biometrics</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>08</span>
+            </td>
+            <td class="enumValue">OOB Login</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>09</span>
+            </td>
+            <td class="enumValue">OOB Other</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>10</span>
+            </td>
+            <td class="enumValue">Other</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>11</span>
+            </td>
+            <td class="enumValue">Push Confirmation</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>12</span>
+            </td>
             <td class="enumValue">Decoupled</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>13</span>
+            </td>
+            <td class="enumValue">WebAuthn</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>14</span>
+            </td>
+            <td class="enumValue">SPC</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>15</span>
+            </td>
+            <td class="enumValue">Behavioural biometrics</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>16</span>
+            </td>
+            <td class="enumValue">Electronic ID</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>12-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for future EMVCo use (values invalid until defined by
+              EMVCo)
+            </td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -314,52 +423,64 @@
         </table>
         <div class="conditions">
           <div class="">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="01">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="02">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="03">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="02">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="02">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="02">
-            Required if <a href="#attr-RReq-transStatus">transStatus</a> is one
-            of [Y, N]<br />
+            Required if <a href="#attr-ARes-transStatus">transStatus</a> is one
+            of [C, D]<br />Required if
+            <a href="#attr-RReq-transStatus">transStatus</a> is one of [Y, N]<br />
           </div>
         </div>
       </div>
@@ -411,13 +532,9 @@
           </div>
         </div>
         <div class="requirements">
-          <div class="length">
-            Length:
-            <code><span class="pre">28</span></code>
-          </div>
-          <div class="regexp">
-            Regexp:
-            <code><span class="pre">^[a-zA-Z0-9+/]{26,28}={0,2}$</span></code>
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">4000</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -489,6 +606,79 @@
     categories="PA NPA"
     channels="APP BRW 3RI"
     class="row-even attribute-header"
+    id="attr-RReq-cardholderInfo">
+    <div class="attribute-name">
+      cardholderInfo<a
+        class="link"
+        href="#attr-RReq-cardholderInfo"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">
+      <a href="#cardholderinfo"> CardholderInfo object</a>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">
+          <div class="dynamic">Optional</div>
+          <div class="hidden dynamic" deviceChannel="01">Optional</div>
+          <div class="hidden dynamic" deviceChannel="02">Optional</div>
+          <div class="hidden dynamic" deviceChannel="03">Optional</div>
+          <div class="hidden dynamic" messageCategory="01">Optional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Optional
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Optional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Optional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Optional
+          </div>
+        </div>
+        <div class="requirements"></div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+            <code>3RI</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Text provided by the ACS/Issuer to Cardholder during a Frictionless or
+          Decoupled transaction. The Issuer can provide information to
+          Cardholder. For example, “Additional authentication is needed for this
+          transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”
+        </div>
+        <div class="conditions"></div>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-odd attribute-header"
     id="attr-RReq-challengeCancel">
     <div class="attribute-name">
       challengeCancel<a
@@ -501,14 +691,28 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-details">
+    class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Optional</div>
         <div class="requirements">
           <div class="regexp">
             Regexp:
-            <code><span class="pre">^(0[13-8]|[89][0-9])$</span></code>
+            <code><span class="pre">^\d{2}$</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+              <code><span class="pre">05</span></code>
+              <code><span class="pre">06</span></code>
+              <code><span class="pre">07</span></code>
+              <code><span class="pre">08</span></code>
+              <code><span class="pre">09</span></code>
+              <code><span class="pre">10</span></code>
+            </div>
           </div>
         </div>
         <div class="scenario">
@@ -582,6 +786,22 @@
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
+              <span>09</span>
+            </td>
+            <td class="enumValue">
+              Error Message in response to the CRes message sent by the ACS
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>10</span>
+            </td>
+            <td class="enumValue">
+              Error Message in response to the CReq message received by the ACS
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
               <span>80-99</span>
             </td>
             <td class="enumValue">Reserved for DS use</td>
@@ -593,7 +813,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-header"
+    class="row-even attribute-header"
     id="attr-RReq-dsTransID">
     <div class="attribute-name">
       dsTransID<a
@@ -606,7 +826,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-details">
+    class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">
@@ -673,7 +893,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-header"
+    class="row-odd attribute-header"
     id="attr-RReq-eci">
     <div class="attribute-name">
       eci<a
@@ -686,7 +906,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-details">
+    class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Optional</div>
@@ -721,7 +941,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW"
-    class="row-odd attribute-header"
+    class="row-even attribute-header"
     id="attr-RReq-interactionCounter">
     <div class="attribute-name">
       interactionCounter<a
@@ -731,7 +951,10 @@
     </div>
     <div class="attribute-type">string</div>
   </div>
-  <div categories="PA NPA" channels="APP BRW" class="row-odd attribute-details">
+  <div
+    categories="PA NPA"
+    channels="APP BRW"
+    class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">
@@ -846,7 +1069,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-header"
+    class="row-odd attribute-header"
     id="attr-RReq-messageCategory">
     <div class="attribute-name">
       messageCategory<a
@@ -859,7 +1082,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-details">
+    class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Required</div>
@@ -922,7 +1145,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-header"
+    class="row-even attribute-header"
     id="attr-RReq-messageExtension">
     <div class="attribute-name">
       messageExtension<a
@@ -938,14 +1161,14 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-details">
+    class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Optional</div>
         <div class="requirements">
           <div class="maxLength">
             Max length:
-            <code><span class="pre">10</span></code>
+            <code><span class="pre">15</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -973,7 +1196,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-header"
+    class="row-odd attribute-header"
     id="attr-RReq-messageType">
     <div class="attribute-name">
       messageType<a
@@ -986,7 +1209,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-details">
+    class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Required</div>
@@ -1020,7 +1243,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-header"
+    class="row-even attribute-header"
     id="attr-RReq-messageVersion">
     <div class="attribute-name">
       messageVersion<a
@@ -1033,14 +1256,14 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-details">
+    class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Required</div>
         <div class="requirements">
           <div class="enum">
             Must be:
-            <code><span class="pre">2.2.0</span></code>
+            <code><span class="pre">2.3.1</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -1068,7 +1291,7 @@
   <div
     categories="PA NPA"
     channels="APP"
-    class="row-even attribute-header"
+    class="row-odd attribute-header"
     id="attr-RReq-sdkTransID">
     <div class="attribute-name">
       sdkTransID<a
@@ -1078,7 +1301,7 @@
     </div>
     <div class="attribute-type">string</div>
   </div>
-  <div categories="PA NPA" channels="APP" class="row-even attribute-details">
+  <div categories="PA NPA" channels="APP" class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">
@@ -1134,15 +1357,15 @@
         </div>
         <div class="conditions">
           <div class="">
-            Required if <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-RReq-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
         </div>
@@ -1152,7 +1375,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-header"
+    class="row-even attribute-header"
     id="attr-RReq-threeDSServerTransID">
     <div class="attribute-name">
       threeDSServerTransID<a
@@ -1165,10 +1388,35 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-details">
+    class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Required</div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -1196,13 +1444,14 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-header"
+    class="row-odd attribute-header"
     id="attr-RReq-transStatus">
     <div class="attribute-name">
       transStatus<a
@@ -1215,7 +1464,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-details">
+    class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">
@@ -1346,7 +1595,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-header"
+    class="row-even attribute-header"
     id="attr-RReq-transStatusReason">
     <div class="attribute-name">
       transStatusReason<a
@@ -1359,7 +1608,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-details">
+    class="row-even attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">
@@ -1391,9 +1640,43 @@
         <div class="requirements">
           <div class="regexp">
             Regexp:
-            <code
-              ><span class="pre">^(0[1-9]|1[0-9]|2[0-6]|[89][0-9])$</span></code
-            >
+            <code><span class="pre">^\d{2}$</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+              <code><span class="pre">05</span></code>
+              <code><span class="pre">06</span></code>
+              <code><span class="pre">07</span></code>
+              <code><span class="pre">08</span></code>
+              <code><span class="pre">09</span></code>
+              <code><span class="pre">10</span></code>
+              <code><span class="pre">11</span></code>
+              <code><span class="pre">12</span></code>
+              <code><span class="pre">13</span></code>
+              <code><span class="pre">14</span></code>
+              <code><span class="pre">15</span></code>
+              <code><span class="pre">16</span></code>
+              <code><span class="pre">17</span></code>
+              <code><span class="pre">18</span></code>
+              <code><span class="pre">19</span></code>
+              <code><span class="pre">20</span></code>
+              <code><span class="pre">21</span></code>
+              <code><span class="pre">22</span></code>
+              <code><span class="pre">23</span></code>
+              <code><span class="pre">24</span></code>
+              <code><span class="pre">25</span></code>
+              <code><span class="pre">26</span></code>
+              <code><span class="pre">27</span></code>
+              <code><span class="pre">28</span></code>
+              <code><span class="pre">29</span></code>
+              <code><span class="pre">30</span></code>
+              <code><span class="pre">80-99</span></code>
+            </div>
           </div>
         </div>
         <div class="scenario">
@@ -1427,13 +1710,13 @@
             <td class="enumKey">
               <span>02</span>
             </td>
-            <td class="enumValue">Unknown Device</td>
+            <td class="enumValue">Unknown device</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
               <span>03</span>
             </td>
-            <td class="enumValue">Unsupported Device</td>
+            <td class="enumValue">Unsupported device</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -1463,7 +1746,7 @@
             <td class="enumKey">
               <span>08</span>
             </td>
-            <td class="enumValue">No Card record</td>
+            <td class="enumValue">No card record</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -1487,7 +1770,7 @@
             <td class="enumKey">
               <span>12</span>
             </td>
-            <td class="enumValue">Transaction not permitted to cardholder</td>
+            <td class="enumValue">Transaction not permitted to Cardholder</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -1523,7 +1806,7 @@
             <td class="enumKey">
               <span>18</span>
             </td>
-            <td class="enumValue">Very High confidence</td>
+            <td class="enumValue">Very high confidence</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -1572,7 +1855,7 @@
             </td>
             <td class="enumValue">
               Decoupled Authentication was provided insufficient time to
-              authenticate cardholder. ACS will not make attempt
+              authenticate Cardholder. ACS will not make attempt
             </td>
           </tr>
           <tr class="enumEntry">
@@ -1580,8 +1863,58 @@
               <span>26</span>
             </td>
             <td class="enumValue">
-              Authentication attempted but not performed by the cardholder
+              Authentication attempted but not performed by the Cardholder
             </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>27</span>
+            </td>
+            <td class="enumValue">
+              Preferred Authentication Method not supported
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>28</span>
+            </td>
+            <td class="enumValue">
+              Validation of content security policy failed
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>29</span>
+            </td>
+            <td class="enumValue">
+              Authentication attempted but not completed by the Cardholder. Fall
+              back to Decoupled Authentication
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>30</span>
+            </td>
+            <td class="enumValue">
+              Authentication completed successfully but additional
+              authentication of the Cardholder required. Reinitiate as Decoupled
+              Authentication
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>31-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80-99</span>
+            </td>
+            <td class="enumValue">Reserved for DS use</td>
           </tr>
         </table>
         <div class="conditions">
@@ -1632,12 +1965,12 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-header"
-    id="attr-RReq-whiteListStatus">
+    class="row-odd attribute-header"
+    id="attr-RReq-trustListStatus">
     <div class="attribute-name">
-      whiteListStatus<a
+      trustListStatus<a
         class="link"
-        href="#attr-RReq-whiteListStatus"
+        href="#attr-RReq-trustListStatus"
         title="Permalink to this attribute"></a>
     </div>
     <div class="attribute-type">string</div>
@@ -1645,7 +1978,7 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-even attribute-details">
+    class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
         <div class="inclusion">Optional</div>
@@ -1678,7 +2011,7 @@
       </div>
       <div class="argdesc">
         <div class="description">
-          Enables the communication of trusted beneficiary/whitelist status
+          Enables the communication of trusted beneficiary/trustlist status
           between the ACS, the DS and the 3DS Requestor. Note: Valid values in
           the AReq message are Y or N
         </div>
@@ -1689,7 +2022,7 @@
               <span>Y</span>
             </td>
             <td class="enumValue">
-              3DS Requestor is whitelisted by cardholder
+              3DS Requestor is Trust Listed by Cardholder
             </td>
           </tr>
           <tr class="enumEntry">
@@ -1697,7 +2030,7 @@
               <span>N</span>
             </td>
             <td class="enumValue">
-              3DS Requestor is not whitelisted by cardholder
+              3DS Requestor is not Trust Listed by Cardholder
             </td>
           </tr>
           <tr class="enumEntry">
@@ -1710,7 +2043,7 @@
             <td class="enumKey">
               <span>P</span>
             </td>
-            <td class="enumValue">Pending confirmation by cardholder</td>
+            <td class="enumValue">Pending confirmation by Cardholder</td>
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
@@ -1723,7 +2056,7 @@
               <span>U</span>
             </td>
             <td class="enumValue">
-              Whitelist status unknown, unavailable, or does not apply
+              Trust List status unknown, unavailable, or does not apply
             </td>
           </tr>
         </table>
@@ -1733,12 +2066,487 @@
   <div
     categories="PA NPA"
     channels="APP BRW 3RI"
-    class="row-odd attribute-header"
-    id="attr-RReq-whiteListStatusSource">
+    class="row-even attribute-header"
+    id="attr-RReq-trustListStatusSource">
     <div class="attribute-name">
-      whiteListStatusSource<a
+      trustListStatusSource<a
         class="link"
-        href="#attr-RReq-whiteListStatusSource"
+        href="#attr-RReq-trustListStatusSource"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">
+          <div class="dynamic">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="01">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="02">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="03">Conditional</div>
+          <div class="hidden dynamic" messageCategory="01">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Conditional
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Conditional
+          </div>
+        </div>
+        <div class="requirements">
+          <div class="regexp">
+            Regexp:
+            <code><span class="pre">^(0[123]|[89][0-9])$</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+            </div>
+          </div>
+        </div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+            <code>3RI</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          This data element will be populated by the system setting Trust List
+          Status.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">3DS Server</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">DS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">ACS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80-99</span>
+            </td>
+            <td class="enumValue">Reserved for DS use</td>
+          </tr>
+        </table>
+        <div class="conditions">
+          <div class="">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="01">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="02">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="03">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="01" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="02" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="03" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="01" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="02" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+          <div class="hidden" deviceChannel="03" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-trustListStatus">trustListStatus</a> is not
+            empty<br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW"
+    class="row-odd attribute-header"
+    id="attr-RReq-challengeErrorReporting">
+    <div class="attribute-name">
+      challengeErrorReporting<a
+        class="link"
+        href="#attr-RReq-challengeErrorReporting"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">
+      <a href="#error"> Error object</a>
+    </div>
+  </div>
+  <div categories="PA NPA" channels="APP BRW" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">
+          <div class="dynamic">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="01">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="02">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="03">Conditional</div>
+          <div class="hidden dynamic" messageCategory="01">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Conditional
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Conditional</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Conditional
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Conditional
+          </div>
+        </div>
+        <div class="requirements"></div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description"></div>
+        <div class="conditions">
+          <div class="">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="01">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="02">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="03">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="01" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="02" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="03" messageCategory="01">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="01" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="02" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+          <div class="hidden" deviceChannel="03" messageCategory="02">
+            Required if
+            <a href="#attr-RReq-challengeCancel">challengeCancel</a> is one of
+            [09, 10]<br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-header"
+    id="attr-RReq-deviceBindingStatus">
+    <div class="attribute-name">
+      deviceBindingStatus<a
+        class="link"
+        href="#attr-RReq-deviceBindingStatus"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="regexp">
+            Regexp:
+            <code><span class="pre">^[0-9]{2}$</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+              <code><span class="pre">05</span></code>
+              <code><span class="pre">06-10</span></code>
+              <code><span class="pre">11</span></code>
+              <code><span class="pre">12</span></code>
+              <code><span class="pre">13</span></code>
+              <code><span class="pre">14</span></code>
+              <code><span class="pre">15</span></code>
+            </div>
+          </div>
+        </div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+            <code>3RI</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Enables the communication of Device Binding Status between the ACS,
+          the DS and the 3DS Requestor. For bound devices (value = 11–14),
+          Device Binding Status also conveys the type of binding that was
+          performed.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">Device is not bound by Cardholder</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">Not eligible as determined by issuer</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">Pending confirmation by Cardholder</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04</span>
+            </td>
+            <td class="enumValue">Cardholder reject</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>05</span>
+            </td>
+            <td class="enumValue">
+              Device Binding Status unknown, unavailable, or does not apply
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>06-10</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>11</span>
+            </td>
+            <td class="enumValue">
+              Device is bound by Cardholder (device is bound using hardware /
+              SIM internal to the consumer device. For instance, keys stored in
+              a secure element on the device)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>12</span>
+            </td>
+            <td class="enumValue">
+              Device is bound by Cardholder (device is bound using hardware
+              external to the consumers device. For example, a external FIDO
+              authenticator)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>13</span>
+            </td>
+            <td class="enumValue">
+              Device is bound by Cardholder (Device is bound using data that
+              includes dynamically)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>14</span>
+            </td>
+            <td class="enumValue">
+              Device is bound by Cardholder (Device is bound using static device
+              data that has been obtained from the consumers device)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>15</span>
+            </td>
+            <td class="enumValue">
+              Device is bound by Cardholder (Other method)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>16-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80-99</span>
+            </td>
+            <td class="enumValue">Reserved for DS use</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-odd attribute-header"
+    id="attr-RReq-deviceBindingStatusSource">
+    <div class="attribute-name">
+      deviceBindingStatusSource<a
+        class="link"
+        href="#attr-RReq-deviceBindingStatusSource"
         title="Permalink to this attribute"></a>
     </div>
     <div class="attribute-type">string</div>
@@ -1778,7 +2586,15 @@
         <div class="requirements">
           <div class="regexp">
             Regexp:
-            <code><span class="pre">^(0[123]|[89][0-9])$</span></code>
+            <code><span class="pre">^[0-9]{2}$</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+            </div>
           </div>
         </div>
         <div class="scenario">
@@ -1797,8 +2613,8 @@
       </div>
       <div class="argdesc">
         <div class="description">
-          This data element will be populated by the system setting Whitelist
-          Status.
+          This data element will be populated by the system setting Device
+          Binding Status.
         </div>
         <p class="enumDescriptionHeader">Meaning of values:</p>
         <table class="enumDescription">
@@ -1822,6 +2638,15 @@
           </tr>
           <tr class="enumEntry">
             <td class="enumKey">
+              <span>04-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
               <span>80-99</span>
             </td>
             <td class="enumValue">Reserved for DS use</td>
@@ -1830,64 +2655,111 @@
         <div class="conditions">
           <div class="">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="01">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="02">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="03">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" messageCategory="01">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="01">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="01">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="01">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" messageCategory="02">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="01" messageCategory="02">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="02" messageCategory="02">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
           <div class="hidden" deviceChannel="03" messageCategory="02">
             Required if
-            <a href="#attr-RReq-whiteListStatus">whiteListStatus</a> is not
-            empty<br />
+            <a href="#attr-RReq-deviceBindingStatus">deviceBindingStatus</a> is
+            not empty<br />
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-header"
+    id="attr-RReq-transStatusReasonInfo">
+    <div class="attribute-name">
+      transStatusReasonInfo<a
+        class="link"
+        href="#attr-RReq-transStatusReasonInfo"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">256</span></code>
+          </div>
+        </div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+            <code>3RI</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Provides additional information on the Transaction Status Reason.
         </div>
       </div>
     </div>

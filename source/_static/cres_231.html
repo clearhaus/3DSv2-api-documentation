@@ -187,7 +187,7 @@
         <div class="requirements">
           <div class="maxLength">
             Max length:
-            <code><span class="pre">10</span></code>
+            <code><span class="pre">15</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -282,7 +282,7 @@
         <div class="requirements">
           <div class="enum">
             Must be:
-            <code><span class="pre">2.2.0</span></code>
+            <code><span class="pre">2.3.1</span></code>
           </div>
         </div>
         <div class="scenario">
@@ -376,15 +376,15 @@
         </div>
         <div class="conditions">
           <div class="">
-            Required if <a href="#attr-CRes-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
           <div class="hidden" messageCategory="01">
-            Required if <a href="#attr-CRes-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
           <div class="hidden" messageCategory="02">
-            Required if <a href="#attr-CRes-deviceChannel">deviceChannel</a> is
+            Required if <a href="#attr-AReq-deviceChannel">deviceChannel</a> is
             "01"<br />
           </div>
         </div>
@@ -410,7 +410,32 @@
     class="row-odd attribute-details">
     <div class="arg">
       <div class="argdef">
-        <div class="inclusion">Required</div>
+        <div class="inclusion">
+          <div class="dynamic">Required</div>
+          <div class="hidden dynamic" deviceChannel="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="03">Required</div>
+          <div class="hidden dynamic" messageCategory="01">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="01">
+            Required
+          </div>
+          <div class="hidden dynamic" messageCategory="02">Required</div>
+          <div class="hidden dynamic" deviceChannel="01" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="02" messageCategory="02">
+            Required
+          </div>
+          <div class="hidden dynamic" deviceChannel="03" messageCategory="02">
+            Required
+          </div>
+        </div>
         <div class="requirements">
           <div class="format">
             Format:
@@ -438,6 +463,7 @@
           Universally unique transaction identifier assigned by the 3DS Server
           to identify a single transaction.
         </div>
+        <div class="conditions"></div>
       </div>
     </div>
   </div>

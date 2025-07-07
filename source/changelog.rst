@@ -7,9 +7,13 @@ Changelog
 The source for this documentation is publicly hosted on `Github
 <https://github.com/clearhaus/3DSv2-api-documentation>`_. The full changes can
 be found in the revision history.
-Select changes are added here.
 
 Pull requests and issues are welcome.
+
+July 7th, 2025
+***************
+
+#. Added documentation for the ``v2.3.1`` specification.
 
 September 17th, 2024
 *********************
