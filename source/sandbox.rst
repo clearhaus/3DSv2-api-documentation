@@ -278,3 +278,79 @@ Browser Examples
 
         The challenge will auto-submit using JavaScript
 
+*************
+3RI Testcases
+*************
+
+The 3RI test cases are meant to test the 3RI flow.
+Set the parameter ``cardholderName`` to trigger different test cases.
+
+.. list-table:: 3RI testcases
+    :header-rows: 1
+    :widths: 20, 25, 25, 45
+
+    * - Testname
+      - CardholderName
+      - Success criteria
+      - What's being tested in your system
+
+    * - Frictionless full
+      - 3RI-Full
+      - ``ARes`` with ``transStatus: Y``
+      - Full frictionless authentication
+
+    * - Frictionless attempt
+      - 3RI-Attempt
+      - ``ARes`` with ``transStatus: A``
+      - Attempt frictionless authentic ation
+
+    * - Frictionless unavailable
+      - 3RI-Unavailable
+      - ``ARes`` with ``transStatus: U``
+      - Frictionless authentication not available
+
+    * - Frictionless rejected
+      - 3RI-Rejected
+      - ``ARes`` with ``transStatus: R``
+      - Rejected frictionless authentication
+
+*************
+SDK Testcases
+*************
+
+The SDK test cases are meant to test the SDK flow.
+Set the parameter ``cardholderName`` to trigger different test cases.
+
+.. list-table:: SDK testcases
+    :header-rows: 1
+    :widths: 20, 25, 25, 45
+
+    * - Testname
+      - CardholderName
+      - Success criteria
+      - What's being tested in your system
+
+    * - Manual challenge
+      - SDK-Challenge
+      - ``RReq`` with ``transStatus: Y`` or ``N``
+      - Challenge authentication with SDK
+
+    * - Frictionless full
+      - SDK-Frictionless
+      - ``ARes`` with ``transStatus: Y``
+      - Full frictionless authentication with SDK
+
+    * - Frictionless attempt
+      - SDK-Attempt
+      - ``ARes`` with ``transStatus: A``
+      - Attempt frictionless authentication with SDK
+
+    * - Frictionless rejected
+      - SDK-Reject
+      - ``ARes`` with ``transStatus: R``
+      - Rejected frictionless authentication with SDK
+
+    * - Frictionless not authenticated
+      - SDK-NotAuthenticated
+      - ``ARes`` with ``transStatus: N``
+      - Not authenticated frictionless authentication with SDK
