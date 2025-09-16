@@ -10,11 +10,11 @@ Summary of Changes
 +--------------+--------------+----------------+------------------------+
 | Message Type | Fields Added | Fields Removed | Fields Renamed/Changed |
 +==============+==============+================+========================+
-| AReq         | 25           | 3              | 2                      |
+| AReq         | 25           | 1              | 2                      |
 +--------------+--------------+----------------+------------------------+
-| ARes         | 11           | 2              | 3                      |
+| ARes         | 11           | 0              | 3                      |
 +--------------+--------------+----------------+------------------------+
-| RReq         | 5            | 2              | 3                      |
+| RReq         | 5            | 0              | 3                      |
 +--------------+--------------+----------------+------------------------+
 
 AReq Changes
@@ -97,10 +97,6 @@ Fields Removed in v2.3.1
      - Description
    * - **threeDSReqAuthMethodInd**
      - Signature verification performed by DS on cardholder authentication mechanism
-   * - **whiteListStatus**
-     - Renamed to ``trustListStatus``
-   * - **whiteListStatusSource**
-     - Renamed to ``trustListStatusSource``
 
 Fields Renamed/Changed in v2.3.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -153,19 +149,6 @@ New Fields Added in v2.3.1
    * - **webAuthnCredList**
      - List of credential IDs registered for Cardholder Account Number
 
-Fields Removed in v2.3.1
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30 70
-
-   * - Field Name
-     - Description
-   * - **whiteListStatus**
-     - Renamed to ``trustListStatus``
-   * - **whiteListStatusSource**
-     - Renamed to ``trustListStatusSource``
 
 Fields Renamed/Changed in v2.3.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -207,20 +190,6 @@ New Fields Added in v2.3.1
      - System setting Device Binding Status
    * - **transStatusReasonInfo**
      - Additional information on Transaction Status Reason
-
-Fields Removed in v2.3.1
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30 70
-
-   * - Field Name
-     - Description
-   * - **whiteListStatus**
-     - Renamed to ``trustListStatus``
-   * - **whiteListStatusSource**
-     - Renamed to ``trustListStatusSource``
 
 Fields Renamed/Changed in v2.3.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
