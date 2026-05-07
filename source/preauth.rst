@@ -27,8 +27,7 @@ This near-pseudocode describes the flow your code should perform.
 
        {
          "acctNumber": "4111111111111111",
-         "ds": "visa",
-         "maxMessageVersion": "2.3.1", // Optional: defaults to 2.2.0
+         "ds": "visa"
        }
 
 2. Send the request to the 3-D Secure Server. Consult the :ref:`requests guide
@@ -81,18 +80,16 @@ If the card number is enrolled for 3-D Secure v2, the response might look
 something like:
 
 .. code-block:: json
-  :caption: /preauth 2.2.0 example response
+  :caption: /preauth example response
   :linenos:
 
    {
-     "acsStartProtocolVersion": "2.1.0",
-     "acsEndProtocolVersion": "2.2.0",
-     "dsStartProtocolVersion": "2.1.0",
-     "dsEndProtocolVersion": "2.2.0",
      "dsProtocolVersions": [
-       "2.1.0",
-       "2.2.0"
+       "2.2.0",
+       "2.3.1"
      ],
+     "dsStartProtocolVersion": "2.2.0",
+     "dsEndProtocolVersion": "2.3.1",
      "acsProtocolVersions": [
        {
          "acsInfoInd": [
@@ -104,78 +101,35 @@ something like:
            "87",
            "88",
            "89",
-           "92",
-           "93",
-           "94"
+           "90"
          ],
-         "threeDSMethodURL": "https://acs.tld/3dsmethod",
-         "version": "2.1.0"
-       },
-       {
-         "acsInfoInd": [
-           "01",
-           "02",
-           "84",
-           "85",
-           "86",
-           "87",
-           "88",
-           "89",
-           "92",
-           "93",
-           "94"
-         ],
-         "threeDSMethodURL": "https://acs.tld/3dsmethod",
+         "threeDSMethodURL": "https://secure7.arcot.com/content-server/api/tds2/txn/browser/v1/tds-method",
          "version": "2.2.0"
        }
      ],
-     "threeDSServerTransID": "d461f105-1792-407f-95ff-9a496fd918a9",
-     "threeDSMethodURL": "https://acs.tld/3dsmethod"
+     "acsStartProtocolVersion": "2.2.0",
+     "acsEndProtocolVersion": "2.2.0",
+     "acsInfoInd": [
+       "01",
+       "02",
+       "84",
+       "85",
+       "86",
+       "87",
+       "88",
+       "89",
+       "90"
+     ],
+     "threeDSServerProtocolVersions": [
+       "2.1.0",
+       "2.2.0",
+       "2.3.1"
+     ],
+     "threeDSMethodURL": "https://secure7.arcot.com/content-server/api/tds2/txn/browser/v1/tds-method",
+     "threeDSServerTransID": "6b91f61e-9e62-4f5c-ab8c-f1ffb84122cb",
+     "scheme": "mastercard",
+     "messageType": "CRD"
    }
-
-If ``maxMessageVersion`` is ``2.3.1``, the response will look like this:
-
-.. code-block:: json
-  :caption: /preauth 2.3.1 example response
-  :linenos:
-
-    {
-      "dsProtocolVersions": [
-        "2.2.0",
-        "2.3.1"
-      ],
-      "acsProtocolVersions": [
-        {
-          "version": "2.2.0",
-          "acsInfoInd": [
-            "01",
-            "02"
-          ],
-          "threeDSMethodURL": "https://www.acs.com/script1",
-          "supportedMsgExt": [
-            {
-              "id": "A000000802-001",
-              "version": "2.0"
-            },
-            {
-              "id": "A000000802-004",
-              "version": "1.0"
-            }
-          ]
-        },
-        {
-          "version": "2.3.1",
-          "acsInfoInd": [
-            "01",
-            "02",
-            "03",
-            "04",
-            "81"
-          ],
-          "threeDSMethodURL": "https://www.acs.com/script3"
-        }
-      ]
-    }
 
 .. note::
 
