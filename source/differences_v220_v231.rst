@@ -7,15 +7,16 @@ This document outlines the differences in message fields between 3D-Secure speci
 Summary of Changes
 ------------------
 
-+--------------+--------------+----------------+------------------------+
-| Message Type | Fields Added | Fields Removed | Fields Renamed/Changed |
-+==============+==============+================+========================+
-| AReq         | 25           | 1              | 2                      |
-+--------------+--------------+----------------+------------------------+
-| ARes         | 11           | 0              | 3                      |
-+--------------+--------------+----------------+------------------------+
-| RReq         | 5            | 0              | 3                      |
-+--------------+--------------+----------------+------------------------+
++--------------+--------------+----------------+------------------------+-------------------------------+
+| Message Type | Fields Added | Fields Removed | Fields Renamed/Changed | Fields with Type/Cardinality  |
+|              |              |                |                        | Change                        |
++==============+==============+================+========================+===============================+
+| AReq         | 29           | 1              | 2                      | 3                             |
++--------------+--------------+----------------+------------------------+-------------------------------+
+| ARes         | 11           | 0              | 3                      | 2                             |
++--------------+--------------+----------------+------------------------+-------------------------------+
+| RReq         | 5            | 0              | 3                      | 1                             |
++--------------+--------------+----------------+------------------------+-------------------------------+
 
 AReq Changes
 -------------------------------------
@@ -41,6 +42,10 @@ New Fields Added in v2.3.1
      - Unstructured information sent between 3DS Server, DS and ACS
    * - **cardSecurityCode**
      - Three- or four-digit security code printed on the card
+   * - **cardSecurityCodeStatus**
+     - Communication of Card Security Code Status
+   * - **cardSecurityCodeStatusSource**
+     - System setting Card Security Code Status
    * - **deviceBindingStatus**
      - Communication of Device Binding Status between ACS, DS and 3DS Requestor
    * - **deviceBindingStatusSource**
@@ -51,7 +56,7 @@ New Fields Added in v2.3.1
      - Characteristics of a Default-SDK
    * - **multiTransaction**
      - Additional transaction information for multiple transactions or Merchants
-   * - **payeeOriginAReq**
+   * - **payeeOrigin**
      - Origin of the payee for SPC Transaction Data
    * - **payTokenInfo**
      - Information about detokenised Payment Token
@@ -67,8 +72,6 @@ New Fields Added in v2.3.1
      - Indicates whether recurring/instalment payment has fixed or variable amount and frequency
    * - **sdkServerSignedContent**
      - JWS object created by the Split-SDK Server for AReq message
-   * - **sdkSignatureTimestamp**
-     - Date and time when 3DS SDK generated the Split-SDK Server Signed Content
    * - **sdkType**
      - Indicates the type of 3DS SDK
    * - **sellerInfo**
@@ -111,6 +114,26 @@ Fields Renamed/Changed in v2.3.1
      - Communication of trusted beneficiary status
    * - **whiteListStatusSource** → **trustListStatusSource**
      - System setting Trust List Status
+
+Fields with Changed Type/Cardinality in v2.3.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 30 30
+
+   * - Field Name
+     - v2.2.0 Type
+     - v2.3.1 Type
+   * - **threeDSRequestorChallengeInd**
+     - Single string
+     - Array of strings
+   * - **threeDSRequestorAuthenticationInfo**
+     - Single object
+     - Array of objects
+   * - **threeDSRequestorPriorAuthenticationInfo**
+     - Single object
+     - Array of objects
 
 ----
 
@@ -166,6 +189,23 @@ Fields Renamed/Changed in v2.3.1
    * - **whiteListStatusSource** → **trustListStatusSource**
      - System setting Trust List Status
 
+Fields with Changed Type/Cardinality in v2.3.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 30 30
+
+   * - Field Name
+     - v2.2.0 Type
+     - v2.3.1 Type
+   * - **cardholderInfo**
+     - String (max 128 chars)
+     - Object ``{text, issuerImage, paymentSystemImage}``
+   * - **acsRenderingType**
+     - Object ``{acsInterface, acsUiTemplate}``
+     - Object ``{acsInterface, acsUiTemplate, deviceUserInterfaceMode}``
+
 ----
 
 RReq Changes
@@ -206,6 +246,20 @@ Fields Renamed/Changed in v2.3.1
      - Communication of trusted beneficiary status
    * - **whiteListStatusSource** → **trustListStatusSource**
      - System setting Trust List Status
+
+Fields with Changed Type/Cardinality in v2.3.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 30 30
+
+   * - Field Name
+     - v2.2.0 Type
+     - v2.3.1 Type
+   * - **acsRenderingType**
+     - Object ``{acsInterface, acsUiTemplate}``
+     - Object ``{acsInterface, acsUiTemplate, deviceUserInterfaceMode}``
 
 ----
 
