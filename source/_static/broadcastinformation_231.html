@@ -1,270 +1,353 @@
-<div class='reference-object'>
-<div categories='' channels='' class='row-even attribute-header' id='attr-BroadcastInformation-category'><div class='attribute-name'>
-category<a class='link' href='#attr-BroadcastInformation-category' title='Permalink to this attribute'></a>
-</div>
-<div class='attribute-type'>
-string</div></div>
-<div categories='' channels='' class='row-even attribute-details'><div class='arg'>
-<div class='argdef'>
-<div class='inclusion'>Required</div>
-<div class='requirements'>
-<div class='enum'>
-One of:
-<div class='value-container'>
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
-<code><span class='pre'>03</span></code>
-<code><span class='pre'>04</span></code>
-<code><span class='pre'>05</span></code>
-<code><span class='pre'>06</span></code>
-</div>
-</div>
-</div>
-</div>
-<div class='argdesc'><div class='description'>Indicates the intended recipient(s) of the broadcast information.</div>
-<p class='enumDescriptionHeader'>Meaning of values:</p>
-<table class='enumDescription'>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>01</span>
-</td>
-<td class='enumValue'>General</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>02</span>
-</td>
-<td class='enumValue'>Certificate expiry</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>03</span>
-</td>
-<td class='enumValue'>Fraud alert</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>04</span>
-</td>
-<td class='enumValue'>Operational alert</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>05</span>
-</td>
-<td class='enumValue'>Transactional data</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>06</span>
-</td>
-<td class='enumValue'>Other</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>07-79</span>
-</td>
-<td class='enumValue'>Reserved for EMVCo future use (values invalid until defined by EMVCo)</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>80-99</span>
-</td>
-<td class='enumValue'>Reserved for DS use</td>
-</tr>
-</table></div>
-</div></div>
-<div categories='' channels='' class='row-odd attribute-header' id='attr-BroadcastInformation-description'><div class='attribute-name'>
-description<a class='link' href='#attr-BroadcastInformation-description' title='Permalink to this attribute'></a>
-</div>
-<div class='attribute-type'>
-string</div></div>
-<div categories='' channels='' class='row-odd attribute-details'><div class='arg'>
-<div class='argdef'>
-<div class='inclusion'>Optional</div>
-<div class='requirements'>
-<div class='maxLength'>
-Max length:
-<code><span class='pre'>4000</span></code>
-</div>
-</div>
-</div>
-<div class='argdesc'><div class='description'></div></div>
-</div></div>
-<div categories='' channels='' class='row-even attribute-header' id='attr-BroadcastInformation-expDate'><div class='attribute-name'>
-expDate<a class='link' href='#attr-BroadcastInformation-expDate' title='Permalink to this attribute'></a>
-</div>
-<div class='attribute-type'>
-string</div></div>
-<div categories='' channels='' class='row-even attribute-details'><div class='arg'>
-<div class='argdef'>
-<div class='inclusion'>Optional</div>
-<div class='requirements'>
-<div class='format'>
-Format:
-<a href='specification_common.html#format-yyyymmdd'>
-<code><span class='pre'>yyyymmdd</span></code>
-</a>
-</div>
-<div class='length'>
-Length:
-<code><span class='pre'>8</span></code>
-</div>
-</div>
-</div>
-<div class='argdesc'><div class='description'>The date after which the relevance of the broadcast information (e.g., certificate expiration dates) expires.</div></div>
-</div></div>
-<div categories='' channels='' class='row-odd attribute-header' id='attr-BroadcastInformation-recipients'><div class='attribute-name'>
-recipients<a class='link' href='#attr-BroadcastInformation-recipients' title='Permalink to this attribute'></a>
-</div>
-<div class='attribute-type'>
-Array of
-string</div></div>
-<div categories='' channels='' class='row-odd attribute-details'><div class='arg'>
-<div class='argdef'>
-<div class='inclusion'>Required</div>
-<div class='requirements'>
-<div class='minLength'>
-Min length:
-<code><span class='pre'>1</span></code>
-</div>
-<div class='maxLength'>
-Max length:
-<code><span class='pre'>3</span></code>
-</div>
-<div class='enum'>
-One of:
-<div class='value-container'>
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
-<code><span class='pre'>03</span></code>
-<code><span class='pre'>04</span></code>
-</div>
-</div>
-</div>
-</div>
-<div class='argdesc'><div class='description'>Indicates the intended recipient(s) of the broadcast information.</div>
-<p class='enumDescriptionHeader'>Meaning of values:</p>
-<table class='enumDescription'>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>01</span>
-</td>
-<td class='enumValue'>3DS SDK</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>02</span>
-</td>
-<td class='enumValue'>3DS Server</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>03</span>
-</td>
-<td class='enumValue'>DS</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>04</span>
-</td>
-<td class='enumValue'>ACS</td>
-</tr>
-</table></div>
-</div></div>
-<div categories='' channels='' class='row-even attribute-header' id='attr-BroadcastInformation-severity'><div class='attribute-name'>
-severity<a class='link' href='#attr-BroadcastInformation-severity' title='Permalink to this attribute'></a>
-</div>
-<div class='attribute-type'>
-string</div></div>
-<div categories='' channels='' class='row-even attribute-details'><div class='arg'>
-<div class='argdef'>
-<div class='inclusion'>Required</div>
-<div class='requirements'>
-<div class='length'>
-Length:
-<code><span class='pre'>2</span></code>
-</div>
-<div class='enum'>
-One of:
-<div class='value-container'>
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
-<code><span class='pre'>03</span></code>
-<code><span class='pre'>04</span></code>
-</div>
-</div>
-</div>
-</div>
-<div class='argdesc'><div class='description'>Indicates the importance/severity level of the broadcast information.</div>
-<p class='enumDescriptionHeader'>Meaning of values:</p>
-<table class='enumDescription'>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>01</span>
-</td>
-<td class='enumValue'>Critical</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>02</span>
-</td>
-<td class='enumValue'>Major</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>03</span>
-</td>
-<td class='enumValue'>Minor</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>04</span>
-</td>
-<td class='enumValue'>Informational</td>
-</tr>
-</table></div>
-</div></div>
-<div categories='' channels='' class='row-odd attribute-header' id='attr-BroadcastInformation-source'><div class='attribute-name'>
-source<a class='link' href='#attr-BroadcastInformation-source' title='Permalink to this attribute'></a>
-</div>
-<div class='attribute-type'>
-string</div></div>
-<div categories='' channels='' class='row-odd attribute-details'><div class='arg'>
-<div class='argdef'>
-<div class='inclusion'>Required</div>
-<div class='requirements'>
-<div class='enum'>
-One of:
-<div class='value-container'>
-<code><span class='pre'>01</span></code>
-<code><span class='pre'>02</span></code>
-<code><span class='pre'>03</span></code>
-</div>
-</div>
-</div>
-</div>
-<div class='argdesc'><div class='description'>Indicates the source of the broadcast information.</div>
-<p class='enumDescriptionHeader'>Meaning of values:</p>
-<table class='enumDescription'>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>01</span>
-</td>
-<td class='enumValue'>3DS Server</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>02</span>
-</td>
-<td class='enumValue'>DS</td>
-</tr>
-<tr class='enumEntry'>
-<td class='enumKey'>
-<span>03</span>
-</td>
-<td class='enumValue'>ACS</td>
-</tr>
-</table></div>
-</div></div>
+<div class="reference-object">
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-BroadcastInformation-category">
+    <div class="attribute-name">
+      category<a
+        class="link"
+        href="#attr-BroadcastInformation-category"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Required</div>
+        <div class="requirements">
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+              <code><span class="pre">05</span></code>
+              <code><span class="pre">06</span></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Indicates the intended recipient(s) of the broadcast information.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">General</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">Certificate expiry</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">Fraud alert</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04</span>
+            </td>
+            <td class="enumValue">Operational alert</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>05</span>
+            </td>
+            <td class="enumValue">Transactional data</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>06</span>
+            </td>
+            <td class="enumValue">Other</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>07-79</span>
+            </td>
+            <td class="enumValue">
+              Reserved for EMVCo future use (values invalid until defined by
+              EMVCo)
+            </td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>80-99</span>
+            </td>
+            <td class="enumValue">Reserved for DS use</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-BroadcastInformation-description">
+    <div class="attribute-name">
+      description<a
+        class="link"
+        href="#attr-BroadcastInformation-description"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">4000</span></code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc"><div class="description"></div></div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-BroadcastInformation-expDate">
+    <div class="attribute-name">
+      expDate<a
+        class="link"
+        href="#attr-BroadcastInformation-expDate"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="format">
+            Format:
+            <a href="specification_common.html#format-yyyymmdd">
+              <code><span class="pre">yyyymmdd</span></code>
+            </a>
+          </div>
+          <div class="length">
+            Length:
+            <code><span class="pre">8</span></code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          The date after which the relevance of the broadcast information (e.g.,
+          certificate expiration dates) expires.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-BroadcastInformation-recipients">
+    <div class="attribute-name">
+      recipients<a
+        class="link"
+        href="#attr-BroadcastInformation-recipients"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">Array of string</div>
+  </div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Required</div>
+        <div class="requirements">
+          <div class="minLength">
+            Min length:
+            <code><span class="pre">1</span></code>
+          </div>
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">3</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Indicates the intended recipient(s) of the broadcast information.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">3DS SDK</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">3DS Server</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">DS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04</span>
+            </td>
+            <td class="enumValue">ACS</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-even attribute-header"
+    id="attr-BroadcastInformation-severity">
+    <div class="attribute-name">
+      severity<a
+        class="link"
+        href="#attr-BroadcastInformation-severity"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Required</div>
+        <div class="requirements">
+          <div class="length">
+            Length:
+            <code><span class="pre">2</span></code>
+          </div>
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+              <code><span class="pre">04</span></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Indicates the importance/severity level of the broadcast information.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">Critical</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">Major</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">Minor</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>04</span>
+            </td>
+            <td class="enumValue">Informational</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    categories=""
+    channels=""
+    class="row-odd attribute-header"
+    id="attr-BroadcastInformation-source">
+    <div class="attribute-name">
+      source<a
+        class="link"
+        href="#attr-BroadcastInformation-source"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div categories="" channels="" class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Required</div>
+        <div class="requirements">
+          <div class="enum">
+            One of:
+            <div class="value-container">
+              <code><span class="pre">01</span></code>
+              <code><span class="pre">02</span></code>
+              <code><span class="pre">03</span></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          Indicates the source of the broadcast information.
+        </div>
+        <p class="enumDescriptionHeader">Meaning of values:</p>
+        <table class="enumDescription">
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>01</span>
+            </td>
+            <td class="enumValue">3DS Server</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>02</span>
+            </td>
+            <td class="enumValue">DS</td>
+          </tr>
+          <tr class="enumEntry">
+            <td class="enumKey">
+              <span>03</span>
+            </td>
+            <td class="enumValue">ACS</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
