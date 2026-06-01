@@ -551,6 +551,12 @@
       <div class="argdef">
         <div class="inclusion">Optional</div>
         <div class="requirements">
+          <div class="format">
+            Format:
+            <a href="specification_common.html#format-countrycode">
+              <code><span class="pre">countryCode</span></code>
+            </a>
+          </div>
           <div class="regexp">
             Regexp:
             <code><span class="pre">^\d{3}$</span></code>
@@ -4586,6 +4592,102 @@
           <dt class="scheme_rule">Visa</dt>
           <dd class="scheme_rule">Field is required if available</dd>
         </dl>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-odd attribute-header"
+    id="attr-AReq-threeDSRequestorID">
+    <div class="attribute-name">
+      threeDSRequestorID<a
+        class="link"
+        href="#attr-AReq-threeDSRequestorID"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-odd attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">35</span></code>
+          </div>
+        </div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+            <code>3RI</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          DS assigned 3DS Requestor identifier. Each DS will provide a unique ID
+          to each 3DS Requestor on an individual basis.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-header"
+    id="attr-AReq-threeDSRequestorName">
+    <div class="attribute-name">
+      threeDSRequestorName<a
+        class="link"
+        href="#attr-AReq-threeDSRequestorName"
+        title="Permalink to this attribute"></a>
+    </div>
+    <div class="attribute-type">string</div>
+  </div>
+  <div
+    categories="PA NPA"
+    channels="APP BRW 3RI"
+    class="row-even attribute-details">
+    <div class="arg">
+      <div class="argdef">
+        <div class="inclusion">Optional</div>
+        <div class="requirements">
+          <div class="maxLength">
+            Max length:
+            <code><span class="pre">40</span></code>
+          </div>
+        </div>
+        <div class="scenario">
+          <div class="category">
+            Categories:
+            <code>PA</code>
+            <code>NPA</code>
+          </div>
+          <div class="channel">
+            Channels:
+            <code>APP</code>
+            <code>BRW</code>
+            <code>3RI</code>
+          </div>
+        </div>
+      </div>
+      <div class="argdesc">
+        <div class="description">
+          DS assigned 3DS Requestor name. Each DS will provide a unique name to
+          each 3DS Requestor on an individual basis.
+        </div>
       </div>
     </div>
   </div>
