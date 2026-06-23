@@ -52,6 +52,11 @@ Sending a wrong ``messageVersion`` will result in an error.
 
 Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
 
+.. note::
+
+   The last-4-digit encoding is shared across channels: the same rules apply to
+   3RI (``deviceChannel: 03``), which is frictionless only — see
+   :ref:`3RI Tests <3ri_sandbox>`.
 
 .. list-table:: Browser testcases
     :header-rows: 1
@@ -74,7 +79,7 @@ Read :ref:`3-D Secure Version Determination <3ds_versioning>`.
 
     * - 3
       - 3xxx
-      - `messageVersion` `2.3`
+      - `messageVersion` `2.3.1`
 
 3DS Method
 -----------
@@ -255,3 +260,89 @@ Browser Examples
       - Failed challenge authentication with 3DS Method
 
         The challenge will auto-submit using JavaScript
+
+.. _3ri_sandbox:
+
+*********
+3RI Tests
+*********
+
+These tests involve ``deviceChannel: 03``. This must be set in all
+authentication requests, together with ``messageCategory: 02`` and a valid
+``threeRIInd``.
+
+For all these tests:
+  1. Perform the :ref:`preauth call <preauth-usage>`.
+  2. Perform a regular :ref:`auth request <auth-usage>`.
+     Use the same ``acctNumber`` as used in the ``preauth`` call.
+
+The ``/auth`` :ref:`3RI example input <threeri_example>` is usable for all
+cases.
+
+3RI uses the **same last-4 PAN encoding as the** `Browser Tests`_: the first
+digit selects the :ref:`message version <3ds_versioning>` and the third and
+fourth digits select the ARes outcome. You can therefore use any scheme test
+PAN (e.g. a Mastercard or Visa BIN) and vary the last four digits.
+
+Because 3RI has no challenge flow (``transStatus C`` is rejected for
+``deviceChannel: 03``), only the frictionless outcomes are available. The
+``3DS Method`` digit (second of the last 4) has no effect for 3RI.
+
+Message version — first digit of the last 4:
+
+.. list-table:: 3RI message version
+    :header-rows: 1
+
+    * - First digit
+      - PAN last 4
+      - Description
+
+    * - 0
+      - 0xxx
+      - Range `messageVersion` `2.1`, `2.2` and `2.3.1`
+    * - 1
+      - 1xxx
+      - `messageVersion` `2.1`
+    * - 2
+      - 2xxx
+      - `messageVersion` `2.2`
+    * - 3
+      - 3xxx
+      - `messageVersion` `2.3.1`
+
+ARes outcome — third and fourth digits of the last 4:
+
+.. list-table:: 3RI ARes outcome
+    :header-rows: 1
+
+    * - Third digit
+      - PAN last 4
+      - Description
+
+    * - 0
+      - xx03
+      - Frictionless `transStatus` `Y` (authenticated)
+    * - 1
+      - xx13
+      - Frictionless `transStatus` `N` (not authenticated)
+    * - 2
+      - xx23
+      - Frictionless `transStatus` `A` (attempted)
+    * - 3
+      - xx33
+      - Frictionless `transStatus` `R` (rejected)
+    * - 5
+      - xx53
+      - Frictionless `transStatus` `U` (unavailable)
+    * - 6
+      - xx63
+      - DS timeout
+
+For example, a Mastercard test PAN ending in ``3003`` returns
+``messageVersion 2.3.1`` with a frictionless ``transStatus Y``.
+
+.. note::
+
+   3RI does not support the challenge flow, decoupled authentication, or
+   information-only requests. Those last-4 combinations (e.g. the browser
+   challenge ``xx7x``) are rejected for ``deviceChannel: 03``.
