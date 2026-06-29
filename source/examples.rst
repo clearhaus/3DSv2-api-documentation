@@ -67,6 +67,9 @@ Basic Browser Example
 Basic 3RI Example
 =================
 
+For 3RI sandbox test cards and how the ``messageVersion`` is selected, see
+:ref:`3RI Tests <3ri_sandbox>`.
+
 .. code-block:: json
    :caption: Basic simple AReq example
    :linenos:
