@@ -23,7 +23,7 @@ Basic Browser Example
    :linenos:
 
    {
-     "acctNumber": "9000100511111111",
+     "acctNumber": "4000100511112003",
      "notificationURL": "https://3ds_callback.example.org/challenge/end",
      "threeDSCompInd": "Y",
      "threeDSRequestorURL": "https://threedsrequestor.example.org",
@@ -54,7 +54,7 @@ Basic Browser Example
      "merchantName": "Dummy Merchant",
      "messageCategory": "01",
      "messageType": "AReq",
-     "messageVersion": "2.1.0",
+     "messageVersion": "2.2.0",
      "purchaseAmount": "101",
      "purchaseCurrency": "840",
      "purchaseExponent": "2",
@@ -75,7 +75,7 @@ For 3RI sandbox test cards and how the ``messageVersion`` is selected, see
    :linenos:
 
    {
-     "acctNumber": "9000110511111111",
+     "acctNumber": "4000100511111003",
      "threeDSRequestorURL": "https://threedsrequestor.example.org",
      "acquirerBIN": "438309",
      "acquirerMerchantID": "00002000000",
