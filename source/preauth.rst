@@ -136,7 +136,7 @@ something like:
   When using ``"deviceChannel": "02"`` (BRW) you **must** use the same
   ``threeDSServerTransID`` returned above for the ``/auth`` call.
 
-  The ``threeDSServerTransID`` expires after 80 seconds.
+  The ``threeDSServerTransID`` expires after 48 hours.
 
 .. _not_enrolled:
 

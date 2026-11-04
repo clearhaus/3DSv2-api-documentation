@@ -126,8 +126,10 @@ General endpoint information
 
 1. We expect an average upstream request time of about 2 seconds, so should
    you.
-2. The request will time out after 10 seconds, after which integrators will
-   receive an error. The error returned will be
+2. The Directory Server has 6 seconds to answer. If it does not, or its
+   response cannot be read, the ``AReq`` is sent once more after 0.5 seconds.
+   A request can therefore take about 12.5 seconds before you receive the
+   error below. Set your read timeout above that.
 
    .. code-block:: json
       :caption: Directory Server timeout response
@@ -143,3 +145,12 @@ General endpoint information
         "messageVersion": "2.1.0",
         "threeDSServerTransID": "2401433d-68be-4820-b1e7-5aa3b44dfa5a"
       }
+
+   ``errorDetail`` is ``Connection timeout`` if the Directory Server did not
+   answer in time, whether or not a connection was made. It is ``Error
+   contacting`` or ``Error reading`` on other connection errors, and ``Invalid
+   response from directory server`` if the Directory Server returned an HTTP
+   status other than ``200``.
+3. An ``Erro`` from the Directory Server or the ACS (``errorComponent`` ``D``
+   or ``A``) is passed on to you with HTTP status ``200``. How long it takes
+   depends on the Directory Server.
