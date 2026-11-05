@@ -11,6 +11,9 @@ It is also the intension that you can use the sandbox for automatic integration
 testing of your service. We will not modify individual test cases. If need be,
 we can deprecate them with a sufficient grace period.
 
+The fixed ``9000…`` trigger PANs are deprecated and still accepted. See
+:ref:`Deprecated test PANs <deprecated_test_pans>`.
+
 The 3-D Secure server sandbox validates input according to the specification.
 
 *************
@@ -346,3 +349,105 @@ For example, a Mastercard test PAN ending in ``3003`` returns
    3RI does not support the challenge flow, decoupled authentication, or
    information-only requests. Those last-4 combinations (e.g. the browser
    challenge ``xx7x``) are rejected for ``deviceChannel: 03``.
+
+.. _deprecated_test_pans:
+
+********************
+Deprecated test PANs
+********************
+
+These PANs still work. The first eight digits select the test: any PAN from
+``<prefix>00000000`` to ``<prefix>99999999`` matches.
+``9000`` is message version ``2.1.0``; ``9001`` is the same test at ``2.2.0``.
+
+New tests should use the last-four-digit encoding in `Browser Tests`_ and `3RI Tests`_.
+
+.. list-table:: Browser (``deviceChannel: 02``)
+    :header-rows: 1
+
+    * - PAN prefix
+      - Example
+      - Response
+
+    * - ``90001004`` / ``90011004``
+      - ``9000100411111111``
+      - ``ARes`` ``transStatus Y`` after 3DS Method timeout
+
+    * - ``90001005`` / ``90011005``
+      - ``9000100511111111``
+      - ``ARes`` ``transStatus Y`` with 3DS Method
+
+    * - ``90001006`` / ``90011006``
+      - ``9000100611111111``
+      - ``ARes`` ``transStatus Y`` without 3DS Method
+
+    * - ``90001008`` / ``90011008``
+      - ``9000100811111111``
+      - ``ARes`` ``transStatus C``, then ``RReq`` ``Y`` or ``N``. With 3DS Method
+
+    * - ``90001009`` / ``90011009``
+      - ``9000100911111111``
+      - ``ARes`` ``transStatus C``, then ``RReq`` ``Y``. With 3DS Method
+
+    * - ``90001010`` / ``90011010``
+      - ``9000101011111111``
+      - ``ARes`` ``transStatus C``, then ``RReq`` ``N``. With 3DS Method
+
+    * - ``90001011`` / ``90011011``
+      - ``9000101111111111``
+      - ``ARes`` ``transStatus C``, then ``RReq`` ``Y``. Without 3DS Method
+
+    * - ``90001012`` / ``90011012``
+      - ``9000101211111111``
+      - ``ARes`` ``transStatus C``, then ``RReq`` ``Y`` or ``N``. Without 3DS Method
+
+    * - ``90001050`` / ``90011050``, last 8 ``00000000``–``38106791``
+      - ``9000105000000000``
+      - ``ARes`` ``transStatus N``
+
+    * - ``90001050`` / ``90011050``, last 8 ``38106792``–``65730666``
+      - ``9000105040000000``
+      - ``ARes`` ``transStatus U``
+
+    * - ``90001050`` / ``90011050``, last 8 ``65730667``–``99999999``
+      - ``9000105070000000``
+      - ``ARes`` ``transStatus R``
+
+    * - ``90001051`` / ``90011051``
+      - ``9000105111111111``
+      - ``ARes`` ``transStatus N`` with ``cardholderInfo``
+
+    * - ``90001053`` / ``90011053``
+      - ``9000105311111111``
+      - ``Erro`` ``errorCode 405``
+
+    * - ``90001055`` / ``90011055``
+      - ``9000105511111111``
+      - ``ARes`` ``transStatus Y``
+
+    * - ``90001056`` / ``90011056``
+      - ``9000105611111111``
+      - ``ARes`` ``transStatus A``
+
+.. list-table:: 3RI (``deviceChannel: 03``)
+    :header-rows: 1
+
+    * - PAN prefix
+      - Example
+      - Response
+
+    * - ``90001105`` / ``90011105``
+      - ``9000110511111111``
+      - ``ARes`` ``transStatus Y``
+
+    * - ``90001106`` / ``90011106``
+      - ``9000110611111111``
+      - ``ARes`` ``transStatus A``
+
+    * - ``90001107`` / ``90011107``
+      - ``9000110711111111``
+      - ``ARes`` ``transStatus U``
+
+    * - ``90001108`` / ``90011108``
+      - ``9000110811111111``
+      - ``ARes`` ``transStatus R``
