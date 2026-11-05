@@ -10,6 +10,18 @@ be found in the revision history.
 
 Pull requests and issues are welcome.
 
+November 4th, 2026
+******************
+
+#. Correct timeouts and retention: the ``/auth`` Directory Server timeout
+   (about 12.5 seconds, not 10), the :ref:`preauth <preauth-success>`
+   ``threeDSServerTransID`` lifetime (48 hours, not 80 seconds) and the
+   ``/postauth`` result retention (20 minutes, not 300 seconds).
+#. Document the ``405`` ``errorDetail`` values on ``/auth``, and that errors
+   from the Directory Server and ACS are passed on.
+#. Document the ``/postauth`` HTTP status codes and the ``305`` and ``403``
+   errors.
+
 July 7th, 2025
 ***************
 
