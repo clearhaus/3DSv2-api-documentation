@@ -46,9 +46,33 @@ See the reference (:ref:`2.1.0 <postauth-response-210>`, :ref:`2.2.0
 <postauth-response-220>`, :ref:`2.3.1 <postauth-response-231>`) for the values returned.
 
 .. note::
-  The authentication cache expires 300 seconds after the 3-D Secure Server
-  receives it from the card scheme, it must be fetched before expiry. It will
-  return an error as examplified below.
+  The 3-D Secure Server keeps the result for 20 minutes after it receives it,
+  and for 5 minutes after each ``/postauth`` call that returns it.
+
+  Until the result has been received, the endpoint returns HTTP status ``200``
+  with the error below. Call it again later.
+
+  .. code-block:: json
+     :caption: Result not received yet.
+
+     {
+       "errorCode": "305",
+       "errorComponent": "S",
+       "errorDescription": "No RReq has been received",
+       "errorDetail": "No response from directory server yet",
+       "messageType": "Erro",
+       "messageVersion": "2.2.0",
+       "threeDSServerTransID": "4593b54f-692d-4d83-86ce-b74c4c23072c"
+     }
+
+  If no result arrives, the transaction expires 20 minutes after the
+  ``/auth`` call for message version ``2.1.0``. For ``2.2.0`` and ``2.3.1`` it
+  expires after ``threeDSRequestorDecMaxTime`` plus 60 minutes, or after 60
+  minutes if that is not set.
+
+  Once the result or the transaction has expired, or for an unknown
+  ``threeDSServerTransID``, the endpoint returns HTTP status ``404`` with the
+  error below.
 
   .. code-block:: json
      :caption: Authentication response after timeout.
@@ -57,8 +81,12 @@ See the reference (:ref:`2.1.0 <postauth-response-210>`, :ref:`2.2.0
        "errorCode": "203",
        "errorComponent": "S",
        "errorDescription": "Unknown threeDSServerTransID",
-       "errorDetail": "Unknown threeDSServerTransID",
+       "errorDetail": "RReq has expired, was never received or invalid threeDSServerTransID",
        "messageType": "Erro",
        "messageVersion": "2.2.0",
        "threeDSServerTransID": "33eaca9c-5aff-41d9-ad75-a2cde347be2a"
      }
+
+  On a temporary system error the endpoint returns HTTP status ``500`` with
+  ``errorCode`` ``403`` and a ``Retry-After`` header in seconds. Retry after
+  that.

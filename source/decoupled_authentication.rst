@@ -11,7 +11,7 @@ If a fallback is determined, `threeDSRequestorPriorAuthenticationInfo` is requir
 
 The requestor can set the TTL for the transaction by setting the `threeDSRequestorDecMaxTime`.
 The `threeDSRequestorDecMaxTime` accepts numeric values between `00001` and `10080` (7 days) which
-determines the TTL in minutes.
+determines the TTL in minutes. We keep the transaction for `threeDSRequestorDecMaxTime` plus 60 minutes.
 
 The requestor shall use the `threeDSServerTransID` to retrieve the authentication value
 by making a request towards the `/postauth` endpoint.
