@@ -33,7 +33,26 @@ If the 3-D Secure Server has not received the RReq message the following respons
         "messageType": "Erro",
         "messageVersion": "2.2.0",
         "threeDSServerTransID": "8700f0ef-0e96-471c-b107-1d2534f3f5a5"
-   }   
+   }
+
+
+Testing in the sandbox
+**********************
+
+In the :ref:`sandbox <sandbox>`, use a browser authentication with an ``acctNumber`` ending in
+``83`` to test decoupled authentication.
+
+Decoupled authentication is only used if the AReq requests it. To request it, the AReq must have:
+
+* ``messageVersion`` ``2.2.0`` or greater.
+* ``threeDSRequestorDecReqInd`` set to ``Y``. For ``2.3.1``, ``B`` is also accepted.
+* ``threeDSRequestorDecMaxTime`` set. Without it, the AReq is rejected with Erro ``201`` (required element missing).
+
+The ACS then returns ``transStatus`` ``D``, and completes the authentication with ``transStatus``
+``Y`` after ``threeDSRequestorDecMaxTime`` minutes, at most 30.
+
+If the AReq does not request decoupled authentication, the ACS falls back to a
+:ref:`challenge <3ds_challenge_flow>` that automatically passes, as for an ``acctNumber`` ending in ``70``.
 
 
 Decoupled authentication flow example

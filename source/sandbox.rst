@@ -167,6 +167,14 @@ Read :ref:`Auth usage <auth-usage>` to understand the flow.
       - `transStatus` `C`
       - Complete the `Challenge flow`_
 
+    * - 8
+      - xx83
+      - `transStatus` `D` (:ref:`Decoupled Authentication <3ds_decoupled_authentication>`)
+      - Only if decoupled authentication is requested: `messageVersion 2.2` or greater and
+        `threeDSRequestorDecReqInd` `Y` (`Y` or `B` for `messageVersion 2.3.1`), which also
+        requires `threeDSRequestorDecMaxTime`. Otherwise the ACS falls back to `transStatus` `C`
+        with a challenge that automatically passes, as for `xx70`.
+
 
 
 Challenge flow
