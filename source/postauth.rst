@@ -46,8 +46,9 @@ See the reference (:ref:`2.1.0 <postauth-response-210>`, :ref:`2.2.0
 <postauth-response-220>`, :ref:`2.3.1 <postauth-response-231>`) for the values returned.
 
 .. note::
-  The 3-D Secure Server keeps the result for 20 minutes after it receives it,
-  and for 5 minutes after each ``/postauth`` call that returns it.
+  The 3-D Secure Server keeps the result for 20 minutes after receiving it.
+  Once ``/postauth`` has returned it, it expires 5 minutes after the latest
+  fetch.
 
   Until the result has been received, the endpoint returns HTTP status ``200``
   with the error below. Call it again later.
